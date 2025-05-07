@@ -2042,8 +2042,8 @@
             "BarBottomPadding": 0,
             "BarLeftPadding": 0,
             "BarRightPadding": 0,
-            "MaxValue": 16,
-            "InitialValue": 8
+            "MaxValue": 3,
+            "InitialValue": 3
           },
           "childrenContent": {
             "Background": {
@@ -2575,6 +2575,38 @@
                 "",
                 "",
                 ""
+              ]
+            }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "Sticker::IsStuck"
+                  },
+                  "parameters": [
+                    "",
+                    "EnemyHealthBar",
+                    "Sticker",
+                    "Enemy",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "PanelSpriteContinuousBar::PanelSpriteContinuousBar::SetValue"
+                  },
+                  "parameters": [
+                    "EnemyHealthBar",
+                    "-",
+                    "1",
+                    ""
+                  ]
+                }
               ]
             }
           ]
