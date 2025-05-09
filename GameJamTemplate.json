@@ -2970,6 +2970,11 @@
           "name": "isFired",
           "type": "boolean",
           "value": false
+        },
+        {
+          "name": "isHeld",
+          "type": "boolean",
+          "value": false
         }
       ],
       "instances": [
@@ -3571,6 +3576,8 @@
               "Topdown": "TopDownMovement"
             },
             {
+              "name": "TopDownMovement",
+              "type": "TopDownMovementBehavior::TopDownMovementBehavior",
               "acceleration": 4000,
               "allowDiagonals": true,
               "angleOffset": 0,
@@ -3580,9 +3587,7 @@
               "ignoreDefaultControls": false,
               "maxSpeed": 200,
               "movementAngleOffset": 0,
-              "name": "TopDownMovement",
               "rotateObject": false,
-              "type": "TopDownMovementBehavior::TopDownMovementBehavior",
               "viewpoint": "TopDown"
             }
           ],
@@ -3684,6 +3689,43 @@
           "conditions": [
             {
               "type": {
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ChangePlan"
+              },
+              "parameters": [
+                "Player_Ball",
+                "=",
+                "10"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Controls\n"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
                 "value": "MouseButtonFromTextPressed"
               },
               "parameters": [
@@ -3701,6 +3743,26 @@
                 "",
                 ""
               ]
+            },
+            {
+              "type": {
+                "value": "BooleanVariable"
+              },
+              "parameters": [
+                "isHeld",
+                "True",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "BooleanVariable"
+              },
+              "parameters": [
+                "BeingDragged",
+                "False",
+                ""
+              ]
             }
           ],
           "actions": [
@@ -3712,6 +3774,36 @@
                 "BeingDragged",
                 "True",
                 ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BooleanVariable"
+              },
+              "parameters": [
+                "BeingDragged",
+                "True",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PrimitiveDrawing::LineV2"
+              },
+              "parameters": [
+                "LinePainter",
+                "Player_Ball.CenterX()",
+                "Player_Ball.CenterY()",
+                "MouseX()",
+                "MouseY()",
+                "2"
               ]
             }
           ]
@@ -3779,41 +3871,30 @@
                 "True",
                 ""
               ]
-            }
-          ],
-          "events": [
-            {
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "Launch"
             },
             {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [
-                {
-                  "type": {
-                    "value": "Physics2::ApplyPolarForce"
-                  },
-                  "parameters": [
-                    "Player_Ball",
-                    "Physics2",
-                    "LaunchAngle",
-                    "DragDistance*4",
-                    "Player_Ball.BoundingBoxCenterX()",
-                    "Player_Ball.BoundingBoxCenterY()"
-                  ]
-                }
+              "type": {
+                "value": "SetBooleanVariable"
+              },
+              "parameters": [
+                "isHeld",
+                "False",
+                ""
               ]
             }
           ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Launch"
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -3823,52 +3904,30 @@
                 "value": "BooleanVariable"
               },
               "parameters": [
-                "BeingDragged",
+                "isFired",
                 "True",
                 ""
               ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
             }
           ],
           "actions": [
             {
               "type": {
-                "value": "PrimitiveDrawing::LineV2"
+                "value": "Physics2::ApplyPolarForce"
               },
               "parameters": [
-                "LinePainter",
-                "Player_Ball.CenterX()",
-                "Player_Ball.CenterY()",
-                "MouseX()",
-                "MouseY()",
-                "2"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [
-            {
-              "type": {
-                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-              },
-              "parameters": [
-                "LaunchAngleText",
-                "Text",
-                "=",
-                "\"Launch Angle: \" + LaunchAngle"
-              ]
-            },
-            {
-              "type": {
-                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-              },
-              "parameters": [
-                "LaunchDistText",
-                "Text",
-                "=",
-                "\"Launch Dist: \" + DragDistance"
+                "Player_Ball",
+                "Physics2",
+                "LaunchAngle",
+                "DragDistance*4",
+                "Player_Ball.BoundingBoxCenterX()",
+                "Player_Ball.BoundingBoxCenterY()"
               ]
             }
           ]
@@ -3884,6 +3943,44 @@
             "textR": 0
           },
           "comment": "Summons"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "Physics2::LinearVelocityLength"
+              },
+              "parameters": [
+                "Player_Ball",
+                "Physics2",
+                "<=",
+                "0"
+              ]
+            },
+            {
+              "type": {
+                "value": "BooleanVariable"
+              },
+              "parameters": [
+                "isHeld",
+                "False",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetBooleanVariable"
+              },
+              "parameters": [
+                "isFired",
+                "False",
+                ""
+              ]
+            }
+          ]
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -3923,7 +4020,7 @@
               "parameters": [
                 "Player_Ball",
                 "Player",
-                "100",
+                "80",
                 ""
               ]
             },
@@ -3950,58 +4047,55 @@
                 "-10",
                 "270"
               ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "DepartScene"
-              },
-              "parameters": [
-                ""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "ChangePlan"
-              },
-              "parameters": [
-                "Player_Ball",
-                "=",
-                "10"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "Physics2::LinearVelocityLength"
-              },
-              "parameters": [
-                "Player_Ball",
-                "Physics2",
-                "<=",
-                "0"
-              ]
-            }
-          ],
-          "actions": [
+            },
             {
               "type": {
                 "value": "SetBooleanVariable"
               },
               "parameters": [
-                "isFired",
-                "False",
+                "isHeld",
+                "True",
                 ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Debug Text"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "LaunchAngleText",
+                "Text",
+                "=",
+                "\"Launch Angle: \" + LaunchAngle"
+              ]
+            },
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "LaunchDistText",
+                "Text",
+                "=",
+                "\"Launch Dist: \" + DragDistance"
               ]
             }
           ]
