@@ -1,7 +1,7 @@
 {
   "firstLayout": "",
   "gdVersion": {
-    "build": 228,
+    "build": 230,
     "major": 5,
     "minor": 5,
     "revision": 0
@@ -164,6 +164,46 @@
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
         "name": "NewSprite10",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "antibody.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "antibody.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "virus.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "virus.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "antibody2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "antibody2.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "player.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "player.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "bgTilemap.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "bgTilemap.png",
         "smoothed": false,
         "userAdded": false
       }
@@ -2163,6 +2203,7 @@
           "assetStoreId": "3d6c54e76a9a06cbd7629c1e78388d4ab808bbf36d644c61d6a14c9ad34d4f89",
           "name": "EnemyHealthBar",
           "type": "PanelSpriteContinuousBar::PanelSpriteContinuousBar",
+          "variant": "",
           "variables": [],
           "effects": [],
           "behaviors": [
@@ -2924,6 +2965,11 @@
           "name": "LaunchAngle",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "isFired",
+          "type": "boolean",
+          "value": false
         }
       ],
       "instances": [
@@ -2997,13 +3043,14 @@
         },
         {
           "angle": 0,
-          "customSize": false,
-          "height": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 64,
           "keepRatio": true,
           "layer": "",
-          "name": "Player",
+          "name": "Player_Ball",
           "persistentUuid": "48b7022b-ae1b-45c7-a0b1-60ac21ff3f0d",
-          "width": 0,
+          "width": 64,
           "x": 608,
           "y": 352,
           "zOrder": 2,
@@ -3106,6 +3153,22 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Player",
+          "persistentUuid": "3ba9035f-ba1e-429e-b227-1d6d1bfa484a",
+          "width": 0,
+          "x": 704,
+          "y": 480,
+          "zOrder": 9,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [
@@ -3197,7 +3260,7 @@
         {
           "adaptCollisionMaskAutomatically": true,
           "assetStoreId": "",
-          "name": "Player",
+          "name": "Player_Ball",
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
@@ -3232,10 +3295,16 @@
               "friction": 1,
               "restitution": 1,
               "linearDamping": 3,
-              "angularDamping": 0.1,
+              "angularDamping": 2,
               "gravityScale": 0,
               "layers": 1,
               "masks": 1
+            },
+            {
+              "name": "Sticker",
+              "type": "Sticker::Sticker",
+              "OnlyFollowPosition": false,
+              "IsDestroyedWithParent": false
             }
           ],
           "animations": [
@@ -3250,7 +3319,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "NewSprite9",
+                      "image": "virus.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -3266,20 +3335,20 @@
                       "customCollisionMask": [
                         [
                           {
-                            "x": 2,
-                            "y": 2
+                            "x": 7,
+                            "y": 5
                           },
                           {
-                            "x": 63,
-                            "y": 2
+                            "x": 73,
+                            "y": 5
                           },
                           {
-                            "x": 63,
-                            "y": 63
+                            "x": 73,
+                            "y": 74
                           },
                           {
-                            "x": 2,
-                            "y": 63
+                            "x": 7,
+                            "y": 74
                           }
                         ]
                       ]
@@ -3443,7 +3512,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "NewSprite10",
+                      "image": "antibody2.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -3459,20 +3528,20 @@
                       "customCollisionMask": [
                         [
                           {
-                            "x": 2,
-                            "y": 2
+                            "x": 12,
+                            "y": 1
                           },
                           {
-                            "x": 64,
-                            "y": 2
+                            "x": 68,
+                            "y": 1
                           },
                           {
-                            "x": 64,
-                            "y": 64
+                            "x": 68,
+                            "y": 79
                           },
                           {
-                            "x": 2,
-                            "y": 64
+                            "x": 12,
+                            "y": 79
                           }
                         ]
                       ]
@@ -3482,6 +3551,102 @@
               ]
             }
           ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "Player",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "RemapForTopdown",
+              "type": "BehaviorRemapper::RemapForTopdown",
+              "Up": "w",
+              "Left": "a",
+              "Right": "d",
+              "Down": "s",
+              "Topdown": "TopDownMovement"
+            },
+            {
+              "acceleration": 4000,
+              "allowDiagonals": true,
+              "angleOffset": 0,
+              "angularMaxSpeed": 180,
+              "customIsometryAngle": 30,
+              "deceleration": 8000,
+              "ignoreDefaultControls": false,
+              "maxSpeed": 200,
+              "movementAngleOffset": 0,
+              "name": "TopDownMovement",
+              "rotateObject": false,
+              "type": "TopDownMovementBehavior::TopDownMovementBehavior",
+              "viewpoint": "TopDown"
+            }
+          ],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "player.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 4,
+                            "y": 13
+                          },
+                          {
+                            "x": 76,
+                            "y": 13
+                          },
+                          {
+                            "x": 76,
+                            "y": 79
+                          },
+                          {
+                            "x": 4,
+                            "y": 79
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "assetStoreId": "",
+          "height": 32,
+          "name": "BorderTile",
+          "texture": "bgTilemap.png",
+          "type": "TiledSpriteObject::TiledSprite",
+          "width": 32,
+          "variables": [],
+          "effects": [],
+          "behaviors": []
         }
       ],
       "objectsFolderStructure": {
@@ -3489,6 +3654,12 @@
         "children": [
           {
             "objectName": "Border"
+          },
+          {
+            "objectName": "BorderTile"
+          },
+          {
+            "objectName": "Player_Ball"
           },
           {
             "objectName": "Player"
@@ -3525,7 +3696,7 @@
                 "value": "SourisSurObjet"
               },
               "parameters": [
-                "Player",
+                "Player_Ball",
                 "",
                 "",
                 ""
@@ -3586,7 +3757,7 @@
               "parameters": [
                 "DragDistance",
                 "=",
-                "clamp(DistanceBetweenPositions(Player.BoundingBoxCenterX(), Player.BoundingBoxCenterY(), MouseX(), MouseY()),0,250)"
+                "clamp(DistanceBetweenPositions(Player_Ball.BoundingBoxCenterX(), Player_Ball.BoundingBoxCenterY(), MouseX(), MouseY()), 0, 250)"
               ]
             },
             {
@@ -3596,7 +3767,17 @@
               "parameters": [
                 "LaunchAngle",
                 "=",
-                "AngleBetweenPositions(MouseX(),MouseY(),Player.BoundingBoxCenterX(),Player.BoundingBoxCenterY())"
+                "AngleBetweenPositions(MouseX(), MouseY(), Player_Ball.BoundingBoxCenterX(), Player_Ball.BoundingBoxCenterY())"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetBooleanVariable"
+              },
+              "parameters": [
+                "isFired",
+                "True",
+                ""
               ]
             }
           ],
@@ -3622,12 +3803,12 @@
                     "value": "Physics2::ApplyPolarForce"
                   },
                   "parameters": [
-                    "Player",
+                    "Player_Ball",
                     "Physics2",
                     "LaunchAngle",
                     "DragDistance*4",
-                    "Player.BoundingBoxCenterX()",
-                    "Player.BoundingBoxCenterY()"
+                    "Player_Ball.BoundingBoxCenterX()",
+                    "Player_Ball.BoundingBoxCenterY()"
                   ]
                 }
               ]
@@ -3651,58 +3832,15 @@
           "actions": [
             {
               "type": {
-                "value": "ChangeColor"
+                "value": "PrimitiveDrawing::LineV2"
               },
               "parameters": [
-                "Player",
-                "\"208;2;27\""
-              ]
-            }
-          ],
-          "events": [
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [
-                {
-                  "type": {
-                    "value": "PrimitiveDrawing::LineV2"
-                  },
-                  "parameters": [
-                    "LinePainter",
-                    "Player.CenterX()",
-                    "Player.CenterY()",
-                    "MouseX()",
-                    "MouseY()",
-                    "2"
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "BooleanVariable"
-              },
-              "parameters": [
-                "BeingDragged",
-                "False",
-                ""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "ChangeColor"
-              },
-              "parameters": [
-                "Player",
-                "\"255;255;255\""
+                "LinePainter",
+                "Player_Ball.CenterX()",
+                "Player_Ball.CenterY()",
+                "MouseX()",
+                "MouseY()",
+                "2"
               ]
             }
           ]
@@ -3731,6 +3869,139 @@
                 "Text",
                 "=",
                 "\"Launch Dist: \" + DragDistance"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Summons"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "MouseButtonFromTextPressed"
+              },
+              "parameters": [
+                "",
+                "\"Right\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "AddForceVersPos"
+              },
+              "parameters": [
+                "Player_Ball",
+                "Player.X()",
+                "Player.Y()",
+                "150",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "Distance"
+              },
+              "parameters": [
+                "Player_Ball",
+                "Player",
+                "100",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "BooleanVariable"
+              },
+              "parameters": [
+                "isFired",
+                "=",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "MettreAutourPos"
+              },
+              "parameters": [
+                "Player_Ball",
+                "Player.CenterX()",
+                "Player.CenterY()",
+                "-10",
+                "270"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ChangePlan"
+              },
+              "parameters": [
+                "Player_Ball",
+                "=",
+                "10"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "Physics2::LinearVelocityLength"
+              },
+              "parameters": [
+                "Player_Ball",
+                "Physics2",
+                "<=",
+                "0"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetBooleanVariable"
+              },
+              "parameters": [
+                "isFired",
+                "False",
+                ""
               ]
             }
           ]
@@ -3817,6 +4088,10 @@
           "scaleY": 100
         },
         {
+          "name": "RemapForTopdown",
+          "type": "BehaviorRemapper::RemapForTopdown"
+        },
+        {
           "name": "Resizable",
           "type": "ResizableCapability::ResizableBehavior"
         },
@@ -3825,8 +4100,16 @@
           "type": "ScalableCapability::ScalableBehavior"
         },
         {
+          "name": "Sticker",
+          "type": "Sticker::Sticker"
+        },
+        {
           "name": "Text",
           "type": "TextContainerCapability::TextContainerBehavior"
+        },
+        {
+          "name": "TopDownMovement",
+          "type": "TopDownMovementBehavior::TopDownMovementBehavior"
         }
       ]
     }
@@ -22520,6 +22803,165 @@
           "fullName": "Resource bar (continuous)",
           "isUsingLegacyInstancesRenderer": true,
           "name": "PanelSpriteContinuousBar",
+          "objects": [
+            {
+              "assetStoreId": "",
+              "bold": false,
+              "italic": false,
+              "name": "Label",
+              "smoothed": true,
+              "type": "TextObject::Text",
+              "underlined": false,
+              "variables": [],
+              "effects": [],
+              "behaviors": [],
+              "string": "2 / 3",
+              "font": "",
+              "textAlignment": "center",
+              "characterSize": 20,
+              "color": {
+                "b": 0,
+                "g": 0,
+                "r": 0
+              },
+              "content": {
+                "bold": false,
+                "isOutlineEnabled": false,
+                "isShadowEnabled": false,
+                "italic": false,
+                "outlineColor": "255;255;255",
+                "outlineThickness": 2,
+                "shadowAngle": 90,
+                "shadowBlurRadius": 2,
+                "shadowColor": "0;0;0",
+                "shadowDistance": 4,
+                "shadowOpacity": 127,
+                "smoothed": true,
+                "underlined": false,
+                "text": "2 / 3",
+                "font": "",
+                "textAlignment": "center",
+                "verticalTextAlignment": "top",
+                "characterSize": 20,
+                "color": "0;0;0"
+              }
+            },
+            {
+              "assetStoreId": "",
+              "bottomMargin": 0,
+              "height": 32,
+              "leftMargin": 0,
+              "name": "FillBar",
+              "rightMargin": 0,
+              "texture": "",
+              "tiled": true,
+              "topMargin": 0,
+              "type": "PanelSpriteObject::PanelSprite",
+              "width": 32,
+              "variables": [],
+              "effects": [],
+              "behaviors": [
+                {
+                  "name": "ResourceBar",
+                  "type": "PanelSpriteContinuousBar::ResourceBar",
+                  "Value": 1,
+                  "MaxValue": 3,
+                  "PreviousValue": 0,
+                  "CurrentValue": 1
+                },
+                {
+                  "name": "Tween",
+                  "type": "Tween::TweenBehavior"
+                }
+              ]
+            },
+            {
+              "assetStoreId": "",
+              "bottomMargin": 0,
+              "height": 32,
+              "leftMargin": 0,
+              "name": "Buffer",
+              "rightMargin": 0,
+              "texture": "",
+              "tiled": true,
+              "topMargin": 0,
+              "type": "PanelSpriteObject::PanelSprite",
+              "width": 32,
+              "variables": [],
+              "effects": [],
+              "behaviors": [
+                {
+                  "name": "Tween",
+                  "type": "Tween::TweenBehavior"
+                }
+              ]
+            },
+            {
+              "assetStoreId": "",
+              "bottomMargin": 0,
+              "height": 32,
+              "leftMargin": 0,
+              "name": "Background",
+              "rightMargin": 0,
+              "texture": "",
+              "tiled": true,
+              "topMargin": 0,
+              "type": "PanelSpriteObject::PanelSprite",
+              "width": 32,
+              "variables": [],
+              "effects": [],
+              "behaviors": []
+            }
+          ],
+          "objectsFolderStructure": {
+            "folderName": "__ROOT",
+            "children": [
+              {
+                "objectName": "Label"
+              },
+              {
+                "objectName": "FillBar"
+              },
+              {
+                "objectName": "Buffer"
+              },
+              {
+                "objectName": "Background"
+              }
+            ]
+          },
+          "objectsGroups": [],
+          "layers": [
+            {
+              "ambientLightColorB": 200,
+              "ambientLightColorG": 200,
+              "ambientLightColorR": 200,
+              "camera3DFarPlaneDistance": 10000,
+              "camera3DFieldOfView": 45,
+              "camera3DNearPlaneDistance": 3,
+              "cameraType": "",
+              "followBaseLayerCamera": false,
+              "isLightingLayer": false,
+              "isLocked": false,
+              "name": "",
+              "renderingType": "",
+              "visibility": true,
+              "cameras": [
+                {
+                  "defaultSize": true,
+                  "defaultViewport": true,
+                  "height": 0,
+                  "viewportBottom": 1,
+                  "viewportLeft": 0,
+                  "viewportRight": 1,
+                  "viewportTop": 0,
+                  "width": 0
+                }
+              ],
+              "effects": []
+            }
+          ],
+          "instances": [],
           "eventsFunctions": [
             {
               "fullName": "",
@@ -24268,165 +24710,7 @@
               "name": "LabelVerticalAnchorTarget"
             }
           ],
-          "objects": [
-            {
-              "assetStoreId": "",
-              "bold": false,
-              "italic": false,
-              "name": "Label",
-              "smoothed": true,
-              "type": "TextObject::Text",
-              "underlined": false,
-              "variables": [],
-              "effects": [],
-              "behaviors": [],
-              "string": "2 / 3",
-              "font": "",
-              "textAlignment": "center",
-              "characterSize": 20,
-              "color": {
-                "b": 0,
-                "g": 0,
-                "r": 0
-              },
-              "content": {
-                "bold": false,
-                "isOutlineEnabled": false,
-                "isShadowEnabled": false,
-                "italic": false,
-                "outlineColor": "255;255;255",
-                "outlineThickness": 2,
-                "shadowAngle": 90,
-                "shadowBlurRadius": 2,
-                "shadowColor": "0;0;0",
-                "shadowDistance": 4,
-                "shadowOpacity": 127,
-                "smoothed": true,
-                "underlined": false,
-                "text": "2 / 3",
-                "font": "",
-                "textAlignment": "center",
-                "verticalTextAlignment": "top",
-                "characterSize": 20,
-                "color": "0;0;0"
-              }
-            },
-            {
-              "assetStoreId": "",
-              "bottomMargin": 0,
-              "height": 32,
-              "leftMargin": 0,
-              "name": "FillBar",
-              "rightMargin": 0,
-              "texture": "",
-              "tiled": true,
-              "topMargin": 0,
-              "type": "PanelSpriteObject::PanelSprite",
-              "width": 32,
-              "variables": [],
-              "effects": [],
-              "behaviors": [
-                {
-                  "name": "ResourceBar",
-                  "type": "PanelSpriteContinuousBar::ResourceBar",
-                  "Value": 1,
-                  "MaxValue": 3,
-                  "PreviousValue": 0,
-                  "CurrentValue": 1
-                },
-                {
-                  "name": "Tween",
-                  "type": "Tween::TweenBehavior"
-                }
-              ]
-            },
-            {
-              "assetStoreId": "",
-              "bottomMargin": 0,
-              "height": 32,
-              "leftMargin": 0,
-              "name": "Buffer",
-              "rightMargin": 0,
-              "texture": "",
-              "tiled": true,
-              "topMargin": 0,
-              "type": "PanelSpriteObject::PanelSprite",
-              "width": 32,
-              "variables": [],
-              "effects": [],
-              "behaviors": [
-                {
-                  "name": "Tween",
-                  "type": "Tween::TweenBehavior"
-                }
-              ]
-            },
-            {
-              "assetStoreId": "",
-              "bottomMargin": 0,
-              "height": 32,
-              "leftMargin": 0,
-              "name": "Background",
-              "rightMargin": 0,
-              "texture": "",
-              "tiled": true,
-              "topMargin": 0,
-              "type": "PanelSpriteObject::PanelSprite",
-              "width": 32,
-              "variables": [],
-              "effects": [],
-              "behaviors": []
-            }
-          ],
-          "objectsFolderStructure": {
-            "folderName": "__ROOT",
-            "children": [
-              {
-                "objectName": "Label"
-              },
-              {
-                "objectName": "FillBar"
-              },
-              {
-                "objectName": "Buffer"
-              },
-              {
-                "objectName": "Background"
-              }
-            ]
-          },
-          "objectsGroups": [],
-          "layers": [
-            {
-              "ambientLightColorB": 200,
-              "ambientLightColorG": 200,
-              "ambientLightColorR": 200,
-              "camera3DFarPlaneDistance": 10000,
-              "camera3DFieldOfView": 45,
-              "camera3DNearPlaneDistance": 3,
-              "cameraType": "",
-              "followBaseLayerCamera": false,
-              "isLightingLayer": false,
-              "isLocked": false,
-              "name": "",
-              "renderingType": "",
-              "visibility": true,
-              "cameras": [
-                {
-                  "defaultSize": true,
-                  "defaultViewport": true,
-                  "height": 0,
-                  "viewportBottom": 1,
-                  "viewportLeft": 0,
-                  "viewportRight": 1,
-                  "viewportTop": 0,
-                  "width": 0
-                }
-              ],
-              "effects": []
-            }
-          ],
-          "instances": []
+          "variants": []
         }
       ]
     },
