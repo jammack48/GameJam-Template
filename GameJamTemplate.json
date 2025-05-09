@@ -3328,8 +3328,8 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 40,
+                        "y": 40
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -3834,16 +3834,6 @@
           "actions": [
             {
               "type": {
-                "value": "SetBooleanVariable"
-              },
-              "parameters": [
-                "BeingDragged",
-                "False",
-                ""
-              ]
-            },
-            {
-              "type": {
                 "value": "SetNumberVariable"
               },
               "parameters": [
@@ -3881,53 +3871,79 @@
                 "False",
                 ""
               ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Comment",
-          "color": {
-            "b": 109,
-            "g": 230,
-            "r": 255,
-            "textB": 0,
-            "textG": 0,
-            "textR": 0
-          },
-          "comment": "Launch"
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "BooleanVariable"
-              },
-              "parameters": [
-                "isFired",
-                "True",
-                ""
-              ]
             },
             {
               "type": {
-                "value": "BuiltinCommonInstructions::Once"
-              },
-              "parameters": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "Physics2::ApplyPolarForce"
+                "value": "SetBooleanVariable"
               },
               "parameters": [
-                "Player_Ball",
-                "Physics2",
-                "LaunchAngle",
-                "DragDistance*4",
-                "Player_Ball.BoundingBoxCenterX()",
-                "Player_Ball.BoundingBoxCenterY()"
+                "BeingDragged",
+                "False",
+                ""
+              ]
+            }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Launch"
+            },
+            {
+              "disabled": true,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "isFired",
+                    "True",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Physics2::ApplyPolarForce"
+                  },
+                  "parameters": [
+                    "Player_Ball",
+                    "Physics2",
+                    "LaunchAngle",
+                    "DragDistance*4",
+                    "Player_Ball.BoundingBoxCenterX()",
+                    "Player_Ball.BoundingBoxCenterY()"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Physics2::ApplyPolarForce"
+                  },
+                  "parameters": [
+                    "Player_Ball",
+                    "Physics2",
+                    "LaunchAngle",
+                    "DragDistance*4",
+                    "Player_Ball.BoundingBoxCenterX()",
+                    "Player_Ball.BoundingBoxCenterY()"
+                  ]
+                }
               ]
             }
           ]
@@ -3942,9 +3958,10 @@
             "textG": 0,
             "textR": 0
           },
-          "comment": "Summons"
+          "comment": "Summons*isheld variable causing issue righ tmouse summonsing????"
         },
         {
+          "disabled": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -3993,6 +4010,16 @@
                 "",
                 "\"Right\""
               ]
+            },
+            {
+              "type": {
+                "value": "BooleanVariable"
+              },
+              "parameters": [
+                "isHeld",
+                "False",
+                ""
+              ]
             }
           ],
           "actions": [
@@ -4002,8 +4029,8 @@
               },
               "parameters": [
                 "Player_Ball",
-                "Player.X()",
-                "Player.Y()",
+                "Player.CenterX()",
+                "Player.CenterY()",
                 "150",
                 ""
               ]
@@ -4029,25 +4056,13 @@
                 "value": "BooleanVariable"
               },
               "parameters": [
-                "isFired",
-                "=",
+                "isHeld",
+                "False",
                 ""
               ]
             }
           ],
           "actions": [
-            {
-              "type": {
-                "value": "MettreAutourPos"
-              },
-              "parameters": [
-                "Player_Ball",
-                "Player.CenterX()",
-                "Player.CenterY()",
-                "-10",
-                "270"
-              ]
-            },
             {
               "type": {
                 "value": "SetBooleanVariable"
@@ -4056,6 +4071,18 @@
                 "isHeld",
                 "True",
                 ""
+              ]
+            },
+            {
+              "type": {
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "Player_Ball",
+                "=",
+                "Player.CenterX()",
+                "=",
+                "Player.CenterY()+20"
               ]
             }
           ]
