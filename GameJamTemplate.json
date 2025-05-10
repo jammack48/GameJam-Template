@@ -3206,6 +3206,23 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 144,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Enemy2",
+          "persistentUuid": "440ff7e8-1b3f-41de-9051-f1aa4ae855f8",
+          "width": 128,
+          "x": 480,
+          "y": 448,
+          "zOrder": 13,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [
@@ -3319,7 +3336,7 @@
               "vertices": [],
               "density": 2,
               "friction": 1,
-              "restitution": 1,
+              "restitution": 0.5,
               "linearDamping": 3,
               "angularDamping": 2,
               "gravityScale": 0,
@@ -3522,7 +3539,7 @@
               "linearDamping": 1,
               "angularDamping": 0.1,
               "gravityScale": 0,
-              "layers": 1,
+              "layers": 2,
               "masks": 1
             }
           ],
@@ -3799,6 +3816,104 @@
             "characterSize": 40,
             "color": "0;0;0"
           }
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "Enemy2",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [
+            {
+              "effectType": "Outline",
+              "name": "Effect",
+              "doubleParameters": {
+                "padding": 2,
+                "thickness": 2
+              },
+              "stringParameters": {
+                "color": "208;2;27"
+              },
+              "booleanParameters": {}
+            }
+          ],
+          "behaviors": [
+            {
+              "name": "Physics2",
+              "type": "Physics2::Physics2Behavior",
+              "bodyType": "Dynamic",
+              "bullet": false,
+              "fixedRotation": false,
+              "canSleep": true,
+              "shape": "Box",
+              "shapeDimensionA": 0,
+              "shapeDimensionB": 0,
+              "shapeOffsetX": 0,
+              "shapeOffsetY": 0,
+              "polygonOrigin": "Center",
+              "vertices": [],
+              "density": 500,
+              "friction": 0.3,
+              "restitution": 0.01,
+              "linearDamping": 100,
+              "angularDamping": 100,
+              "gravityScale": 0,
+              "layers": 1,
+              "masks": 1
+            }
+          ],
+          "animations": [
+            {
+              "name": "NewSprite",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "antibody2.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 12,
+                            "y": 1
+                          },
+                          {
+                            "x": 68,
+                            "y": 1
+                          },
+                          {
+                            "x": 68,
+                            "y": 79
+                          },
+                          {
+                            "x": 12,
+                            "y": 79
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
@@ -3818,6 +3933,9 @@
           },
           {
             "objectName": "Enemy"
+          },
+          {
+            "objectName": "Enemy2"
           },
           {
             "objectName": "LinePainter"
@@ -4098,7 +4216,7 @@
                 "Player_Ball",
                 "Physics2",
                 "<=",
-                "10"
+                "20"
               ]
             }
           ],
@@ -4274,6 +4392,46 @@
                 "Text",
                 "=",
                 "\"Linear Velocity: \" +ToString(Player_Ball.Physics2::LinearVelocity())"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Collisions"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "Player_Ball",
+                "Enemy",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "Enemy",
+                ""
               ]
             }
           ]
