@@ -651,8 +651,8 @@
           "name": "StartText",
           "persistentUuid": "d07f04ad-9983-488b-97aa-1225b68f6019",
           "width": 0,
-          "x": 950,
-          "y": 192,
+          "x": 896,
+          "y": 288,
           "zOrder": 5,
           "numberProperties": [],
           "stringProperties": [],
@@ -667,8 +667,8 @@
           "name": "PhysicsScene",
           "persistentUuid": "950337a7-8d82-4e2e-85da-abedda3345c5",
           "width": 0,
-          "x": 78,
-          "y": 192,
+          "x": 26,
+          "y": 104,
           "zOrder": 5,
           "numberProperties": [],
           "stringProperties": [],
@@ -683,9 +683,26 @@
           "name": "PhysicsSceneGimmok",
           "persistentUuid": "7d74b7d3-72b8-40ee-b737-b4aacb9618da",
           "width": 0,
-          "x": 412,
+          "x": 384,
           "y": 192,
           "zOrder": 5,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 192,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Text",
+          "persistentUuid": "89e1f33c-f383-4776-a67e-924e90a5a760",
+          "width": 256,
+          "x": 32,
+          "y": 448,
+          "zOrder": 16,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -1340,6 +1357,36 @@
             "wordWrap": true,
             "verticalTextAlignment": "top"
           }
+        },
+        {
+          "assetStoreId": "",
+          "name": "Text",
+          "type": "BBText::BBText",
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "ButtonFSM",
+              "type": "ButtonStates::ButtonFSM",
+              "ShouldCheckHovering": true,
+              "State": "Idle",
+              "TouchId": 0,
+              "TouchIsInside": false,
+              "MouseIsInside": false,
+              "Index": 2.0247e-320
+            }
+          ],
+          "content": {
+            "text": "Press Q to quit to menu from each game",
+            "opacity": 255,
+            "fontSize": 40,
+            "visible": true,
+            "color": "255;255;255",
+            "fontFamily": "Arial",
+            "align": "left",
+            "wordWrap": true,
+            "verticalTextAlignment": "top"
+          }
         }
       ],
       "objectsFolderStructure": {
@@ -1347,6 +1394,9 @@
         "children": [
           {
             "objectName": "StartText"
+          },
+          {
+            "objectName": "Text"
           },
           {
             "objectName": "PhysicsScene"
