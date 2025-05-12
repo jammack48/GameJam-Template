@@ -2128,14 +2128,14 @@
               "Topdown": "TopDownMovement"
             },
             {
+              "acceleration": 4000,
+              "deceleration": 8000,
               "name": "TopDownMovement",
               "type": "TopDownMovementBehavior::TopDownMovementBehavior",
-              "acceleration": 400,
               "allowDiagonals": true,
               "angleOffset": 0,
               "angularMaxSpeed": 180,
               "customIsometryAngle": 30,
-              "deceleration": 800,
               "ignoreDefaultControls": false,
               "maxSpeed": 275,
               "movementAngleOffset": 0,
@@ -2360,7 +2360,13 @@
           "name": "Enemy",
           "type": "Sprite",
           "updateIfNotVisible": false,
-          "variables": [],
+          "variables": [
+            {
+              "name": "State",
+              "type": "string",
+              "value": "Moving"
+            }
+          ],
           "effects": [],
           "behaviors": [
             {
@@ -2550,13 +2556,13 @@
           "effects": [],
           "behaviors": [
             {
+              "name": "Anchor",
+              "type": "AnchorBehavior::AnchorBehavior",
               "bottomEdgeAnchor": 0,
               "leftEdgeAnchor": 1,
-              "name": "Anchor",
               "relativeToOriginalWindowSize": true,
               "rightEdgeAnchor": 0,
               "topEdgeAnchor": 1,
-              "type": "AnchorBehavior::AnchorBehavior",
               "useLegacyBottomAndRightAnchors": false
             }
           ],
@@ -2721,24 +2727,6 @@
             "textR": 0
           },
           "comment": "Enemy"
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [
-            {
-              "type": {
-                "value": "AddForceVersPos"
-              },
-              "parameters": [
-                "Enemy",
-                "Player.BoundingBoxCenterX()",
-                "Player.BoundingBoxCenterY()",
-                "150",
-                ""
-              ]
-            }
-          ]
         },
         {
           "type": "BuiltinCommonInstructions::Comment",
@@ -3056,6 +3044,17 @@
                 "",
                 ""
               ]
+            },
+            {
+              "type": {
+                "value": "SetStringObjectVariable"
+              },
+              "parameters": [
+                "Enemy",
+                "State",
+                "=",
+                "\"Hurt\""
+              ]
             }
           ],
           "events": [
@@ -3104,32 +3103,6 @@
           "comment": "Enemy"
         },
         {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "Health::Health::IsDead"
-              },
-              "parameters": [
-                "Enemy",
-                "Health",
-                ""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "Delete"
-              },
-              "parameters": [
-                "Enemy",
-                ""
-              ]
-            }
-          ]
-        },
-        {
           "type": "BuiltinCommonInstructions::Link",
           "include": {
             "includeConfig": 0
@@ -3159,6 +3132,152 @@
               ]
             }
           ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Enemy"
+        },
+        {
+          "type": "BuiltinCommonInstructions::ForEach",
+          "object": "Enemy",
+          "conditions": [],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "StringObjectVariable"
+                  },
+                  "parameters": [
+                    "Enemy",
+                    "State",
+                    "=",
+                    "\"Moving\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "AddForceVersPos"
+                  },
+                  "parameters": [
+                    "Enemy",
+                    "Player.BoundingBoxCenterX()",
+                    "Player.BoundingBoxCenterY()",
+                    "150",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "StringObjectVariable"
+                  },
+                  "parameters": [
+                    "Enemy",
+                    "State",
+                    "=",
+                    "\"Hurt\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ResetObjectTimer"
+                  },
+                  "parameters": [
+                    "Enemy",
+                    "\"Hurt_Timer\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CompareObjectTimer"
+                  },
+                  "parameters": [
+                    "Enemy",
+                    "\"Hurt_Timer\"",
+                    ">=",
+                    "3"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetStringObjectVariable"
+                  },
+                  "parameters": [
+                    "Enemy",
+                    "State",
+                    "=",
+                    "\"Moving\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "RemoveObjectTimer"
+                  },
+                  "parameters": [
+                    "Enemy",
+                    "\"Hurt_Timer\""
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "Health::Health::IsDead"
+              },
+              "parameters": [
+                "Enemy",
+                "Health",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "Enemy",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": []
         }
       ],
       "layers": [
