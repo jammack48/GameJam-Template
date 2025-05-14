@@ -2128,10 +2128,10 @@
               "Topdown": "TopDownMovement"
             },
             {
-              "acceleration": 4000,
-              "deceleration": 8000,
               "name": "TopDownMovement",
               "type": "TopDownMovementBehavior::TopDownMovementBehavior",
+              "acceleration": 4000,
+              "deceleration": 8000,
               "allowDiagonals": true,
               "angleOffset": 0,
               "angularMaxSpeed": 180,
@@ -2365,6 +2365,11 @@
               "name": "State",
               "type": "string",
               "value": "Moving"
+            },
+            {
+              "name": "Hurt",
+              "type": "boolean",
+              "value": false
             }
           ],
           "effects": [],
@@ -2750,7 +2755,7 @@
               "parameters": [
                 "",
                 "\"SpawnEnemy\"",
-                "1",
+                "5",
                 ""
               ]
             }
@@ -3007,90 +3012,6 @@
           "comment": "Colliosisons"
         },
         {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "CollisionNP"
-              },
-              "parameters": [
-                "Bullet",
-                "Enemy",
-                "",
-                "",
-                ""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "Delete"
-              },
-              "parameters": [
-                "Bullet",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "Health::Health::Hit"
-              },
-              "parameters": [
-                "Enemy",
-                "Health",
-                "1",
-                "",
-                "",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "SetStringObjectVariable"
-              },
-              "parameters": [
-                "Enemy",
-                "State",
-                "=",
-                "\"Hurt\""
-              ]
-            }
-          ],
-          "events": [
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "Sticker::IsStuck"
-                  },
-                  "parameters": [
-                    "",
-                    "EnemyHealthBar",
-                    "Sticker",
-                    "Enemy",
-                    ""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "PanelSpriteContinuousBar::PanelSpriteContinuousBar::SetValue"
-                  },
-                  "parameters": [
-                    "EnemyHealthBar",
-                    "-",
-                    "1",
-                    ""
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
           "type": "BuiltinCommonInstructions::Comment",
           "color": {
             "b": 109,
@@ -3156,6 +3077,90 @@
               "conditions": [
                 {
                   "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "Bullet",
+                    "Enemy",
+                    "",
+                    "",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "Bullet",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Health::Health::Hit"
+                  },
+                  "parameters": [
+                    "Enemy",
+                    "Health",
+                    "1",
+                    "",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetStringObjectVariable"
+                  },
+                  "parameters": [
+                    "Enemy",
+                    "State",
+                    "=",
+                    "\"Hurt\""
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "Sticker::IsStuck"
+                      },
+                      "parameters": [
+                        "",
+                        "EnemyHealthBar",
+                        "Sticker",
+                        "Enemy",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "PanelSpriteContinuousBar::PanelSpriteContinuousBar::SetValue"
+                      },
+                      "parameters": [
+                        "EnemyHealthBar",
+                        "-",
+                        "1",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
                     "value": "StringObjectVariable"
                   },
                   "parameters": [
@@ -3194,6 +3199,17 @@
                     "=",
                     "\"Hurt\""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "Enemy",
+                    "Hurt",
+                    "False",
+                    ""
+                  ]
                 }
               ],
               "actions": [
@@ -3204,6 +3220,17 @@
                   "parameters": [
                     "Enemy",
                     "\"Hurt_Timer\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "Enemy",
+                    "Hurt",
+                    "True",
+                    ""
                   ]
                 }
               ]
@@ -3220,6 +3247,17 @@
                     "\"Hurt_Timer\"",
                     ">=",
                     "3"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "Enemy",
+                    "Hurt",
+                    "True",
+                    ""
                   ]
                 }
               ],
@@ -3242,6 +3280,17 @@
                   "parameters": [
                     "Enemy",
                     "\"Hurt_Timer\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "Enemy",
+                    "Hurt",
+                    "False",
+                    ""
                   ]
                 }
               ]
