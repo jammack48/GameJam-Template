@@ -128,14 +128,6 @@
         "userAdded": false
       },
       {
-        "file": "assets/NewSprite5.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "NewSprite5",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
         "file": "assets/NewSprite6.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
@@ -184,38 +176,6 @@
         "userAdded": false
       },
       {
-        "file": "assets/NewSprite9.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "NewSprite9",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "file": "assets/NewSprite10.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "NewSprite10",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "file": "antibody.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "antibody.png",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "file": "virus.png",
-        "kind": "image",
-        "metadata": "{\"localFilePath\":\"virus.png\",\"extension\":\".png\"}",
-        "name": "virus.png",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
         "file": "antibody2.png",
         "kind": "image",
         "metadata": "",
@@ -232,26 +192,10 @@
         "userAdded": false
       },
       {
-        "file": "bgTilemap.png",
-        "kind": "image",
-        "metadata": "",
-        "name": "bgTilemap.png",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
         "file": "assets/CannonBall.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\"}",
         "name": "CannonBall",
-        "smoothed": false,
-        "userAdded": false
-      },
-      {
-        "file": "assets/NewSprite11.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\"}",
-        "name": "NewSprite11",
         "smoothed": false,
         "userAdded": false
       },
@@ -268,6 +212,38 @@
         "kind": "image",
         "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/NewSprite13.png\"}",
         "name": "NewSprite13",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "mapTileset.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "mapTileset.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "enemyTest.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "enemyTest.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "playerCannon.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "playerCannon.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "playerShip.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "playerShip.png",
         "smoothed": false,
         "userAdded": false
       }
@@ -3364,7 +3340,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 0.478934188453525,
+        "zoomFactor": 0.27253598967729364,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -3606,6 +3582,27 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "Map_Layer",
+          "name": "bgTilemap",
+          "persistentUuid": "305a027a-ebce-4e56-b94f-26f17271a456",
+          "width": 0,
+          "x": -672,
+          "y": -640,
+          "zOrder": 20,
+          "numberProperties": [],
+          "stringProperties": [
+            {
+              "name": "tilemap",
+              "value": "{\"tileWidth\":160,\"tileHeight\":160,\"dimX\":16,\"dimY\":12,\"layers\":[{\"id\":0,\"alpha\":1,\"tiles\":[[12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12],[12,0,1,3,1,1,1,1,3,1,3,3,1,1,2,12],[12,4,5,5,5,5,5,5,5,5,5,5,5,5,6,12],[12,4,5,5,5,5,5,5,5,5,5,5,5,5,11,12],[12,4,5,5,5,5,5,5,5,5,5,5,5,5,6,12],[12,4,5,5,5,5,5,5,5,5,5,5,5,5,6,12],[12,4,5,5,5,5,5,5,5,5,5,5,5,5,6,12],[12,4,5,5,5,5,5,5,5,5,5,5,5,5,11,12],[12,4,5,5,5,5,5,5,5,5,5,5,5,5,6,12],[12,4,5,5,5,5,5,5,5,5,5,5,5,5,6,12],[12,8,15,9,9,9,9,15,9,9,9,15,9,9,10,12],[12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12]]}]}"
+            }
+          ],
+          "initialVariables": []
         }
       ],
       "objects": [
@@ -3824,7 +3821,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "antibody2.png",
+                      "image": "enemyTest.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -3840,20 +3837,20 @@
                       "customCollisionMask": [
                         [
                           {
-                            "x": 12,
-                            "y": 1
+                            "x": 4,
+                            "y": 13
                           },
                           {
-                            "x": 68,
-                            "y": 1
+                            "x": 125,
+                            "y": 13
                           },
                           {
-                            "x": 68,
-                            "y": 79
+                            "x": 125,
+                            "y": 115
                           },
                           {
-                            "x": 12,
-                            "y": 79
+                            "x": 4,
+                            "y": 115
                           }
                         ]
                       ]
@@ -4008,17 +4005,6 @@
           ]
         },
         {
-          "assetStoreId": "",
-          "height": 32,
-          "name": "BorderTile",
-          "texture": "bgTilemap.png",
-          "type": "TiledSpriteObject::TiledSprite",
-          "width": 32,
-          "variables": [],
-          "effects": [],
-          "behaviors": []
-        },
-        {
           "adaptCollisionMaskAutomatically": true,
           "assetStoreId": "",
           "name": "Enemy2",
@@ -4137,12 +4123,12 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "NewSprite12",
+                      "image": "playerCannon.png",
                       "points": [
                         {
                           "name": "FirePoint",
-                          "x": 70,
-                          "y": 35
+                          "x": 101.5,
+                          "y": 75
                         }
                       ],
                       "originPoint": {
@@ -4153,26 +4139,26 @@
                       "centerPoint": {
                         "automatic": false,
                         "name": "centre",
-                        "x": 0,
-                        "y": 36.5
+                        "x": 43,
+                        "y": 68.5
                       },
                       "customCollisionMask": [
                         [
                           {
-                            "x": 0,
-                            "y": 22
+                            "x": 12,
+                            "y": 15
                           },
                           {
-                            "x": 57,
-                            "y": 22
+                            "x": 117,
+                            "y": 15
                           },
                           {
-                            "x": 57,
-                            "y": 50
+                            "x": 117,
+                            "y": 101
                           },
                           {
-                            "x": 0,
-                            "y": 50
+                            "x": 12,
+                            "y": 101
                           }
                         ]
                       ]
@@ -4369,6 +4355,81 @@
               ]
             }
           ]
+        },
+        {
+          "assetStoreId": "",
+          "name": "bgTilemap",
+          "type": "TileMap::SimpleTileMap",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "atlasImage": "mapTileset.png",
+            "rowCount": 4,
+            "columnCount": 4,
+            "tileSize": 160,
+            "tilesWithHitBox": "0,1,2,3,7,6,4,8,12,9,10,11,15"
+          }
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "Player_Ship",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "playerShip.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 3,
+                            "y": 1
+                          },
+                          {
+                            "x": 124,
+                            "y": 1
+                          },
+                          {
+                            "x": 124,
+                            "y": 125
+                          },
+                          {
+                            "x": 3,
+                            "y": 125
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
@@ -4376,9 +4437,6 @@
         "children": [
           {
             "objectName": "Border"
-          },
-          {
-            "objectName": "BorderTile"
           },
           {
             "objectName": "Player_Cannon_Ball_HitBox"
@@ -4406,6 +4464,12 @@
           },
           {
             "objectName": "Map1"
+          },
+          {
+            "objectName": "bgTilemap"
+          },
+          {
+            "objectName": "Player_Ship"
           }
         ]
       },
