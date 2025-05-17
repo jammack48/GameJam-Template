@@ -1,7 +1,7 @@
 {
   "firstLayout": "",
   "gdVersion": {
-    "build": 230,
+    "build": 231,
     "major": 5,
     "minor": 5,
     "revision": 0
@@ -11,7 +11,7 @@
     "antialiasingMode": "MSAA",
     "antialisingEnabledOnMobile": false,
     "folderProject": false,
-    "orientation": "landscape",
+    "orientation": "default",
     "packageName": "com.example.gamename",
     "pixelsRounding": true,
     "projectUuid": "7ef04913-e006-4fc4-b2f7-47848778702c",
@@ -77,8 +77,12 @@
       "placement": "bottom-left",
       "showWatermark": true
     },
-    "authorIds": [],
-    "authorUsernames": [],
+    "authorIds": [
+      "r5aB5SYPI4boglaJ9XWqj9AG6qb2"
+    ],
+    "authorUsernames": [
+      "jam_mack46"
+    ],
     "categories": [],
     "playableDevices": [],
     "extensionProperties": [],
@@ -206,7 +210,7 @@
       {
         "file": "virus.png",
         "kind": "image",
-        "metadata": "",
+        "metadata": "{\"localFilePath\":\"virus.png\",\"extension\":\".png\"}",
         "name": "virus.png",
         "smoothed": false,
         "userAdded": false
@@ -222,7 +226,7 @@
       {
         "file": "player.png",
         "kind": "image",
-        "metadata": "",
+        "metadata": "{\"localFilePath\":\"player.png\",\"extension\":\".png\"}",
         "name": "player.png",
         "smoothed": false,
         "userAdded": false
@@ -232,6 +236,30 @@
         "kind": "image",
         "metadata": "",
         "name": "bgTilemap.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/CannonBall.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "CannonBall",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/NewSprite11.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite11",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/NewSprite12.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite12",
         "smoothed": false,
         "userAdded": false
       }
@@ -313,7 +341,7 @@
           "name": "Buttons",
           "objects": [
             {
-              "name": "StartText"
+              "name": "PirateText"
             },
             {
               "name": "SettingsText"
@@ -676,43 +704,11 @@
           "height": 0,
           "keepRatio": true,
           "layer": "",
-          "name": "StartText",
+          "name": "PirateText",
           "persistentUuid": "d07f04ad-9983-488b-97aa-1225b68f6019",
           "width": 0,
-          "x": 896,
-          "y": 288,
-          "zOrder": 5,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "PhysicsScene",
-          "persistentUuid": "950337a7-8d82-4e2e-85da-abedda3345c5",
-          "width": 0,
-          "x": 26,
-          "y": 104,
-          "zOrder": 5,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "PhysicsSceneGimmok",
-          "persistentUuid": "7d74b7d3-72b8-40ee-b737-b4aacb9618da",
-          "width": 0,
-          "x": 384,
-          "y": 192,
+          "x": 470,
+          "y": 168,
           "zOrder": 5,
           "numberProperties": [],
           "stringProperties": [],
@@ -739,7 +735,7 @@
       "objects": [
         {
           "assetStoreId": "",
-          "name": "StartText",
+          "name": "PirateText",
           "type": "BBText::BBText",
           "variables": [],
           "effects": [
@@ -769,7 +765,7 @@
             }
           ],
           "content": {
-            "text": "TopDown Game",
+            "text": "PirateGame",
             "opacity": 255,
             "fontSize": 40,
             "visible": true,
@@ -1421,7 +1417,7 @@
         "folderName": "__ROOT",
         "children": [
           {
-            "objectName": "StartText"
+            "objectName": "PirateText"
           },
           {
             "objectName": "Text"
@@ -1601,7 +1597,7 @@
                 "value": "ButtonStates::ButtonFSM::IsClicked"
               },
               "parameters": [
-                "StartText",
+                "PirateText",
                 "ButtonFSM",
                 ""
               ]
@@ -1637,107 +1633,7 @@
               },
               "parameters": [
                 "",
-                "\"TopdownScene\"",
-                ""
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "ButtonStates::ButtonFSM::IsClicked"
-              },
-              "parameters": [
-                "PhysicsScene",
-                "ButtonFSM",
-                ""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "FlashTransitionPainter::FlashTransitionPainter::PaintEffect"
-              },
-              "parameters": [
-                "TransistionPainter",
-                "FlashTransitionPainter",
-                "\"0;0;0\"",
-                "1",
-                "\"Circular\"",
-                "\"Forward\"",
-                "",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "Wait"
-              },
-              "parameters": [
-                "1"
-              ]
-            },
-            {
-              "type": {
-                "value": "Scene"
-              },
-              "parameters": [
-                "",
-                "\"PhysicsScene\"",
-                ""
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "ButtonStates::ButtonFSM::IsClicked"
-              },
-              "parameters": [
-                "PhysicsSceneGimmok",
-                "ButtonFSM",
-                ""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "FlashTransitionPainter::FlashTransitionPainter::PaintEffect"
-              },
-              "parameters": [
-                "TransistionPainter",
-                "FlashTransitionPainter",
-                "\"0;0;0\"",
-                "1",
-                "\"Circular\"",
-                "\"Forward\"",
-                "",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "Wait"
-              },
-              "parameters": [
-                "1"
-              ]
-            },
-            {
-              "type": {
-                "value": "Scene"
-              },
-              "parameters": [
-                "",
-                "\"PhysicsSceneNoPull\"",
+                "\"PirateGameScene\"",
                 ""
               ]
             }
@@ -2628,6 +2524,17 @@
       },
       "events": [
         {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Can be deleted once we decide on movment",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [],
+          "parameters": []
+        },
+        {
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -3437,8 +3344,8 @@
     {
       "b": 209,
       "disableInputWhenNotFocused": true,
-      "mangledName": "PhysicsScene",
-      "name": "PhysicsScene",
+      "mangledName": "PirateGameScene",
+      "name": "PirateGameScene",
       "r": 209,
       "standardSortMethod": true,
       "stopSoundsOnStartup": true,
@@ -3556,71 +3463,6 @@
         },
         {
           "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 64,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Player_Ball",
-          "persistentUuid": "48b7022b-ae1b-45c7-a0b1-60ac21ff3f0d",
-          "width": 64,
-          "x": 608,
-          "y": 352,
-          "zOrder": 2,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "LinePainter",
-          "persistentUuid": "20fa5fdc-48d4-49e9-92a6-228558afcea7",
-          "width": 0,
-          "x": 928,
-          "y": -64,
-          "zOrder": 3,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "LaunchAngleText",
-          "persistentUuid": "875d9d69-a654-41d7-b000-1b9c4bed07d6",
-          "width": 0,
-          "x": 96,
-          "y": 52,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "LaunchDistText",
-          "persistentUuid": "94b16b5b-5605-41a2-8a4b-59b99496da19",
-          "width": 0,
-          "x": 704,
-          "y": 64,
-          "zOrder": 5,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
           "customSize": false,
           "height": 0,
           "keepRatio": true,
@@ -3673,44 +3515,12 @@
           "height": 0,
           "keepRatio": true,
           "layer": "",
-          "name": "Player",
+          "name": "Player_HitBox",
           "persistentUuid": "3ba9035f-ba1e-429e-b227-1d6d1bfa484a",
           "width": 0,
           "x": 704,
           "y": 480,
           "zOrder": 9,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "DebugText",
-          "persistentUuid": "0af0315b-536f-4d22-bde3-186dbe572f5e",
-          "width": 0,
-          "x": 96,
-          "y": 128,
-          "zOrder": 10,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "DebugText3",
-          "persistentUuid": "7985ccd0-006c-4460-ab90-843c94a0f818",
-          "width": 0,
-          "x": 736,
-          "y": 160,
-          "zOrder": 12,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -3734,17 +3544,32 @@
         },
         {
           "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 160,
+          "customSize": false,
+          "height": 0,
           "keepRatio": true,
           "layer": "",
-          "name": "Text",
-          "persistentUuid": "e4f93259-3666-46da-b33e-18ae93d89191",
-          "width": 1139,
-          "x": 45,
-          "y": 512,
-          "zOrder": 14,
+          "name": "Player_Cannon_Ball_HitBox",
+          "persistentUuid": "fce16dca-46f8-4253-aadd-77287304ed4f",
+          "width": 0,
+          "x": 1152,
+          "y": 416,
+          "zOrder": 15,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Player_Cannon",
+          "persistentUuid": "cb6d301c-1e69-4f6e-81d1-396c582a0edb",
+          "width": 0,
+          "x": 768,
+          "y": 480,
+          "zOrder": 16,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -3839,7 +3664,7 @@
         {
           "adaptCollisionMaskAutomatically": true,
           "assetStoreId": "",
-          "name": "Player_Ball",
+          "name": "Player_Cannon_Ball_HitBox",
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
@@ -3852,7 +3677,7 @@
               "bullet": false,
               "fixedRotation": false,
               "canSleep": true,
-              "shape": "Box",
+              "shape": "Circle",
               "shapeDimensionA": 0,
               "shapeDimensionB": 0,
               "shapeOffsetX": 0,
@@ -3867,17 +3692,11 @@
               "gravityScale": 0,
               "layers": 1,
               "masks": 1
-            },
-            {
-              "name": "Sticker",
-              "type": "Sticker::Sticker",
-              "OnlyFollowPosition": false,
-              "IsDestroyedWithParent": false
             }
           ],
           "animations": [
             {
-              "name": "NewSprite",
+              "name": "CannonBall",
               "useMultipleDirections": false,
               "directions": [
                 {
@@ -3887,12 +3706,12 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "virus.png",
+                      "image": "CannonBall",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 40,
-                        "y": 40
+                        "x": 20,
+                        "y": 20
                       },
                       "centerPoint": {
                         "automatic": true,
@@ -3903,20 +3722,20 @@
                       "customCollisionMask": [
                         [
                           {
-                            "x": 7,
-                            "y": 5
+                            "x": 1,
+                            "y": 1
                           },
                           {
-                            "x": 73,
-                            "y": 5
+                            "x": 39,
+                            "y": 1
                           },
                           {
-                            "x": 73,
-                            "y": 74
+                            "x": 39,
+                            "y": 39
                           },
                           {
-                            "x": 7,
-                            "y": 74
+                            "x": 1,
+                            "y": 39
                           }
                         ]
                       ]
@@ -3926,114 +3745,6 @@
               ]
             }
           ]
-        },
-        {
-          "assetStoreId": "",
-          "name": "LinePainter",
-          "type": "PrimitiveDrawing::Drawer",
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "fillOpacity": 255,
-          "outlineSize": 1,
-          "outlineOpacity": 255,
-          "absoluteCoordinates": true,
-          "clearBetweenFrames": true,
-          "antialiasing": "none",
-          "fillColor": {
-            "r": 159,
-            "g": 255,
-            "b": 61
-          },
-          "outlineColor": {
-            "r": 65,
-            "g": 117,
-            "b": 5
-          }
-        },
-        {
-          "assetStoreId": "",
-          "bold": false,
-          "italic": false,
-          "name": "LaunchAngleText",
-          "smoothed": true,
-          "type": "TextObject::Text",
-          "underlined": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "string": "Launch Angle:",
-          "font": "",
-          "textAlignment": "left",
-          "characterSize": 40,
-          "color": {
-            "b": 0,
-            "g": 0,
-            "r": 0
-          },
-          "content": {
-            "bold": false,
-            "isOutlineEnabled": false,
-            "isShadowEnabled": false,
-            "italic": false,
-            "outlineColor": "255;255;255",
-            "outlineThickness": 2,
-            "shadowAngle": 90,
-            "shadowBlurRadius": 2,
-            "shadowColor": "0;0;0",
-            "shadowDistance": 4,
-            "shadowOpacity": 127,
-            "smoothed": true,
-            "underlined": false,
-            "text": "Launch Angle:",
-            "font": "",
-            "textAlignment": "left",
-            "verticalTextAlignment": "top",
-            "characterSize": 40,
-            "color": "0;0;0"
-          }
-        },
-        {
-          "assetStoreId": "",
-          "bold": false,
-          "italic": false,
-          "name": "LaunchDistText",
-          "smoothed": true,
-          "type": "TextObject::Text",
-          "underlined": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "string": "Launch Dist:",
-          "font": "",
-          "textAlignment": "left",
-          "characterSize": 40,
-          "color": {
-            "b": 0,
-            "g": 0,
-            "r": 0
-          },
-          "content": {
-            "bold": false,
-            "isOutlineEnabled": false,
-            "isShadowEnabled": false,
-            "italic": false,
-            "outlineColor": "255;255;255",
-            "outlineThickness": 2,
-            "shadowAngle": 90,
-            "shadowBlurRadius": 2,
-            "shadowColor": "0;0;0",
-            "shadowDistance": 4,
-            "shadowOpacity": 127,
-            "smoothed": true,
-            "underlined": false,
-            "text": "Launch Dist:",
-            "font": "",
-            "textAlignment": "left",
-            "verticalTextAlignment": "top",
-            "characterSize": 40,
-            "color": "0;0;0"
-          }
         },
         {
           "adaptCollisionMaskAutomatically": true,
@@ -4123,44 +3834,44 @@
         {
           "adaptCollisionMaskAutomatically": true,
           "assetStoreId": "",
-          "name": "Player",
+          "name": "Player_HitBox",
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
           "effects": [],
           "behaviors": [
             {
-              "name": "RemapForTopdown",
-              "type": "BehaviorRemapper::RemapForTopdown",
-              "Up": "w",
-              "Left": "a",
-              "Right": "d",
-              "Down": "s",
-              "Topdown": "TopDownMovement"
-            },
-            {
-              "name": "TopDownMovement",
-              "type": "TopDownMovementBehavior::TopDownMovementBehavior",
-              "acceleration": 4000,
-              "allowDiagonals": true,
-              "angleOffset": 0,
-              "angularMaxSpeed": 180,
-              "customIsometryAngle": 30,
-              "deceleration": 8000,
-              "ignoreDefaultControls": false,
-              "maxSpeed": 200,
-              "movementAngleOffset": 0,
-              "rotateObject": false,
-              "viewpoint": "TopDown"
+              "name": "Physics2",
+              "type": "Physics2::Physics2Behavior",
+              "bodyType": "Dynamic",
+              "bullet": false,
+              "fixedRotation": false,
+              "canSleep": true,
+              "shape": "Circle",
+              "shapeDimensionA": 0,
+              "shapeDimensionB": 0,
+              "shapeOffsetX": 0,
+              "shapeOffsetY": 0,
+              "polygonOrigin": "Center",
+              "vertices": [],
+              "density": 4,
+              "friction": 0.3,
+              "restitution": 0.1,
+              "linearDamping": 4,
+              "angularDamping": 0.1,
+              "gravityScale": 0,
+              "layers": 1,
+              "masks": 1
             }
           ],
           "animations": [
             {
-              "name": "",
+              "name": "player",
               "useMultipleDirections": false,
               "directions": [
                 {
                   "looping": false,
+                  "metadata": "{\"pskl\":{}}",
                   "timeBetweenFrames": 0.08,
                   "sprites": [
                     {
@@ -4181,20 +3892,20 @@
                       "customCollisionMask": [
                         [
                           {
-                            "x": 4,
-                            "y": 13
+                            "x": 2,
+                            "y": 2
                           },
                           {
-                            "x": 76,
-                            "y": 13
+                            "x": 78,
+                            "y": 2
                           },
                           {
-                            "x": 76,
-                            "y": 79
+                            "x": 78,
+                            "y": 78
                           },
                           {
-                            "x": 4,
-                            "y": 79
+                            "x": 2,
+                            "y": 78
                           }
                         ]
                       ]
@@ -4215,132 +3926,6 @@
           "variables": [],
           "effects": [],
           "behaviors": []
-        },
-        {
-          "assetStoreId": "",
-          "bold": false,
-          "italic": false,
-          "name": "DebugText",
-          "smoothed": true,
-          "type": "TextObject::Text",
-          "underlined": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "string": "isHeld:",
-          "font": "",
-          "textAlignment": "left",
-          "characterSize": 40,
-          "color": {
-            "b": 0,
-            "g": 0,
-            "r": 0
-          },
-          "content": {
-            "bold": false,
-            "isOutlineEnabled": false,
-            "isShadowEnabled": false,
-            "italic": false,
-            "outlineColor": "255;255;255",
-            "outlineThickness": 2,
-            "shadowAngle": 90,
-            "shadowBlurRadius": 2,
-            "shadowColor": "0;0;0",
-            "shadowDistance": 4,
-            "shadowOpacity": 127,
-            "smoothed": true,
-            "underlined": false,
-            "text": "isHeld:",
-            "font": "",
-            "textAlignment": "left",
-            "verticalTextAlignment": "top",
-            "characterSize": 40,
-            "color": "0;0;0"
-          }
-        },
-        {
-          "assetStoreId": "",
-          "bold": false,
-          "italic": false,
-          "name": "DebugText2",
-          "smoothed": true,
-          "type": "TextObject::Text",
-          "underlined": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "string": "isFired:",
-          "font": "",
-          "textAlignment": "left",
-          "characterSize": 40,
-          "color": {
-            "b": 0,
-            "g": 0,
-            "r": 0
-          },
-          "content": {
-            "bold": false,
-            "isOutlineEnabled": false,
-            "isShadowEnabled": false,
-            "italic": false,
-            "outlineColor": "255;255;255",
-            "outlineThickness": 2,
-            "shadowAngle": 90,
-            "shadowBlurRadius": 2,
-            "shadowColor": "0;0;0",
-            "shadowDistance": 4,
-            "shadowOpacity": 127,
-            "smoothed": true,
-            "underlined": false,
-            "text": "isFired:",
-            "font": "",
-            "textAlignment": "left",
-            "verticalTextAlignment": "top",
-            "characterSize": 40,
-            "color": "0;0;0"
-          }
-        },
-        {
-          "assetStoreId": "",
-          "bold": false,
-          "italic": false,
-          "name": "DebugText3",
-          "smoothed": true,
-          "type": "TextObject::Text",
-          "underlined": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "string": "Linear Velocity:",
-          "font": "",
-          "textAlignment": "left",
-          "characterSize": 40,
-          "color": {
-            "b": 0,
-            "g": 0,
-            "r": 0
-          },
-          "content": {
-            "bold": false,
-            "isOutlineEnabled": false,
-            "isShadowEnabled": false,
-            "italic": false,
-            "outlineColor": "255;255;255",
-            "outlineThickness": 2,
-            "shadowAngle": 90,
-            "shadowBlurRadius": 2,
-            "shadowColor": "0;0;0",
-            "shadowDistance": 4,
-            "shadowOpacity": 127,
-            "smoothed": true,
-            "underlined": false,
-            "text": "Linear Velocity:",
-            "font": "",
-            "textAlignment": "left",
-            "verticalTextAlignment": "top",
-            "characterSize": 40,
-            "color": "0;0;0"
-          }
         },
         {
           "adaptCollisionMaskAutomatically": true,
@@ -4441,46 +4026,71 @@
           ]
         },
         {
+          "adaptCollisionMaskAutomatically": true,
           "assetStoreId": "",
-          "bold": false,
-          "italic": false,
-          "name": "Text",
-          "smoothed": true,
-          "type": "TextObject::Text",
-          "underlined": false,
+          "name": "Player_Cannon",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
           "variables": [],
           "effects": [],
           "behaviors": [],
-          "string": "LMB Shoot\nRMB Retrieve\nDrag to shoot so when player has ball drag for direction and velocity",
-          "font": "",
-          "textAlignment": "left",
-          "characterSize": 40,
-          "color": {
-            "b": 0,
-            "g": 0,
-            "r": 0
-          },
-          "content": {
-            "bold": false,
-            "isOutlineEnabled": false,
-            "isShadowEnabled": false,
-            "italic": false,
-            "outlineColor": "255;255;255",
-            "outlineThickness": 2,
-            "shadowAngle": 90,
-            "shadowBlurRadius": 2,
-            "shadowColor": "0;0;0",
-            "shadowDistance": 4,
-            "shadowOpacity": 127,
-            "smoothed": true,
-            "underlined": false,
-            "text": "LMB Shoot\nRMB Retrieve\nDrag to shoot so when player has ball drag for direction and velocity",
-            "font": "",
-            "textAlignment": "left",
-            "verticalTextAlignment": "top",
-            "characterSize": 40,
-            "color": "0;0;0"
-          }
+          "animations": [
+            {
+              "name": "NewSprite",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "NewSprite12",
+                      "points": [
+                        {
+                          "name": "FirePoint",
+                          "x": 70,
+                          "y": 35
+                        }
+                      ],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 36.5
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 22
+                          },
+                          {
+                            "x": 57,
+                            "y": 22
+                          },
+                          {
+                            "x": 57,
+                            "y": 50
+                          },
+                          {
+                            "x": 0,
+                            "y": 50
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
@@ -4493,37 +4103,19 @@
             "objectName": "BorderTile"
           },
           {
-            "objectName": "Player_Ball"
+            "objectName": "Player_Cannon_Ball_HitBox"
           },
           {
-            "objectName": "Player"
+            "objectName": "Player_HitBox"
           },
           {
             "objectName": "Enemy"
           },
           {
+            "objectName": "Player_Cannon"
+          },
+          {
             "objectName": "Enemy2"
-          },
-          {
-            "objectName": "LinePainter"
-          },
-          {
-            "objectName": "LaunchAngleText"
-          },
-          {
-            "objectName": "Text"
-          },
-          {
-            "objectName": "LaunchDistText"
-          },
-          {
-            "objectName": "DebugText"
-          },
-          {
-            "objectName": "DebugText2"
-          },
-          {
-            "objectName": "DebugText3"
           }
         ]
       },
@@ -4546,7 +4138,7 @@
                 "value": "ChangePlan"
               },
               "parameters": [
-                "Player_Ball",
+                "Player_Cannon_Ball_HitBox",
                 "=",
                 "10"
               ]
@@ -4576,78 +4168,40 @@
                 "",
                 "\"Left\""
               ]
-            },
-            {
-              "type": {
-                "value": "SourisSurObjet"
-              },
-              "parameters": [
-                "Player_Ball",
-                "",
-                "",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "BooleanVariable"
-              },
-              "parameters": [
-                "BeingDragged",
-                "False",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "BooleanVariable"
-              },
-              "parameters": [
-                "isHeld",
-                "True",
-                ""
-              ]
             }
           ],
-          "actions": [
-            {
-              "type": {
-                "value": "SetBooleanVariable"
-              },
-              "parameters": [
-                "BeingDragged",
-                "True",
-                ""
-              ]
-            }
-          ]
+          "actions": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "CANNON"
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "BooleanVariable"
-              },
-              "parameters": [
-                "BeingDragged",
-                "True",
-                ""
-              ]
-            }
-          ],
+          "conditions": [],
           "actions": [
             {
               "type": {
-                "value": "PrimitiveDrawing::LineV2"
+                "value": "PointAndOrbit::PointAndOrbit"
               },
               "parameters": [
-                "LinePainter",
-                "Player_Ball.CenterX()",
-                "Player_Ball.CenterY()",
+                "",
+                "Player_Cannon",
+                "Player_HitBox.CenterX()",
+                "Player_HitBox.CenterY()",
+                "0",
                 "MouseX()",
                 "MouseY()",
-                "2"
+                "0",
+                ""
               ]
             }
           ]
@@ -4678,53 +4232,21 @@
             },
             {
               "type": {
-                "value": "BooleanVariable"
+                "value": "BuiltinCommonInstructions::Once"
               },
-              "parameters": [
-                "BeingDragged",
-                "True",
-                ""
-              ]
+              "parameters": []
             }
           ],
           "actions": [
             {
               "type": {
-                "value": "SetNumberVariable"
+                "value": "Create"
               },
               "parameters": [
-                "DragDistance",
-                "=",
-                "clamp(DistanceBetweenPositions(Player_Ball.BoundingBoxCenterX(), Player_Ball.BoundingBoxCenterY(), MouseX(), MouseY()), 0, 250)"
-              ]
-            },
-            {
-              "type": {
-                "value": "SetNumberVariable"
-              },
-              "parameters": [
-                "LaunchAngle",
-                "=",
-                "AngleBetweenPositions(MouseX(), MouseY(), Player_Ball.BoundingBoxCenterX(), Player_Ball.BoundingBoxCenterY())"
-              ]
-            },
-            {
-              "type": {
-                "value": "SetBooleanVariable"
-              },
-              "parameters": [
-                "BeingDragged",
-                "False",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "SetBooleanVariable"
-              },
-              "parameters": [
-                "isHeld",
-                "False",
+                "",
+                "Player_Cannon_Ball_HitBox",
+                "Player_Cannon.PointX(\"FirePoint\")",
+                "Player_Cannon.PointY(\"FirePoint\")",
                 ""
               ]
             }
@@ -4751,12 +4273,25 @@
                     "value": "Physics2::ApplyPolarForce"
                   },
                   "parameters": [
-                    "Player_Ball",
+                    "Player_Cannon_Ball_HitBox",
                     "Physics2",
-                    "LaunchAngle",
-                    "DragDistance*4",
-                    "Player_Ball.BoundingBoxCenterX()",
-                    "Player_Ball.BoundingBoxCenterY()"
+                    "AngleBetweenPositions(Player_HitBox.CenterX(), Player_HitBox.CenterY(),MouseX(),MouseY())",
+                    "100",
+                    "Player_Cannon_Ball_HitBox.BoundingBoxCenterX()",
+                    "Player_Cannon_Ball_HitBox.BoundingBoxCenterY()"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Physics2::ApplyPolarForce"
+                  },
+                  "parameters": [
+                    "Player_HitBox",
+                    "Physics2",
+                    "AngleBetweenPositions(MouseX(),MouseY(),Player_HitBox.CenterX(), Player_HitBox.CenterY())",
+                    "100*4",
+                    "Player_Cannon_Ball_HitBox.BoundingBoxCenterX()",
+                    "Player_Cannon_Ball_HitBox.BoundingBoxCenterY()"
                   ]
                 }
               ]
@@ -4776,6 +4311,7 @@
           "comment": "Summons*isheld variable causing issue righ tmouse summonsing????"
         },
         {
+          "disabled": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -4783,63 +4319,14 @@
                 "value": "Physics2::LinearVelocityLength"
               },
               "parameters": [
-                "Player_Ball",
+                "Player_Cannon_Ball_HitBox",
                 "Physics2",
                 "<=",
                 "20"
               ]
             }
           ],
-          "actions": [
-            {
-              "type": {
-                "value": "SetBooleanVariable"
-              },
-              "parameters": [
-                "isHeld",
-                "False",
-                ""
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "MouseButtonFromTextPressed"
-              },
-              "parameters": [
-                "",
-                "\"Right\""
-              ]
-            },
-            {
-              "type": {
-                "value": "BooleanVariable"
-              },
-              "parameters": [
-                "isHeld",
-                "=",
-                ""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "AddForceVersPos"
-              },
-              "parameters": [
-                "Player_Ball",
-                "Player.CenterX()",
-                "Player.CenterY()",
-                "150",
-                ""
-              ]
-            }
-          ]
+          "actions": []
         },
         {
           "type": "BuiltinCommonInstructions::Comment",
@@ -4854,57 +4341,6 @@
           "comment": ""
         },
         {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "CollisionNP"
-              },
-              "parameters": [
-                "Player_Ball",
-                "Player",
-                "",
-                "",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "BooleanVariable"
-              },
-              "parameters": [
-                "isHeld",
-                "=",
-                ""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "MettreXY"
-              },
-              "parameters": [
-                "Player_Ball",
-                "=",
-                "Player.CenterX()",
-                "=",
-                "Player.CenterY()+20"
-              ]
-            },
-            {
-              "type": {
-                "value": "SetBooleanVariable"
-              },
-              "parameters": [
-                "isHeld",
-                "True",
-                ""
-              ]
-            }
-          ]
-        },
-        {
           "type": "BuiltinCommonInstructions::Comment",
           "color": {
             "b": 109,
@@ -4915,56 +4351,6 @@
             "textR": 0
           },
           "comment": "Debug Text"
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [
-            {
-              "type": {
-                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-              },
-              "parameters": [
-                "LaunchAngleText",
-                "Text",
-                "=",
-                "\"Launch Angle: \" + LaunchAngle"
-              ]
-            },
-            {
-              "type": {
-                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-              },
-              "parameters": [
-                "LaunchDistText",
-                "Text",
-                "=",
-                "\"Launch Dist: \" + DragDistance"
-              ]
-            },
-            {
-              "type": {
-                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-              },
-              "parameters": [
-                "DebugText",
-                "Text",
-                "=",
-                "\"isHeld: \" +isHeld"
-              ]
-            },
-            {
-              "type": {
-                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-              },
-              "parameters": [
-                "DebugText3",
-                "Text",
-                "=",
-                "\"Linear Velocity: \" +ToString(Player_Ball.Physics2::LinearVelocity())"
-              ]
-            }
-          ]
         },
         {
           "type": "BuiltinCommonInstructions::Comment",
@@ -4986,7 +4372,7 @@
                 "value": "CollisionNP"
               },
               "parameters": [
-                "Player_Ball",
+                "Player_Cannon_Ball_HitBox",
                 "Enemy",
                 "",
                 "",
@@ -5014,9 +4400,47 @@
           "target": "KeyControls"
         },
         {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Charge"
+        },
+        {
           "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": []
+          "conditions": [
+            {
+              "type": {
+                "value": "MouseButtonFromTextPressed"
+              },
+              "parameters": [
+                "",
+                "\"Left\""
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ResetTimer"
+              },
+              "parameters": [
+                "",
+                "\"ChargeTimer\""
+              ]
+            }
+          ]
         }
       ],
       "layers": [
@@ -5096,10 +4520,6 @@
           "scaleY": 100
         },
         {
-          "name": "RemapForTopdown",
-          "type": "BehaviorRemapper::RemapForTopdown"
-        },
-        {
           "name": "Resizable",
           "type": "ResizableCapability::ResizableBehavior"
         },
@@ -5108,16 +4528,8 @@
           "type": "ScalableCapability::ScalableBehavior"
         },
         {
-          "name": "Sticker",
-          "type": "Sticker::Sticker"
-        },
-        {
           "name": "Text",
           "type": "TextContainerCapability::TextContainerBehavior"
-        },
-        {
-          "name": "TopDownMovement",
-          "type": "TopDownMovementBehavior::TopDownMovementBehavior"
         }
       ]
     },
@@ -6215,6 +5627,17 @@
       },
       "events": [
         {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Can be deleted once we decide on movment",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [],
+          "parameters": []
+        },
+        {
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -6519,6 +5942,11 @@
             "includeConfig": 0
           },
           "target": "KeyControls"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
