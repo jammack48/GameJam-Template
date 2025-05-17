@@ -3367,29 +3367,9 @@
       "objectsGroups": [],
       "variables": [
         {
-          "name": "BeingDragged",
-          "type": "boolean",
-          "value": false
-        },
-        {
-          "name": "DragDistance",
+          "name": "TimerValue",
           "type": "number",
           "value": 0
-        },
-        {
-          "name": "LaunchAngle",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "isFired",
-          "type": "boolean",
-          "value": false
-        },
-        {
-          "name": "isHeld",
-          "type": "boolean",
-          "value": false
         }
       ],
       "instances": [
@@ -3548,12 +3528,29 @@
           "height": 0,
           "keepRatio": true,
           "layer": "",
-          "name": "Player_Cannon_Ball_HitBox",
-          "persistentUuid": "fce16dca-46f8-4253-aadd-77287304ed4f",
+          "name": "Player_Cannon",
+          "persistentUuid": "cb6d301c-1e69-4f6e-81d1-396c582a0edb",
           "width": 0,
-          "x": 1152,
-          "y": 416,
-          "zOrder": 15,
+          "x": 768,
+          "y": 480,
+          "zOrder": 16,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 96,
+          "keepRatio": true,
+          "layer": "UI_Layer",
+          "name": "TimerText",
+          "persistentUuid": "ca2b2c9f-8398-419f-8b7e-a65a15032ebb",
+          "width": 256,
+          "x": 96,
+          "y": 64,
+          "zOrder": 17,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -3564,12 +3561,12 @@
           "height": 0,
           "keepRatio": true,
           "layer": "",
-          "name": "Player_Cannon",
-          "persistentUuid": "cb6d301c-1e69-4f6e-81d1-396c582a0edb",
+          "name": "StateText",
+          "persistentUuid": "628fd1f5-6f3b-4802-ba72-3174f3ce043c",
           "width": 0,
-          "x": 768,
-          "y": 480,
-          "zOrder": 16,
+          "x": 800,
+          "y": 96,
+          "zOrder": 18,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -3687,7 +3684,7 @@
               "density": 2,
               "friction": 1,
               "restitution": 0.5,
-              "linearDamping": 3,
+              "linearDamping": 10,
               "angularDamping": 2,
               "gravityScale": 0,
               "layers": 1,
@@ -3837,7 +3834,13 @@
           "name": "Player_HitBox",
           "type": "Sprite",
           "updateIfNotVisible": false,
-          "variables": [],
+          "variables": [
+            {
+              "name": "State",
+              "type": "string",
+              "value": "Init"
+            }
+          ],
           "effects": [],
           "behaviors": [
             {
@@ -4091,6 +4094,90 @@
               ]
             }
           ]
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "TimerText",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "Power:",
+          "font": "",
+          "textAlignment": "left",
+          "characterSize": 40,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "Power:",
+            "font": "",
+            "textAlignment": "left",
+            "verticalTextAlignment": "top",
+            "characterSize": 40,
+            "color": "0;0;0"
+          }
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "StateText",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "State:",
+          "font": "",
+          "textAlignment": "left",
+          "characterSize": 40,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "State:",
+            "font": "",
+            "textAlignment": "left",
+            "verticalTextAlignment": "top",
+            "characterSize": 40,
+            "color": "0;0;0"
+          }
         }
       ],
       "objectsFolderStructure": {
@@ -4116,6 +4203,12 @@
           },
           {
             "objectName": "Enemy2"
+          },
+          {
+            "objectName": "TimerText"
+          },
+          {
+            "objectName": "StateText"
           }
         ]
       },
@@ -4240,6 +4333,15 @@
           "actions": [
             {
               "type": {
+                "value": "PauseTimer"
+              },
+              "parameters": [
+                "",
+                "\"ChargeTimer\""
+              ]
+            },
+            {
+              "type": {
                 "value": "Create"
               },
               "parameters": [
@@ -4248,6 +4350,24 @@
                 "Player_Cannon.PointX(\"FirePoint\")",
                 "Player_Cannon.PointY(\"FirePoint\")",
                 ""
+              ]
+            },
+            {
+              "type": {
+                "value": "RemoveTimer"
+              },
+              "parameters": [
+                "",
+                "\"ChargeTimer\""
+              ]
+            },
+            {
+              "type": {
+                "value": "ResetObjectTimer"
+              },
+              "parameters": [
+                "Player_Cannon_Ball_HitBox",
+                "\"ShotTimer\""
               ]
             }
           ],
@@ -4276,7 +4396,7 @@
                     "Player_Cannon_Ball_HitBox",
                     "Physics2",
                     "AngleBetweenPositions(Player_HitBox.CenterX(), Player_HitBox.CenterY(),MouseX(),MouseY())",
-                    "100",
+                    "TimerValue*3",
                     "Player_Cannon_Ball_HitBox.BoundingBoxCenterX()",
                     "Player_Cannon_Ball_HitBox.BoundingBoxCenterY()"
                   ]
@@ -4289,7 +4409,7 @@
                     "Player_HitBox",
                     "Physics2",
                     "AngleBetweenPositions(MouseX(),MouseY(),Player_HitBox.CenterX(), Player_HitBox.CenterY())",
-                    "100*4",
+                    "TimerValue*3",
                     "Player_Cannon_Ball_HitBox.BoundingBoxCenterX()",
                     "Player_Cannon_Ball_HitBox.BoundingBoxCenterY()"
                   ]
@@ -4400,6 +4520,13 @@
           "target": "KeyControls"
         },
         {
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
+          "target": "Player_FSM"
+        },
+        {
           "type": "BuiltinCommonInstructions::Comment",
           "color": {
             "b": 109,
@@ -4441,1223 +4568,19 @@
               ]
             }
           ]
-        }
-      ],
-      "layers": [
-        {
-          "ambientLightColorB": 200,
-          "ambientLightColorG": 200,
-          "ambientLightColorR": 200,
-          "camera3DFarPlaneDistance": 10000,
-          "camera3DFieldOfView": 45,
-          "camera3DNearPlaneDistance": 3,
-          "cameraType": "",
-          "followBaseLayerCamera": false,
-          "isLightingLayer": false,
-          "isLocked": false,
-          "name": "",
-          "renderingType": "",
-          "visibility": true,
-          "cameras": [
-            {
-              "defaultSize": true,
-              "defaultViewport": true,
-              "height": 0,
-              "viewportBottom": 1,
-              "viewportLeft": 0,
-              "viewportRight": 1,
-              "viewportTop": 0,
-              "width": 0
-            }
-          ],
-          "effects": [
-            {
-              "effectType": "Scene3D::HemisphereLight",
-              "name": "3D Light",
-              "doubleParameters": {
-                "elevation": 45,
-                "intensity": 1,
-                "rotation": 0
-              },
-              "stringParameters": {
-                "groundColor": "64;64;64",
-                "skyColor": "255;255;255",
-                "top": "Y-"
-              },
-              "booleanParameters": {}
-            }
-          ]
-        }
-      ],
-      "behaviorsSharedData": [
-        {
-          "name": "Animation",
-          "type": "AnimatableCapability::AnimatableBehavior"
-        },
-        {
-          "name": "Effect",
-          "type": "EffectCapability::EffectBehavior"
-        },
-        {
-          "name": "FlashTransitionPainter",
-          "type": "FlashTransitionPainter::FlashTransitionPainter"
-        },
-        {
-          "name": "Flippable",
-          "type": "FlippableCapability::FlippableBehavior"
-        },
-        {
-          "name": "Opacity",
-          "type": "OpacityCapability::OpacityBehavior"
-        },
-        {
-          "name": "Physics2",
-          "type": "Physics2::Physics2Behavior",
-          "gravityX": 0,
-          "gravityY": 9.8,
-          "worldScale": 100,
-          "scaleX": 100,
-          "scaleY": 100
-        },
-        {
-          "name": "Resizable",
-          "type": "ResizableCapability::ResizableBehavior"
-        },
-        {
-          "name": "Scale",
-          "type": "ScalableCapability::ScalableBehavior"
-        },
-        {
-          "name": "Text",
-          "type": "TextContainerCapability::TextContainerBehavior"
-        }
-      ]
-    },
-    {
-      "b": 209,
-      "disableInputWhenNotFocused": true,
-      "mangledName": "PhysicsSceneNoPull",
-      "name": "PhysicsSceneNoPull",
-      "r": 209,
-      "standardSortMethod": true,
-      "stopSoundsOnStartup": true,
-      "title": "",
-      "v": 209,
-      "uiSettings": {
-        "grid": true,
-        "gridType": "rectangular",
-        "gridWidth": 32,
-        "gridHeight": 32,
-        "gridOffsetX": 0,
-        "gridOffsetY": 0,
-        "gridColor": 10401023,
-        "gridAlpha": 0.8,
-        "snap": true,
-        "zoomFactor": 0.4789341884535245,
-        "windowMask": false
-      },
-      "objectsGroups": [],
-      "variables": [
-        {
-          "name": "BeingDragged",
-          "type": "boolean",
-          "value": false
-        },
-        {
-          "name": "DragDistance",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "LaunchAngle",
-          "type": "number",
-          "value": 0
-        },
-        {
-          "name": "isFired",
-          "type": "boolean",
-          "value": false
-        },
-        {
-          "name": "isHeld",
-          "type": "boolean",
-          "value": false
-        }
-      ],
-      "instances": [
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 736,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Border",
-          "persistentUuid": "63dfd7fe-6874-49c9-933e-53b7105aa199",
-          "width": 32,
-          "x": 1216,
-          "y": 0,
-          "zOrder": 1,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 32,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Border",
-          "persistentUuid": "69cbf231-d927-4a34-ad60-c164d4051e1c",
-          "width": 1408,
-          "x": -32,
-          "y": 704,
-          "zOrder": 1,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 32,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Border",
-          "persistentUuid": "e24d4d24-24ef-449e-9ac9-f26b0132df25",
-          "width": 1408,
-          "x": -32,
-          "y": 0,
-          "zOrder": 1,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 736,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Border",
-          "persistentUuid": "d4dd4071-80aa-4c96-b660-6f5755a1aaa4",
-          "width": 32,
-          "x": 0,
-          "y": 0,
-          "zOrder": 1,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 64,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Player_Ball",
-          "persistentUuid": "48b7022b-ae1b-45c7-a0b1-60ac21ff3f0d",
-          "width": 64,
-          "x": 608,
-          "y": 352,
-          "zOrder": 2,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "LinePainter",
-          "persistentUuid": "20fa5fdc-48d4-49e9-92a6-228558afcea7",
-          "width": 0,
-          "x": 928,
-          "y": -64,
-          "zOrder": 3,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "LaunchAngleText",
-          "persistentUuid": "875d9d69-a654-41d7-b000-1b9c4bed07d6",
-          "width": 0,
-          "x": 96,
-          "y": 52,
-          "zOrder": 4,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "LaunchDistText",
-          "persistentUuid": "94b16b5b-5605-41a2-8a4b-59b99496da19",
-          "width": 0,
-          "x": 704,
-          "y": 64,
-          "zOrder": 5,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Enemy",
-          "persistentUuid": "f197f149-155a-4d3b-9ea9-96e577e24cfb",
-          "width": 0,
-          "x": 960,
-          "y": 288,
-          "zOrder": 6,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Enemy",
-          "persistentUuid": "ab301120-4d40-4cf8-b2d5-44f07dcdfdd3",
-          "width": 0,
-          "x": 960,
-          "y": 512,
-          "zOrder": 7,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Enemy",
-          "persistentUuid": "e4bf33c7-0f09-4fbc-b504-56f3d6facbcc",
-          "width": 0,
-          "x": 320,
-          "y": 320,
-          "zOrder": 8,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Player",
-          "persistentUuid": "3ba9035f-ba1e-429e-b227-1d6d1bfa484a",
-          "width": 0,
-          "x": 704,
-          "y": 480,
-          "zOrder": 9,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "DebugText",
-          "persistentUuid": "0af0315b-536f-4d22-bde3-186dbe572f5e",
-          "width": 0,
-          "x": 96,
-          "y": 128,
-          "zOrder": 10,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "DebugText3",
-          "persistentUuid": "7985ccd0-006c-4460-ab90-843c94a0f818",
-          "width": 0,
-          "x": 736,
-          "y": 160,
-          "zOrder": 12,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 144,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Enemy2",
-          "persistentUuid": "440ff7e8-1b3f-41de-9051-f1aa4ae855f8",
-          "width": 128,
-          "x": 480,
-          "y": 448,
-          "zOrder": 13,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Text",
-          "persistentUuid": "6a9c4294-0563-4258-ac81-dbcde91f4966",
-          "width": 0,
-          "x": 64,
-          "y": 608,
-          "zOrder": 14,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        }
-      ],
-      "objects": [
-        {
-          "adaptCollisionMaskAutomatically": true,
-          "assetStoreId": "",
-          "name": "Border",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [
-            {
-              "name": "Physics2",
-              "type": "Physics2::Physics2Behavior",
-              "bodyType": "Static",
-              "bullet": false,
-              "fixedRotation": false,
-              "canSleep": true,
-              "shape": "Box",
-              "shapeDimensionA": 0,
-              "shapeDimensionB": 0,
-              "shapeOffsetX": 0,
-              "shapeOffsetY": 0,
-              "polygonOrigin": "Center",
-              "vertices": [],
-              "density": 1,
-              "friction": 0.3,
-              "restitution": 0.4,
-              "linearDamping": 0.1,
-              "angularDamping": 0.1,
-              "gravityScale": 0,
-              "layers": 1,
-              "masks": 1
-            }
-          ],
-          "animations": [
-            {
-              "name": "NewSprite",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "metadata": "{\"pskl\":{}}",
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "NewSprite8",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 0,
-                            "y": 0
-                          },
-                          {
-                            "x": 64,
-                            "y": 0
-                          },
-                          {
-                            "x": 64,
-                            "y": 64
-                          },
-                          {
-                            "x": 0,
-                            "y": 64
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "adaptCollisionMaskAutomatically": true,
-          "assetStoreId": "",
-          "name": "Player_Ball",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [
-            {
-              "name": "Physics2",
-              "type": "Physics2::Physics2Behavior",
-              "bodyType": "Dynamic",
-              "bullet": false,
-              "fixedRotation": false,
-              "canSleep": true,
-              "shape": "Circle",
-              "shapeDimensionA": 0,
-              "shapeDimensionB": 0,
-              "shapeOffsetX": 0,
-              "shapeOffsetY": 0,
-              "polygonOrigin": "Center",
-              "vertices": [],
-              "density": 2,
-              "friction": 1,
-              "restitution": 0.5,
-              "linearDamping": 3,
-              "angularDamping": 2,
-              "gravityScale": 0,
-              "layers": 1,
-              "masks": 1
-            },
-            {
-              "name": "Sticker",
-              "type": "Sticker::Sticker",
-              "OnlyFollowPosition": false,
-              "IsDestroyedWithParent": false
-            }
-          ],
-          "animations": [
-            {
-              "name": "NewSprite",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "metadata": "{\"pskl\":{}}",
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "virus.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 40,
-                        "y": 40
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 7,
-                            "y": 5
-                          },
-                          {
-                            "x": 73,
-                            "y": 5
-                          },
-                          {
-                            "x": 73,
-                            "y": 74
-                          },
-                          {
-                            "x": 7,
-                            "y": 74
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "assetStoreId": "",
-          "name": "LinePainter",
-          "type": "PrimitiveDrawing::Drawer",
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "fillOpacity": 255,
-          "outlineSize": 1,
-          "outlineOpacity": 255,
-          "absoluteCoordinates": true,
-          "clearBetweenFrames": true,
-          "antialiasing": "none",
-          "fillColor": {
-            "r": 159,
-            "g": 255,
-            "b": 61
-          },
-          "outlineColor": {
-            "r": 65,
-            "g": 117,
-            "b": 5
-          }
-        },
-        {
-          "assetStoreId": "",
-          "bold": false,
-          "italic": false,
-          "name": "LaunchAngleText",
-          "smoothed": true,
-          "type": "TextObject::Text",
-          "underlined": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "string": "Launch Angle:",
-          "font": "",
-          "textAlignment": "left",
-          "characterSize": 40,
-          "color": {
-            "b": 0,
-            "g": 0,
-            "r": 0
-          },
-          "content": {
-            "bold": false,
-            "isOutlineEnabled": false,
-            "isShadowEnabled": false,
-            "italic": false,
-            "outlineColor": "255;255;255",
-            "outlineThickness": 2,
-            "shadowAngle": 90,
-            "shadowBlurRadius": 2,
-            "shadowColor": "0;0;0",
-            "shadowDistance": 4,
-            "shadowOpacity": 127,
-            "smoothed": true,
-            "underlined": false,
-            "text": "Launch Angle:",
-            "font": "",
-            "textAlignment": "left",
-            "verticalTextAlignment": "top",
-            "characterSize": 40,
-            "color": "0;0;0"
-          }
-        },
-        {
-          "assetStoreId": "",
-          "bold": false,
-          "italic": false,
-          "name": "LaunchDistText",
-          "smoothed": true,
-          "type": "TextObject::Text",
-          "underlined": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "string": "Launch Dist:",
-          "font": "",
-          "textAlignment": "left",
-          "characterSize": 40,
-          "color": {
-            "b": 0,
-            "g": 0,
-            "r": 0
-          },
-          "content": {
-            "bold": false,
-            "isOutlineEnabled": false,
-            "isShadowEnabled": false,
-            "italic": false,
-            "outlineColor": "255;255;255",
-            "outlineThickness": 2,
-            "shadowAngle": 90,
-            "shadowBlurRadius": 2,
-            "shadowColor": "0;0;0",
-            "shadowDistance": 4,
-            "shadowOpacity": 127,
-            "smoothed": true,
-            "underlined": false,
-            "text": "Launch Dist:",
-            "font": "",
-            "textAlignment": "left",
-            "verticalTextAlignment": "top",
-            "characterSize": 40,
-            "color": "0;0;0"
-          }
-        },
-        {
-          "adaptCollisionMaskAutomatically": true,
-          "assetStoreId": "",
-          "name": "Enemy",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [
-            {
-              "name": "Physics2",
-              "type": "Physics2::Physics2Behavior",
-              "bodyType": "Dynamic",
-              "bullet": false,
-              "fixedRotation": false,
-              "canSleep": true,
-              "shape": "Box",
-              "shapeDimensionA": 0,
-              "shapeDimensionB": 0,
-              "shapeOffsetX": 0,
-              "shapeOffsetY": 0,
-              "polygonOrigin": "Center",
-              "vertices": [],
-              "density": 5,
-              "friction": 0.3,
-              "restitution": 0.1,
-              "linearDamping": 1,
-              "angularDamping": 0.1,
-              "gravityScale": 0,
-              "layers": 2,
-              "masks": 1
-            }
-          ],
-          "animations": [
-            {
-              "name": "NewSprite",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "metadata": "{\"pskl\":{}}",
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "antibody2.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 12,
-                            "y": 1
-                          },
-                          {
-                            "x": 68,
-                            "y": 1
-                          },
-                          {
-                            "x": 68,
-                            "y": 79
-                          },
-                          {
-                            "x": 12,
-                            "y": 79
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "adaptCollisionMaskAutomatically": true,
-          "assetStoreId": "",
-          "name": "Player",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [
-            {
-              "name": "RemapForTopdown",
-              "type": "BehaviorRemapper::RemapForTopdown",
-              "Up": "w",
-              "Left": "a",
-              "Right": "d",
-              "Down": "s",
-              "Topdown": "TopDownMovement"
-            },
-            {
-              "name": "TopDownMovement",
-              "type": "TopDownMovementBehavior::TopDownMovementBehavior",
-              "acceleration": 4000,
-              "allowDiagonals": true,
-              "angleOffset": 0,
-              "angularMaxSpeed": 180,
-              "customIsometryAngle": 30,
-              "deceleration": 8000,
-              "ignoreDefaultControls": false,
-              "maxSpeed": 200,
-              "movementAngleOffset": 0,
-              "rotateObject": false,
-              "viewpoint": "TopDown"
-            }
-          ],
-          "animations": [
-            {
-              "name": "",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "player.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 4,
-                            "y": 13
-                          },
-                          {
-                            "x": 76,
-                            "y": 13
-                          },
-                          {
-                            "x": 76,
-                            "y": 79
-                          },
-                          {
-                            "x": 4,
-                            "y": 79
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "assetStoreId": "",
-          "height": 32,
-          "name": "BorderTile",
-          "texture": "bgTilemap.png",
-          "type": "TiledSpriteObject::TiledSprite",
-          "width": 32,
-          "variables": [],
-          "effects": [],
-          "behaviors": []
-        },
-        {
-          "assetStoreId": "",
-          "bold": false,
-          "italic": false,
-          "name": "DebugText",
-          "smoothed": true,
-          "type": "TextObject::Text",
-          "underlined": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "string": "isHeld:",
-          "font": "",
-          "textAlignment": "left",
-          "characterSize": 40,
-          "color": {
-            "b": 0,
-            "g": 0,
-            "r": 0
-          },
-          "content": {
-            "bold": false,
-            "isOutlineEnabled": false,
-            "isShadowEnabled": false,
-            "italic": false,
-            "outlineColor": "255;255;255",
-            "outlineThickness": 2,
-            "shadowAngle": 90,
-            "shadowBlurRadius": 2,
-            "shadowColor": "0;0;0",
-            "shadowDistance": 4,
-            "shadowOpacity": 127,
-            "smoothed": true,
-            "underlined": false,
-            "text": "isHeld:",
-            "font": "",
-            "textAlignment": "left",
-            "verticalTextAlignment": "top",
-            "characterSize": 40,
-            "color": "0;0;0"
-          }
-        },
-        {
-          "assetStoreId": "",
-          "bold": false,
-          "italic": false,
-          "name": "DebugText2",
-          "smoothed": true,
-          "type": "TextObject::Text",
-          "underlined": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "string": "isFired:",
-          "font": "",
-          "textAlignment": "left",
-          "characterSize": 40,
-          "color": {
-            "b": 0,
-            "g": 0,
-            "r": 0
-          },
-          "content": {
-            "bold": false,
-            "isOutlineEnabled": false,
-            "isShadowEnabled": false,
-            "italic": false,
-            "outlineColor": "255;255;255",
-            "outlineThickness": 2,
-            "shadowAngle": 90,
-            "shadowBlurRadius": 2,
-            "shadowColor": "0;0;0",
-            "shadowDistance": 4,
-            "shadowOpacity": 127,
-            "smoothed": true,
-            "underlined": false,
-            "text": "isFired:",
-            "font": "",
-            "textAlignment": "left",
-            "verticalTextAlignment": "top",
-            "characterSize": 40,
-            "color": "0;0;0"
-          }
-        },
-        {
-          "assetStoreId": "",
-          "bold": false,
-          "italic": false,
-          "name": "DebugText3",
-          "smoothed": true,
-          "type": "TextObject::Text",
-          "underlined": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "string": "Linear Velocity:",
-          "font": "",
-          "textAlignment": "left",
-          "characterSize": 40,
-          "color": {
-            "b": 0,
-            "g": 0,
-            "r": 0
-          },
-          "content": {
-            "bold": false,
-            "isOutlineEnabled": false,
-            "isShadowEnabled": false,
-            "italic": false,
-            "outlineColor": "255;255;255",
-            "outlineThickness": 2,
-            "shadowAngle": 90,
-            "shadowBlurRadius": 2,
-            "shadowColor": "0;0;0",
-            "shadowDistance": 4,
-            "shadowOpacity": 127,
-            "smoothed": true,
-            "underlined": false,
-            "text": "Linear Velocity:",
-            "font": "",
-            "textAlignment": "left",
-            "verticalTextAlignment": "top",
-            "characterSize": 40,
-            "color": "0;0;0"
-          }
-        },
-        {
-          "adaptCollisionMaskAutomatically": true,
-          "assetStoreId": "",
-          "name": "Enemy2",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [
-            {
-              "effectType": "Outline",
-              "name": "Effect",
-              "doubleParameters": {
-                "padding": 2,
-                "thickness": 2
-              },
-              "stringParameters": {
-                "color": "208;2;27"
-              },
-              "booleanParameters": {}
-            }
-          ],
-          "behaviors": [
-            {
-              "name": "Physics2",
-              "type": "Physics2::Physics2Behavior",
-              "bodyType": "Dynamic",
-              "bullet": false,
-              "fixedRotation": false,
-              "canSleep": true,
-              "shape": "Box",
-              "shapeDimensionA": 0,
-              "shapeDimensionB": 0,
-              "shapeOffsetX": 0,
-              "shapeOffsetY": 0,
-              "polygonOrigin": "Center",
-              "vertices": [],
-              "density": 500,
-              "friction": 0.3,
-              "restitution": 0.01,
-              "linearDamping": 100,
-              "angularDamping": 100,
-              "gravityScale": 0,
-              "layers": 1,
-              "masks": 1
-            }
-          ],
-          "animations": [
-            {
-              "name": "NewSprite",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "metadata": "{\"pskl\":{}}",
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "antibody2.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 12,
-                            "y": 1
-                          },
-                          {
-                            "x": 68,
-                            "y": 1
-                          },
-                          {
-                            "x": 68,
-                            "y": 79
-                          },
-                          {
-                            "x": 12,
-                            "y": 79
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "assetStoreId": "",
-          "bold": false,
-          "italic": false,
-          "name": "Text",
-          "smoothed": true,
-          "type": "TextObject::Text",
-          "underlined": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "string": "LMB Shoot \nRMB Retrieve",
-          "font": "",
-          "textAlignment": "left",
-          "characterSize": 40,
-          "color": {
-            "b": 0,
-            "g": 0,
-            "r": 0
-          },
-          "content": {
-            "bold": false,
-            "isOutlineEnabled": false,
-            "isShadowEnabled": false,
-            "italic": false,
-            "outlineColor": "255;255;255",
-            "outlineThickness": 2,
-            "shadowAngle": 90,
-            "shadowBlurRadius": 2,
-            "shadowColor": "0;0;0",
-            "shadowDistance": 4,
-            "shadowOpacity": 127,
-            "smoothed": true,
-            "underlined": false,
-            "text": "LMB Shoot \nRMB Retrieve",
-            "font": "",
-            "textAlignment": "left",
-            "verticalTextAlignment": "top",
-            "characterSize": 40,
-            "color": "0;0;0"
-          }
-        }
-      ],
-      "objectsFolderStructure": {
-        "folderName": "__ROOT",
-        "children": [
-          {
-            "objectName": "Border"
-          },
-          {
-            "objectName": "BorderTile"
-          },
-          {
-            "objectName": "Player_Ball"
-          },
-          {
-            "objectName": "Player"
-          },
-          {
-            "objectName": "Enemy"
-          },
-          {
-            "objectName": "Enemy2"
-          },
-          {
-            "objectName": "LinePainter"
-          },
-          {
-            "objectName": "LaunchAngleText"
-          },
-          {
-            "objectName": "Text"
-          },
-          {
-            "objectName": "LaunchDistText"
-          },
-          {
-            "objectName": "DebugText"
-          },
-          {
-            "objectName": "DebugText2"
-          },
-          {
-            "objectName": "DebugText3"
-          }
-        ]
-      },
-      "events": [
-        {
-          "colorB": 228,
-          "colorG": 176,
-          "colorR": 74,
-          "creationTime": 0,
-          "name": "Can be deleted once we decide on movment",
-          "source": "",
-          "type": "BuiltinCommonInstructions::Group",
-          "events": [],
-          "parameters": []
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "DepartScene"
-              },
-              "parameters": [
-                ""
-              ]
-            }
-          ],
+          "conditions": [],
           "actions": [
             {
               "type": {
-                "value": "ChangePlan"
+                "value": "SetNumberVariable"
               },
               "parameters": [
-                "Player_Ball",
+                "TimerValue",
                 "=",
-                "10"
+                "clamp((roundTo(TimerElapsedTime(\"ChargeTimer\"),2)*1000),0,500)"
               ]
             }
           ]
@@ -5672,161 +4595,42 @@
             "textG": 0,
             "textR": 0
           },
-          "comment": "Controls\n"
+          "comment": "Cannon balls delete"
         },
         {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
+          "type": "BuiltinCommonInstructions::ForEach",
+          "object": "Player_Cannon_Ball_HitBox",
+          "conditions": [],
+          "actions": [],
+          "events": [
             {
-              "type": {
-                "value": "MouseButtonFromTextPressed"
-              },
-              "parameters": [
-                "",
-                "\"Left\""
-              ]
-            },
-            {
-              "type": {
-                "value": "BooleanVariable"
-              },
-              "parameters": [
-                "isHeld",
-                "True",
-                ""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "Physics2::ApplyImpulseTowardPosition"
-              },
-              "parameters": [
-                "Player_Ball",
-                "Physics2",
-                "15",
-                "MouseX()",
-                "MouseY()",
-                "Player_Ball.BoundingBoxCenterX()",
-                "Player_Ball.BoundingBoxCenterY()"
-              ]
-            },
-            {
-              "type": {
-                "value": "SetBooleanVariable"
-              },
-              "parameters": [
-                "isHeld",
-                "False",
-                ""
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CompareObjectTimer"
+                  },
+                  "parameters": [
+                    "Player_Cannon_Ball_HitBox",
+                    "\"ShotTimer\"",
+                    ">=",
+                    "1"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "Player_Cannon_Ball_HitBox",
+                    ""
+                  ]
+                }
               ]
             }
           ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "CollisionNP"
-              },
-              "parameters": [
-                "Player_Ball",
-                "Player",
-                "",
-                "",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "Physics2::LinearVelocityLength"
-              },
-              "parameters": [
-                "Player_Ball",
-                "Physics2",
-                "<=",
-                " 200"
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "MettreXY"
-              },
-              "parameters": [
-                "Player_Ball",
-                "=",
-                "Player.CenterX()",
-                "=",
-                "Player.CenterY()+20"
-              ]
-            },
-            {
-              "type": {
-                "value": "SetBooleanVariable"
-              },
-              "parameters": [
-                "isHeld",
-                "True",
-                ""
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Comment",
-          "color": {
-            "b": 109,
-            "g": 230,
-            "r": 255,
-            "textB": 0,
-            "textG": 0,
-            "textR": 0
-          },
-          "comment": "Summons"
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "MouseButtonFromTextPressed"
-              },
-              "parameters": [
-                "",
-                "\"Right\""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "AddForceVersPos"
-              },
-              "parameters": [
-                "Player_Ball",
-                "Player.CenterX()",
-                "Player.CenterY()",
-                "225",
-                ""
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Comment",
-          "color": {
-            "b": 224,
-            "g": 16,
-            "r": 189,
-            "textB": 0,
-            "textG": 0,
-            "textR": 0
-          },
-          "comment": ""
         },
         {
           "type": "BuiltinCommonInstructions::Comment",
@@ -5841,12 +4645,6 @@
           "comment": "Debug Text"
         },
         {
-          "disabled": true,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": []
-        },
-        {
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": [
@@ -5855,10 +4653,10 @@
                 "value": "TextContainerCapability::TextContainerBehavior::SetValue"
               },
               "parameters": [
-                "LaunchAngleText",
+                "TimerText",
                 "Text",
                 "=",
-                "\"Launch Angle: \" + LaunchAngle"
+                "\"Power: \" + TimerValue"
               ]
             },
             {
@@ -5866,92 +4664,13 @@
                 "value": "TextContainerCapability::TextContainerBehavior::SetValue"
               },
               "parameters": [
-                "LaunchDistText",
+                "StateText",
                 "Text",
                 "=",
-                "\"Launch Dist: \" + DragDistance"
-              ]
-            },
-            {
-              "type": {
-                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-              },
-              "parameters": [
-                "DebugText",
-                "Text",
-                "=",
-                "\"isHeld: \" +isHeld"
-              ]
-            },
-            {
-              "type": {
-                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-              },
-              "parameters": [
-                "DebugText3",
-                "Text",
-                "=",
-                "\"Linear Velocity: \" +ToString(Player_Ball.Physics2::LinearVelocity())"
+                "\"State: \" + Player_HitBox.State"
               ]
             }
           ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Comment",
-          "color": {
-            "b": 109,
-            "g": 230,
-            "r": 255,
-            "textB": 0,
-            "textG": 0,
-            "textR": 0
-          },
-          "comment": "Collisions"
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "CollisionNP"
-              },
-              "parameters": [
-                "Player_Ball",
-                "Enemy",
-                "",
-                "",
-                ""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "Delete"
-              },
-              "parameters": [
-                "Enemy",
-                ""
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Link",
-          "include": {
-            "includeConfig": 0
-          },
-          "target": "KeyControls"
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": []
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": []
         }
       ],
       "layers": [
@@ -5981,6 +4700,39 @@
               "width": 0
             }
           ],
+          "effects": [
+            {
+              "effectType": "Scene3D::HemisphereLight",
+              "name": "3D Light",
+              "doubleParameters": {
+                "elevation": 45,
+                "intensity": 1,
+                "rotation": 0
+              },
+              "stringParameters": {
+                "groundColor": "64;64;64",
+                "skyColor": "255;255;255",
+                "top": "Y-"
+              },
+              "booleanParameters": {}
+            }
+          ]
+        },
+        {
+          "ambientLightColorB": 200,
+          "ambientLightColorG": 200,
+          "ambientLightColorR": 200,
+          "camera3DFarPlaneDistance": 10000,
+          "camera3DFieldOfView": 45,
+          "camera3DNearPlaneDistance": 3,
+          "cameraType": "",
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "isLocked": false,
+          "name": "UI_Layer",
+          "renderingType": "",
+          "visibility": true,
+          "cameras": [],
           "effects": [
             {
               "effectType": "Scene3D::HemisphereLight",
@@ -6031,10 +4783,6 @@
           "scaleY": 100
         },
         {
-          "name": "RemapForTopdown",
-          "type": "BehaviorRemapper::RemapForTopdown"
-        },
-        {
           "name": "Resizable",
           "type": "ResizableCapability::ResizableBehavior"
         },
@@ -6043,23 +4791,15 @@
           "type": "ScalableCapability::ScalableBehavior"
         },
         {
-          "name": "Sticker",
-          "type": "Sticker::Sticker"
-        },
-        {
           "name": "Text",
           "type": "TextContainerCapability::TextContainerBehavior"
-        },
-        {
-          "name": "TopDownMovement",
-          "type": "TopDownMovementBehavior::TopDownMovementBehavior"
         }
       ]
     }
   ],
   "externalEvents": [
     {
-      "associatedLayout": "MenuScene",
+      "associatedLayout": "PirateGameScene",
       "name": "KeyControls",
       "events": [
         {
@@ -6091,7 +4831,7 @@
       ]
     },
     {
-      "associatedLayout": "TopdownScene",
+      "associatedLayout": "PirateGameScene",
       "name": "Player_FSM",
       "events": [
         {
@@ -6113,8 +4853,8 @@
                 "value": "StringObjectVariable"
               },
               "parameters": [
-                "Player",
-                "PlayerFSM",
+                "Player_HitBox",
+                "State",
                 "=",
                 "\"Init\""
               ]
@@ -6139,10 +4879,10 @@
                 "value": "StringObjectVariable"
               },
               "parameters": [
-                "Player",
-                "PlayerFSM",
+                "Player_HitBox",
+                "State",
                 "=",
-                "\"Idle\""
+                "\"Ready\""
               ]
             }
           ],
@@ -6153,40 +4893,14 @@
               "include": {
                 "includeConfig": 0
               },
-              "target": "Player_FSM_Idle"
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "StringObjectVariable"
-              },
-              "parameters": [
-                "Player",
-                "PlayerFSM",
-                "=",
-                "\"Moving\""
-              ]
-            }
-          ],
-          "actions": [],
-          "events": [
-            {
-              "type": "BuiltinCommonInstructions::Link",
-              "include": {
-                "includeConfig": 0
-              },
-              "target": "Player_FSM_Moving"
+              "target": "Player_FSM_Ready"
             }
           ]
         }
       ]
     },
     {
-      "associatedLayout": "TopdownScene",
+      "associatedLayout": "PirateGameScene",
       "name": "Player_FSM_Init",
       "events": [
         {
@@ -6194,7 +4908,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "name": "Player FSM Init",
+          "name": "Player FSM Init (Spawn state no player input ehre)",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
@@ -6219,52 +4933,43 @@
                   "parameters": []
                 }
               ],
-              "actions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Wait"
+                  },
+                  "parameters": [
+                    "1"
+                  ]
+                }
+              ],
               "events": [
                 {
-                  "disabled": true,
+                  "colorB": 228,
+                  "colorG": 176,
+                  "colorR": 74,
+                  "creationTime": 0,
+                  "name": "Transistions ******** ",
+                  "source": "",
+                  "type": "BuiltinCommonInstructions::Group",
+                  "events": [],
+                  "parameters": []
+                },
+                {
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [],
                   "actions": [
                     {
                       "type": {
-                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                        "value": "SetStringObjectVariable"
                       },
                       "parameters": [
-                        "Character_Skins",
-                        "Animation",
+                        "Player_HitBox",
+                        "State",
                         "=",
-                        "\"Move\""
+                        "\"Ready\""
                       ]
                     }
-                  ]
-                }
-              ]
-            },
-            {
-              "colorB": 228,
-              "colorG": 176,
-              "colorR": 74,
-              "creationTime": 0,
-              "name": "Transistions ******** ",
-              "source": "",
-              "type": "BuiltinCommonInstructions::Group",
-              "events": [],
-              "parameters": []
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [
-                {
-                  "type": {
-                    "value": "SetStringObjectVariable"
-                  },
-                  "parameters": [
-                    "Player",
-                    "PlayerFSM",
-                    "=",
-                    "\"Idle\""
                   ]
                 }
               ]
@@ -6280,15 +4985,15 @@
       ]
     },
     {
-      "associatedLayout": "TopdownScene",
-      "name": "Player_FSM_Idle",
+      "associatedLayout": "PirateGameScene",
+      "name": "Player_FSM_Ready",
       "events": [
         {
           "colorB": 228,
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "name": "Player FSM Idle",
+          "name": "Player FSM Ready (Main player state where all game action happens)",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
           "events": [
@@ -6319,19 +5024,7 @@
                   "disabled": true,
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
-                      },
-                      "parameters": [
-                        "Character_Skins",
-                        "Animation",
-                        "=",
-                        "\"Move\""
-                      ]
-                    }
-                  ]
+                  "actions": []
                 }
               ]
             },
@@ -6345,136 +5038,6 @@
               "type": "BuiltinCommonInstructions::Group",
               "events": [],
               "parameters": []
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "AnyKeyPressed"
-                  },
-                  "parameters": [
-                    ""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "SetStringObjectVariable"
-                  },
-                  "parameters": [
-                    "Player",
-                    "PlayerFSM",
-                    "=",
-                    "\"Moving\""
-                  ]
-                }
-              ]
-            }
-          ],
-          "parameters": []
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": []
-        }
-      ]
-    },
-    {
-      "associatedLayout": "TopdownScene",
-      "name": "Player_FSM_Moving",
-      "events": [
-        {
-          "colorB": 228,
-          "colorG": 176,
-          "colorR": 74,
-          "creationTime": 0,
-          "name": "Player FSM Moving (duplicate)",
-          "source": "",
-          "type": "BuiltinCommonInstructions::Group",
-          "events": [
-            {
-              "colorB": 228,
-              "colorG": 176,
-              "colorR": 74,
-              "creationTime": 0,
-              "name": "Actions",
-              "source": "",
-              "type": "BuiltinCommonInstructions::Group",
-              "events": [],
-              "parameters": []
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "BuiltinCommonInstructions::Once"
-                  },
-                  "parameters": []
-                }
-              ],
-              "actions": [],
-              "events": [
-                {
-                  "disabled": true,
-                  "type": "BuiltinCommonInstructions::Standard",
-                  "conditions": [],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "AnimatableCapability::AnimatableBehavior::SetName"
-                      },
-                      "parameters": [
-                        "Character_Skins",
-                        "Animation",
-                        "=",
-                        "\"Move\""
-                      ]
-                    }
-                  ]
-                }
-              ]
-            },
-            {
-              "colorB": 228,
-              "colorG": 176,
-              "colorR": 74,
-              "creationTime": 0,
-              "name": "Transistions ******** ",
-              "source": "",
-              "type": "BuiltinCommonInstructions::Group",
-              "events": [],
-              "parameters": []
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "inverted": true,
-                    "value": "AnyKeyPressed"
-                  },
-                  "parameters": [
-                    ""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "SetStringObjectVariable"
-                  },
-                  "parameters": [
-                    "Player",
-                    "PlayerFSM",
-                    "=",
-                    "\"Idle\""
-                  ]
-                }
-              ]
             }
           ],
           "parameters": []
