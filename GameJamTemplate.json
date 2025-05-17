@@ -238,6 +238,14 @@
         "name": "playerCannon.png",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "file": "playerShip.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "playerShip.png",
+        "smoothed": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -3332,7 +3340,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 0.49508400737488983,
+        "zoomFactor": 0.27253598967729364,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -4362,6 +4370,66 @@
             "tileSize": 160,
             "tilesWithHitBox": "0,1,2,3,7,6,4,8,12,9,10,11,15"
           }
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "Player_Ship",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "playerShip.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 3,
+                            "y": 1
+                          },
+                          {
+                            "x": 124,
+                            "y": 1
+                          },
+                          {
+                            "x": 124,
+                            "y": 125
+                          },
+                          {
+                            "x": 3,
+                            "y": 125
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
@@ -4399,6 +4467,9 @@
           },
           {
             "objectName": "bgTilemap"
+          },
+          {
+            "objectName": "Player_Ship"
           }
         ]
       },
