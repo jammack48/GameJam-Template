@@ -3939,29 +3939,6 @@
           "effects": [],
           "behaviors": [
             {
-              "name": "Physics2",
-              "type": "Physics2::Physics2Behavior",
-              "bodyType": "Dynamic",
-              "bullet": false,
-              "fixedRotation": false,
-              "canSleep": true,
-              "shape": "Circle",
-              "shapeDimensionA": 0,
-              "shapeDimensionB": 0,
-              "shapeOffsetX": 0,
-              "shapeOffsetY": 0,
-              "polygonOrigin": "Center",
-              "vertices": [],
-              "density": 4,
-              "friction": 0.3,
-              "restitution": 0.1,
-              "linearDamping": 4,
-              "angularDamping": 0.1,
-              "gravityScale": 0,
-              "layers": 1,
-              "masks": 1
-            },
-            {
               "name": "SmoothCamera",
               "type": "SmoothCamera::SmoothCamera",
               "LeftwardSpeed": 0.9,
@@ -4653,17 +4630,6 @@
                 "=",
                 "\"State: \" + Player_HitBox.State"
               ]
-            },
-            {
-              "type": {
-                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-              },
-              "parameters": [
-                "DebugText",
-                "Text",
-                "=",
-                "\"Debug: \" + ToString(Player_HitBox.Physics2::LinearVelocity())"
-              ]
             }
           ]
         },
@@ -5130,6 +5096,121 @@
                     "0",
                     ""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "AddForceAL"
+                  },
+                  "parameters": [
+                    "Player_HitBox",
+                    "Player_HitBox.Angle()",
+                    "125",
+                    "0"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "KeyFromTextPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "\"a\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Rotate"
+                  },
+                  "parameters": [
+                    "Player_HitBox",
+                    "100",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "KeyFromTextPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "\"s\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Rotate"
+                  },
+                  "parameters": [
+                    "Player_HitBox",
+                    "100",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "KeyFromTextPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "\"w\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Rotate"
+                  },
+                  "parameters": [
+                    "Player_HitBox",
+                    "-100",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "KeyFromTextPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "\"d\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Rotate"
+                  },
+                  "parameters": [
+                    "Player_HitBox",
+                    "-100",
+                    ""
+                  ]
                 }
               ]
             },
@@ -5279,6 +5360,22 @@
                     },
                     {
                       "type": {
+                        "value": "ResetObjectTimer"
+                      },
+                      "parameters": [
+                        "Player_HitBox",
+                        "\"MoveTimer\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "disabled": true,
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
                         "value": "Physics2::ApplyPolarForce"
                       },
                       "parameters": [
@@ -5300,25 +5397,10 @@
                         "=",
                         "\"Moving\""
                       ]
-                    },
-                    {
-                      "type": {
-                        "value": "ResetObjectTimer"
-                      },
-                      "parameters": [
-                        "Player_HitBox",
-                        "\"MoveTimer\""
-                      ]
                     }
                   ]
                 }
               ]
-            },
-            {
-              "disabled": true,
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": []
             }
           ],
           "parameters": []
@@ -5418,6 +5500,7 @@
               "comment": "not workign as it straight away is less than 10 then build sup before slowing down so if we wait"
             },
             {
+              "disabled": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
