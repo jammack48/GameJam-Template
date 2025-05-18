@@ -1,7 +1,7 @@
 {
   "firstLayout": "",
   "gdVersion": {
-    "build": 231,
+    "build": 230,
     "major": 5,
     "minor": 5,
     "revision": 0
@@ -1901,7 +1901,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 0.5653158055126334,
+        "zoomFactor": 0.4481978045410381,
         "windowMask": false
       },
       "objectsGroups": [
@@ -1910,9 +1910,6 @@
           "objects": [
             {
               "name": "Enemy"
-            },
-            {
-              "name": "Enemy2"
             }
           ]
         }
@@ -1968,7 +1965,7 @@
           "layer": "",
           "name": "Border",
           "persistentUuid": "e24d4d24-24ef-449e-9ac9-f26b0132df25",
-          "width": 2176,
+          "width": 1984,
           "x": -416,
           "y": -352,
           "zOrder": 1,
@@ -2010,23 +2007,6 @@
           "initialVariables": []
         },
         {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 144,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Enemy2",
-          "persistentUuid": "440ff7e8-1b3f-41de-9051-f1aa4ae855f8",
-          "width": 128,
-          "x": 480,
-          "y": 448,
-          "zOrder": 13,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
           "angle": 349,
           "customSize": false,
           "height": 0,
@@ -2035,8 +2015,8 @@
           "name": "Player_Cannon",
           "persistentUuid": "cb6d301c-1e69-4f6e-81d1-396c582a0edb",
           "width": 0,
-          "x": 876,
-          "y": 505,
+          "x": 735,
+          "y": 371,
           "zOrder": 62,
           "numberProperties": [],
           "stringProperties": [],
@@ -2140,7 +2120,7 @@
           "width": 0,
           "x": 1760,
           "y": -736,
-          "zOrder": 21,
+          "zOrder": 124,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -2234,8 +2214,8 @@
           "name": "Player_Ship",
           "persistentUuid": "9301b163-aade-48ea-b32a-950d28766cd3",
           "width": 0,
-          "x": 672,
-          "y": 704,
+          "x": 736,
+          "y": 449,
           "zOrder": 59,
           "numberProperties": [],
           "stringProperties": [],
@@ -2600,7 +2580,13 @@
                     {
                       "hasCustomCollisionMask": true,
                       "image": "player.png",
-                      "points": [],
+                      "points": [
+                        {
+                          "name": "FlipPoint",
+                          "x": 81,
+                          "y": 40.5
+                        }
+                      ],
                       "originPoint": {
                         "name": "origine",
                         "x": 40,
@@ -2629,104 +2615,6 @@
                           {
                             "x": 12,
                             "y": 62
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "adaptCollisionMaskAutomatically": true,
-          "assetStoreId": "",
-          "name": "Enemy2",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [
-            {
-              "effectType": "Outline",
-              "name": "Effect",
-              "doubleParameters": {
-                "padding": 2,
-                "thickness": 2
-              },
-              "stringParameters": {
-                "color": "208;2;27"
-              },
-              "booleanParameters": {}
-            }
-          ],
-          "behaviors": [
-            {
-              "name": "Physics2",
-              "type": "Physics2::Physics2Behavior",
-              "bodyType": "Dynamic",
-              "bullet": false,
-              "fixedRotation": false,
-              "canSleep": true,
-              "shape": "Box",
-              "shapeDimensionA": 0,
-              "shapeDimensionB": 0,
-              "shapeOffsetX": 0,
-              "shapeOffsetY": 0,
-              "polygonOrigin": "Center",
-              "vertices": [],
-              "density": 500,
-              "friction": 0.3,
-              "restitution": 0.01,
-              "linearDamping": 100,
-              "angularDamping": 100,
-              "gravityScale": 0,
-              "layers": 1,
-              "masks": 1
-            }
-          ],
-          "animations": [
-            {
-              "name": "NewSprite",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "metadata": "{\"pskl\":{}}",
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "antibody2.png",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 12,
-                            "y": 1
-                          },
-                          {
-                            "x": 68,
-                            "y": 1
-                          },
-                          {
-                            "x": 68,
-                            "y": 79
-                          },
-                          {
-                            "x": 12,
-                            "y": 79
                           }
                         ]
                       ]
@@ -3027,7 +2915,18 @@
                     {
                       "hasCustomCollisionMask": true,
                       "image": "playerShip.png",
-                      "points": [],
+                      "points": [
+                        {
+                          "name": "Point",
+                          "x": 0,
+                          "y": 0
+                        },
+                        {
+                          "name": "CannonPoint",
+                          "x": 102.5,
+                          "y": 68
+                        }
+                      ],
                       "originPoint": {
                         "name": "origine",
                         "x": 64,
@@ -3103,9 +3002,6 @@
             "objectName": "Player_Cannon"
           },
           {
-            "objectName": "Enemy2"
-          },
-          {
             "objectName": "Map1"
           },
           {
@@ -3138,7 +3034,7 @@
                 "TransistionPainter",
                 "FlashTransitionPainter",
                 "\"0;0;0\"",
-                "1",
+                ".5",
                 "\"Circular\"",
                 "\"Backward\"",
                 "",
@@ -3152,14 +3048,14 @@
           "include": {
             "includeConfig": 0
           },
-          "target": "KeyControls"
+          "target": "Player_FSM"
         },
         {
           "type": "BuiltinCommonInstructions::Link",
           "include": {
             "includeConfig": 0
           },
-          "target": "Player_FSM"
+          "target": "KeyControls"
         },
         {
           "type": "BuiltinCommonInstructions::Link",
@@ -3453,6 +3349,29 @@
           "conditions": [
             {
               "type": {
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Cache"
+              },
+              "parameters": [
+                "Player_HitBox"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
                 "value": "StringObjectVariable"
               },
               "parameters": [
@@ -3543,77 +3462,6 @@
               ]
             }
           ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Comment",
-          "color": {
-            "b": 109,
-            "g": 230,
-            "r": 255,
-            "textB": 0,
-            "textG": 0,
-            "textR": 0
-          },
-          "comment": "Flip Player"
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "PosX"
-              },
-              "parameters": [
-                "Player_Ship",
-                "<",
-                "MouseX()"
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "FlippableCapability::FlippableBehavior::FlipX"
-              },
-              "parameters": [
-                "Player_Ship",
-                "Flippable",
-                "no"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "PosX"
-              },
-              "parameters": [
-                "Player_Ship",
-                ">=",
-                "MouseX()"
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "FlippableCapability::FlippableBehavior::FlipX"
-              },
-              "parameters": [
-                "Player_Ship",
-                "Flippable",
-                "yes"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": []
         }
       ]
     },
@@ -3694,11 +3542,6 @@
             }
           ],
           "parameters": []
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": []
         }
       ]
     },
@@ -3777,8 +3620,8 @@
                   "parameters": [
                     "",
                     "Player_Cannon",
-                    "Player_HitBox.CenterX()",
-                    "Player_HitBox.CenterY()",
+                    "Player_Ship.PointX(\"CannonPoint\")",
+                    "Player_Ship.PointY(\"CannonPoint\")",
                     "0",
                     "MouseX()",
                     "MouseY()",
@@ -3972,37 +3815,6 @@
               ]
             },
             {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "MouseButtonFromTextPressed"
-                  },
-                  "parameters": [
-                    "",
-                    "\"Left\""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "BuiltinCommonInstructions::Once"
-                  },
-                  "parameters": []
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "ResetTimer"
-                  },
-                  "parameters": [
-                    "",
-                    "\"ChargeTimer\""
-                  ]
-                }
-              ]
-            },
-            {
               "type": "BuiltinCommonInstructions::Comment",
               "color": {
                 "b": 109,
@@ -4064,6 +3876,115 @@
                     "Player_Cannon",
                     "Flippable",
                     "yes"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Flip Player"
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "PosX"
+                  },
+                  "parameters": [
+                    "Player_Ship",
+                    "<",
+                    "Player_HitBox.PointX(\"FlipPoint\")"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "FlippableCapability::FlippableBehavior::FlipX"
+                  },
+                  "parameters": [
+                    "Player_Ship",
+                    "Flippable",
+                    "no"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "PosX"
+                  },
+                  "parameters": [
+                    "Player_Ship",
+                    ">=",
+                    "Player_HitBox.PointX(\"FlipPoint\")"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "FlippableCapability::FlippableBehavior::FlipX"
+                  },
+                  "parameters": [
+                    "Player_Ship",
+                    "Flippable",
+                    "yes"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Not workign yet *****"
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "MouseButtonFromTextPressed"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Left\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "ResetTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"ChargeTimer\""
                   ]
                 }
               ]
