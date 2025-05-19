@@ -4382,12 +4382,12 @@
               "actions": [
                 {
                   "type": {
-                    "value": "Rotate"
+                    "value": "SetAngle"
                   },
                   "parameters": [
                     "Player_HitBox",
-                    "100",
-                    ""
+                    "=",
+                    "0"
                   ]
                 }
               ]
@@ -4425,12 +4425,12 @@
               "actions": [
                 {
                   "type": {
-                    "value": "Rotate"
+                    "value": "SetAngle"
                   },
                   "parameters": [
                     "Player_HitBox",
-                    "100",
-                    ""
+                    "=",
+                    "90"
                   ]
                 }
               ]
@@ -4468,12 +4468,12 @@
               "actions": [
                 {
                   "type": {
-                    "value": "Rotate"
+                    "value": "SetAngle"
                   },
                   "parameters": [
                     "Player_HitBox",
-                    "-100",
-                    ""
+                    "=",
+                    "270"
                   ]
                 }
               ]
@@ -4511,12 +4511,12 @@
               "actions": [
                 {
                   "type": {
-                    "value": "Rotate"
+                    "value": "SetAngle"
                   },
                   "parameters": [
                     "Player_HitBox",
-                    "-100",
-                    ""
+                    "=",
+                    "180"
                   ]
                 }
               ]
