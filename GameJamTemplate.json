@@ -358,6 +358,14 @@
           "identifier": "https://asset-resources.gdevelop.io/public-resources/Resource bars/96409107ae77918bbcde7a715c09e12b1b6c8ef16524b06b0d162955f1bd1a27_Shaded Red Fill Bar.png",
           "name": "Shaded Red Fill Bar.png"
         }
+      },
+      {
+        "file": "AssetsV2/enemyShipExample.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "AssetsV2\\enemyShipExample.png",
+        "smoothed": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -1985,7 +1993,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 0.5843784410740962,
+        "zoomFactor": 0.41943397827590845,
         "windowMask": false
       },
       "objectsGroups": [
@@ -2257,35 +2265,9 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Enemy_Skull_Prefab",
-          "persistentUuid": "7d79b502-7ecb-47a4-94e3-2c43ef8beea4",
-          "width": 0,
-          "x": 512,
-          "y": 544,
-          "zOrder": 127,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
         }
       ],
       "objects": [
-        {
-          "assetStoreId": "",
-          "name": "Enemy_Skull_Prefab",
-          "type": "EnemyPrefab::Enemy_Skull_Prefab",
-          "variant": "",
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "content": {}
-        },
         {
           "adaptCollisionMaskAutomatically": true,
           "assetStoreId": "",
@@ -2474,7 +2456,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "AssetsV2\\enemyShip.png",
+                      "image": "AssetsV2\\enemyShipExample.png",
                       "points": [
                         {
                           "name": "Skull_Point",
@@ -2496,20 +2478,20 @@
                       "customCollisionMask": [
                         [
                           {
-                            "x": 0,
-                            "y": 1
+                            "x": 19,
+                            "y": 12
                           },
                           {
-                            "x": 121,
-                            "y": 1
+                            "x": 176,
+                            "y": 12
                           },
                           {
-                            "x": 121,
-                            "y": 121
+                            "x": 176,
+                            "y": 144
                           },
                           {
-                            "x": 0,
-                            "y": 121
+                            "x": 19,
+                            "y": 144
                           }
                         ]
                       ]
@@ -3193,10 +3175,10 @@
                         "y": 46.5
                       },
                       "centerPoint": {
-                        "automatic": true,
+                        "automatic": false,
                         "name": "centre",
-                        "x": 0,
-                        "y": 0
+                        "x": -39,
+                        "y": 45
                       },
                       "customCollisionMask": [
                         [
@@ -3356,9 +3338,6 @@
           },
           {
             "folderName": "Sprites"
-          },
-          {
-            "objectName": "Enemy_Skull_Prefab"
           }
         ]
       },
@@ -6043,29 +6022,6 @@
                                 "Enemy",
                                 "SpawnX",
                                 "SpawnY",
-                                ""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "Create"
-                              },
-                              "parameters": [
-                                "",
-                                "Enemy_Skull",
-                                "Enemy.PointX(\"Skull_Point\")",
-                                "Enemy.PointY(\"Skull_Point\")",
-                                ""
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "Sticker::Sticker::Stick"
-                              },
-                              "parameters": [
-                                "Enemy_Skull",
-                                "Sticker",
-                                "Enemy",
                                 ""
                               ]
                             }
