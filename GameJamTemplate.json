@@ -484,6 +484,94 @@
         "name": "AssetsV4\\rocksWithWater.png",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "file": "Sinking ship1.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Sinking ship1.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Sinking ship2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Sinking ship2.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Sinking ship3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Sinking ship3.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Sinking ship4.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Sinking ship4.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Sinking ship5.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Sinking ship5.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Sinking ship6.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Sinking ship6.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Sinking ship7.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Sinking ship7.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Sinking ship8.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Sinking ship8.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Sinking ship9.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Sinking ship9.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Sinking ship10.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Sinking ship10.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Sinking ship11.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Sinking ship11.png",
+        "smoothed": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -2726,6 +2814,480 @@
                     {
                       "hasCustomCollisionMask": true,
                       "image": "AssetsV2\\enemyShipExample.png",
+                      "points": [
+                        {
+                          "name": "Skull_Point",
+                          "x": 114.5,
+                          "y": 57.5
+                        }
+                      ],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 64,
+                        "y": 64
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 64,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 19,
+                            "y": 12
+                          },
+                          {
+                            "x": 176,
+                            "y": 12
+                          },
+                          {
+                            "x": 176,
+                            "y": 144
+                          },
+                          {
+                            "x": 19,
+                            "y": 144
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Sinking",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Sinking ship1.png",
+                      "points": [
+                        {
+                          "name": "Skull_Point",
+                          "x": 114.5,
+                          "y": 57.5
+                        }
+                      ],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 64,
+                        "y": 64
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 64,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 19,
+                            "y": 12
+                          },
+                          {
+                            "x": 176,
+                            "y": 12
+                          },
+                          {
+                            "x": 176,
+                            "y": 144
+                          },
+                          {
+                            "x": 19,
+                            "y": 144
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Sinking ship2.png",
+                      "points": [
+                        {
+                          "name": "Skull_Point",
+                          "x": 114.5,
+                          "y": 57.5
+                        }
+                      ],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 64,
+                        "y": 64
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 64,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 19,
+                            "y": 12
+                          },
+                          {
+                            "x": 176,
+                            "y": 12
+                          },
+                          {
+                            "x": 176,
+                            "y": 144
+                          },
+                          {
+                            "x": 19,
+                            "y": 144
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Sinking ship3.png",
+                      "points": [
+                        {
+                          "name": "Skull_Point",
+                          "x": 114.5,
+                          "y": 57.5
+                        }
+                      ],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 64,
+                        "y": 64
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 64,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 19,
+                            "y": 12
+                          },
+                          {
+                            "x": 176,
+                            "y": 12
+                          },
+                          {
+                            "x": 176,
+                            "y": 144
+                          },
+                          {
+                            "x": 19,
+                            "y": 144
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Sinking ship4.png",
+                      "points": [
+                        {
+                          "name": "Skull_Point",
+                          "x": 114.5,
+                          "y": 57.5
+                        }
+                      ],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 64,
+                        "y": 64
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 64,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 19,
+                            "y": 12
+                          },
+                          {
+                            "x": 176,
+                            "y": 12
+                          },
+                          {
+                            "x": 176,
+                            "y": 144
+                          },
+                          {
+                            "x": 19,
+                            "y": 144
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Sinking ship5.png",
+                      "points": [
+                        {
+                          "name": "Skull_Point",
+                          "x": 114.5,
+                          "y": 57.5
+                        }
+                      ],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 64,
+                        "y": 64
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 64,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 19,
+                            "y": 12
+                          },
+                          {
+                            "x": 176,
+                            "y": 12
+                          },
+                          {
+                            "x": 176,
+                            "y": 144
+                          },
+                          {
+                            "x": 19,
+                            "y": 144
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Sinking ship6.png",
+                      "points": [
+                        {
+                          "name": "Skull_Point",
+                          "x": 114.5,
+                          "y": 57.5
+                        }
+                      ],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 64,
+                        "y": 64
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 64,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 19,
+                            "y": 12
+                          },
+                          {
+                            "x": 176,
+                            "y": 12
+                          },
+                          {
+                            "x": 176,
+                            "y": 144
+                          },
+                          {
+                            "x": 19,
+                            "y": 144
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Sinking ship7.png",
+                      "points": [
+                        {
+                          "name": "Skull_Point",
+                          "x": 114.5,
+                          "y": 57.5
+                        }
+                      ],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 64,
+                        "y": 64
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 64,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 19,
+                            "y": 12
+                          },
+                          {
+                            "x": 176,
+                            "y": 12
+                          },
+                          {
+                            "x": 176,
+                            "y": 144
+                          },
+                          {
+                            "x": 19,
+                            "y": 144
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Sinking ship8.png",
+                      "points": [
+                        {
+                          "name": "Skull_Point",
+                          "x": 114.5,
+                          "y": 57.5
+                        }
+                      ],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 64,
+                        "y": 64
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 64,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 19,
+                            "y": 12
+                          },
+                          {
+                            "x": 176,
+                            "y": 12
+                          },
+                          {
+                            "x": 176,
+                            "y": 144
+                          },
+                          {
+                            "x": 19,
+                            "y": 144
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Sinking ship9.png",
+                      "points": [
+                        {
+                          "name": "Skull_Point",
+                          "x": 114.5,
+                          "y": 57.5
+                        }
+                      ],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 64,
+                        "y": 64
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 64,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 19,
+                            "y": 12
+                          },
+                          {
+                            "x": 176,
+                            "y": 12
+                          },
+                          {
+                            "x": 176,
+                            "y": 144
+                          },
+                          {
+                            "x": 19,
+                            "y": 144
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Sinking ship10.png",
+                      "points": [
+                        {
+                          "name": "Skull_Point",
+                          "x": 114.5,
+                          "y": 57.5
+                        }
+                      ],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 64,
+                        "y": 64
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 64,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 19,
+                            "y": 12
+                          },
+                          {
+                            "x": 176,
+                            "y": 12
+                          },
+                          {
+                            "x": 176,
+                            "y": 144
+                          },
+                          {
+                            "x": 19,
+                            "y": 144
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Sinking ship11.png",
                       "points": [
                         {
                           "name": "Skull_Point",
@@ -7462,48 +8024,16 @@
                             "10",
                             "2"
                           ]
-                        }
-                      ]
-                    },
-                    {
-                      "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [
-                        {
-                          "type": {
-                            "value": "BooleanObjectVariable"
-                          },
-                          "parameters": [
-                            "Enemy",
-                            "Rotate",
-                            "=",
-                            ""
-                          ]
-                        }
-                      ],
-                      "actions": [
-                        {
-                          "type": {
-                            "value": "SetBooleanObjectVariable"
-                          },
-                          "parameters": [
-                            "Enemy",
-                            "Rotate",
-                            "True",
-                            ""
-                          ]
                         },
                         {
                           "type": {
-                            "value": "Tween::TweenBehavior::AddObjectAngleTween2"
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
                           },
                           "parameters": [
                             "Enemy",
-                            "Tween",
-                            "\"Rotate\"",
-                            "90",
-                            "\"linear\"",
-                            ".5",
-                            ""
+                            "Animation",
+                            "=",
+                            "\"Sinking\""
                           ]
                         }
                       ]
@@ -7513,50 +8043,33 @@
                       "conditions": [
                         {
                           "type": {
-                            "value": "Tween::HasFinished"
+                            "value": "AnimatableCapability::AnimatableBehavior::HasAnimationEnded"
                           },
                           "parameters": [
                             "Enemy",
-                            "Tween",
-                            "\"Rotate\""
+                            "Animation"
                           ]
                         },
                         {
                           "type": {
-                            "value": "BooleanObjectVariable"
+                            "value": "AnimatableCapability::AnimatableBehavior::Name"
                           },
                           "parameters": [
                             "Enemy",
-                            "SInk",
+                            "Animation",
                             "=",
-                            ""
+                            "\"Sinking\""
                           ]
                         }
                       ],
                       "actions": [
                         {
                           "type": {
-                            "value": "SetBooleanObjectVariable"
+                            "value": "Delete"
                           },
                           "parameters": [
-                            "Enemy",
-                            "SInk",
-                            "True",
+                            "Enemy_Health_Bar",
                             ""
-                          ]
-                        },
-                        {
-                          "type": {
-                            "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
-                          },
-                          "parameters": [
-                            "Enemy",
-                            "Tween",
-                            "\"Sink\"",
-                            "0",
-                            "\"linear\"",
-                            ".5",
-                            "yes"
                           ]
                         },
                         {
@@ -7564,7 +8077,7 @@
                             "value": "Delete"
                           },
                           "parameters": [
-                            "Enemy_Health_Bar",
+                            "Enemy",
                             ""
                           ]
                         }
