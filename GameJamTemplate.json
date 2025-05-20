@@ -368,7 +368,6 @@
         "userAdded": false
       },
       {
-<<<<<<< HEAD
         "file": "AssetsV4/Beryliumbold.ttf",
         "kind": "font",
         "metadata": "",
@@ -387,12 +386,6 @@
         "kind": "image",
         "metadata": "",
         "name": "AssetsV4\\playerShipWithWater.png",
-=======
-        "file": "assets/NewSprite14.png",
-        "kind": "image",
-        "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/NewSprite14.png\"}",
-        "name": "NewSprite5",
->>>>>>> main
         "smoothed": false,
         "userAdded": false
       }
@@ -466,7 +459,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.2,
         "snap": true,
-        "zoomFactor": 0.3325387091250779,
+        "zoomFactor": 0.3553434558816989,
         "windowMask": false
       },
       "objectsGroups": [
@@ -2094,11 +2087,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-<<<<<<< HEAD
-        "zoomFactor": 0.3437520241612333,
-=======
-        "zoomFactor": 0.5653158055126342,
->>>>>>> main
+        "zoomFactor": 0.3010461197182475,
         "windowMask": false
       },
       "objectsGroups": [
@@ -2367,23 +2356,6 @@
           "x": -200,
           "y": 376,
           "zOrder": 126,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 288,
-          "keepRatio": true,
-          "layer": "",
-          "name": "NewSprite",
-          "persistentUuid": "4372f1e3-0086-4753-a096-d08fa428b17f",
-          "width": 288,
-          "x": 640,
-          "y": 320,
-          "zOrder": 127,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -3537,67 +3509,6 @@
               }
             }
           }
-        },
-        {
-          "adaptCollisionMaskAutomatically": true,
-          "assetStoreId": "",
-          "name": "NewSprite",
-          "type": "Sprite",
-          "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "animations": [
-            {
-              "name": "NewSprite",
-              "useMultipleDirections": false,
-              "directions": [
-                {
-                  "looping": false,
-                  "metadata": "{\"pskl\":{}}",
-                  "timeBetweenFrames": 0.08,
-                  "sprites": [
-                    {
-                      "hasCustomCollisionMask": true,
-                      "image": "NewSprite5",
-                      "points": [],
-                      "originPoint": {
-                        "name": "origine",
-                        "x": 32,
-                        "y": 32
-                      },
-                      "centerPoint": {
-                        "automatic": true,
-                        "name": "centre",
-                        "x": 0,
-                        "y": 0
-                      },
-                      "customCollisionMask": [
-                        [
-                          {
-                            "x": 2,
-                            "y": 2
-                          },
-                          {
-                            "x": 64,
-                            "y": 2
-                          },
-                          {
-                            "x": 64,
-                            "y": 62
-                          },
-                          {
-                            "x": 2,
-                            "y": 62
-                          }
-                        ]
-                      ]
-                    }
-                  ]
-                }
-              ]
-            }
-          ]
         }
       ],
       "objectsFolderStructure": {
@@ -3676,9 +3587,6 @@
           },
           {
             "objectName": "Shockwave"
-          },
-          {
-            "objectName": "NewSprite"
           }
         ]
       },
@@ -3878,54 +3786,7 @@
         {
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
-          "actions": [
-            {
-              "type": {
-                "value": "MettreXY"
-              },
-              "parameters": [
-                "NewSprite",
-                "=",
-                "Player_HitBox.CenterX()",
-                "=",
-                "Player_HitBox.CenterY()"
-              ]
-            },
-            {
-              "type": {
-                "value": "SetAngle"
-              },
-              "parameters": [
-                "NewSprite",
-                "=",
-                "Player_HitBox.Angle()"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "BuiltinCommonInstructions::Once"
-              },
-              "parameters": []
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "OpacityCapability::OpacityBehavior::SetValue"
-              },
-              "parameters": [
-                "NewSprite",
-                "Opacity",
-                "=",
-                "50"
-              ]
-            }
-          ]
+          "actions": []
         }
       ],
       "layers": [
@@ -4615,12 +4476,12 @@
               "actions": [
                 {
                   "type": {
-                    "value": "SetAngle"
+                    "value": "Rotate"
                   },
                   "parameters": [
                     "Player_HitBox",
-                    "=",
-                    "0"
+                    "100",
+                    ""
                   ]
                 }
               ]
@@ -4658,12 +4519,12 @@
               "actions": [
                 {
                   "type": {
-                    "value": "SetAngle"
+                    "value": "Rotate"
                   },
                   "parameters": [
                     "Player_HitBox",
-                    "=",
-                    "90"
+                    "100",
+                    ""
                   ]
                 }
               ]
@@ -4701,12 +4562,12 @@
               "actions": [
                 {
                   "type": {
-                    "value": "SetAngle"
+                    "value": "Rotate"
                   },
                   "parameters": [
                     "Player_HitBox",
-                    "=",
-                    "270"
+                    "-100",
+                    ""
                   ]
                 }
               ]
@@ -4744,12 +4605,12 @@
               "actions": [
                 {
                   "type": {
-                    "value": "SetAngle"
+                    "value": "Rotate"
                   },
                   "parameters": [
                     "Player_HitBox",
-                    "=",
-                    "180"
+                    "-100",
+                    ""
                   ]
                 }
               ]
