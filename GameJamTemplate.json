@@ -388,6 +388,22 @@
         "name": "AssetsV4\\playerShipWithWater.png",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "file": "AssetsV4/playerCannonHurt.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "AssetsV4\\playerCannonHurt.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "AssetsV4/playerCannonDead.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "AssetsV4\\playerCannonDead.png",
+        "smoothed": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -2771,7 +2787,7 @@
           "behaviors": [],
           "animations": [
             {
-              "name": "NewSprite",
+              "name": "Idle",
               "useMultipleDirections": false,
               "directions": [
                 {
@@ -2782,6 +2798,114 @@
                     {
                       "hasCustomCollisionMask": true,
                       "image": "AssetsV2\\playerCannonV1.png",
+                      "points": [
+                        {
+                          "name": "FirePoint",
+                          "x": 101.5,
+                          "y": 75
+                        }
+                      ],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 43,
+                        "y": 68.5
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 1
+                          },
+                          {
+                            "x": 122,
+                            "y": 1
+                          },
+                          {
+                            "x": 122,
+                            "y": 99
+                          },
+                          {
+                            "x": 0,
+                            "y": 99
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Hurt",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "AssetsV4\\playerCannonHurt.png",
+                      "points": [
+                        {
+                          "name": "FirePoint",
+                          "x": 101.5,
+                          "y": 75
+                        }
+                      ],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 43,
+                        "y": 68.5
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 1
+                          },
+                          {
+                            "x": 122,
+                            "y": 1
+                          },
+                          {
+                            "x": 122,
+                            "y": 99
+                          },
+                          {
+                            "x": 0,
+                            "y": 99
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Dead",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "AssetsV4\\playerCannonDead.png",
                       "points": [
                         {
                           "name": "FirePoint",
@@ -3049,7 +3173,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "AssetsV2\\playerShip.png",
+                      "image": "AssetsV4\\playerShipWithWater.png",
                       "points": [
                         {
                           "name": "Point",
@@ -3085,11 +3209,11 @@
                           },
                           {
                             "x": 121,
-                            "y": 121
+                            "y": 122
                           },
                           {
                             "x": 0,
-                            "y": 121
+                            "y": 122
                           }
                         ]
                       ]
@@ -4292,6 +4416,17 @@
                     "Player_HitBox.Health::MaxHealth()",
                     ""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                  },
+                  "parameters": [
+                    "Player_Cannon",
+                    "Animation",
+                    "=",
+                    "\"Idle\""
+                  ]
                 }
               ]
             },
@@ -4351,6 +4486,42 @@
               "type": "BuiltinCommonInstructions::Group",
               "events": [],
               "parameters": []
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Cannon animation"
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                  },
+                  "parameters": [
+                    "Player_Cannon",
+                    "Animation",
+                    "=",
+                    "\"Idle\""
+                  ]
+                }
+              ]
             },
             {
               "type": "BuiltinCommonInstructions::Comment",
@@ -5031,6 +5202,17 @@
                     "Player_HitBox.CenterY()",
                     ""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                  },
+                  "parameters": [
+                    "Player_Cannon",
+                    "Animation",
+                    "=",
+                    "\"Hurt\""
+                  ]
                 }
               ]
             },
@@ -5044,14 +5226,14 @@
               "type": "BuiltinCommonInstructions::Group",
               "events": [],
               "parameters": []
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": []
             }
           ],
           "parameters": []
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": []
         }
       ]
     },
