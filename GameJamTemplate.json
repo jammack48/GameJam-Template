@@ -368,10 +368,31 @@
         "userAdded": false
       },
       {
+<<<<<<< HEAD
+        "file": "AssetsV4/Beryliumbold.ttf",
+        "kind": "font",
+        "metadata": "",
+        "name": "AssetsV4\\Beryliumbold.ttf",
+        "userAdded": false
+      },
+      {
+        "file": "AssetsV4/Berylium.ttf",
+        "kind": "font",
+        "metadata": "",
+        "name": "AssetsV4\\Berylium.ttf",
+        "userAdded": false
+      },
+      {
+        "file": "AssetsV4/playerShipWithWater.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "AssetsV4\\playerShipWithWater.png",
+=======
         "file": "assets/NewSprite14.png",
         "kind": "image",
         "metadata": "{\"extension\":\".png\",\"localFilePath\":\"assets/NewSprite14.png\"}",
         "name": "NewSprite5",
+>>>>>>> main
         "smoothed": false,
         "userAdded": false
       }
@@ -445,7 +466,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.2,
         "snap": true,
-        "zoomFactor": 0.3553434558816989,
+        "zoomFactor": 0.3325387091250779,
         "windowMask": false
       },
       "objectsGroups": [
@@ -636,8 +657,8 @@
           "name": "CreditsText",
           "persistentUuid": "7dd6ce66-320d-4ba8-a5a4-e33ac0abc7c9",
           "width": 0,
-          "x": 566,
-          "y": 544,
+          "x": 1088,
+          "y": 608,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -819,8 +840,8 @@
           "name": "PirateText",
           "persistentUuid": "d07f04ad-9983-488b-97aa-1225b68f6019",
           "width": 0,
-          "x": 470,
-          "y": 168,
+          "x": 227,
+          "y": 171,
           "zOrder": 5,
           "numberProperties": [],
           "stringProperties": [],
@@ -841,6 +862,27 @@
           "zOrder": 16,
           "numberProperties": [],
           "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "background",
+          "name": "background",
+          "persistentUuid": "3c83c2fb-d5c2-4d01-81fc-22e0a41ef84d",
+          "width": 0,
+          "x": -32,
+          "y": -32,
+          "zOrder": 17,
+          "numberProperties": [],
+          "stringProperties": [
+            {
+              "name": "tilemap",
+              "value": "{\"tileWidth\":160,\"tileHeight\":160,\"dimX\":9,\"dimY\":5,\"layers\":[{\"id\":0,\"alpha\":1,\"tiles\":[[12,12,12,12,12,12,12,12,12],[12,12,12,12,12,12,12,12,12],[12,12,12,12,12,12,12,12,12],[12,12,12,12,12,12,12,12,12],[12,12,12,12,12,12,12,12,12]]}]}"
+            }
+          ],
           "initialVariables": []
         }
       ],
@@ -877,12 +919,12 @@
             }
           ],
           "content": {
-            "text": "PirateGame",
+            "text": "Pirate Kings Clash of the tides",
             "opacity": 255,
-            "fontSize": 40,
+            "fontSize": 64,
             "visible": true,
-            "color": "255;255;255",
-            "fontFamily": "Arial",
+            "color": "94;46;17",
+            "fontFamily": "AssetsV4\\Beryliumbold.ttf",
             "align": "left",
             "wordWrap": true,
             "verticalTextAlignment": "top"
@@ -924,8 +966,8 @@
             "opacity": 255,
             "fontSize": 40,
             "visible": true,
-            "color": "255;255;255",
-            "fontFamily": "Arial",
+            "color": "94;46;17",
+            "fontFamily": "AssetsV4\\Beryliumbold.ttf",
             "align": "left",
             "wordWrap": true,
             "verticalTextAlignment": "top"
@@ -967,8 +1009,8 @@
             "opacity": 255,
             "fontSize": 40,
             "visible": true,
-            "color": "255;255;255",
-            "fontFamily": "Arial",
+            "color": "94;46;17",
+            "fontFamily": "AssetsV4\\Beryliumbold.ttf",
             "align": "left",
             "wordWrap": true,
             "verticalTextAlignment": "top"
@@ -1010,8 +1052,8 @@
             "opacity": 255,
             "fontSize": 40,
             "visible": true,
-            "color": "255;255;255",
-            "fontFamily": "Arial",
+            "color": "94;46;17",
+            "fontFamily": "AssetsV4\\Berylium.ttf",
             "align": "left",
             "wordWrap": true,
             "verticalTextAlignment": "top"
@@ -1053,8 +1095,8 @@
             "opacity": 255,
             "fontSize": 40,
             "visible": true,
-            "color": "255;255;255",
-            "fontFamily": "Arial",
+            "color": "94;46;17",
+            "fontFamily": "AssetsV4\\Beryliumbold.ttf",
             "align": "left",
             "wordWrap": true,
             "verticalTextAlignment": "top"
@@ -1515,13 +1557,28 @@
           "content": {
             "text": "Press Q to quit to menu from each game",
             "opacity": 255,
-            "fontSize": 40,
+            "fontSize": 32,
             "visible": true,
-            "color": "255;255;255",
-            "fontFamily": "Arial",
+            "color": "94;46;17",
+            "fontFamily": "AssetsV4\\Berylium.ttf",
             "align": "left",
             "wordWrap": true,
             "verticalTextAlignment": "top"
+          }
+        },
+        {
+          "assetStoreId": "",
+          "name": "background",
+          "type": "TileMap::SimpleTileMap",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "atlasImage": "mapTileset.png",
+            "rowCount": 4,
+            "columnCount": 4,
+            "tileSize": 160,
+            "tilesWithHitBox": "0,1,2,3,7,6,4,8,12,9,10,11,15"
           }
         }
       ],
@@ -1542,6 +1599,9 @@
           },
           {
             "objectName": "QuitText"
+          },
+          {
+            "objectName": "background"
           },
           {
             "objectName": "SettingsText"
@@ -1912,6 +1972,39 @@
           "followBaseLayerCamera": false,
           "isLightingLayer": false,
           "isLocked": false,
+          "name": "background",
+          "renderingType": "",
+          "visibility": true,
+          "cameras": [],
+          "effects": [
+            {
+              "effectType": "Scene3D::HemisphereLight",
+              "name": "3D Light",
+              "doubleParameters": {
+                "elevation": 45,
+                "intensity": 1,
+                "rotation": 0
+              },
+              "stringParameters": {
+                "groundColor": "64;64;64",
+                "skyColor": "255;255;255",
+                "top": "Y-"
+              },
+              "booleanParameters": {}
+            }
+          ]
+        },
+        {
+          "ambientLightColorB": 200,
+          "ambientLightColorG": 200,
+          "ambientLightColorR": 200,
+          "camera3DFarPlaneDistance": 10000,
+          "camera3DFieldOfView": 45,
+          "camera3DNearPlaneDistance": 3,
+          "cameraType": "",
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "isLocked": false,
           "name": "",
           "renderingType": "",
           "visibility": true,
@@ -2001,7 +2094,11 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
+<<<<<<< HEAD
+        "zoomFactor": 0.3437520241612333,
+=======
         "zoomFactor": 0.5653158055126342,
+>>>>>>> main
         "windowMask": false
       },
       "objectsGroups": [
@@ -2126,7 +2223,7 @@
           "angle": 0,
           "customSize": true,
           "depth": 1,
-          "height": 96,
+          "height": 64,
           "keepRatio": true,
           "layer": "UI_Layer",
           "name": "TimerText",
@@ -2770,7 +2867,7 @@
           "effects": [],
           "behaviors": [],
           "string": "Power:",
-          "font": "",
+          "font": "AssetsV4\\Beryliumbold.ttf",
           "textAlignment": "left",
           "characterSize": 40,
           "color": {
@@ -2793,7 +2890,7 @@
             "smoothed": true,
             "underlined": false,
             "text": "Power:",
-            "font": "",
+            "font": "AssetsV4\\Beryliumbold.ttf",
             "textAlignment": "left",
             "verticalTextAlignment": "top",
             "characterSize": 40,
@@ -2812,7 +2909,7 @@
           "effects": [],
           "behaviors": [],
           "string": "State:",
-          "font": "",
+          "font": "AssetsV4\\Beryliumbold.ttf",
           "textAlignment": "left",
           "characterSize": 40,
           "color": {
@@ -2835,7 +2932,7 @@
             "smoothed": true,
             "underlined": false,
             "text": "State:",
-            "font": "",
+            "font": "AssetsV4\\Beryliumbold.ttf",
             "textAlignment": "left",
             "verticalTextAlignment": "top",
             "characterSize": 40,
@@ -2854,7 +2951,7 @@
           "effects": [],
           "behaviors": [],
           "string": "Debug:",
-          "font": "",
+          "font": "AssetsV4\\Beryliumbold.ttf",
           "textAlignment": "left",
           "characterSize": 40,
           "color": {
@@ -2877,7 +2974,7 @@
             "smoothed": true,
             "underlined": false,
             "text": "Debug:",
-            "font": "",
+            "font": "AssetsV4\\Beryliumbold.ttf",
             "textAlignment": "left",
             "verticalTextAlignment": "top",
             "characterSize": 40,
@@ -3043,7 +3140,7 @@
           "effects": [],
           "behaviors": [],
           "string": "Enemies:",
-          "font": "",
+          "font": "AssetsV4\\Beryliumbold.ttf",
           "textAlignment": "left",
           "characterSize": 40,
           "color": {
@@ -3066,7 +3163,7 @@
             "smoothed": true,
             "underlined": false,
             "text": "Enemies:",
-            "font": "",
+            "font": "AssetsV4\\Beryliumbold.ttf",
             "textAlignment": "left",
             "verticalTextAlignment": "top",
             "characterSize": 40,
