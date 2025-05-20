@@ -412,6 +412,36 @@
         "name": "NewSprite5",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "file": "Cannon pirate VG Sounds/Sounds/Sound Effects/Shots/Cannon Fire.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Cannon pirate VG Sounds\\Sounds\\Sound Effects\\Shots\\Cannon Fire.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "ship sinking.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "ship sinking.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "Cannon pirate VG Sounds/Sounds/Sound Effects/Hits/Impact.Hit SFX.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Cannon pirate VG Sounds\\Sounds\\Sound Effects\\Hits\\Impact.Hit SFX.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -5189,6 +5219,18 @@
                     "Player_Cannon_Ball_HitBox",
                     "\"ShotTimer\""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "Cannon pirate VG Sounds\\Sounds\\Sound Effects\\Shots\\Cannon Fire.mp3",
+                    "",
+                    "15",
+                    ""
+                  ]
                 }
               ],
               "events": [
@@ -6590,6 +6632,33 @@
                         "\"Hurt\""
                       ]
                     }
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "PlaySound"
+                          },
+                          "parameters": [
+                            "",
+                            "Cannon pirate VG Sounds\\Sounds\\Sound Effects\\Hits\\Impact.Hit SFX.mp3",
+                            "",
+                            "10",
+                            ""
+                          ]
+                        }
+                      ]
+                    }
                   ]
                 },
                 {
@@ -6908,6 +6977,31 @@
                   ],
                   "actions": [],
                   "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "BuiltinCommonInstructions::Once"
+                          },
+                          "parameters": []
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "PlaySound"
+                          },
+                          "parameters": [
+                            "",
+                            "ship sinking.mp3",
+                            "",
+                            "10",
+                            "2"
+                          ]
+                        }
+                      ]
+                    },
                     {
                       "type": "BuiltinCommonInstructions::Standard",
                       "conditions": [
