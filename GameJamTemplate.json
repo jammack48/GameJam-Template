@@ -7279,10 +7279,9 @@
                 "textG": 0,
                 "textR": 0
               },
-              "comment": "Shake Screen full charge - not working yet"
+              "comment": "Shake Screen full charge - workign may need to be bigger"
             },
             {
-              "disabled": true,
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [
                 {
@@ -7295,6 +7294,12 @@
                     "Charge_Bar.MaxValue()",
                     ""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
                 }
               ],
               "actions": [
@@ -7304,9 +7309,9 @@
                   },
                   "parameters": [
                     "",
-                    "10",
-                    "1",
-                    "1",
+                    "4",
+                    ".1",
+                    ".1",
                     ""
                   ]
                 }
@@ -7438,6 +7443,16 @@
                     "5",
                     ".08",
                     "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "CameraShake::StopShaking"
+                  },
+                  "parameters": [
+                    "",
+                    ".1",
                     ""
                   ]
                 }
