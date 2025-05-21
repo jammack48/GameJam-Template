@@ -2806,9 +2806,9 @@
             {
               "name": "Health",
               "type": "Health::Health",
-              "Health": 3,
+              "Health": 500,
               "CurrentHealth": 0,
-              "MaxHealth": 3,
+              "MaxHealth": 500,
               "DamageCooldown": 0,
               "AllowOverHealing": false,
               "IsHealthJustDamaged": false,
@@ -4359,8 +4359,8 @@
             }
           ],
           "content": {
-            "InitialValue": 3,
-            "MaxValue": 3,
+            "InitialValue": 500,
+            "MaxValue": 500,
             "BarTopPadding": 8,
             "BarRightPadding": 10,
             "BarBottomPadding": 8,
@@ -4739,7 +4739,7 @@
             "BarRightPadding": 25,
             "BarBottomPadding": 5,
             "InitialValue": 0,
-            "MaxValue": 3,
+            "MaxValue": 500,
             "EasingDuration": 0
           },
           "childrenContent": {
@@ -6203,7 +6203,7 @@
                   "parameters": [
                     "Charge_Bar",
                     "=",
-                    "TimerElapsedTime(\"ChargeTimer\")",
+                    "TimerValue",
                     ""
                   ]
                 }
@@ -7682,6 +7682,17 @@
                                 "Enemy_Health_Bar",
                                 "Sticker",
                                 "Enemy",
+                                ""
+                              ]
+                            },
+                            {
+                              "type": {
+                                "value": "PanelSpriteContinuousBar::PanelSpriteContinuousBar::SetValue"
+                              },
+                              "parameters": [
+                                "Enemy_Health_Bar",
+                                "=",
+                                "Enemy.Health::MaxHealth()",
                                 ""
                               ]
                             }
