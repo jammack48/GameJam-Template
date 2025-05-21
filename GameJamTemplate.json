@@ -580,6 +580,50 @@
         "name": "AssetsV4\\playerDirectionCompass.png",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "file": "AssetsV4/enemyImpact.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "AssetsV4\\enemyImpact.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "assets/Bronze bar background.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Bronze bar background.png",
+        "smoothed": false,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Resource bars/pixel art/243af986cfe00f54732f8c0800fb77bc516087c6bc96893f0f83e5dacbca0f13_Bronze bar background.png",
+          "name": "Bronze bar background.png"
+        }
+      },
+      {
+        "file": "assets/Brown LCD Bar Fill.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Brown LCD Bar Fill.png",
+        "smoothed": false,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Resource bars/pixel art/dedf79e6421b8ab3ba5ede3a90bef87412c248afcd4eb4881cd94dada5538140_Brown LCD Bar Fill.png",
+          "name": "Brown LCD Bar Fill.png"
+        }
+      },
+      {
+        "file": "assets/Green LCD Bar Fill.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Green LCD Bar Fill.png",
+        "smoothed": false,
+        "userAdded": false,
+        "origin": {
+          "identifier": "https://asset-resources.gdevelop.io/public-resources/Resource bars/pixel art/55034bb02ed0cbeede3da64dcf05d3590abee4a8fa69657ed5d461f31d2f1df0_Green LCD Bar Fill.png",
+          "name": "Green LCD Bar Fill.png"
+        }
       }
     ],
     "resourceFolders": []
@@ -2504,38 +2548,6 @@
         },
         {
           "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Barrel",
-          "persistentUuid": "5f6f253d-b279-4201-85ff-fdc48eea7232",
-          "width": 0,
-          "x": 1088,
-          "y": 448,
-          "zOrder": 128,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Chest",
-          "persistentUuid": "0e51c0fd-fb97-4ede-9e00-f168abb3fd9e",
-          "width": 0,
-          "x": 1184,
-          "y": 384,
-          "zOrder": 129,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
           "customSize": true,
           "depth": 1,
           "height": 86,
@@ -2598,6 +2610,23 @@
           "x": 1471,
           "y": -327,
           "zOrder": 131,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 270,
+          "customSize": true,
+          "depth": 48,
+          "height": 32,
+          "keepRatio": true,
+          "layer": "UI_Layer",
+          "name": "Charge_Bar",
+          "persistentUuid": "f15ba210-7195-4867-b01a-f3e448d21110",
+          "width": 448,
+          "x": 1008,
+          "y": 368,
+          "zOrder": 132,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -2671,7 +2700,13 @@
           "name": "Player_Cannon_Ball_HitBox",
           "type": "Sprite",
           "updateIfNotVisible": false,
-          "variables": [],
+          "variables": [
+            {
+              "name": "Damage",
+              "type": "number",
+              "value": 1
+            }
+          ],
           "effects": [],
           "behaviors": [],
           "animations": [
@@ -4640,6 +4675,141 @@
           "variables": [],
           "effects": [],
           "behaviors": []
+        },
+        {
+          "additive": false,
+          "assetStoreId": "",
+          "destroyWhenNoParticles": true,
+          "emitterAngleA": 0,
+          "emitterAngleB": 90,
+          "emitterForceMax": 0,
+          "emitterForceMin": 0,
+          "flow": 0,
+          "jumpForwardInTimeOnCreation": 0,
+          "maxParticleNb": 1,
+          "name": "Enemy_Hit_Particle",
+          "particleAlpha1": 204,
+          "particleAlpha2": 0,
+          "particleAlphaRandomness1": 0,
+          "particleAlphaRandomness2": 0,
+          "particleAngle1": 0,
+          "particleAngle2": 0,
+          "particleAngleRandomness1": 0,
+          "particleAngleRandomness2": 0,
+          "particleBlue1": 255,
+          "particleBlue2": 255,
+          "particleColor1": "255;255;255",
+          "particleColor2": "255;255;255",
+          "particleGravityX": 0,
+          "particleGravityY": 0,
+          "particleGreen1": 255,
+          "particleGreen2": 255,
+          "particleLifeTimeMax": 1,
+          "particleLifeTimeMin": 0.2,
+          "particleRed1": 255,
+          "particleRed2": 255,
+          "particleSize1": 300,
+          "particleSize2": 100,
+          "particleSizeRandomness1": 0,
+          "particleSizeRandomness2": 0,
+          "rendererParam1": 3,
+          "rendererParam2": 1,
+          "rendererType": "Quad",
+          "tank": 1,
+          "textureParticleName": "AssetsV4\\enemyImpact.png",
+          "type": "ParticleSystem::ParticleEmitter",
+          "zoneRadius": 3,
+          "variables": [],
+          "effects": [],
+          "behaviors": []
+        },
+        {
+          "assetStoreId": "39b5fe0a8bca0e591a8b8a74c94ee3e6f80192ac548e4fe52c6102de1c0e22ab",
+          "name": "Charge_Bar",
+          "type": "PanelSpriteContinuousBar::PanelSpriteContinuousBar",
+          "variant": "",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "ShowLabel": false,
+            "PreviousHighValueDuration": 0,
+            "BarTopPadding": 4,
+            "BarLeftPadding": 25,
+            "BarRightPadding": 25,
+            "BarBottomPadding": 5,
+            "InitialValue": 0,
+            "MaxValue": 3,
+            "EasingDuration": 0
+          },
+          "childrenContent": {
+            "Background": {
+              "bottomMargin": 4,
+              "height": 25,
+              "leftMargin": 24,
+              "rightMargin": 25,
+              "texture": "Bronze bar background.png",
+              "tiled": true,
+              "topMargin": 3,
+              "width": 113
+            },
+            "Buffer": {
+              "bottomMargin": 0,
+              "height": 32,
+              "leftMargin": 0,
+              "rightMargin": 0,
+              "texture": "Brown LCD Bar Fill.png",
+              "tiled": true,
+              "topMargin": 0,
+              "width": 32
+            },
+            "FillBar": {
+              "bottomMargin": 0,
+              "height": 32,
+              "leftMargin": 0,
+              "rightMargin": 0,
+              "texture": "Green LCD Bar Fill.png",
+              "tiled": true,
+              "topMargin": 0,
+              "width": 32
+            },
+            "Label": {
+              "bold": false,
+              "italic": false,
+              "smoothed": true,
+              "underlined": false,
+              "string": "",
+              "font": "",
+              "textAlignment": "",
+              "characterSize": 20,
+              "color": {
+                "b": 0,
+                "g": 0,
+                "r": 0
+              },
+              "content": {
+                "bold": false,
+                "isOutlineEnabled": false,
+                "isShadowEnabled": false,
+                "italic": false,
+                "outlineColor": "255;255;255",
+                "outlineThickness": 2,
+                "shadowAngle": 90,
+                "shadowBlurRadius": 2,
+                "shadowColor": "0;0;0",
+                "shadowDistance": 4,
+                "shadowOpacity": 127,
+                "smoothed": true,
+                "underlined": false,
+                "text": "",
+                "font": "",
+                "textAlignment": "",
+                "verticalTextAlignment": "top",
+                "characterSize": 20,
+                "color": "0;0;0"
+              }
+            }
+          }
         }
       ],
       "objectsFolderStructure": {
@@ -4677,6 +4847,9 @@
             "folderName": "Enemies",
             "children": [
               {
+                "objectName": "Enemy_Hit_Particle"
+              },
+              {
                 "objectName": "Enemy"
               },
               {
@@ -4690,6 +4863,9 @@
           {
             "folderName": "Player",
             "children": [
+              {
+                "objectName": "Charge_Bar"
+              },
               {
                 "objectName": "Shockwave"
               },
@@ -4735,9 +4911,6 @@
                 "objectName": "TimerText"
               }
             ]
-          },
-          {
-            "folderName": "Sprites"
           }
         ]
       },
@@ -4815,55 +4988,11 @@
           "target": "Enemies"
         },
         {
-          "type": "BuiltinCommonInstructions::Comment",
-          "color": {
-            "b": 109,
-            "g": 230,
-            "r": 255,
-            "textB": 0,
-            "textG": 0,
-            "textR": 0
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
           },
-          "comment": "Debug Text"
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": [
-            {
-              "type": {
-                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-              },
-              "parameters": [
-                "TimerText",
-                "Text",
-                "=",
-                "\"Power: \" + TimerValue"
-              ]
-            },
-            {
-              "type": {
-                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-              },
-              "parameters": [
-                "StateText",
-                "Text",
-                "=",
-                "\"State: \" + Player_HitBox.State"
-              ]
-            },
-            {
-              "type": {
-                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
-              },
-              "parameters": [
-                "CountText",
-                "Text",
-                "=",
-                "\"Enemies: \" + ToString(SceneInstancesCount(Enemy))"
-              ]
-            }
-          ]
+          "target": "UI"
         },
         {
           "type": "BuiltinCommonInstructions::Comment",
@@ -5616,9 +5745,9 @@
             {
               "type": "BuiltinCommonInstructions::Comment",
               "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
+                "b": 224,
+                "g": 16,
+                "r": 189,
                 "textB": 0,
                 "textG": 0,
                 "textR": 0
@@ -6061,6 +6190,35 @@
                 "textG": 0,
                 "textR": 0
               },
+              "comment": "Charging Bar"
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "PanelSpriteContinuousBar::PanelSpriteContinuousBar::SetValue"
+                  },
+                  "parameters": [
+                    "Charge_Bar",
+                    "=",
+                    "TimerElapsedTime(\"ChargeTimer\")",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
               "comment": "Shoot after charging"
             },
             {
@@ -6218,98 +6376,37 @@
                         "1"
                       ]
                     }
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "Collectables"
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "CollisionNP"
-                  },
-                  "parameters": [
-                    "Player_HitBox",
-                    "Chest",
-                    "",
-                    "",
-                    ""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "Delete"
-                  },
-                  "parameters": [
-                    "Chest",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "PlaySound"
-                  },
-                  "parameters": [
-                    "",
-                    "Cannon pirate VG Sounds\\Sounds\\Sound Effects\\pickup\\pickup idea 1.mp3",
-                    "",
-                    "15",
-                    ""
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "CollisionNP"
-                  },
-                  "parameters": [
-                    "Player_HitBox",
-                    "Barrel",
-                    "",
-                    "",
-                    ""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "Delete"
-                  },
-                  "parameters": [
-                    "Barrel",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "PlaySound"
-                  },
-                  "parameters": [
-                    "",
-                    "Cannon pirate VG Sounds\\Sounds\\Sound Effects\\pickup\\pickup idea 1.mp3",
-                    "",
-                    "15",
-                    ""
+                  ],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Comment",
+                      "color": {
+                        "b": 224,
+                        "g": 16,
+                        "r": 189,
+                        "textB": 0,
+                        "textG": 0,
+                        "textR": 0
+                      },
+                      "comment": "Amout of Damage of Cannon Ball"
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "SetNumberObjectVariable"
+                          },
+                          "parameters": [
+                            "Player_Cannon_Ball_HitBox",
+                            "Damage",
+                            "=",
+                            "TimerValue"
+                          ]
+                        }
+                      ]
+                    }
                   ]
                 }
               ]
@@ -7729,7 +7826,7 @@
                       "parameters": [
                         "Enemy",
                         "Health",
-                        "1",
+                        "Player_Cannon_Ball_HitBox.Damage",
                         "",
                         "",
                         ""
@@ -7760,6 +7857,18 @@
                         "5",
                         ".08",
                         "",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "Enemy_Hit_Particle",
+                        "Enemy.X()",
+                        "Enemy.Y()",
                         ""
                       ]
                     }
@@ -8271,14 +8380,14 @@
                 {
                   "type": "BuiltinCommonInstructions::Comment",
                   "color": {
-                    "b": 109,
-                    "g": 230,
-                    "r": 255,
+                    "b": 224,
+                    "g": 16,
+                    "r": 189,
                     "textB": 0,
                     "textG": 0,
                     "textR": 0
                   },
-                  "comment": "Dead State "
+                  "comment": "Dead State - errror cant have trigger once in repeat loop use a boolaean"
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
@@ -8314,9 +8423,14 @@
                       "conditions": [
                         {
                           "type": {
-                            "value": "BuiltinCommonInstructions::Once"
+                            "value": "BooleanObjectVariable"
                           },
-                          "parameters": []
+                          "parameters": [
+                            "Enemy",
+                            "SInk",
+                            "=",
+                            ""
+                          ]
                         }
                       ],
                       "actions": [
@@ -8342,6 +8456,17 @@
                             "=",
                             "\"Sinking\""
                           ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "Enemy",
+                            "SInk",
+                            "True",
+                            ""
+                          ]
                         }
                       ]
                     },
@@ -8366,6 +8491,17 @@
                             "Animation",
                             "=",
                             "\"Sinking\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "BooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "Enemy",
+                            "SInk",
+                            "True",
+                            ""
                           ]
                         }
                       ],
@@ -8396,6 +8532,181 @@
             }
           ],
           "parameters": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": []
+        }
+      ]
+    },
+    {
+      "associatedLayout": "PirateGameScene",
+      "name": "Treasure",
+      "events": [
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Treasure",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [],
+          "parameters": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "Player_HitBox",
+                "Chest",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "Chest",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "Cannon pirate VG Sounds\\Sounds\\Sound Effects\\pickup\\pickup idea 1.mp3",
+                "",
+                "15",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": []
+        }
+      ]
+    },
+    {
+      "associatedLayout": "PirateGameScene",
+      "name": "Barrells",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "Player_HitBox",
+                "Barrel",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "Barrel",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "Cannon pirate VG Sounds\\Sounds\\Sound Effects\\pickup\\pickup idea 1.mp3",
+                "",
+                "15",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": []
+        }
+      ]
+    },
+    {
+      "associatedLayout": "PirateGameScene",
+      "name": "UI",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Debug Text"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "TimerText",
+                "Text",
+                "=",
+                "\"Power: \" + TimerValue"
+              ]
+            },
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "StateText",
+                "Text",
+                "=",
+                "\"State: \" + Player_HitBox.State"
+              ]
+            },
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "CountText",
+                "Text",
+                "=",
+                "\"Enemies: \" + ToString(SceneInstancesCount(Enemy))"
+              ]
+            }
+          ]
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
