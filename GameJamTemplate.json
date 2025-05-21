@@ -8759,6 +8759,17 @@
                                 "Enemy.Health::MaxHealth()",
                                 ""
                               ]
+                            },
+                            {
+                              "type": {
+                                "value": "OpacityCapability::OpacityBehavior::SetValue"
+                              },
+                              "parameters": [
+                                "Enemy_Health_Bar",
+                                "Opacity",
+                                "=",
+                                "80"
+                              ]
                             }
                           ]
                         }
