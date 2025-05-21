@@ -624,6 +624,72 @@
           "identifier": "https://asset-resources.gdevelop.io/public-resources/Resource bars/pixel art/55034bb02ed0cbeede3da64dcf05d3590abee4a8fa69657ed5d461f31d2f1df0_Green LCD Bar Fill.png",
           "name": "Green LCD Bar Fill.png"
         }
+      },
+      {
+        "file": "AssetsV4/bulletFallWaterAnim0000.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "AssetsV4\\bulletFallWaterAnim0000.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "AssetsV4/bulletFallWaterAnim0001.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "AssetsV4\\bulletFallWaterAnim0001.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "AssetsV4/bulletFallWaterAnim0002.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "AssetsV4\\bulletFallWaterAnim0002.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "AssetsV4/bulletFallWaterAnim0003.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "AssetsV4\\bulletFallWaterAnim0003.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "AssetsV4/bulletFallWaterAnim0004.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "AssetsV4\\bulletFallWaterAnim0004.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "AssetsV4/bulletFallWaterAnim0005.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "AssetsV4\\bulletFallWaterAnim0005.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "AssetsV4/bulletFallWaterAnim0006.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "AssetsV4\\bulletFallWaterAnim0006.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "Cannon ball hitting the water.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Cannon ball hitting the water.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -2705,6 +2771,11 @@
               "name": "Damage",
               "type": "number",
               "value": 1
+            },
+            {
+              "name": "Splash",
+              "type": "boolean",
+              "value": false
             }
           ],
           "effects": [],
@@ -2725,14 +2796,278 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 20,
-                        "y": 20
+                        "x": 20.5,
+                        "y": 21
                       },
                       "centerPoint": {
-                        "automatic": true,
+                        "automatic": false,
                         "name": "centre",
-                        "x": 0,
-                        "y": 0
+                        "x": 20,
+                        "y": 21
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 42,
+                            "y": 0
+                          },
+                          {
+                            "x": 42,
+                            "y": 43
+                          },
+                          {
+                            "x": 0,
+                            "y": 43
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Splash",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.09,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "AssetsV4\\bulletFallWaterAnim0000.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 60.5,
+                        "y": 64.5
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 60.5,
+                        "y": 64.5
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 42,
+                            "y": 0
+                          },
+                          {
+                            "x": 42,
+                            "y": 43
+                          },
+                          {
+                            "x": 0,
+                            "y": 43
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "AssetsV4\\bulletFallWaterAnim0001.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 60.5,
+                        "y": 64.5
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 60.5,
+                        "y": 64.5
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 42,
+                            "y": 0
+                          },
+                          {
+                            "x": 42,
+                            "y": 43
+                          },
+                          {
+                            "x": 0,
+                            "y": 43
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "AssetsV4\\bulletFallWaterAnim0002.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 60.5,
+                        "y": 64.5
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 60.5,
+                        "y": 64.5
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 42,
+                            "y": 0
+                          },
+                          {
+                            "x": 42,
+                            "y": 43
+                          },
+                          {
+                            "x": 0,
+                            "y": 43
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "AssetsV4\\bulletFallWaterAnim0003.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 60.5,
+                        "y": 64.5
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 60.5,
+                        "y": 64.5
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 42,
+                            "y": 0
+                          },
+                          {
+                            "x": 42,
+                            "y": 43
+                          },
+                          {
+                            "x": 0,
+                            "y": 43
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "AssetsV4\\bulletFallWaterAnim0004.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 60.5,
+                        "y": 64.5
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 60.5,
+                        "y": 64.5
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 42,
+                            "y": 0
+                          },
+                          {
+                            "x": 42,
+                            "y": 43
+                          },
+                          {
+                            "x": 0,
+                            "y": 43
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "AssetsV4\\bulletFallWaterAnim0005.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 60.5,
+                        "y": 64.5
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 60.5,
+                        "y": 64.5
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 42,
+                            "y": 0
+                          },
+                          {
+                            "x": 42,
+                            "y": 43
+                          },
+                          {
+                            "x": 0,
+                            "y": 43
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "AssetsV4\\bulletFallWaterAnim0006.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 60.5,
+                        "y": 64.5
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 60.5,
+                        "y": 64.5
                       },
                       "customCollisionMask": [
                         [
@@ -7315,6 +7650,97 @@
                     ">=",
                     ".7"
                   ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "Player_Cannon_Ball_HitBox",
+                    "Splash",
+                    "=",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Arreter"
+                  },
+                  "parameters": [
+                    "Player_Cannon_Ball_HitBox"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                  },
+                  "parameters": [
+                    "Player_Cannon_Ball_HitBox",
+                    "Animation",
+                    "=",
+                    "\"Splash\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "Player_Cannon_Ball_HitBox",
+                    "Splash",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "Cannon ball hitting the water.mp3",
+                    "",
+                    "10",
+                    "RandomFloatInRange(0.9,1.1)"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::HasAnimationEnded"
+                  },
+                  "parameters": [
+                    "Player_Cannon_Ball_HitBox",
+                    "Animation"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::Name"
+                  },
+                  "parameters": [
+                    "Player_Cannon_Ball_HitBox",
+                    "Animation",
+                    "=",
+                    "\"Splash\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "Player_Cannon_Ball_HitBox",
+                    "Splash",
+                    "True",
+                    ""
+                  ]
                 }
               ],
               "actions": [
@@ -7330,11 +7756,6 @@
               ]
             }
           ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": []
         }
       ]
     },
@@ -7817,6 +8238,18 @@
                         "Enemy",
                         "Health",
                         ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "inverted": true,
+                        "value": "AnimatableCapability::AnimatableBehavior::Name"
+                      },
+                      "parameters": [
+                        "Player_Cannon_Ball_HitBox",
+                        "Animation",
+                        "=",
+                        "\"Splash\""
                       ]
                     }
                   ],
