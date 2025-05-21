@@ -690,6 +690,14 @@
         "preloadAsSound": false,
         "preloadInCache": false,
         "userAdded": false
+      },
+      {
+        "file": "assets/NewSprite16.png",
+        "kind": "image",
+        "metadata": "{\"extension\":\".png\"}",
+        "name": "NewSprite9",
+        "smoothed": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -2390,7 +2398,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 0.35534345588170124,
+        "zoomFactor": 0.2090255622833539,
         "windowMask": false
       },
       "objectsGroups": [
@@ -2709,6 +2717,630 @@
           "x": 1008,
           "y": 368,
           "zOrder": 132,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Spawn_Points",
+          "persistentUuid": "f1e0ece8-1bd4-4d4d-a5c4-6a50f32465bd",
+          "width": 0,
+          "x": -960,
+          "y": 1152,
+          "zOrder": 133,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Spawn_Points",
+          "persistentUuid": "946f0665-5aa5-498c-ab3d-ee7faecd612a",
+          "width": 0,
+          "x": 1216,
+          "y": -288,
+          "zOrder": 133,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Spawn_Points",
+          "persistentUuid": "3fc8801b-e5d7-47b6-9acd-0b4151781baf",
+          "width": 0,
+          "x": 928,
+          "y": -352,
+          "zOrder": 133,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Spawn_Points",
+          "persistentUuid": "223ea933-c40b-42ef-95bc-04b1a322d5da",
+          "width": 0,
+          "x": 512,
+          "y": -384,
+          "zOrder": 133,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Spawn_Points",
+          "persistentUuid": "ea2251c5-c611-40e6-80b0-f61c616f6323",
+          "width": 0,
+          "x": 224,
+          "y": -320,
+          "zOrder": 133,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Spawn_Points",
+          "persistentUuid": "7c19db5d-549e-4ef1-bee7-75628d9d831c",
+          "width": 0,
+          "x": -224,
+          "y": -320,
+          "zOrder": 133,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Spawn_Points",
+          "persistentUuid": "27f814aa-323a-4e9b-8c77-26cdf0b06147",
+          "width": 0,
+          "x": -416,
+          "y": -128,
+          "zOrder": 133,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Spawn_Points",
+          "persistentUuid": "572196dd-f8fd-4485-a679-ad8d28774f96",
+          "width": 0,
+          "x": -608,
+          "y": -288,
+          "zOrder": 133,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Spawn_Points",
+          "persistentUuid": "56589d4e-acd9-4a96-a690-a584354008a0",
+          "width": 0,
+          "x": -864,
+          "y": -288,
+          "zOrder": 133,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Spawn_Points",
+          "persistentUuid": "913a1478-c9d6-43d4-af63-ca38d7c50d77",
+          "width": 0,
+          "x": -992,
+          "y": -160,
+          "zOrder": 133,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Spawn_Points",
+          "persistentUuid": "f2b4a9e7-eadf-46d6-b671-87d6642ff2c9",
+          "width": 0,
+          "x": -1024,
+          "y": 0,
+          "zOrder": 133,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Spawn_Points",
+          "persistentUuid": "137616a8-4ae7-4707-b20c-0194afc2e6c3",
+          "width": 0,
+          "x": -640,
+          "y": 384,
+          "zOrder": 133,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Spawn_Points",
+          "persistentUuid": "837397a5-725b-4218-b36e-677c07cd788d",
+          "width": 0,
+          "x": -960,
+          "y": 384,
+          "zOrder": 133,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Spawn_Points",
+          "persistentUuid": "6e8b167c-b489-4004-a7e1-469a24ace0e0",
+          "width": 0,
+          "x": -960,
+          "y": 704,
+          "zOrder": 133,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Spawn_Points",
+          "persistentUuid": "cd0facae-63de-4e01-b5e7-3f557d8b76f6",
+          "width": 0,
+          "x": -640,
+          "y": 736,
+          "zOrder": 133,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Spawn_Points",
+          "persistentUuid": "794cb93a-d17c-49c8-8912-1e5415453c96",
+          "width": 0,
+          "x": -960,
+          "y": 896,
+          "zOrder": 133,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Spawn_Points",
+          "persistentUuid": "2fac2ab4-19dc-4739-82dd-5b36d17308fc",
+          "width": 0,
+          "x": 1376,
+          "y": 672,
+          "zOrder": 133,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Spawn_Points",
+          "persistentUuid": "52e1dca0-2e03-4c9f-99a5-2cc3181c01d2",
+          "width": 0,
+          "x": -736,
+          "y": 1024,
+          "zOrder": 133,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Spawn_Points",
+          "persistentUuid": "454b43f8-4801-414e-a4d4-134071adfb61",
+          "width": 0,
+          "x": -416,
+          "y": 1184,
+          "zOrder": 133,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Spawn_Points",
+          "persistentUuid": "06d345a3-cfd8-4398-8593-bf811bb3a972",
+          "width": 0,
+          "x": -224,
+          "y": 1088,
+          "zOrder": 133,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Spawn_Points",
+          "persistentUuid": "2627c4b7-86ae-424c-9b47-dbf347c0098c",
+          "width": 0,
+          "x": 64,
+          "y": 1184,
+          "zOrder": 133,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Spawn_Points",
+          "persistentUuid": "4236d2f8-a637-4dfb-b11e-d2ab4221073b",
+          "width": 0,
+          "x": 256,
+          "y": 1056,
+          "zOrder": 133,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Spawn_Points",
+          "persistentUuid": "69c2d3ba-c4c4-4312-85b4-d460010160d6",
+          "width": 0,
+          "x": 640,
+          "y": 1184,
+          "zOrder": 133,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Spawn_Points",
+          "persistentUuid": "df506277-d8dc-4f11-a16c-36761edcdc42",
+          "width": 0,
+          "x": 832,
+          "y": 1120,
+          "zOrder": 133,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Spawn_Points",
+          "persistentUuid": "f9957865-a2ec-470d-be9b-8b9d475ca0ea",
+          "width": 0,
+          "x": 1056,
+          "y": 1184,
+          "zOrder": 133,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Spawn_Points",
+          "persistentUuid": "a42f6494-6e4a-4751-8764-240b6ad1efad",
+          "width": 0,
+          "x": 1216,
+          "y": 1088,
+          "zOrder": 133,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Spawn_Points",
+          "persistentUuid": "ffd2d417-7fa9-4e5e-affe-f0da7650b6a6",
+          "width": 0,
+          "x": 1120,
+          "y": 960,
+          "zOrder": 133,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Spawn_Points",
+          "persistentUuid": "90630de8-bf28-4026-9470-0dec6e4a1473",
+          "width": 0,
+          "x": 1248,
+          "y": 832,
+          "zOrder": 133,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Spawn_Points",
+          "persistentUuid": "2cb07862-ef80-413b-bc4b-38fe220b4683",
+          "width": 0,
+          "x": 1056,
+          "y": 608,
+          "zOrder": 133,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Spawn_Points",
+          "persistentUuid": "83bd4cdf-8c78-43c0-aa1c-052f85983a62",
+          "width": 0,
+          "x": 1088,
+          "y": 384,
+          "zOrder": 133,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Spawn_Points",
+          "persistentUuid": "87170efd-dcf2-4fc1-980c-b7cd33880f7a",
+          "width": 0,
+          "x": 1344,
+          "y": 288,
+          "zOrder": 133,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Spawn_Points",
+          "persistentUuid": "d4c49417-9b01-4a11-ad52-a307688f607a",
+          "width": 0,
+          "x": 1408,
+          "y": 64,
+          "zOrder": 133,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Spawn_Points",
+          "persistentUuid": "295e5415-34fa-45b6-bb5d-e002a1f13451",
+          "width": 0,
+          "x": 1216,
+          "y": -64,
+          "zOrder": 133,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Spawn_Points",
+          "persistentUuid": "57d24ee6-8c77-4b27-b2f7-b516b46ada21",
+          "width": 0,
+          "x": 672,
+          "y": -160,
+          "zOrder": 133,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Spawn_Points",
+          "persistentUuid": "b3a63609-9a66-46bb-b459-1d320acec393",
+          "width": 0,
+          "x": -224,
+          "y": 128,
+          "zOrder": 133,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Spawn_Points",
+          "persistentUuid": "60c5f9f2-4357-484a-8272-7358a3ce702b",
+          "width": 0,
+          "x": -256,
+          "y": 640,
+          "zOrder": 133,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Spawn_Points",
+          "persistentUuid": "58f01af7-3297-47e9-9b27-6fb20050702d",
+          "width": 0,
+          "x": 576,
+          "y": 832,
+          "zOrder": 133,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Spawn_Points",
+          "persistentUuid": "d7d48201-f399-4108-a9e7-4b6cc67c1200",
+          "width": 0,
+          "x": -736,
+          "y": 64,
+          "zOrder": 133,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Spawn_Points",
+          "persistentUuid": "665f14d3-6e97-4b5e-91a9-7581b1034d78",
+          "width": 0,
+          "x": 160,
+          "y": -160,
+          "zOrder": 133,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -5161,6 +5793,67 @@
               }
             }
           }
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "Spawn_Points",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "NewSprite",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "metadata": "{\"pskl\":{}}",
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "NewSprite9",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 32,
+                            "y": 0
+                          },
+                          {
+                            "x": 32,
+                            "y": 32
+                          },
+                          {
+                            "x": 0,
+                            "y": 32
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
@@ -5197,6 +5890,9 @@
           {
             "folderName": "Enemies",
             "children": [
+              {
+                "objectName": "Spawn_Points"
+              },
               {
                 "objectName": "Enemy_Hit_Particle"
               },
@@ -7945,178 +8641,38 @@
                   ]
                 }
               ],
-              "actions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "Spawn_Points"
+                  ]
+                }
+              ],
               "events": [
                 {
                   "type": "BuiltinCommonInstructions::Repeat",
-                  "repeatExpression": "10",
+                  "repeatExpression": "15",
                   "conditions": [],
                   "actions": [],
                   "events": [
                     {
                       "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [],
-                      "actions": [
+                      "conditions": [
                         {
                           "type": {
-                            "value": "SetNumberVariable"
+                            "value": "AjoutHasard"
                           },
                           "parameters": [
-                            "SpawnSide",
-                            "=",
-                            "RandomInRange(0,3)"
+                            "",
+                            "Spawn_Points"
                           ]
                         }
                       ],
+                      "actions": [],
                       "events": [
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "value": "NumberVariable"
-                              },
-                              "parameters": [
-                                "SpawnSide",
-                                "=",
-                                "0"
-                              ]
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "SetNumberVariable"
-                              },
-                              "parameters": [
-                                "SpawnX",
-                                "=",
-                                "RandomFloatInRange(0,Map1.BoundingBoxRight())"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "SetNumberVariable"
-                              },
-                              "parameters": [
-                                "SpawnY",
-                                "=",
-                                "0"
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "value": "NumberVariable"
-                              },
-                              "parameters": [
-                                "SpawnSide",
-                                "=",
-                                "1"
-                              ]
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "SetNumberVariable"
-                              },
-                              "parameters": [
-                                "SpawnX",
-                                "=",
-                                "Map1.BoundingBoxRight()"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "SetNumberVariable"
-                              },
-                              "parameters": [
-                                "SpawnY",
-                                "=",
-                                "RandomFloatInRange(0,Map1.BoundingBoxBottom())"
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "value": "NumberVariable"
-                              },
-                              "parameters": [
-                                "SpawnSide",
-                                "=",
-                                "2"
-                              ]
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "SetNumberVariable"
-                              },
-                              "parameters": [
-                                "SpawnX",
-                                "=",
-                                "RandomFloatInRange(0,Map1.BoundingBoxRight())"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "SetNumberVariable"
-                              },
-                              "parameters": [
-                                "SpawnY",
-                                "=",
-                                "Map1.BoundingBoxLeft()"
-                              ]
-                            }
-                          ]
-                        },
-                        {
-                          "type": "BuiltinCommonInstructions::Standard",
-                          "conditions": [
-                            {
-                              "type": {
-                                "value": "NumberVariable"
-                              },
-                              "parameters": [
-                                "SpawnSide",
-                                "=",
-                                "3"
-                              ]
-                            }
-                          ],
-                          "actions": [
-                            {
-                              "type": {
-                                "value": "SetNumberVariable"
-                              },
-                              "parameters": [
-                                "SpawnY",
-                                "=",
-                                "RandomFloatInRange(0,Map1.BoundingBoxBottom())"
-                              ]
-                            },
-                            {
-                              "type": {
-                                "value": "SetNumberVariable"
-                              },
-                              "parameters": [
-                                "SpawnX",
-                                "=",
-                                "0"
-                              ]
-                            }
-                          ]
-                        },
                         {
                           "type": "BuiltinCommonInstructions::Standard",
                           "conditions": [],
@@ -8128,8 +8684,8 @@
                               "parameters": [
                                 "",
                                 "Enemy",
-                                "SpawnX",
-                                "SpawnY",
+                                "Spawn_Points.X()",
+                                "Spawn_Points.Y()",
                                 ""
                               ]
                             },
@@ -8190,23 +8746,6 @@
                               ]
                             }
                           ]
-                        }
-                      ],
-                      "variables": [
-                        {
-                          "name": "SpawnSide",
-                          "type": "number",
-                          "value": 0
-                        },
-                        {
-                          "name": "SpawnX",
-                          "type": "number",
-                          "value": 0
-                        },
-                        {
-                          "name": "SpawnY",
-                          "type": "number",
-                          "value": 0
                         }
                       ]
                     }
