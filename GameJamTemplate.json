@@ -4438,7 +4438,7 @@
           ]
         },
         {
-          "adaptCollisionMaskAutomatically": true,
+          "adaptCollisionMaskAutomatically": false,
           "assetStoreId": "",
           "name": "Player_HitBox",
           "type": "Sprite",
@@ -4567,20 +4567,24 @@
                       "customCollisionMask": [
                         [
                           {
-                            "x": 12,
-                            "y": 18
+                            "x": 14,
+                            "y": 21.5
                           },
                           {
-                            "x": 80,
-                            "y": 18
+                            "x": 72,
+                            "y": 26
                           },
                           {
-                            "x": 80,
-                            "y": 62
+                            "x": 75,
+                            "y": 42
                           },
                           {
-                            "x": 12,
-                            "y": 62
+                            "x": 69.5,
+                            "y": 58.5
+                          },
+                          {
+                            "x": 13.5,
+                            "y": 58
                           }
                         ]
                       ]
@@ -7995,6 +7999,56 @@
                   ]
                 }
               ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "Player_HitBox",
+                    "Enemy_Cannon_Ball",
+                    "",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "StringObjectVariable"
+                  },
+                  "parameters": [
+                    "Player_HitBox",
+                    "State",
+                    "!=",
+                    "\"Hurt\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "Enemy_Cannon_Ball",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetStringObjectVariable"
+                  },
+                  "parameters": [
+                    "Player_HitBox",
+                    "State",
+                    "=",
+                    "\"Hurt\""
+                  ]
+                }
+              ]
             }
           ],
           "parameters": []
@@ -8179,6 +8233,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "disabled": true,
           "name": "Player FSM Dead - not coded yet",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
