@@ -2478,7 +2478,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 0.6244537826600045,
+        "zoomFactor": 0.16572117247526985,
         "windowMask": false
       },
       "objectsGroups": [
@@ -2717,74 +2717,6 @@
           "x": 640,
           "y": 320,
           "zOrder": 50,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 86,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Rocks",
-          "persistentUuid": "c4f8686c-f528-4d4c-9916-413fb17be3bd",
-          "width": 2828,
-          "x": -1292,
-          "y": -497,
-          "zOrder": 10,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 1894,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Rocks",
-          "persistentUuid": "8673a5d1-b69a-40f3-a35d-a311f2fe8cc2",
-          "width": 116,
-          "x": -1294,
-          "y": -499,
-          "zOrder": 10,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 86,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Rocks",
-          "persistentUuid": "bdd3bae2-3c64-48ee-9cff-706e53c128ac",
-          "width": 2855,
-          "x": -1291,
-          "y": 1308,
-          "zOrder": 130,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 1878,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Rocks",
-          "persistentUuid": "b1633c4f-37ff-4d45-a3e2-1c0087bc5207",
-          "width": 116,
-          "x": 1449,
-          "y": -498,
-          "zOrder": 10,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -3522,6 +3454,74 @@
           "x": 704,
           "y": 128,
           "zOrder": 139,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 64,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Border",
+          "persistentUuid": "9a8645ff-96e1-4e36-b761-75e636610345",
+          "width": 2880,
+          "x": -1312,
+          "y": 1376,
+          "zOrder": 140,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 64,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Border",
+          "persistentUuid": "f2ec089c-25a8-49b2-a54d-4baa9eb6c746",
+          "width": 2880,
+          "x": -1312,
+          "y": -576,
+          "zOrder": 140,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 2048,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Border",
+          "persistentUuid": "85ba7e37-3cdb-409c-af33-16756827d45c",
+          "width": 64,
+          "x": 1568,
+          "y": -576,
+          "zOrder": 141,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 2048,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Border",
+          "persistentUuid": "d4a51c01-0cd6-41c4-979e-2d558cbab436",
+          "width": 64,
+          "x": -1344,
+          "y": -576,
+          "zOrder": 141,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -7593,6 +7593,14 @@
             },
             {
               "type": {
+                "value": "Cache"
+              },
+              "parameters": [
+                "Border"
+              ]
+            },
+            {
+              "type": {
                 "value": "OpacityCapability::OpacityBehavior::SetValue"
               },
               "parameters": [
@@ -7762,6 +7770,35 @@
               "parameters": [
                 "Player_HitBox",
                 "Rocks",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "Player_Ship",
+                "Border",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SeparateFromObjects"
+              },
+              "parameters": [
+                "Player_HitBox",
+                "Border",
                 ""
               ]
             }
