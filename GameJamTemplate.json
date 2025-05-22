@@ -2414,7 +2414,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 0.2090255622833539,
+        "zoomFactor": 0.17708595277544034,
         "windowMask": false
       },
       "objectsGroups": [
@@ -2664,7 +2664,7 @@
           "width": 2828,
           "x": -1292,
           "y": -497,
-          "zOrder": 130,
+          "zOrder": 10,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -2681,7 +2681,7 @@
           "width": 116,
           "x": -1294,
           "y": -499,
-          "zOrder": 131,
+          "zOrder": 10,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -2715,7 +2715,7 @@
           "width": 116,
           "x": 1449,
           "y": -498,
-          "zOrder": 131,
+          "zOrder": 10,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -8141,6 +8141,17 @@
                     "",
                     ".3"
                   ]
+                },
+                {
+                  "type": {
+                    "value": "ScalableCapability::ScalableBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "Player_HitBox",
+                    "Scale",
+                    "=",
+                    ".5"
+                  ]
                 }
               ]
             },
@@ -8165,6 +8176,17 @@
                   },
                   "parameters": [
                     "",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ScalableCapability::ScalableBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "Player_HitBox",
+                    "Scale",
+                    "=",
                     "1"
                   ]
                 }
