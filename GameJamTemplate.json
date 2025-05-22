@@ -714,6 +714,62 @@
         "name": "Freeze_Layer.png",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "file": "AssetsV4/playerCannonAttack0001.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "AssetsV4\\playerCannonAttack0001.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "AssetsV4/playerCannonAttack0002.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "AssetsV4\\playerCannonAttack0002.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "AssetsV4/playerCannonAttack0003.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "AssetsV4\\playerCannonAttack0003.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "AssetsV4/playerCannonAttack0004.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "AssetsV4\\playerCannonAttack0004.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "AssetsV4/playerCannonAttack0005.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "AssetsV4\\playerCannonAttack0005.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "AssetsV4/playerCannonAttack0006.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "AssetsV4\\playerCannonAttack0006.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "AssetsV4/coinIcon.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "AssetsV4\\coinIcon.png",
+        "smoothed": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -2422,7 +2478,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 0.2725359896772953,
+        "zoomFactor": 0.6244537826600045,
         "windowMask": false
       },
       "objectsGroups": [
@@ -2455,6 +2511,11 @@
           "name": "Cannon_Ball_Number",
           "type": "number",
           "value": 1
+        },
+        {
+          "name": "Gold",
+          "type": "number",
+          "value": 0
         }
       ],
       "instances": [
@@ -2497,7 +2558,7 @@
           "height": 64,
           "keepRatio": true,
           "layer": "UI_Layer",
-          "name": "TimerText",
+          "name": "CoinText",
           "persistentUuid": "ca2b2c9f-8398-419f-8b7e-a65a15032ebb",
           "width": 256,
           "x": 64,
@@ -3397,6 +3458,70 @@
           "x": 0,
           "y": 0,
           "zOrder": 135,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Chest",
+          "persistentUuid": "32a80833-85bd-4d80-ab03-b0c658d06ade",
+          "width": 0,
+          "x": 864,
+          "y": 256,
+          "zOrder": 136,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "UI_Layer",
+          "name": "Coin",
+          "persistentUuid": "073b636d-c84f-4e06-a73b-b5300db34887",
+          "width": 0,
+          "x": 27,
+          "y": 13,
+          "zOrder": 137,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Chest",
+          "persistentUuid": "8c033e1f-8602-4fda-8e15-d800f228890e",
+          "width": 0,
+          "x": 352,
+          "y": 288,
+          "zOrder": 138,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Chest",
+          "persistentUuid": "41fe2b72-3938-4a0c-a09f-614abc123e4e",
+          "width": 0,
+          "x": 704,
+          "y": 128,
+          "zOrder": 139,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -4845,6 +4970,300 @@
                   ]
                 }
               ]
+            },
+            {
+              "name": "Shoot",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "AssetsV4\\playerCannonAttack0001.png",
+                      "points": [
+                        {
+                          "name": "FirePoint",
+                          "x": 101.5,
+                          "y": 75
+                        },
+                        {
+                          "name": "SmokePoint",
+                          "x": 127,
+                          "y": 60.5
+                        }
+                      ],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 43,
+                        "y": 68.5
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 1
+                          },
+                          {
+                            "x": 122,
+                            "y": 1
+                          },
+                          {
+                            "x": 122,
+                            "y": 99
+                          },
+                          {
+                            "x": 0,
+                            "y": 99
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "AssetsV4\\playerCannonAttack0002.png",
+                      "points": [
+                        {
+                          "name": "FirePoint",
+                          "x": 101.5,
+                          "y": 75
+                        },
+                        {
+                          "name": "SmokePoint",
+                          "x": 127,
+                          "y": 60.5
+                        }
+                      ],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 43,
+                        "y": 68.5
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 1
+                          },
+                          {
+                            "x": 122,
+                            "y": 1
+                          },
+                          {
+                            "x": 122,
+                            "y": 99
+                          },
+                          {
+                            "x": 0,
+                            "y": 99
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "AssetsV4\\playerCannonAttack0003.png",
+                      "points": [
+                        {
+                          "name": "FirePoint",
+                          "x": 101.5,
+                          "y": 75
+                        },
+                        {
+                          "name": "SmokePoint",
+                          "x": 127,
+                          "y": 60.5
+                        }
+                      ],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 43,
+                        "y": 68.5
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 1
+                          },
+                          {
+                            "x": 122,
+                            "y": 1
+                          },
+                          {
+                            "x": 122,
+                            "y": 99
+                          },
+                          {
+                            "x": 0,
+                            "y": 99
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "AssetsV4\\playerCannonAttack0004.png",
+                      "points": [
+                        {
+                          "name": "FirePoint",
+                          "x": 101.5,
+                          "y": 75
+                        },
+                        {
+                          "name": "SmokePoint",
+                          "x": 127,
+                          "y": 60.5
+                        }
+                      ],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 43,
+                        "y": 68.5
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 1
+                          },
+                          {
+                            "x": 122,
+                            "y": 1
+                          },
+                          {
+                            "x": 122,
+                            "y": 99
+                          },
+                          {
+                            "x": 0,
+                            "y": 99
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "AssetsV4\\playerCannonAttack0005.png",
+                      "points": [
+                        {
+                          "name": "FirePoint",
+                          "x": 101.5,
+                          "y": 75
+                        },
+                        {
+                          "name": "SmokePoint",
+                          "x": 127,
+                          "y": 60.5
+                        }
+                      ],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 43,
+                        "y": 68.5
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 1
+                          },
+                          {
+                            "x": 122,
+                            "y": 1
+                          },
+                          {
+                            "x": 122,
+                            "y": 99
+                          },
+                          {
+                            "x": 0,
+                            "y": 99
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "AssetsV4\\playerCannonAttack0006.png",
+                      "points": [
+                        {
+                          "name": "FirePoint",
+                          "x": 101.5,
+                          "y": 75
+                        },
+                        {
+                          "name": "SmokePoint",
+                          "x": 127,
+                          "y": 60.5
+                        }
+                      ],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 43,
+                        "y": 68.5
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 1
+                          },
+                          {
+                            "x": 122,
+                            "y": 1
+                          },
+                          {
+                            "x": 122,
+                            "y": 99
+                          },
+                          {
+                            "x": 0,
+                            "y": 99
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -4852,14 +5271,14 @@
           "assetStoreId": "",
           "bold": false,
           "italic": false,
-          "name": "TimerText",
+          "name": "CoinText",
           "smoothed": true,
           "type": "TextObject::Text",
           "underlined": false,
           "variables": [],
           "effects": [],
           "behaviors": [],
-          "string": "Power:",
+          "string": "Gold:",
           "font": "AssetsV4\\Beryliumbold.ttf",
           "textAlignment": "left",
           "characterSize": 40,
@@ -4882,7 +5301,7 @@
             "shadowOpacity": 127,
             "smoothed": true,
             "underlined": false,
-            "text": "Power:",
+            "text": "Gold:",
             "font": "AssetsV4\\Beryliumbold.ttf",
             "textAlignment": "left",
             "verticalTextAlignment": "top",
@@ -6435,6 +6854,113 @@
               ]
             }
           ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "Coin",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "AssetsV4\\coinIcon.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 20,
+                            "y": 0
+                          },
+                          {
+                            "x": 20,
+                            "y": 20
+                          },
+                          {
+                            "x": 0,
+                            "y": 20
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "additive": false,
+          "assetStoreId": "",
+          "destroyWhenNoParticles": true,
+          "emitterAngleA": 0,
+          "emitterAngleB": 0,
+          "emitterForceMax": 250,
+          "emitterForceMin": 200,
+          "flow": 200,
+          "jumpForwardInTimeOnCreation": 0,
+          "maxParticleNb": 5,
+          "name": "Coin_Particles",
+          "particleAlpha1": 204,
+          "particleAlpha2": 0,
+          "particleAlphaRandomness1": 0,
+          "particleAlphaRandomness2": 0,
+          "particleAngle1": 0,
+          "particleAngle2": 0,
+          "particleAngleRandomness1": 0,
+          "particleAngleRandomness2": 0,
+          "particleBlue1": 51,
+          "particleBlue2": 0,
+          "particleColor1": "255;51;51",
+          "particleColor2": "255;255;0",
+          "particleGravityX": 0,
+          "particleGravityY": 0,
+          "particleGreen1": 51,
+          "particleGreen2": 255,
+          "particleLifeTimeMax": 2.5,
+          "particleLifeTimeMin": 0.5,
+          "particleRed1": 255,
+          "particleRed2": 255,
+          "particleSize1": 100,
+          "particleSize2": 150,
+          "particleSizeRandomness1": 0,
+          "particleSizeRandomness2": 0,
+          "rendererParam1": 3,
+          "rendererParam2": 1,
+          "rendererType": "Quad",
+          "tank": 5,
+          "textureParticleName": "AssetsV4\\coinIcon.png",
+          "type": "ParticleSystem::ParticleEmitter",
+          "zoneRadius": 3,
+          "variables": [],
+          "effects": [],
+          "behaviors": []
         }
       ],
       "objectsFolderStructure": {
@@ -6454,6 +6980,9 @@
           {
             "folderName": "Map/Border",
             "children": [
+              {
+                "objectName": "Freeze_Overlay"
+              },
               {
                 "objectName": "Rocks"
               },
@@ -6494,6 +7023,9 @@
           {
             "folderName": "Player",
             "children": [
+              {
+                "objectName": "Custom_Cursor"
+              },
               {
                 "objectName": "Charge_Bar"
               },
@@ -6539,15 +7071,15 @@
                 "objectName": "StateText"
               },
               {
-                "objectName": "TimerText"
+                "objectName": "CoinText"
               }
             ]
           },
           {
-            "objectName": "Custom_Cursor"
+            "objectName": "Coin"
           },
           {
-            "objectName": "Freeze_Overlay"
+            "objectName": "Coin_Particles"
           }
         ]
       },
@@ -6661,6 +7193,13 @@
             "includeConfig": 0
           },
           "target": "Enemies"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
+          "target": "Treasure"
         },
         {
           "type": "BuiltinCommonInstructions::Link",
@@ -7484,6 +8023,24 @@
                     "=",
                     "\"Idle\""
                   ]
+                },
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "AnimatableCapability::AnimatableBehavior::Name"
+                  },
+                  "parameters": [
+                    "Player_Cannon",
+                    "Animation",
+                    "=",
+                    "\"Shoot\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
                 }
               ],
               "actions": [
@@ -8076,6 +8633,17 @@
                     ".1",
                     ""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                  },
+                  "parameters": [
+                    "Player_Cannon",
+                    "Animation",
+                    "=",
+                    "\"Shoot\""
+                  ]
                 }
               ],
               "events": [
@@ -8269,6 +8837,56 @@
                   "parameters": [
                     "",
                     "\"Freeze_Layer\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Comment",
+              "color": {
+                "b": 109,
+                "g": 230,
+                "r": 255,
+                "textB": 0,
+                "textG": 0,
+                "textR": 0
+              },
+              "comment": "Chagne shooting animation when finished"
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::Name"
+                  },
+                  "parameters": [
+                    "Player_Cannon",
+                    "Animation",
+                    "=",
+                    "\"Shoot\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::HasAnimationEnded"
+                  },
+                  "parameters": [
+                    "Player_Cannon",
+                    "Animation"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                  },
+                  "parameters": [
+                    "Player_Cannon",
+                    "Animation",
+                    "=",
+                    "\"Idle\""
                   ]
                 }
               ]
@@ -10726,6 +11344,28 @@
           "actions": [
             {
               "type": {
+                "value": "Create"
+              },
+              "parameters": [
+                "",
+                "Coin_Particles",
+                "Chest.CenterX()",
+                "Chest.CenterY()",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetAngle"
+              },
+              "parameters": [
+                "Coin_Particles",
+                "=",
+                "270"
+              ]
+            },
+            {
+              "type": {
                 "value": "Delete"
               },
               "parameters": [
@@ -10841,10 +11481,10 @@
                 "value": "TextContainerCapability::TextContainerBehavior::SetValue"
               },
               "parameters": [
-                "TimerText",
+                "CoinText",
                 "Text",
                 "=",
-                "\"Power: \" + TimerValue"
+                "\"Gold: \" + Gold"
               ]
             },
             {
