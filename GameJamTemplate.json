@@ -3525,6 +3525,22 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Cannon_Explode_Particle",
+          "persistentUuid": "28c43cda-ec4e-49a0-b22e-8c23b1c154dc",
+          "width": 0,
+          "x": 544,
+          "y": 480,
+          "zOrder": 142,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [
@@ -6961,6 +6977,53 @@
           "variables": [],
           "effects": [],
           "behaviors": []
+        },
+        {
+          "additive": false,
+          "assetStoreId": "",
+          "destroyWhenNoParticles": true,
+          "emitterAngleA": 0,
+          "emitterAngleB": 360,
+          "emitterForceMax": 250,
+          "emitterForceMin": 200,
+          "flow": 250,
+          "jumpForwardInTimeOnCreation": 0,
+          "maxParticleNb": 15,
+          "name": "Cannon_Explode_Particle",
+          "particleAlpha1": 204,
+          "particleAlpha2": 0,
+          "particleAlphaRandomness1": 0,
+          "particleAlphaRandomness2": 0,
+          "particleAngle1": 0,
+          "particleAngle2": 0,
+          "particleAngleRandomness1": 0,
+          "particleAngleRandomness2": 0,
+          "particleBlue1": 255,
+          "particleBlue2": 255,
+          "particleColor1": "255;255;255",
+          "particleColor2": "255;255;255",
+          "particleGravityX": 0,
+          "particleGravityY": 0,
+          "particleGreen1": 255,
+          "particleGreen2": 255,
+          "particleLifeTimeMax": 1.2,
+          "particleLifeTimeMin": 0.5,
+          "particleRed1": 255,
+          "particleRed2": 255,
+          "particleSize1": 100,
+          "particleSize2": 100,
+          "particleSizeRandomness1": 0,
+          "particleSizeRandomness2": 0,
+          "rendererParam1": 3,
+          "rendererParam2": 1,
+          "rendererType": "Quad",
+          "tank": 15,
+          "textureParticleName": "AssetsV4\\enemyImpact.png",
+          "type": "ParticleSystem::ParticleEmitter",
+          "zoneRadius": 20,
+          "variables": [],
+          "effects": [],
+          "behaviors": []
         }
       ],
       "objectsFolderStructure": {
@@ -7080,6 +7143,9 @@
                 "objectName": "CoinText"
               }
             ]
+          },
+          {
+            "objectName": "Cannon_Explode_Particle"
           }
         ]
       },
@@ -7200,6 +7266,13 @@
             "includeConfig": 0
           },
           "target": "Treasure"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
+          "target": "Barrells"
         },
         {
           "type": "BuiltinCommonInstructions::Link",
@@ -10773,7 +10846,7 @@
                               "parameters": [
                                 "Random_Chance",
                                 "=",
-                                "RandomInRange(0,3)"
+                                "RandomInRange(0,5)"
                               ]
                             }
                           ],
@@ -10811,6 +10884,45 @@
                                   },
                                   "parameters": [
                                     "Chest",
+                                    "=",
+                                    "10"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "NumberVariable"
+                                  },
+                                  "parameters": [
+                                    "Random_Chance",
+                                    "=",
+                                    "4"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "Create"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Barrel",
+                                    "Enemy.CenterX()",
+                                    "Enemy.CenterY()",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "ChangePlan"
+                                  },
+                                  "parameters": [
+                                    "Barrel",
                                     "=",
                                     "10"
                                   ]
@@ -11060,10 +11172,13 @@
           "actions": [
             {
               "type": {
-                "value": "Delete"
+                "value": "Create"
               },
               "parameters": [
-                "Barrel",
+                "",
+                "Cannon_Explode_Particle",
+                "Barrel.CenterX()",
+                "Barrel.CenterY()",
                 ""
               ]
             },
@@ -11076,6 +11191,15 @@
                 "Cannon pirate VG Sounds\\Sounds\\Sound Effects\\pickup\\pickup idea 1.mp3",
                 "",
                 "15",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "Barrel",
                 ""
               ]
             }
