@@ -706,6 +706,14 @@
         "name": "AssetsV4\\playerTarget.png",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "file": "Freeze_Layer.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "Freeze_Layer.png",
+        "smoothed": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -2414,7 +2422,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 0.17708595277544034,
+        "zoomFactor": 0.2725359896772953,
         "windowMask": false
       },
       "objectsGroups": [
@@ -3373,6 +3381,22 @@
           "x": 864,
           "y": 512,
           "zOrder": 134,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "Freeze_Layer",
+          "name": "Freeze_Overlay",
+          "persistentUuid": "747e33c3-d54c-4ddd-9df3-1605db8befea",
+          "width": 0,
+          "x": 0,
+          "y": 0,
+          "zOrder": 135,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -6351,6 +6375,66 @@
               ]
             }
           ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "Freeze_Overlay",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "Freeze_Layer.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 1280,
+                            "y": 0
+                          },
+                          {
+                            "x": 1280,
+                            "y": 720
+                          },
+                          {
+                            "x": 0,
+                            "y": 720
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
@@ -6461,6 +6545,9 @@
           },
           {
             "objectName": "Custom_Cursor"
+          },
+          {
+            "objectName": "Freeze_Overlay"
           }
         ]
       },
@@ -6749,6 +6836,39 @@
           "name": "UI_Layer",
           "renderingType": "",
           "visibility": true,
+          "cameras": [],
+          "effects": [
+            {
+              "effectType": "Scene3D::HemisphereLight",
+              "name": "3D Light",
+              "doubleParameters": {
+                "elevation": 45,
+                "intensity": 1,
+                "rotation": 0
+              },
+              "stringParameters": {
+                "groundColor": "64;64;64",
+                "skyColor": "255;255;255",
+                "top": "Y-"
+              },
+              "booleanParameters": {}
+            }
+          ]
+        },
+        {
+          "ambientLightColorB": 200,
+          "ambientLightColorG": 200,
+          "ambientLightColorR": 200,
+          "camera3DFarPlaneDistance": 10000,
+          "camera3DFieldOfView": 45,
+          "camera3DNearPlaneDistance": 3,
+          "cameraType": "",
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "isLocked": false,
+          "name": "Freeze_Layer",
+          "renderingType": "",
+          "visibility": false,
           "cameras": [],
           "effects": [
             {
@@ -8152,6 +8272,35 @@
                     "=",
                     ".5"
                   ]
+                },
+                {
+                  "type": {
+                    "value": "ShowLayer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Freeze_Layer\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "OpacityCapability::OpacityBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "Freeze_Overlay",
+                    "Opacity",
+                    "=",
+                    "100"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ChangeColor"
+                  },
+                  "parameters": [
+                    "Freeze_Overlay",
+                    "\"74;151;243\""
+                  ]
                 }
               ]
             },
@@ -8188,6 +8337,15 @@
                     "Scale",
                     "=",
                     "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "HideLayer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"Freeze_Layer\""
                   ]
                 }
               ]
@@ -10728,6 +10886,17 @@
       "associatedLayout": "PirateGameScene",
       "name": "UI",
       "events": [
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "UI",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [],
+          "parameters": []
+        },
         {
           "type": "BuiltinCommonInstructions::Comment",
           "color": {
