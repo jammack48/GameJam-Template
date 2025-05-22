@@ -2436,12 +2436,12 @@
         {
           "name": "Turn_Speed",
           "type": "number",
-          "value": 100
+          "value": 125
         },
         {
           "name": "Boat_Speed",
           "type": "number",
-          "value": 125
+          "value": 300
         },
         {
           "name": "Cannon_Ball_Number",
@@ -7247,6 +7247,22 @@
                     "=",
                     "\"Idle\""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "PointAndOrbit::PointAndOrbit"
+                  },
+                  "parameters": [
+                    "",
+                    "Player_Cannon",
+                    "Player_Ship.PointX(\"CannonPoint\")",
+                    "Player_Ship.PointY(\"CannonPoint\")",
+                    "0",
+                    "MouseX()",
+                    "MouseY()",
+                    "0",
+                    ""
+                  ]
                 }
               ]
             },
@@ -7258,25 +7274,34 @@
               "name": "Transistions ******** ",
               "source": "",
               "type": "BuiltinCommonInstructions::Group",
-              "events": [],
-              "parameters": []
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [
+              "events": [
                 {
-                  "type": {
-                    "value": "SetStringObjectVariable"
-                  },
-                  "parameters": [
-                    "Player_HitBox",
-                    "State",
-                    "=",
-                    "\"Sailing\""
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Wait"
+                      },
+                      "parameters": [
+                        "1"
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetStringObjectVariable"
+                      },
+                      "parameters": [
+                        "Player_HitBox",
+                        "State",
+                        "=",
+                        "\"Sailing\""
+                      ]
+                    }
                   ]
                 }
-              ]
+              ],
+              "parameters": []
             }
           ],
           "parameters": []
@@ -9956,7 +9981,7 @@
                           "parameters": [
                             "Enemy_Cannon_Ball",
                             "AngleBetweenPositions(Enemy.PointX(\"FirePoint\"),Enemy.PointY(\"FirePoint\"),Player_HitBox.CenterX(), Player_HitBox.CenterY())",
-                            "500",
+                            "300",
                             "1"
                           ]
                         },
