@@ -698,6 +698,14 @@
         "name": "NewSprite9",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "file": "AssetsV4/playerTarget.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "AssetsV4\\playerTarget.png",
+        "smoothed": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -1980,6 +1988,14 @@
               },
               "parameters": [
                 "CameraCenter"
+              ]
+            },
+            {
+              "type": {
+                "value": "MontreSouris"
+              },
+              "parameters": [
+                ""
               ]
             }
           ]
@@ -3341,6 +3357,22 @@
           "x": 160,
           "y": -160,
           "zOrder": 133,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Custom_Cursor",
+          "persistentUuid": "fd0c1671-2d24-4081-983d-411c8510b1d2",
+          "width": 0,
+          "x": 864,
+          "y": 512,
+          "zOrder": 134,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -6259,6 +6291,66 @@
               ]
             }
           ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "Custom_Cursor",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "AssetsV4\\playerTarget.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 26,
+                        "y": 26
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 52,
+                            "y": 0
+                          },
+                          {
+                            "x": 52,
+                            "y": 52
+                          },
+                          {
+                            "x": 0,
+                            "y": 52
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
@@ -6366,6 +6458,9 @@
                 "objectName": "TimerText"
               }
             ]
+          },
+          {
+            "objectName": "Custom_Cursor"
           }
         ]
       },
@@ -6396,6 +6491,44 @@
                 "\"Backward\"",
                 "",
                 ""
+              ]
+            },
+            {
+              "type": {
+                "value": "CacheSouris"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Cursor"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "MettreXY"
+              },
+              "parameters": [
+                "Custom_Cursor",
+                "=",
+                "MouseX()",
+                "=",
+                "MouseY()"
               ]
             }
           ]
@@ -10523,11 +10656,6 @@
               ]
             }
           ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": []
         }
       ]
     },
