@@ -11193,6 +11193,65 @@
                             ""
                           ]
                         }
+                      ],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "Random_Chance",
+                                "=",
+                                "RandomInRange(0,3)"
+                              ]
+                            }
+                          ],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "NumberVariable"
+                                  },
+                                  "parameters": [
+                                    "Random_Chance",
+                                    "=",
+                                    "2"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "Create"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Chest",
+                                    "Enemy.CenterX()",
+                                    "Enemy.CenterY()",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "ChangePlan"
+                                  },
+                                  "parameters": [
+                                    "Chest",
+                                    "=",
+                                    "10"
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
                       ]
                     },
                     {
@@ -11250,6 +11309,13 @@
                           ]
                         }
                       ]
+                    }
+                  ],
+                  "variables": [
+                    {
+                      "name": "Random_Chance",
+                      "type": "number",
+                      "value": 0
                     }
                   ]
                 },
@@ -11383,6 +11449,16 @@
                 "",
                 "15",
                 ""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "Gold",
+                "+",
+                "1"
               ]
             }
           ]
