@@ -7247,7 +7247,13 @@
                     "=",
                     "\"Idle\""
                   ]
-                },
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
                 {
                   "type": {
                     "value": "PointAndOrbit::PointAndOrbit"
@@ -7349,9 +7355,15 @@
               "conditions": [
                 {
                   "type": {
-                    "value": "BuiltinCommonInstructions::Once"
+                    "inverted": true,
+                    "value": "AnimatableCapability::AnimatableBehavior::Name"
                   },
-                  "parameters": []
+                  "parameters": [
+                    "Player_Cannon",
+                    "Animation",
+                    "=",
+                    "\"Idle\""
+                  ]
                 }
               ],
               "actions": [
@@ -7451,8 +7463,8 @@
                     "Player_Ship.PointX(\"CannonPoint\")",
                     "Player_Ship.PointY(\"CannonPoint\")",
                     "0",
-                    "MouseX()",
-                    "MouseY()",
+                    "CursorX()",
+                    "CursorY()",
                     "0",
                     ""
                   ]
