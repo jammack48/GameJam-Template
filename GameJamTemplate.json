@@ -951,6 +951,14 @@
         "name": "enemyHurtV2.png",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "file": "playerCannonHurtFlash.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "playerCannonHurtFlash.png",
+        "smoothed": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -1165,6 +1173,16 @@
       "name": "Magnet_Strength",
       "type": "number",
       "value": 0
+    },
+    {
+      "name": "Player_Health",
+      "type": "number",
+      "value": 10
+    },
+    {
+      "name": "Player_Max_Health",
+      "type": "number",
+      "value": 10
     }
   ],
   "layouts": [
@@ -2829,7 +2847,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 0.44819780454104,
+        "zoomFactor": 0.35534345588170196,
         "windowMask": false
       },
       "objectsGroups": [
@@ -2884,8 +2902,8 @@
           "name": "Player_HitBox",
           "persistentUuid": "3ba9035f-ba1e-429e-b227-1d6d1bfa484a",
           "width": 0,
-          "x": 704,
-          "y": 480,
+          "x": 328,
+          "y": 392,
           "zOrder": 9,
           "numberProperties": [],
           "stringProperties": [],
@@ -2900,9 +2918,9 @@
           "name": "Player_Cannon",
           "persistentUuid": "cb6d301c-1e69-4f6e-81d1-396c582a0edb",
           "width": 0,
-          "x": 736,
+          "x": 460,
           "y": 372,
-          "zOrder": 62,
+          "zOrder": 100,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -2983,7 +3001,7 @@
           "name": "bgTilemap",
           "persistentUuid": "305a027a-ebce-4e56-b94f-26f17271a456",
           "width": 3840,
-          "x": -1792,
+          "x": -1920,
           "y": -992,
           "zOrder": -68,
           "numberProperties": [],
@@ -3020,9 +3038,9 @@
           "name": "Player_Ship",
           "persistentUuid": "9301b163-aade-48ea-b32a-950d28766cd3",
           "width": 0,
-          "x": 736,
-          "y": 449,
-          "zOrder": 59,
+          "x": 384,
+          "y": 455,
+          "zOrder": 88,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -3549,38 +3567,6 @@
           "keepRatio": true,
           "layer": "",
           "name": "Spawn_Points",
-          "persistentUuid": "2cb07862-ef80-413b-bc4b-38fe220b4683",
-          "width": 0,
-          "x": 1056,
-          "y": 608,
-          "zOrder": 133,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Spawn_Points",
-          "persistentUuid": "83bd4cdf-8c78-43c0-aa1c-052f85983a62",
-          "width": 0,
-          "x": 1088,
-          "y": 384,
-          "zOrder": 133,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Spawn_Points",
           "persistentUuid": "87170efd-dcf2-4fc1-980c-b7cd33880f7a",
           "width": 0,
           "x": 1344,
@@ -3761,7 +3747,7 @@
           "width": 0,
           "x": 864,
           "y": 256,
-          "zOrder": 136,
+          "zOrder": 80,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -3793,7 +3779,7 @@
           "width": 0,
           "x": 352,
           "y": 288,
-          "zOrder": 138,
+          "zOrder": 80,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -3809,7 +3795,7 @@
           "width": 0,
           "x": 704,
           "y": 128,
-          "zOrder": 139,
+          "zOrder": 80,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -3878,22 +3864,6 @@
           "x": -1344,
           "y": -576,
           "zOrder": 141,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Cannon_Explode_Particle",
-          "persistentUuid": "28c43cda-ec4e-49a0-b22e-8c23b1c154dc",
-          "width": 0,
-          "x": 544,
-          "y": 480,
-          "zOrder": 142,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -5295,8 +5265,55 @@
               "directions": [
                 {
                   "looping": false,
-                  "timeBetweenFrames": 0.08,
+                  "timeBetweenFrames": 0.125,
                   "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "playerCannonHurtFlash.png",
+                      "points": [
+                        {
+                          "name": "FirePoint",
+                          "x": 101.5,
+                          "y": 75
+                        },
+                        {
+                          "name": "SmokePoint",
+                          "x": 127,
+                          "y": 60.5
+                        }
+                      ],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 43,
+                        "y": 68.5
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 1
+                          },
+                          {
+                            "x": 122,
+                            "y": 1
+                          },
+                          {
+                            "x": 122,
+                            "y": 99
+                          },
+                          {
+                            "x": 0,
+                            "y": 99
+                          }
+                        ]
+                      ]
+                    },
                     {
                       "hasCustomCollisionMask": true,
                       "image": "AssetsV4\\playerCannonHurt.png",
@@ -7538,6 +7555,53 @@
                 ""
               ]
             }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Health::Health::SetHealth"
+                  },
+                  "parameters": [
+                    "Player_HitBox",
+                    "Health",
+                    "Player_Health",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Health::Health::SetMaxHealthOp"
+                  },
+                  "parameters": [
+                    "Player_HitBox",
+                    "Health",
+                    "=",
+                    "Player_Max_Health",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PanelSpriteContinuousBar::PanelSpriteContinuousBar::SetValue"
+                  },
+                  "parameters": [
+                    "Player_Health_Bar",
+                    "=",
+                    "Player_HitBox.Health::Health()",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": []
+            }
           ]
         },
         {
@@ -7656,7 +7720,7 @@
                 "Enemy",
                 "Enemy",
                 "<=",
-                "0"
+                "1"
               ]
             },
             {
@@ -10040,8 +10104,224 @@
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": []
+          "conditions": [
+            {
+              "type": {
+                "value": "SourisSurObjet"
+              },
+              "parameters": [
+                "Item_Health_Plus",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "MouseButtonFromTextPressed"
+              },
+              "parameters": [
+                "",
+                "\"Left\""
+              ]
+            },
+            {
+              "type": {
+                "value": "NumberVariable"
+              },
+              "parameters": [
+                "Gold_Global",
+                ">=",
+                "10"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "Gold_Global",
+                "-",
+                "10"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "Player_Health",
+                "+",
+                "2"
+              ]
+            },
+            {
+              "type": {
+                "value": "PanelSpriteContinuousBar::PanelSpriteContinuousBar::SetValue"
+              },
+              "parameters": [
+                "Player_Health_Bar",
+                "=",
+                "Player_Health",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "Buying a power bottle.mp3",
+                "",
+                "25",
+                "RandomFloatInRange(.9,1.1)"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "SourisSurObjet"
+              },
+              "parameters": [
+                "Item_Health_Max",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "MouseButtonFromTextPressed"
+              },
+              "parameters": [
+                "",
+                "\"Left\""
+              ]
+            },
+            {
+              "type": {
+                "value": "NumberVariable"
+              },
+              "parameters": [
+                "Gold_Global",
+                ">=",
+                "10"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "Gold_Global",
+                "-",
+                "10"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "Player_Health",
+                "=",
+                "10"
+              ]
+            },
+            {
+              "type": {
+                "value": "PanelSpriteContinuousBar::PanelSpriteContinuousBar::SetValue"
+              },
+              "parameters": [
+                "Player_Health_Bar",
+                "=",
+                "Player_Health",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "Buying a power bottle.mp3",
+                "",
+                "25",
+                "RandomFloatInRange(.9,1.1)"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Health bar"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PanelSpriteContinuousBar::PanelSpriteContinuousBar::SetValue"
+              },
+              "parameters": [
+                "Player_Health_Bar",
+                "=",
+                "Player_Health",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "PanelSpriteContinuousBar::PanelSpriteContinuousBar::SetMaxValue"
+              },
+              "parameters": [
+                "Player_Health_Bar",
+                "=",
+                "Player_Max_Health",
+                ""
+              ]
+            }
+          ]
         }
       ],
       "layers": [
@@ -10665,20 +10945,7 @@
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "Health::Health::Health"
-              },
-              "parameters": [
-                "Player_HitBox",
-                "Health",
-                "=",
-                "Player_HitBox.Health::Health()",
-                ""
-              ]
-            }
-          ],
+          "conditions": [],
           "actions": [
             {
               "type": {
@@ -10689,6 +10956,26 @@
                 "=",
                 "Player_HitBox.Health::Health()",
                 ""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "Player_Max_Health",
+                "=",
+                "Player_HitBox.Health::MaxHealth()"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "Player_Health",
+                "=",
+                "Player_HitBox.Health::Health()"
               ]
             }
           ]
@@ -10772,18 +11059,18 @@
               "actions": [
                 {
                   "type": {
-                    "value": "PanelSpriteContinuousBar::PanelSpriteContinuousBar::SetMaxValue"
+                    "value": "PanelSpriteContinuousBar::PanelSpriteContinuousBar::SetValue"
                   },
                   "parameters": [
                     "Player_Health_Bar",
                     "=",
-                    "Player_HitBox.Health::MaxHealth()",
+                    "Player_HitBox.Health::Health()",
                     ""
                   ]
                 },
                 {
                   "type": {
-                    "value": "PanelSpriteContinuousBar::PanelSpriteContinuousBar::SetValue"
+                    "value": "PanelSpriteContinuousBar::PanelSpriteContinuousBar::SetMaxValue"
                   },
                   "parameters": [
                     "Player_Health_Bar",
@@ -13257,6 +13544,7 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
+          "folded": true,
           "name": "Enemy Controller",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -14631,7 +14919,7 @@
                 "DebugText",
                 "Text",
                 "=",
-                "\"Time: \" + ToString(Player_HitBox.ObjectTimerElapsedTime(\"Hurt_Timer\"))"
+                "\"Health: \" + ToString(Player_HitBox.Health::Health())"
               ]
             }
           ]
