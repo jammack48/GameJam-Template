@@ -2744,7 +2744,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 0.5843784410740988,
+        "zoomFactor": 0.44819780454104,
         "windowMask": false
       },
       "objectsGroups": [
@@ -2864,7 +2864,7 @@
           "name": "DebugText",
           "persistentUuid": "b9f63a93-460f-459e-bfc6-df38ed1c921e",
           "width": 0,
-          "x": 704,
+          "x": 601,
           "y": 0,
           "zOrder": 19,
           "numberProperties": [],
@@ -4916,6 +4916,11 @@
               "name": "State",
               "type": "string",
               "value": "Init"
+            },
+            {
+              "name": "IsHurt",
+              "type": "boolean",
+              "value": false
             }
           ],
           "effects": [],
@@ -11733,9 +11738,14 @@
               "conditions": [
                 {
                   "type": {
-                    "value": "BuiltinCommonInstructions::Once"
+                    "value": "BooleanObjectVariable"
                   },
-                  "parameters": []
+                  "parameters": [
+                    "Player_HitBox",
+                    "IsHurt",
+                    "=",
+                    ""
+                  ]
                 }
               ],
               "actions": [
@@ -11794,6 +11804,17 @@
                     "Player_HitBox",
                     "\"Hurt_Timer\""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "Player_HitBox",
+                    "IsHurt",
+                    "True",
+                    ""
+                  ]
                 }
               ]
             },
@@ -11836,6 +11857,17 @@
                 },
                 {
                   "type": {
+                    "value": "SetStringObjectVariable"
+                  },
+                  "parameters": [
+                    "Player_HitBox",
+                    "State",
+                    "=",
+                    "\"Sailing\""
+                  ]
+                },
+                {
+                  "type": {
                     "value": "RemoveObjectTimer"
                   },
                   "parameters": [
@@ -11845,13 +11877,13 @@
                 },
                 {
                   "type": {
-                    "value": "SetStringObjectVariable"
+                    "value": "SetBooleanObjectVariable"
                   },
                   "parameters": [
                     "Player_HitBox",
-                    "State",
-                    "=",
-                    "\"Sailing\""
+                    "IsHurt",
+                    "False",
+                    ""
                   ]
                 }
               ]
@@ -13954,6 +13986,17 @@
                 "Text",
                 "=",
                 "\"Enemies: \" + ToString(SceneInstancesCount(Enemy))"
+              ]
+            },
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "DebugText",
+                "Text",
+                "=",
+                "\"Time: \" + ToString(Player_HitBox.ObjectTimerElapsedTime(\"Hurt_Timer\"))"
               ]
             }
           ]
