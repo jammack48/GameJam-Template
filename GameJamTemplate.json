@@ -946,6 +946,93 @@
         "characterSize": 40,
         "color": "0;0;0"
       }
+    },
+    {
+      "assetStoreId": "ebc9bc64e9525d8e827938e246f37b4398590f18a3444735dc50edbea0317f03",
+      "name": "Player_Health_Bar",
+      "type": "PanelSpriteContinuousBar::PanelSpriteContinuousBar",
+      "variant": "",
+      "variables": [],
+      "effects": [],
+      "behaviors": [],
+      "content": {
+        "InitialValue": 10,
+        "MaxValue": 10,
+        "BarTopPadding": 8,
+        "BarRightPadding": 10,
+        "BarBottomPadding": 8,
+        "BarLeftPadding": 10,
+        "PreviousHighValueDuration": 0,
+        "ShowLabel": false
+      },
+      "childrenContent": {
+        "Background": {
+          "bottomMargin": 8,
+          "height": 35,
+          "leftMargin": 10,
+          "rightMargin": 10,
+          "texture": "Wood Bar Border.png",
+          "tiled": true,
+          "topMargin": 8,
+          "width": 397
+        },
+        "Buffer": {
+          "bottomMargin": 0,
+          "height": 32,
+          "leftMargin": 0,
+          "rightMargin": 0,
+          "texture": "Shaded Blue Fill Bar.png",
+          "tiled": false,
+          "topMargin": 0,
+          "width": 32
+        },
+        "FillBar": {
+          "bottomMargin": 9,
+          "height": 19,
+          "leftMargin": 6,
+          "rightMargin": 6,
+          "texture": "Shaded Blue Fill Bar.png",
+          "tiled": false,
+          "topMargin": 9,
+          "width": 19
+        },
+        "Label": {
+          "bold": false,
+          "italic": false,
+          "smoothed": true,
+          "underlined": false,
+          "string": "",
+          "font": "",
+          "textAlignment": "center",
+          "characterSize": 16,
+          "color": {
+            "b": 255,
+            "g": 255,
+            "r": 255
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "",
+            "font": "",
+            "textAlignment": "center",
+            "verticalTextAlignment": "top",
+            "characterSize": 16,
+            "color": "255;255;255"
+          }
+        }
+      }
     }
   ],
   "objectsFolderStructure": {
@@ -956,6 +1043,9 @@
       },
       {
         "objectName": "CoinText"
+      },
+      {
+        "objectName": "Player_Health_Bar"
       }
     ]
   },
@@ -969,12 +1059,12 @@
     {
       "name": "Player_Speed",
       "type": "number",
-      "value": 0
+      "value": 300
     },
     {
       "name": "Player_Turn_Speed",
       "type": "number",
-      "value": 0
+      "value": 125
     },
     {
       "name": "Cannon_Shot_Number",
@@ -982,7 +1072,12 @@
       "value": 3
     },
     {
-      "name": "Unnamed",
+      "name": "Magnet_Distance",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "Magnet_Strength",
       "type": "number",
       "value": 0
     }
@@ -2687,6 +2782,11 @@
           "name": "Gold",
           "type": "number",
           "value": 0
+        },
+        {
+          "name": "IsFreezing",
+          "type": "boolean",
+          "value": false
         }
       ],
       "instances": [
@@ -5742,93 +5842,6 @@
           }
         },
         {
-          "assetStoreId": "ebc9bc64e9525d8e827938e246f37b4398590f18a3444735dc50edbea0317f03",
-          "name": "Player_Health_Bar",
-          "type": "PanelSpriteContinuousBar::PanelSpriteContinuousBar",
-          "variant": "",
-          "variables": [],
-          "effects": [],
-          "behaviors": [],
-          "content": {
-            "InitialValue": 10,
-            "MaxValue": 10,
-            "BarTopPadding": 8,
-            "BarRightPadding": 10,
-            "BarBottomPadding": 8,
-            "BarLeftPadding": 10,
-            "PreviousHighValueDuration": 0,
-            "ShowLabel": false
-          },
-          "childrenContent": {
-            "Background": {
-              "bottomMargin": 8,
-              "height": 35,
-              "leftMargin": 10,
-              "rightMargin": 10,
-              "texture": "Wood Bar Border.png",
-              "tiled": true,
-              "topMargin": 8,
-              "width": 397
-            },
-            "Buffer": {
-              "bottomMargin": 0,
-              "height": 32,
-              "leftMargin": 0,
-              "rightMargin": 0,
-              "texture": "Shaded Blue Fill Bar.png",
-              "tiled": false,
-              "topMargin": 0,
-              "width": 32
-            },
-            "FillBar": {
-              "bottomMargin": 9,
-              "height": 19,
-              "leftMargin": 6,
-              "rightMargin": 6,
-              "texture": "Shaded Blue Fill Bar.png",
-              "tiled": false,
-              "topMargin": 9,
-              "width": 19
-            },
-            "Label": {
-              "bold": false,
-              "italic": false,
-              "smoothed": true,
-              "underlined": false,
-              "string": "",
-              "font": "",
-              "textAlignment": "center",
-              "characterSize": 16,
-              "color": {
-                "b": 255,
-                "g": 255,
-                "r": 255
-              },
-              "content": {
-                "bold": false,
-                "isOutlineEnabled": false,
-                "isShadowEnabled": false,
-                "italic": false,
-                "outlineColor": "255;255;255",
-                "outlineThickness": 2,
-                "shadowAngle": 90,
-                "shadowBlurRadius": 2,
-                "shadowColor": "0;0;0",
-                "shadowDistance": 4,
-                "shadowOpacity": 127,
-                "smoothed": true,
-                "underlined": false,
-                "text": "",
-                "font": "",
-                "textAlignment": "center",
-                "verticalTextAlignment": "top",
-                "characterSize": 16,
-                "color": "255;255;255"
-              }
-            }
-          }
-        },
-        {
           "adaptCollisionMaskAutomatically": true,
           "assetStoreId": "",
           "name": "Enemy_Skull",
@@ -6285,7 +6298,15 @@
           "updateIfNotVisible": false,
           "variables": [],
           "effects": [],
-          "behaviors": [],
+          "behaviors": [
+            {
+              "name": "MagneticEffect",
+              "type": "MagneticEffect::MagneticEffect",
+              "Speed": 48,
+              "Distance": 128,
+              "IsAttracted": false
+            }
+          ],
           "animations": [
             {
               "name": "",
@@ -7243,9 +7264,6 @@
                 "objectName": "Player_Hand"
               },
               {
-                "objectName": "Player_Health_Bar"
-              },
-              {
                 "objectName": "Player_Cannon"
               },
               {
@@ -7657,6 +7675,10 @@
           "type": "Health::Health"
         },
         {
+          "name": "MagneticEffect",
+          "type": "MagneticEffect::MagneticEffect"
+        },
+        {
           "name": "Opacity",
           "type": "OpacityCapability::OpacityBehavior"
         },
@@ -7993,6 +8015,22 @@
           "x": 1204,
           "y": -54,
           "zOrder": 15,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 270,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Player_Health_Bar",
+          "persistentUuid": "f13d3be3-ac93-4f70-b5b7-4f8936d35f5b",
+          "width": 0,
+          "x": 1030,
+          "y": 313,
+          "zOrder": 16,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -9038,6 +9076,29 @@
       },
       "events": [
         {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "MontreSouris"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ]
+        },
+        {
           "type": "BuiltinCommonInstructions::Comment",
           "color": {
             "b": 109,
@@ -9393,6 +9454,283 @@
               ]
             }
           ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "SourisSurObjet"
+              },
+              "parameters": [
+                "Item_Magnet_1",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "MouseButtonFromTextPressed"
+              },
+              "parameters": [
+                "",
+                "\"Left\""
+              ]
+            },
+            {
+              "type": {
+                "value": "NumberVariable"
+              },
+              "parameters": [
+                "Gold_Global",
+                ">=",
+                "10"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "Gold_Global",
+                "-",
+                "10"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "Magnet_Distance",
+                "=",
+                "250"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "Magnet_Strength",
+                "=",
+                "100"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "SourisSurObjet"
+              },
+              "parameters": [
+                "Item_Magnet_2",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "MouseButtonFromTextPressed"
+              },
+              "parameters": [
+                "",
+                "\"Left\""
+              ]
+            },
+            {
+              "type": {
+                "value": "NumberVariable"
+              },
+              "parameters": [
+                "Gold_Global",
+                ">=",
+                "10"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "Gold_Global",
+                "-",
+                "10"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "Magnet_Strength",
+                "=",
+                "400"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "Magnet_Distance",
+                "=",
+                "800"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "SourisSurObjet"
+              },
+              "parameters": [
+                "Item_Speed_Boost",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "MouseButtonFromTextPressed"
+              },
+              "parameters": [
+                "",
+                "\"Left\""
+              ]
+            },
+            {
+              "type": {
+                "value": "NumberVariable"
+              },
+              "parameters": [
+                "Gold_Global",
+                ">=",
+                "10"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "Gold_Global",
+                "-",
+                "10"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "Player_Speed",
+                "=",
+                "400"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "SourisSurObjet"
+              },
+              "parameters": [
+                "Item_Fast_Turn",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "MouseButtonFromTextPressed"
+              },
+              "parameters": [
+                "",
+                "\"Left\""
+              ]
+            },
+            {
+              "type": {
+                "value": "NumberVariable"
+              },
+              "parameters": [
+                "Gold_Global",
+                ">=",
+                "10"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "Gold_Global",
+                "-",
+                "10"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "Player_Turn_Speed",
+                "=",
+                "300"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": []
         }
       ],
       "layers": [
@@ -10130,7 +10468,7 @@
                   "parameters": [
                     "Player_HitBox",
                     "Player_HitBox.Angle()",
-                    "Boat_Speed",
+                    "Player_Speed",
                     "0"
                   ]
                 }
@@ -10216,7 +10554,7 @@
                   },
                   "parameters": [
                     "Player_HitBox",
-                    "-Turn_Speed",
+                    "-Player_Turn_Speed",
                     ""
                   ]
                 }
@@ -10259,7 +10597,7 @@
                   },
                   "parameters": [
                     "Player_HitBox",
-                    "Turn_Speed",
+                    "Player_Turn_Speed",
                     ""
                   ]
                 }
@@ -11030,9 +11368,35 @@
                     "",
                     "\"Right\""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "IsFreezing",
+                    "=",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
                 }
               ],
               "actions": [
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "IsFreezing",
+                    "True",
+                    ""
+                  ]
+                },
                 {
                   "type": {
                     "value": "ChangeTimeScale"
@@ -11040,6 +11404,15 @@
                   "parameters": [
                     "",
                     ".3"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "ResetTimer"
+                  },
+                  "parameters": [
+                    "",
+                    "\"FreezeTimer\""
                   ]
                 },
                 {
@@ -11089,12 +11462,23 @@
               "conditions": [
                 {
                   "type": {
-                    "inverted": true,
-                    "value": "MouseButtonFromTextPressed"
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "IsFreezing",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "CompareTimer"
                   },
                   "parameters": [
                     "",
-                    "\"Right\""
+                    "\"FreezeTimer\"",
+                    ">=",
+                    ".5"
                   ]
                 }
               ],
@@ -11126,6 +11510,16 @@
                   "parameters": [
                     "",
                     "\"Freeze_Layer\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "IsFreezing",
+                    "False",
+                    ""
                   ]
                 }
               ]
@@ -11442,6 +11836,15 @@
                 },
                 {
                   "type": {
+                    "value": "RemoveObjectTimer"
+                  },
+                  "parameters": [
+                    "Player_HitBox",
+                    "\"Hurt_Timer\""
+                  ]
+                },
+                {
+                  "type": {
                     "value": "SetStringObjectVariable"
                   },
                   "parameters": [
@@ -11449,15 +11852,6 @@
                     "State",
                     "=",
                     "\"Sailing\""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "RemoveObjectTimer"
-                  },
-                  "parameters": [
-                    "Player_HitBox",
-                    "\"Hurt_Timer\""
                   ]
                 }
               ]
@@ -11657,6 +12051,16 @@
               "conditions": [
                 {
                   "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "IsFreezing",
+                    "=",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
                     "value": "CompareObjectTimer"
                   },
                   "parameters": [
@@ -11664,6 +12068,88 @@
                     "\"ShotTimer\"",
                     ">=",
                     ".7"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "Player_Cannon_Ball_HitBox",
+                    "Splash",
+                    "=",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Arreter"
+                  },
+                  "parameters": [
+                    "Player_Cannon_Ball_HitBox"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                  },
+                  "parameters": [
+                    "Player_Cannon_Ball_HitBox",
+                    "Animation",
+                    "=",
+                    "\"Splash\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "Player_Cannon_Ball_HitBox",
+                    "Splash",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "Cannon ball hitting the water.mp3",
+                    "",
+                    "10",
+                    "RandomFloatInRange(0.9,1.1)"
+                  ]
+                }
+              ]
+            },
+            {
+              "disabled": true,
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "IsFreezing",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "CompareObjectTimer"
+                  },
+                  "parameters": [
+                    "Player_Cannon_Ball_HitBox",
+                    "\"ShotTimer\"",
+                    ">=",
+                    "2"
                   ]
                 },
                 {
@@ -13324,7 +13810,22 @@
         {
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
-          "actions": []
+          "actions": [
+            {
+              "type": {
+                "value": "MagneticEffect::MagneticEffect::Attraction"
+              },
+              "parameters": [
+                "Chest",
+                "MagneticEffect",
+                "Player_HitBox",
+                "Magnet_Distance",
+                "Magnet_Strength",
+                "",
+                ""
+              ]
+            }
+          ]
         }
       ]
     },
@@ -58330,6 +58831,602 @@
         }
       ],
       "eventsBasedBehaviors": [],
+      "eventsBasedObjects": []
+    },
+    {
+      "author": "Entropy",
+      "category": "Movement",
+      "extensionNamespace": "",
+      "fullName": "Magnetic Effect",
+      "gdevelopVersion": ">=5.5.222",
+      "helpPath": "",
+      "iconUrl": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0ibWRpLW1hZ25ldCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGQ9Ik0zLDdWMTNBOSw5IDAgMCwwIDEyLDIyQTksOSAwIDAsMCAyMSwxM1Y3SDE3VjEzQTUsNSAwIDAsMSAxMiwxOEE1LDUgMCAwLDEgNywxM1Y3TTE3LDVIMjFWMkgxN00zLDVIN1YySDMiIC8+PC9zdmc+",
+      "name": "MagneticEffect",
+      "previewIconUrl": "https://resources.gdevelop-app.com/assets/Icons/magnet.svg",
+      "shortDescription": "Attract an object to another object, with customisable speed and distance.",
+      "version": "1.1.0",
+      "description": "With this behavior, you can attract an object to another object, such as coins attracted to a player.",
+      "origin": {
+        "identifier": "MagneticEffect",
+        "name": "gdevelop-extension-store"
+      },
+      "tags": [
+        "magnet",
+        "attract"
+      ],
+      "authorIds": [
+        "q8ubdigLvIRXLxsJDDTaokO41mc2"
+      ],
+      "dependencies": [],
+      "globalVariables": [],
+      "sceneVariables": [],
+      "eventsFunctions": [],
+      "eventsBasedBehaviors": [
+        {
+          "description": "Attraction to another object, with customisable speed and distance.",
+          "fullName": "Magnetic Effect",
+          "name": "MagneticEffect",
+          "objectType": "",
+          "eventsFunctions": [
+            {
+              "description": "Attraction to a target object.",
+              "fullName": "Attraction to a target object",
+              "functionType": "Action",
+              "name": "Attraction",
+              "sentence": "Attract _PARAM0_ to _PARAM2_ at a speed of _PARAM4_px/s if the distance is below _PARAM3_px permanently: _PARAM5_",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "In case distance and speed haven't been set by the user, we define them with the default behavior's values."
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "Egal"
+                      },
+                      "parameters": [
+                        "NewDistance",
+                        "!=",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "Distance",
+                        "=",
+                        "NewDistance"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "Egal"
+                      },
+                      "parameters": [
+                        "NewSpeed",
+                        "!=",
+                        "0"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "Speed",
+                        "=",
+                        "NewSpeed"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "colorB": 228,
+                  "colorG": 176,
+                  "colorR": 74,
+                  "creationTime": 0,
+                  "name": "Attraction",
+                  "source": "",
+                  "type": "BuiltinCommonInstructions::Group",
+                  "events": [],
+                  "parameters": []
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Basically, we look at the distance of the object, if it's below the attraction distance then we apply a force. When they are in collision, we stop the attraction."
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "Distance"
+                      },
+                      "parameters": [
+                        "Object",
+                        "OtherObject",
+                        "NewDistance",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanVariable"
+                      },
+                      "parameters": [
+                        "IsAttracted",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "MagneticEffect::MagneticEffect::IsAttracted"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "AddForceVers"
+                      },
+                      "parameters": [
+                        "Object",
+                        "OtherObject",
+                        "NewSpeed",
+                        "0"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "CollisionNP"
+                      },
+                      "parameters": [
+                        "Object",
+                        "OtherObject",
+                        "",
+                        "",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Arreter"
+                      },
+                      "parameters": [
+                        "Object"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "If the attraction is not permanent, then we need to make sure the attraction stops if the targeted object's distance is above the attraction distance."
+                },
+                {
+                  "colorB": 228,
+                  "colorG": 176,
+                  "colorR": 74,
+                  "creationTime": 0,
+                  "name": "Not Permanent",
+                  "source": "",
+                  "type": "BuiltinCommonInstructions::Group",
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
+                            "inverted": true,
+                            "value": "BooleanVariable"
+                          },
+                          "parameters": [
+                            "Permanent",
+                            "True",
+                            ""
+                          ]
+                        }
+                      ],
+                      "actions": [],
+                      "events": [
+                        {
+                          "type": "BuiltinCommonInstructions::Standard",
+                          "conditions": [
+                            {
+                              "type": {
+                                "inverted": true,
+                                "value": "Distance"
+                              },
+                              "parameters": [
+                                "Object",
+                                "OtherObject",
+                                "NewDistance",
+                                ""
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetBooleanVariable"
+                              },
+                              "parameters": [
+                                "IsAttracted",
+                                "False",
+                                ""
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ],
+                  "parameters": []
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "MagneticEffect::MagneticEffect",
+                  "type": "behavior"
+                },
+                {
+                  "description": "Target Object",
+                  "name": "OtherObject",
+                  "type": "objectList"
+                },
+                {
+                  "description": "Distance (Default: 128)",
+                  "name": "NewDistance",
+                  "type": "expression"
+                },
+                {
+                  "description": "Speed (Default: 48)",
+                  "name": "NewSpeed",
+                  "type": "expression"
+                },
+                {
+                  "description": "Permanent",
+                  "name": "Permanent",
+                  "type": "yesorno"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "Check if the object is attracted to the target object.",
+              "fullName": "Is attracted to the target object",
+              "functionType": "Condition",
+              "name": "IsAttracted",
+              "sentence": "_PARAM0_ is attracted to the target object",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "The condition reads the property isAttracted of the object"
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetReturnBoolean"
+                      },
+                      "parameters": [
+                        "False"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BooleanVariable"
+                      },
+                      "parameters": [
+                        "IsAttracted",
+                        "True",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetReturnBoolean"
+                      },
+                      "parameters": [
+                        "True"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "MagneticEffect::MagneticEffect",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "description": "Stop the attraction to the target object.",
+              "fullName": "Stop attraction",
+              "functionType": "Action",
+              "name": "StopAttraction",
+              "sentence": "Stop the attraction of _PARAM0_",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "In order to stop the attraction, we change the boolean isAttracted to false."
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "MagneticEffect::MagneticEffect::IsAttracted"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetBooleanVariable"
+                      },
+                      "parameters": [
+                        "IsAttracted",
+                        "False",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "MagneticEffect::MagneticEffect",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "fullName": "",
+              "functionType": "Action",
+              "name": "onDeActivate",
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "When the behavior is removed, we need to ensure the attraction is removed too."
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "MagneticEffect::MagneticEffect::StopAttraction"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "MagneticEffect::MagneticEffect",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            },
+            {
+              "fullName": "",
+              "functionType": "Action",
+              "name": "onDestroy",
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "When the object is removed, we need to ensure the attraction is removed too."
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "MagneticEffect::MagneticEffect::StopAttraction"
+                      },
+                      "parameters": [
+                        "Object",
+                        "Behavior",
+                        ""
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "MagneticEffect::MagneticEffect",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            }
+          ],
+          "propertyDescriptors": [
+            {
+              "value": "48",
+              "type": "Number",
+              "label": "Speed",
+              "description": "",
+              "group": "",
+              "extraInformation": [],
+              "hidden": true,
+              "name": "Speed"
+            },
+            {
+              "value": "128",
+              "type": "Number",
+              "label": "Distance",
+              "description": "",
+              "group": "",
+              "extraInformation": [],
+              "hidden": true,
+              "name": "Distance"
+            },
+            {
+              "value": "false",
+              "type": "Boolean",
+              "label": "Is Attracted",
+              "description": "",
+              "group": "",
+              "extraInformation": [],
+              "hidden": true,
+              "name": "IsAttracted"
+            }
+          ],
+          "sharedPropertyDescriptors": []
+        }
+      ],
       "eventsBasedObjects": []
     }
   ],
