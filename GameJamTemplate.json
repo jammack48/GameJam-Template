@@ -903,6 +903,54 @@
         "metadata": "",
         "name": "FullSSIntro.mp4",
         "userAdded": false
+      },
+      {
+        "file": "upgradeShotX3.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "upgradeShotX3.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "upgradeShotX2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "upgradeShotX2.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "upgradeHealthS.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "upgradeHealthS.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "upgradeHealthL.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "upgradeHealthL.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "playerShipHurt.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "playerShipHurt.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "enemyHurtV2.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "enemyHurtV2.png",
+        "smoothed": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -4939,6 +4987,65 @@
                   ]
                 }
               ]
+            },
+            {
+              "name": "Hurt",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "enemyHurtV2.png",
+                      "points": [
+                        {
+                          "name": "Skull_Point",
+                          "x": 114.5,
+                          "y": 57.5
+                        },
+                        {
+                          "name": "FirePoint",
+                          "x": 191,
+                          "y": 78
+                        }
+                      ],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 64,
+                        "y": 64
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 64,
+                        "y": 64
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 19,
+                            "y": 12
+                          },
+                          {
+                            "x": 176,
+                            "y": 12
+                          },
+                          {
+                            "x": 176,
+                            "y": 144
+                          },
+                          {
+                            "x": 19,
+                            "y": 144
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
             }
           ]
         },
@@ -5781,7 +5888,7 @@
           ],
           "animations": [
             {
-              "name": "",
+              "name": "Idle",
               "useMultipleDirections": false,
               "directions": [
                 {
@@ -5791,6 +5898,65 @@
                     {
                       "hasCustomCollisionMask": true,
                       "image": "AssetsV4\\playerShipWithWater.png",
+                      "points": [
+                        {
+                          "name": "Point",
+                          "x": 0,
+                          "y": 0
+                        },
+                        {
+                          "name": "CannonPoint",
+                          "x": 96,
+                          "y": 59
+                        }
+                      ],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 64,
+                        "y": 64.5
+                      },
+                      "centerPoint": {
+                        "automatic": false,
+                        "name": "centre",
+                        "x": 64,
+                        "y": 64.5
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 1
+                          },
+                          {
+                            "x": 121,
+                            "y": 1
+                          },
+                          {
+                            "x": 121,
+                            "y": 122
+                          },
+                          {
+                            "x": 0,
+                            "y": 122
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "name": "Hurt",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "playerShipHurt.png",
                       "points": [
                         {
                           "name": "Point",
@@ -7769,7 +7935,7 @@
       "title": "",
       "v": 209,
       "uiSettings": {
-        "grid": false,
+        "grid": true,
         "gridType": "rectangular",
         "gridWidth": 32,
         "gridHeight": 32,
@@ -7777,8 +7943,8 @@
         "gridOffsetY": 0,
         "gridColor": 10401023,
         "gridAlpha": 0.8,
-        "snap": false,
-        "zoomFactor": 0.3797121001947931,
+        "snap": true,
+        "zoomFactor": 0.5653158055126307,
         "windowMask": false
       },
       "objectsGroups": [
@@ -7925,8 +8091,8 @@
           "name": "Item_Health_Plus",
           "persistentUuid": "b1de06f0-af35-4a1e-935d-8a3578f16134",
           "width": 0,
-          "x": 31,
-          "y": 159,
+          "x": 64,
+          "y": 160,
           "zOrder": 7,
           "numberProperties": [],
           "stringProperties": [],
@@ -7941,8 +8107,8 @@
           "name": "Item_Health_Max",
           "persistentUuid": "0fe015ad-213f-41b0-b383-c648afe9a863",
           "width": 0,
-          "x": 118,
-          "y": 169,
+          "x": 160,
+          "y": 121,
           "zOrder": 8,
           "numberProperties": [],
           "stringProperties": [],
@@ -7973,8 +8139,8 @@
           "name": "Item_Double_Blast",
           "persistentUuid": "afcbc00c-057e-4c36-a087-91de295eea3e",
           "width": 0,
-          "x": 307,
-          "y": 333,
+          "x": 320,
+          "y": 312,
           "zOrder": 10,
           "numberProperties": [],
           "stringProperties": [],
@@ -7989,8 +8155,8 @@
           "name": "Item_Triple_Blast",
           "persistentUuid": "2b462cc2-0f99-4587-96a9-9f62b5dd1190",
           "width": 0,
-          "x": 318,
-          "y": 464,
+          "x": 306,
+          "y": 467,
           "zOrder": 11,
           "numberProperties": [],
           "stringProperties": [],
@@ -8554,7 +8720,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "healthSmall.jpg",
+                      "image": "upgradeHealthS.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -8571,19 +8737,19 @@
                         [
                           {
                             "x": 0,
-                            "y": 0
+                            "y": 1
                           },
                           {
-                            "x": 32,
-                            "y": 0
+                            "x": 37,
+                            "y": 1
                           },
                           {
-                            "x": 32,
-                            "y": 88
+                            "x": 37,
+                            "y": 101
                           },
                           {
                             "x": 0,
-                            "y": 88
+                            "y": 101
                           }
                         ]
                       ]
@@ -8633,7 +8799,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "healthBig.jpg",
+                      "image": "upgradeHealthL.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -8649,20 +8815,20 @@
                       "customCollisionMask": [
                         [
                           {
-                            "x": 0,
+                            "x": 1,
                             "y": 0
                           },
                           {
-                            "x": 50,
+                            "x": 61,
                             "y": 0
                           },
                           {
-                            "x": 50,
-                            "y": 113
+                            "x": 61,
+                            "y": 135
                           },
                           {
-                            "x": 0,
-                            "y": 113
+                            "x": 1,
+                            "y": 135
                           }
                         ]
                       ]
@@ -8791,7 +8957,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "doubleBlast.jpg",
+                      "image": "upgradeShotX2.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -8811,16 +8977,16 @@
                             "y": 0
                           },
                           {
-                            "x": 62,
+                            "x": 75,
                             "y": 0
                           },
                           {
-                            "x": 62,
-                            "y": 90
+                            "x": 75,
+                            "y": 104
                           },
                           {
                             "x": 0,
-                            "y": 90
+                            "y": 104
                           }
                         ]
                       ]
@@ -8870,7 +9036,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "tripleShot.jpg",
+                      "image": "upgradeShotX3.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -8886,20 +9052,20 @@
                       "customCollisionMask": [
                         [
                           {
-                            "x": 0,
-                            "y": 0
+                            "x": 1,
+                            "y": 1
                           },
                           {
-                            "x": 80,
-                            "y": 0
+                            "x": 109,
+                            "y": 1
                           },
                           {
-                            "x": 80,
-                            "y": 108
+                            "x": 109,
+                            "y": 127
                           },
                           {
-                            "x": 0,
-                            "y": 108
+                            "x": 1,
+                            "y": 127
                           }
                         ]
                       ]
@@ -9983,7 +10149,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.24672586957406276,
+        "zoomFactor": 0.31119749424452037,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -9993,14 +10159,14 @@
           "angle": 0,
           "customSize": true,
           "depth": 1,
-          "height": 719,
+          "height": 748,
           "keepRatio": true,
           "layer": "",
           "name": "NewVideo",
           "persistentUuid": "c30f4011-9e94-408c-8398-31d19c148c24",
-          "width": 1277,
-          "x": 0,
-          "y": 0,
+          "width": 1300,
+          "x": -13,
+          "y": -13,
           "zOrder": 1,
           "numberProperties": [],
           "stringProperties": [],
@@ -10780,6 +10946,35 @@
                   },
                   "parameters": [
                     "Player_Cannon",
+                    "Animation",
+                    "=",
+                    "\"Idle\""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::Name"
+                  },
+                  "parameters": [
+                    "Player_Ship",
+                    "Animation",
+                    "!=",
+                    "\"Idle\""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                  },
+                  "parameters": [
+                    "Player_Ship",
                     "Animation",
                     "=",
                     "\"Idle\""
@@ -12152,6 +12347,17 @@
                 },
                 {
                   "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                  },
+                  "parameters": [
+                    "Player_Cannon",
+                    "Animation",
+                    "=",
+                    "\"Hurt\""
+                  ]
+                },
+                {
+                  "type": {
                     "value": "Flash::Flash::Flash"
                   },
                   "parameters": [
@@ -12179,6 +12385,17 @@
                     "IsHurt",
                     "True",
                     ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                  },
+                  "parameters": [
+                    "Player_Ship",
+                    "Animation",
+                    "=",
+                    "\"Hurt\""
                   ]
                 }
               ]
@@ -13368,6 +13585,35 @@
                       "conditions": [
                         {
                           "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::Name"
+                          },
+                          "parameters": [
+                            "Enemy",
+                            "Animation",
+                            "!=",
+                            "\"Front\""
+                          ]
+                        }
+                      ],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                          },
+                          "parameters": [
+                            "Enemy",
+                            "Animation",
+                            "=",
+                            "\"Front\""
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [
+                        {
+                          "type": {
                             "value": "PosX"
                           },
                           "parameters": [
@@ -13580,6 +13826,17 @@
                             "True",
                             ""
                           ]
+                        },
+                        {
+                          "type": {
+                            "value": "AnimatableCapability::AnimatableBehavior::SetName"
+                          },
+                          "parameters": [
+                            "Enemy",
+                            "Animation",
+                            "=",
+                            "\"Hurt\""
+                          ]
                         }
                       ]
                     },
@@ -13594,7 +13851,7 @@
                             "Enemy",
                             "\"Hurt_Timer\"",
                             ">=",
-                            "2"
+                            ".4"
                           ]
                         },
                         {
