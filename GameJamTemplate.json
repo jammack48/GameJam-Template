@@ -959,6 +959,62 @@
         "name": "playerCannonHurtFlash.png",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "file": "AssetsV4/upgradeFasterTurning.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "AssetsV4\\upgradeFasterTurning.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "AssetsV4/upgradeSpeedBoost.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "AssetsV4\\upgradeSpeedBoost.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "AssetsV4/upgradePowderKegTrail.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "AssetsV4\\upgradePowderKegTrail.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "AssetsV4/upgradeWhirlpoolShot.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "AssetsV4\\upgradeWhirlpoolShot.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "AssetsV4/upgradeTreasureMagnet.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "AssetsV4\\upgradeTreasureMagnet.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "AssetsV4/pi-rat.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "AssetsV4\\pi-rat.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "AssetsV4/ratSpeechBubble.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "AssetsV4\\ratSpeechBubble.png",
+        "smoothed": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -8071,7 +8127,7 @@
       "title": "",
       "v": 209,
       "uiSettings": {
-        "grid": true,
+        "grid": false,
         "gridType": "rectangular",
         "gridWidth": 32,
         "gridHeight": 32,
@@ -8079,8 +8135,8 @@
         "gridOffsetY": 0,
         "gridColor": 10401023,
         "gridAlpha": 0.8,
-        "snap": true,
-        "zoomFactor": 0.5653158055126307,
+        "snap": false,
+        "zoomFactor": 0.7935310315619165,
         "windowMask": false
       },
       "objectsGroups": [
@@ -8163,25 +8219,9 @@
           "name": "Item_Magnet_1",
           "persistentUuid": "27a21a53-5803-475b-8707-091c8d396fac",
           "width": 0,
-          "x": 47,
-          "y": 483,
+          "x": 475,
+          "y": 141,
           "zOrder": 3,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Item_Magnet_2",
-          "persistentUuid": "88e75b73-9ca4-41e5-b4a7-4bee6b16fff1",
-          "width": 0,
-          "x": 136,
-          "y": 485,
-          "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -8195,8 +8235,8 @@
           "name": "Item_Speed_Boost",
           "persistentUuid": "902c6eee-fc80-44f7-b34b-f9c38b41db59",
           "width": 0,
-          "x": 28,
-          "y": 317,
+          "x": 96,
+          "y": 323,
           "zOrder": 5,
           "numberProperties": [],
           "stringProperties": [],
@@ -8211,8 +8251,8 @@
           "name": "Item_Powderkey",
           "persistentUuid": "7a8f23b0-9a82-4948-b9a4-13d6b54d558a",
           "width": 0,
-          "x": 157,
-          "y": 325,
+          "x": 339,
+          "y": 495,
           "zOrder": 6,
           "numberProperties": [],
           "stringProperties": [],
@@ -8227,8 +8267,8 @@
           "name": "Item_Health_Plus",
           "persistentUuid": "b1de06f0-af35-4a1e-935d-8a3578f16134",
           "width": 0,
-          "x": 64,
-          "y": 160,
+          "x": 35,
+          "y": 178,
           "zOrder": 7,
           "numberProperties": [],
           "stringProperties": [],
@@ -8243,8 +8283,8 @@
           "name": "Item_Health_Max",
           "persistentUuid": "0fe015ad-213f-41b0-b383-c648afe9a863",
           "width": 0,
-          "x": 160,
-          "y": 121,
+          "x": 141,
+          "y": 144,
           "zOrder": 8,
           "numberProperties": [],
           "stringProperties": [],
@@ -8259,8 +8299,8 @@
           "name": "Item_Fast_Turn",
           "persistentUuid": "4ad42151-0ec9-4905-910d-75158167ab44",
           "width": 0,
-          "x": 307,
-          "y": 161,
+          "x": 336,
+          "y": 142,
           "zOrder": 9,
           "numberProperties": [],
           "stringProperties": [],
@@ -8275,8 +8315,8 @@
           "name": "Item_Double_Blast",
           "persistentUuid": "afcbc00c-057e-4c36-a087-91de295eea3e",
           "width": 0,
-          "x": 320,
-          "y": 312,
+          "x": 331,
+          "y": 342,
           "zOrder": 10,
           "numberProperties": [],
           "stringProperties": [],
@@ -8291,8 +8331,8 @@
           "name": "Item_Triple_Blast",
           "persistentUuid": "2b462cc2-0f99-4587-96a9-9f62b5dd1190",
           "width": 0,
-          "x": 306,
-          "y": 467,
+          "x": 452,
+          "y": 319,
           "zOrder": 11,
           "numberProperties": [],
           "stringProperties": [],
@@ -8307,8 +8347,8 @@
           "name": "Item_Whirlpool",
           "persistentUuid": "2f5a79c4-14f6-4375-b882-025da5fa29cf",
           "width": 0,
-          "x": 434,
-          "y": 319,
+          "x": 21,
+          "y": 487,
           "zOrder": 12,
           "numberProperties": [],
           "stringProperties": [],
@@ -8461,7 +8501,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "pi-rat.png",
+                      "image": "AssetsV4\\pi-rat.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -8540,7 +8580,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "treasureMagnetV1.jpg",
+                      "image": "AssetsV4\\upgradeTreasureMagnet.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -8560,16 +8600,16 @@
                             "y": 0
                           },
                           {
-                            "x": 39,
+                            "x": 64,
                             "y": 0
                           },
                           {
-                            "x": 39,
-                            "y": 106
+                            "x": 64,
+                            "y": 139
                           },
                           {
                             "x": 0,
-                            "y": 106
+                            "y": 139
                           }
                         ]
                       ]
@@ -8698,7 +8738,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "speedBoost.jpg",
+                      "image": "AssetsV4\\upgradeSpeedBoost.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -8715,19 +8755,19 @@
                         [
                           {
                             "x": 0,
-                            "y": 0
+                            "y": 1
                           },
                           {
-                            "x": 93,
-                            "y": 0
+                            "x": 112,
+                            "y": 1
                           },
                           {
-                            "x": 93,
-                            "y": 103
+                            "x": 112,
+                            "y": 123
                           },
                           {
                             "x": 0,
-                            "y": 103
+                            "y": 123
                           }
                         ]
                       ]
@@ -8777,7 +8817,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "powderKegTrail.jpg",
+                      "image": "AssetsV4\\upgradePowderKegTrail.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -8797,16 +8837,16 @@
                             "y": 0
                           },
                           {
-                            "x": 65,
+                            "x": 77,
                             "y": 0
                           },
                           {
-                            "x": 65,
-                            "y": 94
+                            "x": 77,
+                            "y": 110
                           },
                           {
                             "x": 0,
-                            "y": 94
+                            "y": 110
                           }
                         ]
                       ]
@@ -9014,7 +9054,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "fasterTurning.jpg",
+                      "image": "AssetsV4\\upgradeFasterTurning.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -9031,19 +9071,19 @@
                         [
                           {
                             "x": 0,
-                            "y": 0
+                            "y": 1
                           },
                           {
-                            "x": 56,
-                            "y": 0
+                            "x": 83,
+                            "y": 1
                           },
                           {
-                            "x": 56,
-                            "y": 97
+                            "x": 83,
+                            "y": 138
                           },
                           {
                             "x": 0,
-                            "y": 97
+                            "y": 138
                           }
                         ]
                       ]
@@ -9251,7 +9291,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "whirlpoolShot.jpg",
+                      "image": "AssetsV4\\upgradeWhirlpoolShot.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -9271,16 +9311,16 @@
                             "y": 0
                           },
                           {
-                            "x": 67,
+                            "x": 81,
                             "y": 0
                           },
                           {
-                            "x": 67,
-                            "y": 99
+                            "x": 81,
+                            "y": 118
                           },
                           {
                             "x": 0,
-                            "y": 99
+                            "y": 118
                           }
                         ]
                       ]
@@ -9362,6 +9402,22 @@
             "characterSize": 60,
             "color": "0;0;0"
           }
+        },
+        {
+          "assetStoreId": "",
+          "bottomMargin": 68,
+          "height": 244,
+          "leftMargin": 86,
+          "name": "RatSpeechBubble",
+          "rightMargin": 24,
+          "texture": "AssetsV4\\ratSpeechBubble.png",
+          "tiled": false,
+          "topMargin": 24,
+          "type": "PanelSpriteObject::PanelSprite",
+          "width": 432,
+          "variables": [],
+          "effects": [],
+          "behaviors": []
         }
       ],
       "objectsFolderStructure": {
@@ -9415,6 +9471,9 @@
           },
           {
             "objectName": "FightTextButton"
+          },
+          {
+            "objectName": "RatSpeechBubble"
           }
         ]
       },
