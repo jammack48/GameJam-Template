@@ -964,6 +964,26 @@
     {
       "name": "Gold_Global",
       "type": "number",
+      "value": 100
+    },
+    {
+      "name": "Player_Speed",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "Player_Turn_Speed",
+      "type": "number",
+      "value": 0
+    },
+    {
+      "name": "Cannon_Shot_Number",
+      "type": "number",
+      "value": 3
+    },
+    {
+      "name": "Unnamed",
+      "type": "number",
       "value": 0
     }
   ],
@@ -2602,6 +2622,10 @@
         {
           "name": "Scale",
           "type": "ScalableCapability::ScalableBehavior"
+        },
+        {
+          "name": "Text",
+          "type": "TextContainerCapability::TextContainerBehavior"
         }
       ]
     },
@@ -7446,7 +7470,7 @@
               },
               "parameters": [
                 "",
-                "\"MenuScene\"",
+                "\"Tavern\"",
                 ""
               ]
             }
@@ -7693,7 +7717,43 @@
         "zoomFactor": 0.3797121001947931,
         "windowMask": false
       },
-      "objectsGroups": [],
+      "objectsGroups": [
+        {
+          "name": "Bottles",
+          "objects": [
+            {
+              "name": "Item_Magnet_1"
+            },
+            {
+              "name": "Item_Triple_Blast"
+            },
+            {
+              "name": "Item_Whirlpool"
+            },
+            {
+              "name": "Item_Double_Blast"
+            },
+            {
+              "name": "Item_Health_Max"
+            },
+            {
+              "name": "Item_Powderkey"
+            },
+            {
+              "name": "Item_Magnet_2"
+            },
+            {
+              "name": "Item_Speed_Boost"
+            },
+            {
+              "name": "Item_Health_Plus"
+            },
+            {
+              "name": "Item_Fast_Turn"
+            }
+          ]
+        }
+      ],
       "variables": [],
       "instances": [
         {
@@ -7903,6 +7963,39 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 93,
+          "keepRatio": true,
+          "layer": "",
+          "name": "FightTextButton",
+          "persistentUuid": "5b6a8b40-8175-4c77-a2d9-dc640510f4ab",
+          "width": 155,
+          "x": 985,
+          "y": 380,
+          "zOrder": 14,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "TransistionPainter",
+          "persistentUuid": "f9454eb6-aa7e-4bbf-acd8-5e6f067ea20f",
+          "width": 0,
+          "x": 1204,
+          "y": -54,
+          "zOrder": 15,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [
@@ -8032,8 +8125,27 @@
           "name": "Item_Magnet_1",
           "type": "Sprite",
           "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
+          "variables": [
+            {
+              "name": "IsAvailable",
+              "type": "boolean",
+              "value": true
+            }
+          ],
+          "effects": [
+            {
+              "effectType": "Outline",
+              "name": "Effect",
+              "doubleParameters": {
+                "padding": 2,
+                "thickness": 2
+              },
+              "stringParameters": {
+                "color": "255;255;255"
+              },
+              "booleanParameters": {}
+            }
+          ],
           "behaviors": [],
           "animations": [
             {
@@ -8092,8 +8204,27 @@
           "name": "Item_Magnet_2",
           "type": "Sprite",
           "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
+          "variables": [
+            {
+              "name": "IsAvailable",
+              "type": "boolean",
+              "value": true
+            }
+          ],
+          "effects": [
+            {
+              "effectType": "Outline",
+              "name": "Effect",
+              "doubleParameters": {
+                "padding": 2,
+                "thickness": 2
+              },
+              "stringParameters": {
+                "color": "255;255;255"
+              },
+              "booleanParameters": {}
+            }
+          ],
           "behaviors": [],
           "animations": [
             {
@@ -8152,8 +8283,27 @@
           "name": "Item_Speed_Boost",
           "type": "Sprite",
           "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
+          "variables": [
+            {
+              "name": "IsAvailable",
+              "type": "boolean",
+              "value": true
+            }
+          ],
+          "effects": [
+            {
+              "effectType": "Outline",
+              "name": "Effect",
+              "doubleParameters": {
+                "padding": 2,
+                "thickness": 2
+              },
+              "stringParameters": {
+                "color": "255;255;255"
+              },
+              "booleanParameters": {}
+            }
+          ],
           "behaviors": [],
           "animations": [
             {
@@ -8212,8 +8362,27 @@
           "name": "Item_Powderkey",
           "type": "Sprite",
           "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
+          "variables": [
+            {
+              "name": "IsAvailable",
+              "type": "boolean",
+              "value": true
+            }
+          ],
+          "effects": [
+            {
+              "effectType": "Outline",
+              "name": "Effect",
+              "doubleParameters": {
+                "padding": 2,
+                "thickness": 2
+              },
+              "stringParameters": {
+                "color": "255;255;255"
+              },
+              "booleanParameters": {}
+            }
+          ],
           "behaviors": [],
           "animations": [
             {
@@ -8272,8 +8441,27 @@
           "name": "Item_Health_Plus",
           "type": "Sprite",
           "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
+          "variables": [
+            {
+              "name": "IsAvailable",
+              "type": "boolean",
+              "value": true
+            }
+          ],
+          "effects": [
+            {
+              "effectType": "Outline",
+              "name": "Effect",
+              "doubleParameters": {
+                "padding": 2,
+                "thickness": 2
+              },
+              "stringParameters": {
+                "color": "255;255;255"
+              },
+              "booleanParameters": {}
+            }
+          ],
           "behaviors": [],
           "animations": [
             {
@@ -8332,8 +8520,27 @@
           "name": "Item_Health_Max",
           "type": "Sprite",
           "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
+          "variables": [
+            {
+              "name": "IsAvailable",
+              "type": "boolean",
+              "value": true
+            }
+          ],
+          "effects": [
+            {
+              "effectType": "Outline",
+              "name": "Effect",
+              "doubleParameters": {
+                "padding": 2,
+                "thickness": 2
+              },
+              "stringParameters": {
+                "color": "255;255;255"
+              },
+              "booleanParameters": {}
+            }
+          ],
           "behaviors": [],
           "animations": [
             {
@@ -8392,8 +8599,27 @@
           "name": "Item_Fast_Turn",
           "type": "Sprite",
           "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
+          "variables": [
+            {
+              "name": "IsAvailable",
+              "type": "boolean",
+              "value": true
+            }
+          ],
+          "effects": [
+            {
+              "effectType": "Outline",
+              "name": "Effect",
+              "doubleParameters": {
+                "padding": 2,
+                "thickness": 2
+              },
+              "stringParameters": {
+                "color": "255;255;255"
+              },
+              "booleanParameters": {}
+            }
+          ],
           "behaviors": [],
           "animations": [
             {
@@ -8452,8 +8678,27 @@
           "name": "Item_Double_Blast",
           "type": "Sprite",
           "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
+          "variables": [
+            {
+              "name": "IsAvailable",
+              "type": "boolean",
+              "value": true
+            }
+          ],
+          "effects": [
+            {
+              "effectType": "Outline",
+              "name": "Effect",
+              "doubleParameters": {
+                "padding": 2,
+                "thickness": 2
+              },
+              "stringParameters": {
+                "color": "255;255;255"
+              },
+              "booleanParameters": {}
+            }
+          ],
           "behaviors": [],
           "animations": [
             {
@@ -8512,8 +8757,27 @@
           "name": "Item_Triple_Blast",
           "type": "Sprite",
           "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
+          "variables": [
+            {
+              "name": "IsAvailable",
+              "type": "boolean",
+              "value": true
+            }
+          ],
+          "effects": [
+            {
+              "effectType": "Outline",
+              "name": "Effect",
+              "doubleParameters": {
+                "padding": 2,
+                "thickness": 2
+              },
+              "stringParameters": {
+                "color": "255;255;255"
+              },
+              "booleanParameters": {}
+            }
+          ],
           "behaviors": [],
           "animations": [
             {
@@ -8572,8 +8836,27 @@
           "name": "Item_Whirlpool",
           "type": "Sprite",
           "updateIfNotVisible": false,
-          "variables": [],
-          "effects": [],
+          "variables": [
+            {
+              "name": "IsAvailable",
+              "type": "boolean",
+              "value": true
+            }
+          ],
+          "effects": [
+            {
+              "effectType": "Outline",
+              "name": "Effect",
+              "doubleParameters": {
+                "padding": 2,
+                "thickness": 2
+              },
+              "stringParameters": {
+                "color": "255;255;255"
+              },
+              "booleanParameters": {}
+            }
+          ],
           "behaviors": [],
           "animations": [
             {
@@ -8625,11 +8908,118 @@
               ]
             }
           ]
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "FightTextButton",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [
+            {
+              "name": "Variable",
+              "type": "number",
+              "value": 0
+            }
+          ],
+          "effects": [
+            {
+              "effectType": "Outline",
+              "name": "Effect",
+              "doubleParameters": {
+                "padding": 2,
+                "thickness": 2
+              },
+              "stringParameters": {
+                "color": "255;255;255"
+              },
+              "booleanParameters": {}
+            }
+          ],
+          "behaviors": [
+            {
+              "name": "ButtonFSM",
+              "type": "ButtonStates::ButtonFSM",
+              "ShouldCheckHovering": true,
+              "State": "Idle",
+              "TouchId": 0,
+              "TouchIsInside": false,
+              "MouseIsInside": false,
+              "Index": 2.0247e-320
+            }
+          ],
+          "string": "Fight ",
+          "font": "AssetsV4\\Beryliumbold.ttf",
+          "textAlignment": "left",
+          "characterSize": 60,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "Fight ",
+            "font": "AssetsV4\\Beryliumbold.ttf",
+            "textAlignment": "left",
+            "verticalTextAlignment": "top",
+            "characterSize": 60,
+            "color": "0;0;0"
+          }
         }
       ],
       "objectsFolderStructure": {
         "folderName": "__ROOT",
         "children": [
+          {
+            "folderName": "Items",
+            "children": [
+              {
+                "objectName": "Item_Powderkey"
+              },
+              {
+                "objectName": "Item_Whirlpool"
+              },
+              {
+                "objectName": "Item_Health_Plus"
+              },
+              {
+                "objectName": "Item_Triple_Blast"
+              },
+              {
+                "objectName": "Item_Double_Blast"
+              },
+              {
+                "objectName": "Item_Fast_Turn"
+              },
+              {
+                "objectName": "Item_Health_Max"
+              },
+              {
+                "objectName": "Item_Speed_Boost"
+              },
+              {
+                "objectName": "Item_Magnet_2"
+              },
+              {
+                "objectName": "Item_Magnet_1"
+              }
+            ]
+          },
           {
             "folderName": "Backgrounds",
             "children": [
@@ -8638,42 +9028,27 @@
               },
               {
                 "objectName": "Background"
-              },
-              {
-                "objectName": "Item_Magnet_1"
-              },
-              {
-                "objectName": "Item_Magnet_2"
-              },
-              {
-                "objectName": "Item_Speed_Boost"
-              },
-              {
-                "objectName": "Item_Powderkey"
-              },
-              {
-                "objectName": "Item_Health_Plus"
-              },
-              {
-                "objectName": "Item_Health_Max"
-              },
-              {
-                "objectName": "Item_Fast_Turn"
-              },
-              {
-                "objectName": "Item_Double_Blast"
-              },
-              {
-                "objectName": "Item_Triple_Blast"
-              },
-              {
-                "objectName": "Item_Whirlpool"
               }
             ]
+          },
+          {
+            "objectName": "FightTextButton"
           }
         ]
       },
       "events": [
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Dispplay Gold"
+        },
         {
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
@@ -8687,6 +9062,334 @@
                 "Text",
                 "=",
                 "\"Gold: \" + Gold_Global"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Exit button"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": true,
+                "value": "ButtonStates::ButtonFSM::IsHovered"
+              },
+              "parameters": [
+                "FightTextButton",
+                "ButtonFSM",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "EffectCapability::EffectBehavior::EnableEffect"
+              },
+              "parameters": [
+                "FightTextButton",
+                "Effect",
+                "\"Effect\"",
+                "no"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "ButtonStates::ButtonFSM::IsHovered"
+              },
+              "parameters": [
+                "FightTextButton",
+                "ButtonFSM",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "EffectCapability::EffectBehavior::EnableEffect"
+              },
+              "parameters": [
+                "FightTextButton",
+                "Effect",
+                "\"Effect\"",
+                "yes"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "ButtonStates::ButtonFSM::IsClicked"
+              },
+              "parameters": [
+                "FightTextButton",
+                "ButtonFSM",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "FlashTransitionPainter::FlashTransitionPainter::PaintEffect"
+              },
+              "parameters": [
+                "TransistionPainter",
+                "FlashTransitionPainter",
+                "\"0;0;0\"",
+                "1",
+                "\"Circular\"",
+                "\"Forward\"",
+                "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Wait"
+              },
+              "parameters": [
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "Scene"
+              },
+              "parameters": [
+                "",
+                "\"PirateGameScene\"",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Bottle Glow"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "SourisSurObjet"
+              },
+              "parameters": [
+                "Bottles",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "EffectCapability::EffectBehavior::EnableEffect"
+              },
+              "parameters": [
+                "Bottles",
+                "Effect",
+                "\"Effect\"",
+                "yes"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "inverted": true,
+                "value": "SourisSurObjet"
+              },
+              "parameters": [
+                "Bottles",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "EffectCapability::EffectBehavior::EnableEffect"
+              },
+              "parameters": [
+                "Bottles",
+                "Effect",
+                "\"Effect\"",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Choose Bottle"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "SourisSurObjet"
+              },
+              "parameters": [
+                "Item_Double_Blast",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "MouseButtonFromTextPressed"
+              },
+              "parameters": [
+                "",
+                "\"Left\""
+              ]
+            },
+            {
+              "type": {
+                "value": "NumberVariable"
+              },
+              "parameters": [
+                "Gold_Global",
+                ">=",
+                "10"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "Gold_Global",
+                "-",
+                "10"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "Cannon_Shot_Number",
+                "=",
+                "2"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "SourisSurObjet"
+              },
+              "parameters": [
+                "Item_Triple_Blast",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "MouseButtonFromTextPressed"
+              },
+              "parameters": [
+                "",
+                "\"Left\""
+              ]
+            },
+            {
+              "type": {
+                "value": "NumberVariable"
+              },
+              "parameters": [
+                "Gold_Global",
+                ">=",
+                "10"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "Gold_Global",
+                "-",
+                "10"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "Cannon_Shot_Number",
+                "=",
+                "3"
               ]
             }
           ]
@@ -8744,6 +9447,10 @@
           "type": "AnimatableCapability::AnimatableBehavior"
         },
         {
+          "name": "ButtonFSM",
+          "type": "ButtonStates::ButtonFSM"
+        },
+        {
           "name": "Effect",
           "type": "EffectCapability::EffectBehavior"
         },
@@ -8766,6 +9473,10 @@
         {
           "name": "Scale",
           "type": "ScalableCapability::ScalableBehavior"
+        },
+        {
+          "name": "Text",
+          "type": "TextContainerCapability::TextContainerBehavior"
         }
       ]
     }
@@ -9840,41 +10551,11 @@
               "actions": [
                 {
                   "type": {
-                    "value": "PauseTimer"
-                  },
-                  "parameters": [
-                    "",
-                    "\"ChargeTimer\""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Create"
-                  },
-                  "parameters": [
-                    "",
-                    "Player_Cannon_Ball_HitBox",
-                    "Player_Cannon.PointX(\"FirePoint\")",
-                    "Player_Cannon.PointY(\"FirePoint\")",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
                     "value": "RemoveTimer"
                   },
                   "parameters": [
                     "",
                     "\"ChargeTimer\""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "ResetObjectTimer"
-                  },
-                  "parameters": [
-                    "Player_Cannon_Ball_HitBox",
-                    "\"ShotTimer\""
                   ]
                 },
                 {
@@ -9968,33 +10649,330 @@
                     "textG": 0,
                     "textR": 0
                   },
+                  "comment": "Cannon Ball 1"
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "Cannon_Shot_Number",
+                        "=",
+                        "1"
+                      ]
+                    }
+                  ],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "Player_Cannon_Ball_HitBox",
+                            "Player_Cannon.PointX(\"FirePoint\")",
+                            "Player_Cannon.PointY(\"FirePoint\")",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "Player_Cannon_Ball_HitBox",
+                            "\"ShotTimer\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AddForceAL"
+                          },
+                          "parameters": [
+                            "Player_Cannon_Ball_HitBox",
+                            "AngleBetweenPositions(Player_HitBox.CenterX(), Player_HitBox.CenterY(),MouseX(),MouseY())",
+                            "TimerValue*3",
+                            "1"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Cannon Ball 2"
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "Cannon_Shot_Number",
+                        "=",
+                        "2"
+                      ]
+                    }
+                  ],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "Player_Cannon_Ball_HitBox",
+                            "Player_Cannon.PointX(\"FirePoint\")",
+                            "Player_Cannon.PointY(\"FirePoint\")",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "Player_Cannon_Ball_HitBox",
+                            "\"ShotTimer\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AddForceAL"
+                          },
+                          "parameters": [
+                            "Player_Cannon_Ball_HitBox",
+                            "AngleBetweenPositions(Player_HitBox.CenterX(), Player_HitBox.CenterY(),MouseX(),MouseY())+10",
+                            "TimerValue*3",
+                            "1"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "Player_Cannon_Ball_HitBox",
+                            "Player_Cannon.PointX(\"FirePoint\")",
+                            "Player_Cannon.PointY(\"FirePoint\")",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "Player_Cannon_Ball_HitBox",
+                            "\"ShotTimer\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AddForceAL"
+                          },
+                          "parameters": [
+                            "Player_Cannon_Ball_HitBox",
+                            "AngleBetweenPositions(Player_HitBox.CenterX(), Player_HitBox.CenterY(),MouseX(),MouseY())-10",
+                            "TimerValue*3",
+                            "1"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Cannon Ball 3"
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "Cannon_Shot_Number",
+                        "=",
+                        "3"
+                      ]
+                    }
+                  ],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "Player_Cannon_Ball_HitBox",
+                            "Player_Cannon.PointX(\"FirePoint\")",
+                            "Player_Cannon.PointY(\"FirePoint\")",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "Player_Cannon_Ball_HitBox",
+                            "\"ShotTimer\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AddForceAL"
+                          },
+                          "parameters": [
+                            "Player_Cannon_Ball_HitBox",
+                            "AngleBetweenPositions(Player_HitBox.CenterX(), Player_HitBox.CenterY(),MouseX(),MouseY())+10",
+                            "TimerValue*3",
+                            "1"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "Player_Cannon_Ball_HitBox",
+                            "Player_Cannon.PointX(\"FirePoint\")",
+                            "Player_Cannon.PointY(\"FirePoint\")",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "Player_Cannon_Ball_HitBox",
+                            "\"ShotTimer\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AddForceAL"
+                          },
+                          "parameters": [
+                            "Player_Cannon_Ball_HitBox",
+                            "AngleBetweenPositions(Player_HitBox.CenterX(), Player_HitBox.CenterY(),MouseX(),MouseY())",
+                            "TimerValue*3",
+                            "1"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "Player_Cannon_Ball_HitBox",
+                            "Player_Cannon.PointX(\"FirePoint\")",
+                            "Player_Cannon.PointY(\"FirePoint\")",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "Player_Cannon_Ball_HitBox",
+                            "\"ShotTimer\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AddForceAL"
+                          },
+                          "parameters": [
+                            "Player_Cannon_Ball_HitBox",
+                            "AngleBetweenPositions(Player_HitBox.CenterX(), Player_HitBox.CenterY(),MouseX(),MouseY())-10",
+                            "TimerValue*3",
+                            "1"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
                   "comment": "Launch Cannon ball"
                 },
                 {
                   "type": "BuiltinCommonInstructions::Standard",
                   "conditions": [],
-                  "actions": [
-                    {
-                      "type": {
-                        "value": "ResetObjectTimer"
-                      },
-                      "parameters": [
-                        "Player_HitBox",
-                        "\"MoveTimer\""
-                      ]
-                    },
-                    {
-                      "type": {
-                        "value": "AddForceAL"
-                      },
-                      "parameters": [
-                        "Player_Cannon_Ball_HitBox",
-                        "AngleBetweenPositions(Player_HitBox.CenterX(), Player_HitBox.CenterY(),MouseX(),MouseY())",
-                        "TimerValue*3",
-                        "1"
-                      ]
-                    }
-                  ],
+                  "actions": [],
                   "events": [
                     {
                       "type": "BuiltinCommonInstructions::Comment",
@@ -12338,7 +13316,7 @@
               "parameters": [
                 "Gold_Global",
                 "+",
-                "1"
+                "5"
               ]
             }
           ]
