@@ -3725,22 +3725,6 @@
           "customSize": false,
           "height": 0,
           "keepRatio": true,
-          "layer": "",
-          "name": "Chest",
-          "persistentUuid": "32a80833-85bd-4d80-ab03-b0c658d06ade",
-          "width": 0,
-          "x": 864,
-          "y": 256,
-          "zOrder": 80,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
           "layer": "UI_Layer",
           "name": "Coin",
           "persistentUuid": "073b636d-c84f-4e06-a73b-b5300db34887",
@@ -3748,38 +3732,6 @@
           "x": 27,
           "y": 13,
           "zOrder": 137,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Chest",
-          "persistentUuid": "8c033e1f-8602-4fda-8e15-d800f228890e",
-          "width": 0,
-          "x": 352,
-          "y": 288,
-          "zOrder": 80,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Chest",
-          "persistentUuid": "41fe2b72-3938-4a0c-a09f-614abc123e4e",
-          "width": 0,
-          "x": 704,
-          "y": 128,
-          "zOrder": 80,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -3864,6 +3816,54 @@
           "x": 576,
           "y": 832,
           "zOrder": 133,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Barrel",
+          "persistentUuid": "d4694354-d9dd-4761-b584-d8b9aa1b0ee8",
+          "width": 0,
+          "x": 864,
+          "y": 384,
+          "zOrder": 10,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Barrel",
+          "persistentUuid": "3ef6a00a-014b-4c67-943e-9b0cca6556cb",
+          "width": 0,
+          "x": 428,
+          "y": 544,
+          "zOrder": 10,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Barrel",
+          "persistentUuid": "bb838fd1-95ce-43cb-9de2-953406133add",
+          "width": 0,
+          "x": 736,
+          "y": 576,
+          "zOrder": 10,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -4303,6 +4303,11 @@
               "name": "CanShoot",
               "type": "boolean",
               "value": true
+            },
+            {
+              "name": "BarrelHit",
+              "type": "boolean",
+              "value": false
             }
           ],
           "effects": [],
@@ -6461,9 +6466,28 @@
           "name": "Barrel",
           "type": "Sprite",
           "updateIfNotVisible": false,
-          "variables": [],
+          "variables": [
+            {
+              "name": "IsArmed",
+              "type": "boolean",
+              "value": false
+            },
+            {
+              "name": "IsFlashing",
+              "type": "boolean",
+              "value": true
+            }
+          ],
           "effects": [],
-          "behaviors": [],
+          "behaviors": [
+            {
+              "name": "Flash",
+              "type": "Flash::Flash",
+              "HalfPeriodTime": 0.1,
+              "IsFlashing": false,
+              "FlashDuration": 0
+            }
+          ],
           "animations": [
             {
               "name": "",
@@ -7364,7 +7388,7 @@
           "flow": 250,
           "jumpForwardInTimeOnCreation": 0,
           "maxParticleNb": 15,
-          "name": "Cannon_Explode_Particle",
+          "name": "Barrel_Explode_Particle",
           "particleAlpha1": 204,
           "particleAlpha2": 0,
           "particleAlphaRandomness1": 0,
@@ -7399,6 +7423,51 @@
           "variables": [],
           "effects": [],
           "behaviors": []
+        },
+        {
+          "assetStoreId": "",
+          "name": "Barrel_Shockwave",
+          "type": "PrimitiveDrawing::Drawer",
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "EllipseShockWave",
+              "type": "ShockWaveEffect::EllipseShockWave",
+              "StartWidth": 8,
+              "StartHeight": 8,
+              "StartOutlineThickness": 16,
+              "StartColor": "255;0;31",
+              "StartOpacity": 255,
+              "StartAngle": 0,
+              "EndWidth": 400,
+              "EndHeight": 400,
+              "EndOutlineThickness": 4,
+              "EndColor": "255;159;0",
+              "EndOpacity": 125,
+              "EndAngle": 0,
+              "Duration": 0.3,
+              "Easing": "easeOutSine",
+              "IsFilled": false,
+              "Progress": 0
+            }
+          ],
+          "fillOpacity": 125,
+          "outlineSize": 4,
+          "outlineOpacity": 255,
+          "absoluteCoordinates": false,
+          "clearBetweenFrames": true,
+          "antialiasing": "none",
+          "fillColor": {
+            "r": 255,
+            "g": 235,
+            "b": 0
+          },
+          "outlineColor": {
+            "r": 255,
+            "g": 159,
+            "b": 0
+          }
         }
       ],
       "objectsFolderStructure": {
@@ -7415,6 +7484,12 @@
               },
               {
                 "objectName": "Barrel"
+              },
+              {
+                "objectName": "Barrel_Shockwave"
+              },
+              {
+                "objectName": "Barrel_Explode_Particle"
               },
               {
                 "objectName": "Chest"
@@ -7512,9 +7587,6 @@
                 "objectName": "StateText"
               }
             ]
-          },
-          {
-            "objectName": "Cannon_Explode_Particle"
           }
         ]
       },
@@ -13548,6 +13620,7 @@
                 },
                 {
                   "disabled": true,
+                  "folded": true,
                   "type": "BuiltinCommonInstructions::Repeat",
                   "repeatExpression": "15",
                   "conditions": [],
@@ -13767,6 +13840,47 @@
                     "textG": 0,
                     "textR": 0
                   },
+                  "comment": "Seperate Border"
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "CollisionNP"
+                      },
+                      "parameters": [
+                        "Enemy",
+                        "Border",
+                        "",
+                        "",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SeparateFromObjects"
+                      },
+                      "parameters": [
+                        "Enemy",
+                        "Border",
+                        ""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
                   "comment": "Enemy Health Bar Update"
                 },
                 {
@@ -13968,6 +14082,112 @@
                         "State",
                         "=",
                         "\"Recoil\""
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 28,
+                    "g": 231,
+                    "r": 248,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Barrel mine"
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "CollisionNP"
+                      },
+                      "parameters": [
+                        "Barrel_Shockwave",
+                        "Enemy",
+                        "",
+                        "",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "BooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "Enemy",
+                        "BarrelHit",
+                        "=",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "Health::Health::Hit"
+                      },
+                      "parameters": [
+                        "Enemy",
+                        "Health",
+                        "200",
+                        "",
+                        "",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "ShakeObject::ShakeObject_PositionAngleScale::ShakeObject_PositionAngleScale"
+                      },
+                      "parameters": [
+                        "Enemy",
+                        "ShakeObject_PositionAngleScale",
+                        "",
+                        "1",
+                        "1",
+                        "5",
+                        "5",
+                        ".08",
+                        "",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "Create"
+                      },
+                      "parameters": [
+                        "",
+                        "Enemy_Hit_Particle",
+                        "Enemy.X()",
+                        "Enemy.Y()",
+                        ""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetStringObjectVariable"
+                      },
+                      "parameters": [
+                        "Enemy",
+                        "State",
+                        "=",
+                        "\"Hurt\""
+                      ]
+                    },
+                    {
+                      "type": {
+                        "value": "SetBooleanObjectVariable"
+                      },
+                      "parameters": [
+                        "Enemy",
+                        "BarrelHit",
+                        "True",
+                        ""
                       ]
                     }
                   ]
@@ -14384,6 +14604,17 @@
                           "parameters": [
                             "Enemy",
                             "Hurt",
+                            "False",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "SetBooleanObjectVariable"
+                          },
+                          "parameters": [
+                            "Enemy",
+                            "BarrelHit",
                             "False",
                             ""
                           ]
@@ -14988,6 +15219,11 @@
               ]
             }
           ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": []
         }
       ]
     },
@@ -14996,6 +15232,18 @@
       "name": "Barrells",
       "events": [
         {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "Barrels",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [],
+          "parameters": []
+        },
+        {
+          "disabled": true,
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -15014,36 +15262,146 @@
           "actions": [
             {
               "type": {
-                "value": "Create"
-              },
-              "parameters": [
-                "",
-                "Cannon_Explode_Particle",
-                "Barrel.CenterX()",
-                "Barrel.CenterY()",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "PlaySound"
-              },
-              "parameters": [
-                "",
-                "Cannon pirate VG Sounds\\Sounds\\Sound Effects\\pickup\\pickup idea 1.mp3",
-                "",
-                "15",
-                ""
-              ]
-            },
-            {
-              "type": {
                 "value": "Delete"
               },
               "parameters": [
                 "Barrel",
                 ""
               ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "Player_Cannon_Ball_HitBox",
+                "Barrel",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "Player_Cannon_Ball_HitBox",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Flash::Flash::Flash"
+              },
+              "parameters": [
+                "Barrel",
+                "Flash",
+                "3",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "SetBooleanObjectVariable"
+              },
+              "parameters": [
+                "Barrel",
+                "IsFlashing",
+                "True",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "ResetObjectTimer"
+              },
+              "parameters": [
+                "Barrel",
+                "\"BarrellTimer\""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::ForEach",
+          "object": "Barrel",
+          "conditions": [],
+          "actions": [],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BooleanObjectVariable"
+                  },
+                  "parameters": [
+                    "Barrel",
+                    "IsFlashing",
+                    "True",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "CompareObjectTimer"
+                  },
+                  "parameters": [
+                    "Barrel",
+                    "\"BarrellTimer\"",
+                    ">=",
+                    "3"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "Barrel_Explode_Particle",
+                    "Barrel.CenterX()",
+                    "Barrel.CenterY()",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Create"
+                  },
+                  "parameters": [
+                    "",
+                    "Barrel_Shockwave",
+                    "Barrel.CenterX()",
+                    "Barrel.CenterY()",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Delete"
+                  },
+                  "parameters": [
+                    "Barrel",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": []
             }
           ]
         },
