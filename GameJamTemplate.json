@@ -866,6 +866,36 @@
         "name": "whirlpoolShot.jpg",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "file": "power bottle selecting.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "power bottle selecting.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "Buying a power bottle.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Buying a power bottle.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "Cannon pirate VG Sounds/updated Sound file 2.0/Game Music/Newer Ideas/Pirate tavern theme music with background.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Cannon pirate VG Sounds\\updated Sound file 2.0\\Game Music\\Newer Ideas\\Pirate tavern theme music with background.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -9100,6 +9130,19 @@
               "parameters": [
                 ""
               ]
+            },
+            {
+              "type": {
+                "value": "PlayMusicCanal"
+              },
+              "parameters": [
+                "",
+                "Cannon pirate VG Sounds\\updated Sound file 2.0\\Game Music\\Newer Ideas\\Pirate tavern theme music with background.mp3",
+                "2",
+                "",
+                "15",
+                "1"
+              ]
             }
           ]
         },
@@ -9276,6 +9319,12 @@
                 "",
                 ""
               ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
             }
           ],
           "actions": [
@@ -9288,6 +9337,18 @@
                 "Effect",
                 "\"Effect\"",
                 "yes"
+              ]
+            },
+            {
+              "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "power bottle selecting.mp3",
+                "",
+                "15",
+                "RandomFloatInRange(.9,1.1)"
               ]
             }
           ]
@@ -9394,6 +9455,18 @@
                 "=",
                 "2"
               ]
+            },
+            {
+              "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "Buying a power bottle.mp3",
+                "",
+                "25",
+                "RandomFloatInRange(.9,1.1)"
+              ]
             }
           ]
         },
@@ -9456,6 +9529,18 @@
                 "Cannon_Shot_Number",
                 "=",
                 "3"
+              ]
+            },
+            {
+              "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "Buying a power bottle.mp3",
+                "",
+                "25",
+                "RandomFloatInRange(.9,1.1)"
               ]
             }
           ]
@@ -9530,6 +9615,18 @@
                 "=",
                 "100"
               ]
+            },
+            {
+              "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "Buying a power bottle.mp3",
+                "",
+                "25",
+                "RandomFloatInRange(.9,1.1)"
+              ]
             }
           ]
         },
@@ -9603,6 +9700,18 @@
                 "=",
                 "800"
               ]
+            },
+            {
+              "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "Buying a power bottle.mp3",
+                "",
+                "25",
+                "RandomFloatInRange(.9,1.1)"
+              ]
             }
           ]
         },
@@ -9666,6 +9775,18 @@
                 "=",
                 "400"
               ]
+            },
+            {
+              "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "Buying a power bottle.mp3",
+                "",
+                "25",
+                "RandomFloatInRange(.9,1.1)"
+              ]
             }
           ]
         },
@@ -9728,6 +9849,18 @@
                 "Player_Turn_Speed",
                 "=",
                 "300"
+              ]
+            },
+            {
+              "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "Buying a power bottle.mp3",
+                "",
+                "25",
+                "RandomFloatInRange(.9,1.1)"
               ]
             }
           ]
@@ -13498,18 +13631,6 @@
                       "actions": [
                         {
                           "type": {
-                            "value": "PlaySound"
-                          },
-                          "parameters": [
-                            "",
-                            "ship sinking.mp3",
-                            "",
-                            "10",
-                            "2"
-                          ]
-                        },
-                        {
-                          "type": {
                             "value": "AnimatableCapability::AnimatableBehavior::SetName"
                           },
                           "parameters": [
@@ -13622,6 +13743,31 @@
                                     "Barrel",
                                     "=",
                                     "10"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "BuiltinCommonInstructions::Once"
+                                  },
+                                  "parameters": []
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "PlaySound"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "ship sinking.mp3",
+                                    "",
+                                    "10",
+                                    "2"
                                   ]
                                 }
                               ]
