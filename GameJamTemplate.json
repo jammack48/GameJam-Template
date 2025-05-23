@@ -3663,22 +3663,6 @@
           "keepRatio": true,
           "layer": "",
           "name": "Spawn_Points",
-          "persistentUuid": "58f01af7-3297-47e9-9b27-6fb20050702d",
-          "width": 0,
-          "x": 576,
-          "y": 832,
-          "zOrder": 133,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Spawn_Points",
           "persistentUuid": "d7d48201-f399-4108-a9e7-4b6cc67c1200",
           "width": 0,
           "x": -736,
@@ -3864,6 +3848,22 @@
           "x": -1344,
           "y": -576,
           "zOrder": 141,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Spawn_Points",
+          "persistentUuid": "801c61e4-9810-4153-80da-65d062e4a227",
+          "width": 0,
+          "x": 576,
+          "y": 832,
+          "zOrder": 133,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -13533,6 +13533,168 @@
                       ]
                     }
                   ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Not needed as moved spawn points further out - Leave here just in case"
+                },
+                {
+                  "disabled": true,
+                  "type": "BuiltinCommonInstructions::Repeat",
+                  "repeatExpression": "15",
+                  "conditions": [],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [],
+                      "events": [
+                        {
+                          "infiniteLoopWarning": true,
+                          "type": "BuiltinCommonInstructions::While",
+                          "whileConditions": [
+                            {
+                              "type": {
+                                "value": "NumberVariable"
+                              },
+                              "parameters": [
+                                "Enemy_Distance",
+                                "<",
+                                "100"
+                              ]
+                            }
+                          ],
+                          "conditions": [
+                            {
+                              "type": {
+                                "value": "AjoutHasard"
+                              },
+                              "parameters": [
+                                "",
+                                "Spawn_Points"
+                              ]
+                            }
+                          ],
+                          "actions": [
+                            {
+                              "type": {
+                                "value": "SetNumberVariable"
+                              },
+                              "parameters": [
+                                "Enemy_Distance",
+                                "=",
+                                "DistanceBetweenPositions(Player_HitBox.X(),Player_HitBox.Y(),Spawn_Points.X(),Spawn_Points.Y())"
+                              ]
+                            }
+                          ],
+                          "events": [
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "Create"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Enemy",
+                                    "Spawn_Points.X()",
+                                    "Spawn_Points.Y()",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "Create"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Enemy_Health_Bar",
+                                    "Enemy.BoundingBoxLeft()",
+                                    "Enemy.CenterY()-100",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "ScalableCapability::ScalableBehavior::SetX"
+                                  },
+                                  "parameters": [
+                                    "Enemy_Health_Bar",
+                                    "Scale",
+                                    "=",
+                                    ".3"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "ScalableCapability::ScalableBehavior::SetY"
+                                  },
+                                  "parameters": [
+                                    "Enemy_Health_Bar",
+                                    "Scale",
+                                    "=",
+                                    ".8"
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "Sticker::Sticker::Stick"
+                                  },
+                                  "parameters": [
+                                    "Enemy_Health_Bar",
+                                    "Sticker",
+                                    "Enemy",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "PanelSpriteContinuousBar::PanelSpriteContinuousBar::SetValue"
+                                  },
+                                  "parameters": [
+                                    "Enemy_Health_Bar",
+                                    "=",
+                                    "Enemy.Health::MaxHealth()",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "OpacityCapability::OpacityBehavior::SetValue"
+                                  },
+                                  "parameters": [
+                                    "Enemy_Health_Bar",
+                                    "Opacity",
+                                    "=",
+                                    "80"
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ],
+                      "variables": [
+                        {
+                          "folded": true,
+                          "name": "Enemy_Distance",
+                          "type": "number",
+                          "value": 0
+                        }
+                      ]
+                    }
+                  ]
                 }
               ]
             }
@@ -13544,7 +13706,6 @@
           "colorG": 176,
           "colorR": 74,
           "creationTime": 0,
-          "folded": true,
           "name": "Enemy Controller",
           "source": "",
           "type": "BuiltinCommonInstructions::Group",
@@ -13555,6 +13716,47 @@
               "conditions": [],
               "actions": [],
               "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Seperate Enemies"
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "CollisionNP"
+                      },
+                      "parameters": [
+                        "Enemy",
+                        "Enemy",
+                        "",
+                        "",
+                        ""
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SeparateFromObjects"
+                      },
+                      "parameters": [
+                        "Enemy",
+                        "Enemy",
+                        ""
+                      ]
+                    }
+                  ]
+                },
                 {
                   "type": "BuiltinCommonInstructions::Comment",
                   "color": {
@@ -14672,6 +14874,11 @@
             }
           ],
           "parameters": []
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": []
         }
       ]
     },
