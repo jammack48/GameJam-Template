@@ -9049,8 +9049,8 @@
           "name": "Item_Double_Blast",
           "persistentUuid": "afcbc00c-057e-4c36-a087-91de295eea3e",
           "width": 0,
-          "x": 331,
-          "y": 342,
+          "x": 348,
+          "y": 444,
           "zOrder": 10,
           "numberProperties": [],
           "stringProperties": [],
@@ -9335,7 +9335,26 @@
               "booleanParameters": {}
             }
           ],
-          "behaviors": [],
+          "behaviors": [
+            {
+              "name": "Sway",
+              "type": "Sway::Sway",
+              "Scale": "Scale",
+              "TweenBehavior": "Tween",
+              "AngleLeft": -1,
+              "AngleRight": 1,
+              "AngleTimeMin": 1,
+              "AngleTimeMax": 3,
+              "YScaleMin": 0.9,
+              "YScaleMax": 1.1,
+              "YScaleTimeMin": 1,
+              "YScaleTimeMax": 3
+            },
+            {
+              "name": "Tween",
+              "type": "Tween::TweenBehavior"
+            }
+          ],
           "animations": [
             {
               "name": "",
@@ -9355,10 +9374,10 @@
                         "y": 0
                       },
                       "centerPoint": {
-                        "automatic": true,
+                        "automatic": false,
                         "name": "centre",
-                        "x": 0,
-                        "y": 0
+                        "x": 31.5,
+                        "y": 139
                       },
                       "customCollisionMask": [
                         [
@@ -9414,7 +9433,26 @@
               "booleanParameters": {}
             }
           ],
-          "behaviors": [],
+          "behaviors": [
+            {
+              "name": "Sway",
+              "type": "Sway::Sway",
+              "Scale": "Scale",
+              "TweenBehavior": "Tween",
+              "AngleLeft": -1,
+              "AngleRight": 1,
+              "AngleTimeMin": 1,
+              "AngleTimeMax": 3,
+              "YScaleMin": 0.9,
+              "YScaleMax": 1.1,
+              "YScaleTimeMin": 1,
+              "YScaleTimeMax": 3
+            },
+            {
+              "name": "Tween",
+              "type": "Tween::TweenBehavior"
+            }
+          ],
           "animations": [
             {
               "name": "",
@@ -9434,10 +9472,10 @@
                         "y": 0
                       },
                       "centerPoint": {
-                        "automatic": true,
+                        "automatic": false,
                         "name": "centre",
-                        "x": 0,
-                        "y": 0
+                        "x": 29.5,
+                        "y": 98.5
                       },
                       "customCollisionMask": [
                         [
@@ -9493,7 +9531,26 @@
               "booleanParameters": {}
             }
           ],
-          "behaviors": [],
+          "behaviors": [
+            {
+              "name": "Sway",
+              "type": "Sway::Sway",
+              "Scale": "Scale",
+              "TweenBehavior": "Tween",
+              "AngleLeft": -1,
+              "AngleRight": 1,
+              "AngleTimeMin": 1,
+              "AngleTimeMax": 3,
+              "YScaleMin": 0.9,
+              "YScaleMax": 1.1,
+              "YScaleTimeMin": 1,
+              "YScaleTimeMax": 3
+            },
+            {
+              "name": "Tween",
+              "type": "Tween::TweenBehavior"
+            }
+          ],
           "animations": [
             {
               "name": "",
@@ -9513,10 +9570,10 @@
                         "y": 0
                       },
                       "centerPoint": {
-                        "automatic": true,
+                        "automatic": false,
                         "name": "centre",
-                        "x": 0,
-                        "y": 0
+                        "x": 46,
+                        "y": 122.5
                       },
                       "customCollisionMask": [
                         [
@@ -9572,7 +9629,26 @@
               "booleanParameters": {}
             }
           ],
-          "behaviors": [],
+          "behaviors": [
+            {
+              "name": "Sway",
+              "type": "Sway::Sway",
+              "Scale": "Scale",
+              "TweenBehavior": "Tween",
+              "AngleLeft": -1,
+              "AngleRight": 1,
+              "AngleTimeMin": 1,
+              "AngleTimeMax": 3,
+              "YScaleMin": 0.9,
+              "YScaleMax": 1.1,
+              "YScaleTimeMin": 1,
+              "YScaleTimeMax": 3
+            },
+            {
+              "name": "Tween",
+              "type": "Tween::TweenBehavior"
+            }
+          ],
           "animations": [
             {
               "name": "",
@@ -9592,10 +9668,10 @@
                         "y": 0
                       },
                       "centerPoint": {
-                        "automatic": true,
+                        "automatic": false,
                         "name": "centre",
-                        "x": 0,
-                        "y": 0
+                        "x": 39,
+                        "y": 109.5
                       },
                       "customCollisionMask": [
                         [
@@ -9651,7 +9727,26 @@
               "booleanParameters": {}
             }
           ],
-          "behaviors": [],
+          "behaviors": [
+            {
+              "name": "Sway",
+              "type": "Sway::Sway",
+              "Scale": "Scale",
+              "TweenBehavior": "Tween",
+              "AngleLeft": -1,
+              "AngleRight": 1,
+              "AngleTimeMin": 1,
+              "AngleTimeMax": 3,
+              "YScaleMin": 0.9,
+              "YScaleMax": 1.1,
+              "YScaleTimeMin": 1,
+              "YScaleTimeMax": 3
+            },
+            {
+              "name": "Tween",
+              "type": "Tween::TweenBehavior"
+            }
+          ],
           "animations": [
             {
               "name": "",
@@ -9671,10 +9766,10 @@
                         "y": 0
                       },
                       "centerPoint": {
-                        "automatic": true,
+                        "automatic": false,
                         "name": "centre",
-                        "x": 0,
-                        "y": 0
+                        "x": 19,
+                        "y": 100
                       },
                       "customCollisionMask": [
                         [
@@ -9730,7 +9825,26 @@
               "booleanParameters": {}
             }
           ],
-          "behaviors": [],
+          "behaviors": [
+            {
+              "name": "Sway",
+              "type": "Sway::Sway",
+              "Scale": "Scale",
+              "TweenBehavior": "Tween",
+              "AngleLeft": -1,
+              "AngleRight": 1,
+              "AngleTimeMin": 1,
+              "AngleTimeMax": 3,
+              "YScaleMin": 0.9,
+              "YScaleMax": 1.1,
+              "YScaleTimeMin": 1,
+              "YScaleTimeMax": 3
+            },
+            {
+              "name": "Tween",
+              "type": "Tween::TweenBehavior"
+            }
+          ],
           "animations": [
             {
               "name": "",
@@ -9750,10 +9864,10 @@
                         "y": 0
                       },
                       "centerPoint": {
-                        "automatic": true,
+                        "automatic": false,
                         "name": "centre",
-                        "x": 0,
-                        "y": 0
+                        "x": 31,
+                        "y": 133
                       },
                       "customCollisionMask": [
                         [
@@ -9809,7 +9923,26 @@
               "booleanParameters": {}
             }
           ],
-          "behaviors": [],
+          "behaviors": [
+            {
+              "name": "Sway",
+              "type": "Sway::Sway",
+              "Scale": "Scale",
+              "TweenBehavior": "Tween",
+              "AngleLeft": -1,
+              "AngleRight": 1,
+              "AngleTimeMin": 1,
+              "AngleTimeMax": 3,
+              "YScaleMin": 0.9,
+              "YScaleMax": 1.1,
+              "YScaleTimeMin": 1,
+              "YScaleTimeMax": 3
+            },
+            {
+              "name": "Tween",
+              "type": "Tween::TweenBehavior"
+            }
+          ],
           "animations": [
             {
               "name": "",
@@ -9829,10 +9962,10 @@
                         "y": 0
                       },
                       "centerPoint": {
-                        "automatic": true,
+                        "automatic": false,
                         "name": "centre",
-                        "x": 0,
-                        "y": 0
+                        "x": 37.5,
+                        "y": 136
                       },
                       "customCollisionMask": [
                         [
@@ -9888,7 +10021,26 @@
               "booleanParameters": {}
             }
           ],
-          "behaviors": [],
+          "behaviors": [
+            {
+              "name": "Sway",
+              "type": "Sway::Sway",
+              "Scale": "Scale",
+              "TweenBehavior": "Tween",
+              "AngleLeft": -1,
+              "AngleRight": 1,
+              "AngleTimeMin": 1,
+              "AngleTimeMax": 3,
+              "YScaleMin": 0.9,
+              "YScaleMax": 1.1,
+              "YScaleTimeMin": 1,
+              "YScaleTimeMax": 3
+            },
+            {
+              "name": "Tween",
+              "type": "Tween::TweenBehavior"
+            }
+          ],
           "animations": [
             {
               "name": "",
@@ -9904,14 +10056,14 @@
                       "points": [],
                       "originPoint": {
                         "name": "origine",
-                        "x": 0,
-                        "y": 0
+                        "x": 38,
+                        "y": 103.5
                       },
                       "centerPoint": {
-                        "automatic": true,
+                        "automatic": false,
                         "name": "centre",
-                        "x": 0,
-                        "y": 0
+                        "x": -0.5,
+                        "y": 47.5
                       },
                       "customCollisionMask": [
                         [
@@ -9967,7 +10119,26 @@
               "booleanParameters": {}
             }
           ],
-          "behaviors": [],
+          "behaviors": [
+            {
+              "name": "Sway",
+              "type": "Sway::Sway",
+              "Scale": "Scale",
+              "TweenBehavior": "Tween",
+              "AngleLeft": -1,
+              "AngleRight": 1,
+              "AngleTimeMin": 1,
+              "AngleTimeMax": 3,
+              "YScaleMin": 0.9,
+              "YScaleMax": 1.1,
+              "YScaleTimeMin": 1,
+              "YScaleTimeMax": 3
+            },
+            {
+              "name": "Tween",
+              "type": "Tween::TweenBehavior"
+            }
+          ],
           "animations": [
             {
               "name": "",
@@ -9987,10 +10158,10 @@
                         "y": 0
                       },
                       "centerPoint": {
-                        "automatic": true,
+                        "automatic": false,
                         "name": "centre",
-                        "x": 0,
-                        "y": 0
+                        "x": 53.5,
+                        "y": 126.5
                       },
                       "customCollisionMask": [
                         [
@@ -10046,7 +10217,26 @@
               "booleanParameters": {}
             }
           ],
-          "behaviors": [],
+          "behaviors": [
+            {
+              "name": "Sway",
+              "type": "Sway::Sway",
+              "Scale": "Scale",
+              "TweenBehavior": "Tween",
+              "AngleLeft": -1,
+              "AngleRight": 1,
+              "AngleTimeMin": 1,
+              "AngleTimeMax": 3,
+              "YScaleMin": 0.9,
+              "YScaleMax": 1.1,
+              "YScaleTimeMin": 1,
+              "YScaleTimeMax": 3
+            },
+            {
+              "name": "Tween",
+              "type": "Tween::TweenBehavior"
+            }
+          ],
           "animations": [
             {
               "name": "",
@@ -10066,10 +10256,10 @@
                         "y": 0
                       },
                       "centerPoint": {
-                        "automatic": true,
+                        "automatic": false,
                         "name": "centre",
-                        "x": 0,
-                        "y": 0
+                        "x": 34.5,
+                        "y": 117.5
                       },
                       "customCollisionMask": [
                         [
@@ -11476,8 +11666,16 @@
           "type": "ScalableCapability::ScalableBehavior"
         },
         {
+          "name": "Sway",
+          "type": "Sway::Sway"
+        },
+        {
           "name": "Text",
           "type": "TextContainerCapability::TextContainerBehavior"
+        },
+        {
+          "name": "Tween",
+          "type": "Tween::TweenBehavior"
         }
       ]
     },
