@@ -1031,6 +1031,106 @@
         "name": "AssetsV3\\objectsWaves.png",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "file": "Cannon pirate VG Sounds/menu/menu scroll sound.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Cannon pirate VG Sounds\\menu\\menu scroll sound.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "Cannon pirate VG Sounds/water Recoil wave/shot recoil wave sound.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Cannon pirate VG Sounds\\water Recoil wave\\shot recoil wave sound.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "Cannon pirate VG Sounds/Shots/Cannon Fire/Cannon Fire.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Cannon pirate VG Sounds\\Shots\\Cannon Fire\\Cannon Fire.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "Triple shot.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Triple shot.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "start menu selected  idea 1.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "start menu selected  idea 1.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "menu scroll sound 2.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "menu scroll sound 2.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "start menu selected idea 2.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "start menu selected idea 2.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "start menu selected  idea2.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "start menu selected  idea2.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "Foghorn start menu selected idea 3.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Foghorn start menu selected idea 3.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "start menu selected  idea3.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "start menu selected  idea3.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -1219,7 +1319,7 @@
     {
       "name": "Gold_Global",
       "type": "number",
-      "value": 100
+      "value": 200
     },
     {
       "name": "Player_Speed",
@@ -1234,7 +1334,7 @@
     {
       "name": "Cannon_Shot_Number",
       "type": "number",
-      "value": 3
+      "value": 1
     },
     {
       "name": "Magnet_Distance",
@@ -1255,6 +1355,11 @@
       "name": "Player_Max_Health",
       "type": "number",
       "value": 10
+    },
+    {
+      "name": "Level",
+      "type": "number",
+      "value": 1
     }
   ],
   "layouts": [
@@ -1286,7 +1391,7 @@
           "name": "Buttons",
           "objects": [
             {
-              "name": "PirateText"
+              "name": "PirateTextStart"
             },
             {
               "name": "SettingsText"
@@ -1450,27 +1555,11 @@
           "height": 0,
           "keepRatio": true,
           "layer": "",
-          "name": "HighscoreText",
-          "persistentUuid": "f60c1869-e74b-439c-aa61-9c53d1381572",
-          "width": 0,
-          "x": 527,
-          "y": 448,
-          "zOrder": 5,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
           "name": "CreditsText",
           "persistentUuid": "7dd6ce66-320d-4ba8-a5a4-e33ac0abc7c9",
           "width": 0,
-          "x": 1088,
-          "y": 608,
+          "x": 550,
+          "y": 480,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -1650,29 +1739,12 @@
           "height": 324,
           "keepRatio": true,
           "layer": "",
-          "name": "PirateText",
+          "name": "PirateTextStart",
           "persistentUuid": "d07f04ad-9983-488b-97aa-1225b68f6019",
           "width": 925,
           "x": 227,
           "y": 171,
           "zOrder": 5,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 192,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Text",
-          "persistentUuid": "89e1f33c-f383-4776-a67e-924e90a5a760",
-          "width": 256,
-          "x": 32,
-          "y": 448,
-          "zOrder": 16,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -1702,7 +1774,7 @@
       "objects": [
         {
           "assetStoreId": "",
-          "name": "PirateText",
+          "name": "PirateTextStart",
           "type": "BBText::BBText",
           "variables": [],
           "effects": [
@@ -2399,7 +2471,7 @@
         "folderName": "__ROOT",
         "children": [
           {
-            "objectName": "PirateText"
+            "objectName": "PirateTextStart"
           },
           {
             "objectName": "Text"
@@ -2539,6 +2611,33 @@
                 "yes"
               ]
             }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "menu scroll sound 2.mp3",
+                    "",
+                    "15",
+                    "RandomFloatInRange(.9,1.1)"
+                  ]
+                }
+              ]
+            }
           ]
         },
         {
@@ -2590,13 +2689,25 @@
                 "value": "ButtonStates::ButtonFSM::IsClicked"
               },
               "parameters": [
-                "PirateText",
+                "PirateTextStart",
                 "ButtonFSM",
                 ""
               ]
             }
           ],
           "actions": [
+            {
+              "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "start menu selected  idea3.mp3",
+                "",
+                "15",
+                "2"
+              ]
+            },
             {
               "type": {
                 "value": "FlashTransitionPainter::FlashTransitionPainter::PaintEffect"
@@ -2617,7 +2728,7 @@
                 "value": "Wait"
               },
               "parameters": [
-                "1"
+                "2"
               ]
             },
             {
@@ -2626,7 +2737,7 @@
               },
               "parameters": [
                 "",
-                "\"PirateGameScene\"",
+                "\"PirateGameScene1\"",
                 ""
               ]
             }
@@ -2673,6 +2784,33 @@
                 "1"
               ]
             }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "start menu selected idea 2.mp3",
+                    "",
+                    "15",
+                    "RandomFloatInRange(.9,1.1)"
+                  ]
+                }
+              ]
+            }
           ]
         },
         {
@@ -2704,6 +2842,33 @@
                 "1"
               ]
             }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "start menu selected idea 2.mp3",
+                    "",
+                    "15",
+                    "RandomFloatInRange(.9,1.1)"
+                  ]
+                }
+              ]
+            }
           ]
         },
         {
@@ -2733,6 +2898,33 @@
                 "",
                 "\"bounce\"",
                 "1"
+              ]
+            }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "start menu selected idea 2.mp3",
+                    "",
+                    "15",
+                    "RandomFloatInRange(.9,1.1)"
+                  ]
+                }
               ]
             }
           ]
@@ -2776,6 +2968,33 @@
                 "",
                 "\"bounce\"",
                 "1"
+              ]
+            }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "BuiltinCommonInstructions::Once"
+                  },
+                  "parameters": []
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "start menu selected idea 2.mp3",
+                    "",
+                    "15",
+                    "RandomFloatInRange(.9,1.1)"
+                  ]
+                }
               ]
             }
           ]
@@ -2902,8 +3121,8 @@
     {
       "b": 209,
       "disableInputWhenNotFocused": true,
-      "mangledName": "PirateGameScene",
-      "name": "PirateGameScene",
+      "mangledName": "PirateGameScene1",
+      "name": "PirateGameScene1",
       "r": 209,
       "standardSortMethod": true,
       "stopSoundsOnStartup": true,
@@ -2919,7 +3138,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 0.35534345588170196,
+        "zoomFactor": 0.5117784035210231,
         "windowMask": false
       },
       "objectsGroups": [
@@ -3016,38 +3235,6 @@
         },
         {
           "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "UI_Layer",
-          "name": "StateText",
-          "persistentUuid": "628fd1f5-6f3b-4802-ba72-3174f3ce043c",
-          "width": 0,
-          "x": 416,
-          "y": 0,
-          "zOrder": 18,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "UI_Layer",
-          "name": "DebugText",
-          "persistentUuid": "b9f63a93-460f-459e-bfc6-df38ed1c921e",
-          "width": 0,
-          "x": 601,
-          "y": 0,
-          "zOrder": 19,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
           "customSize": true,
           "depth": 1,
           "height": 2624,
@@ -3073,7 +3260,7 @@
           "name": "bgTilemap",
           "persistentUuid": "305a027a-ebce-4e56-b94f-26f17271a456",
           "width": 3840,
-          "x": -1920,
+          "x": -1760,
           "y": -992,
           "zOrder": -68,
           "numberProperties": [],
@@ -3897,76 +4084,12 @@
           "customSize": false,
           "height": 0,
           "keepRatio": true,
-          "layer": "",
-          "name": "Barrel",
-          "persistentUuid": "d4694354-d9dd-4761-b584-d8b9aa1b0ee8",
+          "layer": "UI_Layer",
+          "name": "LevelText",
+          "persistentUuid": "73f24872-8fe4-4d78-8244-cf9d8ed40f09",
           "width": 0,
-          "x": 864,
-          "y": 384,
-          "zOrder": 10,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Barrel",
-          "persistentUuid": "3ef6a00a-014b-4c67-943e-9b0cca6556cb",
-          "width": 0,
-          "x": 428,
-          "y": 544,
-          "zOrder": 10,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Barrel",
-          "persistentUuid": "bb838fd1-95ce-43cb-9de2-953406133add",
-          "width": 0,
-          "x": 556,
-          "y": 544,
-          "zOrder": 10,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Barrel",
-          "persistentUuid": "e8baee72-7eea-432c-b554-d8dee06dd4fd",
-          "width": 0,
-          "x": 736,
-          "y": 576,
-          "zOrder": 10,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Whirlpool",
-          "persistentUuid": "f57f1e95-79ce-47fc-b70d-b760cb77af9a",
-          "width": 0,
-          "x": 672,
-          "y": 384,
+          "x": 512,
+          "y": 0,
           "zOrder": 142,
           "numberProperties": [],
           "stringProperties": [],
@@ -7694,6 +7817,48 @@
               ]
             }
           ]
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "LevelText",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "Level:",
+          "font": "AssetsV4\\Beryliumbold.ttf",
+          "textAlignment": "left",
+          "characterSize": 40,
+          "color": {
+            "b": 0,
+            "g": 0,
+            "r": 0
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "Level:",
+            "font": "AssetsV4\\Beryliumbold.ttf",
+            "textAlignment": "left",
+            "verticalTextAlignment": "top",
+            "characterSize": 40,
+            "color": "0;0;0"
+          }
         }
       ],
       "objectsFolderStructure": {
@@ -7814,6 +7979,9 @@
               },
               {
                 "objectName": "StateText"
+              },
+              {
+                "objectName": "LevelText"
               }
             ]
           }
@@ -9987,11 +10155,21 @@
             },
             {
               "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "Level",
+                "+",
+                "1"
+              ]
+            },
+            {
+              "type": {
                 "value": "Scene"
               },
               "parameters": [
                 "",
-                "\"PirateGameScene\"",
+                "\"PirateGameScene1\"",
                 ""
               ]
             }
@@ -10202,7 +10380,7 @@
               "parameters": [
                 "Gold_Global",
                 ">=",
-                "10"
+                "3250"
               ]
             },
             {
@@ -10220,7 +10398,7 @@
               "parameters": [
                 "Gold_Global",
                 "-",
-                "10"
+                "3250"
               ]
             },
             {
@@ -10277,7 +10455,7 @@
               "parameters": [
                 "Gold_Global",
                 ">=",
-                "10"
+                "5750"
               ]
             },
             {
@@ -10295,7 +10473,7 @@
               "parameters": [
                 "Gold_Global",
                 "-",
-                "10"
+                "5750"
               ]
             },
             {
@@ -10352,7 +10530,7 @@
               "parameters": [
                 "Gold_Global",
                 ">=",
-                "10"
+                "500"
               ]
             },
             {
@@ -10370,7 +10548,7 @@
               "parameters": [
                 "Gold_Global",
                 "-",
-                "10"
+                "500"
               ]
             },
             {
@@ -10437,7 +10615,7 @@
               "parameters": [
                 "Gold_Global",
                 ">=",
-                "10"
+                "1250"
               ]
             },
             {
@@ -10455,7 +10633,7 @@
               "parameters": [
                 "Gold_Global",
                 "-",
-                "10"
+                "1250"
               ]
             },
             {
@@ -10522,7 +10700,7 @@
               "parameters": [
                 "Gold_Global",
                 ">=",
-                "10"
+                "500"
               ]
             },
             {
@@ -10540,7 +10718,7 @@
               "parameters": [
                 "Gold_Global",
                 "-",
-                "10"
+                "500"
               ]
             },
             {
@@ -10597,7 +10775,7 @@
               "parameters": [
                 "Gold_Global",
                 ">=",
-                "10"
+                "600"
               ]
             },
             {
@@ -10615,7 +10793,7 @@
               "parameters": [
                 "Gold_Global",
                 "-",
-                "10"
+                "600"
               ]
             },
             {
@@ -10672,7 +10850,7 @@
               "parameters": [
                 "Gold_Global",
                 ">=",
-                "10"
+                "500"
               ]
             },
             {
@@ -10690,7 +10868,7 @@
               "parameters": [
                 "Gold_Global",
                 "-",
-                "10"
+                "500"
               ]
             },
             {
@@ -10758,7 +10936,7 @@
               "parameters": [
                 "Gold_Global",
                 ">=",
-                "10"
+                "950"
               ]
             },
             {
@@ -10776,7 +10954,7 @@
               "parameters": [
                 "Gold_Global",
                 "-",
-                "10"
+                "950"
               ]
             },
             {
@@ -11128,7 +11306,7 @@
   ],
   "externalEvents": [
     {
-      "associatedLayout": "PirateGameScene",
+      "associatedLayout": "PirateGameScene1",
       "name": "KeyControls",
       "events": [
         {
@@ -11186,7 +11364,7 @@
       ]
     },
     {
-      "associatedLayout": "PirateGameScene",
+      "associatedLayout": "PirateGameScene1",
       "name": "Player_FSM",
       "events": [
         {
@@ -11514,7 +11692,7 @@
       ]
     },
     {
-      "associatedLayout": "PirateGameScene",
+      "associatedLayout": "PirateGameScene1",
       "name": "Player_FSM_Init",
       "events": [
         {
@@ -11648,7 +11826,7 @@
       ]
     },
     {
-      "associatedLayout": "PirateGameScene",
+      "associatedLayout": "PirateGameScene1",
       "name": "Player_FSM_Sailing",
       "events": [
         {
@@ -13036,7 +13214,7 @@
       ]
     },
     {
-      "associatedLayout": "PirateGameScene",
+      "associatedLayout": "PirateGameScene1",
       "name": "Player_FSM_Hurt",
       "events": [
         {
@@ -13282,7 +13460,7 @@
       ]
     },
     {
-      "associatedLayout": "PirateGameScene",
+      "associatedLayout": "PirateGameScene1",
       "name": "Player_FSM_Dead",
       "events": [
         {
@@ -13381,7 +13559,7 @@
       ]
     },
     {
-      "associatedLayout": "PirateGameScene",
+      "associatedLayout": "PirateGameScene1",
       "name": "Cannon_Balls",
       "events": [
         {
@@ -13791,7 +13969,7 @@
       ]
     },
     {
-      "associatedLayout": "PirateGameScene",
+      "associatedLayout": "PirateGameScene1",
       "name": "Camera",
       "events": [
         {
@@ -13834,7 +14012,7 @@
       ]
     },
     {
-      "associatedLayout": "PirateGameScene",
+      "associatedLayout": "PirateGameScene1",
       "name": "Game_Music",
       "events": [
         {
@@ -13868,7 +14046,7 @@
       ]
     },
     {
-      "associatedLayout": "PirateGameScene",
+      "associatedLayout": "PirateGameScene1",
       "name": "Enemies",
       "events": [
         {
@@ -13916,8 +14094,143 @@
               ],
               "events": [
                 {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "Level",
+                        "=",
+                        "1"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "EnemyCount",
+                        "=",
+                        "6"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "Level",
+                        "=",
+                        "2"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "EnemyCount",
+                        "=",
+                        "15"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "Level",
+                        "=",
+                        "3"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "EnemyCount",
+                        "=",
+                        "22"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "Level",
+                        "=",
+                        "4"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "EnemyCount",
+                        "=",
+                        "30"
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "Level",
+                        "=",
+                        "5"
+                      ]
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "SetNumberVariable"
+                      },
+                      "parameters": [
+                        "EnemyCount",
+                        "=",
+                        "40"
+                      ]
+                    }
+                  ]
+                },
+                {
                   "type": "BuiltinCommonInstructions::Repeat",
-                  "repeatExpression": "15",
+                  "repeatExpression": "EnemyCount",
                   "conditions": [],
                   "actions": [],
                   "events": [
@@ -14187,6 +14500,13 @@
                       ]
                     }
                   ]
+                }
+              ],
+              "variables": [
+                {
+                  "name": "EnemyCount",
+                  "type": "number",
+                  "value": 0
                 }
               ]
             }
@@ -15293,7 +15613,7 @@
                               "parameters": [
                                 "Random_Chance",
                                 "=",
-                                "RandomInRange(0,5)"
+                                "RandomInRange(1,5)"
                               ]
                             }
                           ],
@@ -15308,7 +15628,85 @@
                                   "parameters": [
                                     "Random_Chance",
                                     "=",
+                                    "1"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "Create"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Chest",
+                                    "Enemy.CenterX()",
+                                    "Enemy.CenterY()",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "ChangePlan"
+                                  },
+                                  "parameters": [
+                                    "Chest",
+                                    "=",
+                                    "10"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "NumberVariable"
+                                  },
+                                  "parameters": [
+                                    "Random_Chance",
+                                    "=",
                                     "2"
+                                  ]
+                                }
+                              ],
+                              "actions": [
+                                {
+                                  "type": {
+                                    "value": "Create"
+                                  },
+                                  "parameters": [
+                                    "",
+                                    "Chest",
+                                    "Enemy.CenterX()",
+                                    "Enemy.CenterY()",
+                                    ""
+                                  ]
+                                },
+                                {
+                                  "type": {
+                                    "value": "ChangePlan"
+                                  },
+                                  "parameters": [
+                                    "Chest",
+                                    "=",
+                                    "10"
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "type": "BuiltinCommonInstructions::Standard",
+                              "conditions": [
+                                {
+                                  "type": {
+                                    "value": "NumberVariable"
+                                  },
+                                  "parameters": [
+                                    "Random_Chance",
+                                    "=",
+                                    "3"
                                   ]
                                 }
                               ],
@@ -15533,7 +15931,7 @@
       ]
     },
     {
-      "associatedLayout": "PirateGameScene",
+      "associatedLayout": "PirateGameScene1",
       "name": "Treasure",
       "events": [
         {
@@ -15614,7 +16012,7 @@
               "parameters": [
                 "Gold_Global",
                 "+",
-                "5"
+                "111"
               ]
             }
           ]
@@ -15647,7 +16045,7 @@
       ]
     },
     {
-      "associatedLayout": "PirateGameScene",
+      "associatedLayout": "PirateGameScene1",
       "name": "Barrells",
       "events": [
         {
@@ -15882,7 +16280,7 @@
       ]
     },
     {
-      "associatedLayout": "PirateGameScene",
+      "associatedLayout": "PirateGameScene1",
       "name": "UI",
       "events": [
         {
@@ -15928,10 +16326,10 @@
                 "value": "TextContainerCapability::TextContainerBehavior::SetValue"
               },
               "parameters": [
-                "StateText",
+                "CountText",
                 "Text",
                 "=",
-                "\"State: \" + Player_HitBox.State"
+                "\"Enemies: \" + ToString(SceneInstancesCount(Enemy))"
               ]
             },
             {
@@ -15939,10 +16337,28 @@
                 "value": "TextContainerCapability::TextContainerBehavior::SetValue"
               },
               "parameters": [
-                "CountText",
+                "LevelText",
                 "Text",
                 "=",
-                "\"Enemies: \" + ToString(SceneInstancesCount(Enemy))"
+                "\"Level: \" + Level"
+              ]
+            }
+          ]
+        },
+        {
+          "disabled": true,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": [
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "StateText",
+                "Text",
+                "=",
+                "\"State: \" + Player_HitBox.State"
               ]
             },
             {
@@ -16019,7 +16435,7 @@
       ]
     },
     {
-      "associatedLayout": "PirateGameScene",
+      "associatedLayout": "PirateGameScene1",
       "name": "PowerUps",
       "events": [
         {
