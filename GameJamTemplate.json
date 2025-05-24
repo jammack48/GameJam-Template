@@ -1167,6 +1167,30 @@
         "preloadAsSound": false,
         "preloadInCache": false,
         "userAdded": false
+      },
+      {
+        "file": "bossCharacter.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "bossCharacter.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "bossCannonFront.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "bossCannonFront.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "bossCannonBack.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "bossCannonBack.png",
+        "smoothed": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -8614,11 +8638,281 @@
               ]
             }
           ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "Boss",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "Sway",
+              "type": "Sway::Sway",
+              "Scale": "Scale",
+              "TweenBehavior": "Tween",
+              "AngleLeft": -5,
+              "AngleRight": 5,
+              "AngleTimeMin": 1,
+              "AngleTimeMax": 3,
+              "YScaleMin": 1,
+              "YScaleMax": 1.2,
+              "YScaleTimeMin": 1,
+              "YScaleTimeMax": 3
+            },
+            {
+              "name": "Tween",
+              "type": "Tween::TweenBehavior"
+            }
+          ],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "bossCharacter.png",
+                      "points": [
+                        {
+                          "name": "LeftGun",
+                          "x": 24.5,
+                          "y": 185.5
+                        },
+                        {
+                          "name": "RightGun",
+                          "x": 475.5,
+                          "y": 156.5
+                        },
+                        {
+                          "name": "LeftDownGun",
+                          "x": 89.5,
+                          "y": 229.5
+                        },
+                        {
+                          "name": "RightDownGun",
+                          "x": 440.5,
+                          "y": 190.5
+                        }
+                      ],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 1,
+                            "y": 1
+                          },
+                          {
+                            "x": 514,
+                            "y": 1
+                          },
+                          {
+                            "x": 514,
+                            "y": 388
+                          },
+                          {
+                            "x": 1,
+                            "y": 388
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "Boss_Cannon_Front",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "bossCannonFront.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 1
+                          },
+                          {
+                            "x": 132,
+                            "y": 1
+                          },
+                          {
+                            "x": 132,
+                            "y": 195
+                          },
+                          {
+                            "x": 0,
+                            "y": 195
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "Boss_Cannon_Side",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "bossCannonFront.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 1
+                          },
+                          {
+                            "x": 132,
+                            "y": 1
+                          },
+                          {
+                            "x": 132,
+                            "y": 195
+                          },
+                          {
+                            "x": 0,
+                            "y": 195
+                          }
+                        ]
+                      ]
+                    },
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "bossCannonBack.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 1
+                          },
+                          {
+                            "x": 132,
+                            "y": 1
+                          },
+                          {
+                            "x": 132,
+                            "y": 195
+                          },
+                          {
+                            "x": 0,
+                            "y": 195
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
         "folderName": "__ROOT",
         "children": [
+          {
+            "folderName": "Boss",
+            "children": [
+              {
+                "objectName": "Boss"
+              },
+              {
+                "objectName": "Boss_Cannon_Front"
+              },
+              {
+                "objectName": "Boss_Cannon_Side"
+              }
+            ]
+          },
           {
             "folderName": "Items",
             "children": [
