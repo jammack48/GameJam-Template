@@ -9783,6 +9783,11 @@
               "name": "IsAvailable",
               "type": "boolean",
               "value": true
+            },
+            {
+              "name": "Desc",
+              "type": "string",
+              "value": "0"
             }
           ],
           "effects": [
@@ -9979,6 +9984,11 @@
               "name": "IsAvailable",
               "type": "boolean",
               "value": true
+            },
+            {
+              "name": "Desc",
+              "type": "string",
+              "value": "0"
             }
           ],
           "effects": [
@@ -10077,6 +10087,11 @@
               "name": "IsAvailable",
               "type": "boolean",
               "value": true
+            },
+            {
+              "name": "Desc",
+              "type": "string",
+              "value": "0"
             }
           ],
           "effects": [
@@ -10175,6 +10190,11 @@
               "name": "IsAvailable",
               "type": "boolean",
               "value": true
+            },
+            {
+              "name": "Desc",
+              "type": "string",
+              "value": "0"
             }
           ],
           "effects": [
@@ -10273,6 +10293,11 @@
               "name": "IsAvailable",
               "type": "boolean",
               "value": true
+            },
+            {
+              "name": "Desc",
+              "type": "string",
+              "value": "0"
             }
           ],
           "effects": [
@@ -10371,6 +10396,11 @@
               "name": "IsAvailable",
               "type": "boolean",
               "value": true
+            },
+            {
+              "name": "Desc",
+              "type": "string",
+              "value": "0"
             }
           ],
           "effects": [
@@ -10469,6 +10499,11 @@
               "name": "IsAvailable",
               "type": "boolean",
               "value": true
+            },
+            {
+              "name": "Desc",
+              "type": "string",
+              "value": "Double blast baby"
             }
           ],
           "effects": [
@@ -10567,6 +10602,11 @@
               "name": "IsAvailable",
               "type": "boolean",
               "value": true
+            },
+            {
+              "name": "Desc",
+              "type": "string",
+              "value": "0"
             }
           ],
           "effects": [
@@ -10665,6 +10705,11 @@
               "name": "IsAvailable",
               "type": "boolean",
               "value": true
+            },
+            {
+              "name": "Desc",
+              "type": "string",
+              "value": "0"
             }
           ],
           "effects": [
@@ -11058,6 +11103,22 @@
                     "Player_Max_Health",
                     ""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "RatSpeechBubble"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Cache"
+                  },
+                  "parameters": [
+                    "SpeechText"
+                  ]
                 }
               ]
             }
@@ -11278,44 +11339,6 @@
                 "RandomFloatInRange(.9,1.1)"
               ]
             }
-          ],
-          "events": [
-            {
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 109,
-                "g": 230,
-                "r": 255,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "Speech Show"
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [
-                {
-                  "type": {
-                    "value": "Montre"
-                  },
-                  "parameters": [
-                    "SpeechText",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Montre"
-                  },
-                  "parameters": [
-                    "RatSpeechBubble",
-                    ""
-                  ]
-                }
-              ]
-            }
           ]
         },
         {
@@ -11345,41 +11368,21 @@
                 "\"Effect\"",
                 ""
               ]
-            }
-          ],
-          "events": [
-            {
-              "type": "BuiltinCommonInstructions::Comment",
-              "color": {
-                "b": 224,
-                "g": 16,
-                "r": 189,
-                "textB": 0,
-                "textG": 0,
-                "textR": 0
-              },
-              "comment": "Speech Hide Not working"
             },
             {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [],
-              "actions": [
-                {
-                  "type": {
-                    "value": "Cache"
-                  },
-                  "parameters": [
-                    "SpeechText"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "Cache"
-                  },
-                  "parameters": [
-                    "RatSpeechBubble"
-                  ]
-                }
+              "type": {
+                "value": "Cache"
+              },
+              "parameters": [
+                "SpeechText"
+              ]
+            },
+            {
+              "type": {
+                "value": "Cache"
+              },
+              "parameters": [
+                "RatSpeechBubble"
               ]
             }
           ]
@@ -11490,6 +11493,53 @@
                 "value": "SourisSurObjet"
               },
               "parameters": [
+                "Item_Double_Blast",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Montre"
+              },
+              "parameters": [
+                "RatSpeechBubble",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Montre"
+              },
+              "parameters": [
+                "SpeechText",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "SpeechText",
+                "Text",
+                "=",
+                "Item_Double_Blast.Desc"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "SourisSurObjet"
+              },
+              "parameters": [
                 "Item_Triple_Blast",
                 "",
                 "",
@@ -11553,6 +11603,53 @@
                 "",
                 "25",
                 "RandomFloatInRange(.9,1.1)"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "SourisSurObjet"
+              },
+              "parameters": [
+                "Item_Triple_Blast",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Montre"
+              },
+              "parameters": [
+                "RatSpeechBubble",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Montre"
+              },
+              "parameters": [
+                "SpeechText",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "SpeechText",
+                "Text",
+                "=",
+                "Item_Triple_Blast.Desc"
               ]
             }
           ]
@@ -11650,6 +11747,53 @@
                 "value": "SourisSurObjet"
               },
               "parameters": [
+                "Item_Magnet_1",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Montre"
+              },
+              "parameters": [
+                "RatSpeechBubble",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Montre"
+              },
+              "parameters": [
+                "SpeechText",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "SpeechText",
+                "Text",
+                "=",
+                "Item_Magnet_1.Desc"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "SourisSurObjet"
+              },
+              "parameters": [
                 "Item_Magnet_2",
                 "",
                 "",
@@ -11723,6 +11867,53 @@
                 "",
                 "25",
                 "RandomFloatInRange(.9,1.1)"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "SourisSurObjet"
+              },
+              "parameters": [
+                "Item_Magnet_2",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Montre"
+              },
+              "parameters": [
+                "RatSpeechBubble",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Montre"
+              },
+              "parameters": [
+                "SpeechText",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "SpeechText",
+                "Text",
+                "=",
+                "Item_Speed_Boost.Desc"
               ]
             }
           ]
@@ -11810,6 +12001,53 @@
                 "value": "SourisSurObjet"
               },
               "parameters": [
+                "Item_Speed_Boost",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Montre"
+              },
+              "parameters": [
+                "RatSpeechBubble",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Montre"
+              },
+              "parameters": [
+                "SpeechText",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "SpeechText",
+                "Text",
+                "=",
+                "Item_Double_Blast.Desc"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "SourisSurObjet"
+              },
+              "parameters": [
                 "Item_Fast_Turn",
                 "",
                 "",
@@ -11873,6 +12111,53 @@
                 "",
                 "25",
                 "RandomFloatInRange(.9,1.1)"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "SourisSurObjet"
+              },
+              "parameters": [
+                "Item_Fast_Turn",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Montre"
+              },
+              "parameters": [
+                "RatSpeechBubble",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Montre"
+              },
+              "parameters": [
+                "SpeechText",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "SpeechText",
+                "Text",
+                "=",
+                "Item_Fast_Turn.Desc"
               ]
             }
           ]
@@ -11971,6 +12256,53 @@
                 "value": "SourisSurObjet"
               },
               "parameters": [
+                "Item_Health_Plus",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Montre"
+              },
+              "parameters": [
+                "RatSpeechBubble",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Montre"
+              },
+              "parameters": [
+                "SpeechText",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "SpeechText",
+                "Text",
+                "=",
+                "Item_Health_Max.Desc"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "SourisSurObjet"
+              },
+              "parameters": [
                 "Item_Health_Max",
                 "",
                 "",
@@ -12045,6 +12377,299 @@
                 "",
                 "25",
                 "RandomFloatInRange(.9,1.1)"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "SourisSurObjet"
+              },
+              "parameters": [
+                "Item_Health_Max",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Montre"
+              },
+              "parameters": [
+                "RatSpeechBubble",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Montre"
+              },
+              "parameters": [
+                "SpeechText",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "SpeechText",
+                "Text",
+                "=",
+                "Item_Health_Max.Desc"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "SourisSurObjet"
+              },
+              "parameters": [
+                "Item_Powderkey",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "MouseButtonFromTextPressed"
+              },
+              "parameters": [
+                "",
+                "\"Left\""
+              ]
+            },
+            {
+              "type": {
+                "value": "NumberVariable"
+              },
+              "parameters": [
+                "Gold_Global",
+                ">=",
+                "2200"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "Gold_Global",
+                "-",
+                "2200"
+              ]
+            },
+            {
+              "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "Buying a power bottle.mp3",
+                "",
+                "25",
+                "RandomFloatInRange(.9,1.1)"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "Cannon_Shot_Number",
+                "=",
+                "8"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "SourisSurObjet"
+              },
+              "parameters": [
+                "Item_Powderkey",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Montre"
+              },
+              "parameters": [
+                "RatSpeechBubble",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Montre"
+              },
+              "parameters": [
+                "SpeechText",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "SpeechText",
+                "Text",
+                "=",
+                "Item_Powderkey.Desc"
+              ]
+            }
+          ]
+        },
+        {
+          "disabled": true,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "SourisSurObjet"
+              },
+              "parameters": [
+                "Item_Whirlpool",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "MouseButtonFromTextPressed"
+              },
+              "parameters": [
+                "",
+                "\"Left\""
+              ]
+            },
+            {
+              "type": {
+                "value": "NumberVariable"
+              },
+              "parameters": [
+                "Gold_Global",
+                ">=",
+                "2200"
+              ]
+            },
+            {
+              "type": {
+                "value": "BuiltinCommonInstructions::Once"
+              },
+              "parameters": []
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "Gold_Global",
+                "-",
+                "2200"
+              ]
+            },
+            {
+              "type": {
+                "value": "PlaySound"
+              },
+              "parameters": [
+                "",
+                "Buying a power bottle.mp3",
+                "",
+                "25",
+                "RandomFloatInRange(.9,1.1)"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetNumberVariable"
+              },
+              "parameters": [
+                "Cannon_Shot_Number",
+                "=",
+                "8"
+              ]
+            }
+          ]
+        },
+        {
+          "disabled": true,
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "SourisSurObjet"
+              },
+              "parameters": [
+                "Item_Whirlpool",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Montre"
+              },
+              "parameters": [
+                "RatSpeechBubble",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Montre"
+              },
+              "parameters": [
+                "SpeechText",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "TextContainerCapability::TextContainerBehavior::SetValue"
+              },
+              "parameters": [
+                "SpeechText",
+                "Text",
+                "=",
+                "Item_Powderkey.Desc"
               ]
             }
           ]
