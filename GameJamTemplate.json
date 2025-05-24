@@ -3164,7 +3164,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 0.23867758270258083,
+        "zoomFactor": 0.23867758270258085,
         "windowMask": false
       },
       "objectsGroups": [
@@ -3422,8 +3422,8 @@
           "name": "Spawn_Points",
           "persistentUuid": "946f0665-5aa5-498c-ab3d-ee7faecd612a",
           "width": 0,
-          "x": 1216,
-          "y": -288,
+          "x": 1408,
+          "y": -416,
           "zOrder": 133,
           "numberProperties": [],
           "stringProperties": [],
@@ -3502,8 +3502,8 @@
           "name": "Spawn_Points",
           "persistentUuid": "27f814aa-323a-4e9b-8c77-26cdf0b06147",
           "width": 0,
-          "x": -416,
-          "y": -128,
+          "x": -704,
+          "y": -416,
           "zOrder": 133,
           "numberProperties": [],
           "stringProperties": [],
@@ -3662,8 +3662,8 @@
           "name": "Spawn_Points",
           "persistentUuid": "2fac2ab4-19dc-4739-82dd-5b36d17308fc",
           "width": 0,
-          "x": 1376,
-          "y": 672,
+          "x": 1344,
+          "y": 576,
           "zOrder": 133,
           "numberProperties": [],
           "stringProperties": [],
@@ -3742,8 +3742,8 @@
           "name": "Spawn_Points",
           "persistentUuid": "4236d2f8-a637-4dfb-b11e-d2ab4221073b",
           "width": 0,
-          "x": 256,
-          "y": 1056,
+          "x": -896,
+          "y": 224,
           "zOrder": 133,
           "numberProperties": [],
           "stringProperties": [],
@@ -3854,8 +3854,8 @@
           "name": "Spawn_Points",
           "persistentUuid": "87170efd-dcf2-4fc1-980c-b7cd33880f7a",
           "width": 0,
-          "x": 1344,
-          "y": 288,
+          "x": 1472,
+          "y": 384,
           "zOrder": 133,
           "numberProperties": [],
           "stringProperties": [],
@@ -3870,8 +3870,8 @@
           "name": "Spawn_Points",
           "persistentUuid": "d4c49417-9b01-4a11-ad52-a307688f607a",
           "width": 0,
-          "x": 1408,
-          "y": 64,
+          "x": 1472,
+          "y": 192,
           "zOrder": 133,
           "numberProperties": [],
           "stringProperties": [],
@@ -3886,8 +3886,8 @@
           "name": "Spawn_Points",
           "persistentUuid": "295e5415-34fa-45b6-bb5d-e002a1f13451",
           "width": 0,
-          "x": 1216,
-          "y": -64,
+          "x": 1376,
+          "y": -192,
           "zOrder": 133,
           "numberProperties": [],
           "stringProperties": [],
@@ -3902,8 +3902,8 @@
           "name": "Spawn_Points",
           "persistentUuid": "57d24ee6-8c77-4b27-b2f7-b516b46ada21",
           "width": 0,
-          "x": 672,
-          "y": -160,
+          "x": 800,
+          "y": -352,
           "zOrder": 133,
           "numberProperties": [],
           "stringProperties": [],
@@ -4098,8 +4098,8 @@
           "name": "Spawn_Points",
           "persistentUuid": "801c61e4-9810-4153-80da-65d062e4a227",
           "width": 0,
-          "x": 576,
-          "y": 832,
+          "x": -64,
+          "y": 928,
           "zOrder": 133,
           "numberProperties": [],
           "stringProperties": [],
@@ -4213,6 +4213,246 @@
           "x": 204,
           "y": 480,
           "zOrder": 50,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Spawn_Points",
+          "persistentUuid": "30219d0b-9ce3-4327-924b-d5f857851821",
+          "width": 0,
+          "x": 576,
+          "y": 832,
+          "zOrder": 133,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Spawn_Points",
+          "persistentUuid": "f121be25-e34f-4e12-987b-1f2006a6b1a0",
+          "width": 0,
+          "x": 480,
+          "y": 1088,
+          "zOrder": 133,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Spawn_Points",
+          "persistentUuid": "295565ef-a3f3-4881-804f-8ab2e322484c",
+          "width": 0,
+          "x": 256,
+          "y": 1056,
+          "zOrder": 133,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Spawn_Points",
+          "persistentUuid": "57eed2ff-fcf5-49ff-85c2-19041876a164",
+          "width": 0,
+          "x": -512,
+          "y": 960,
+          "zOrder": 133,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Spawn_Points",
+          "persistentUuid": "7132f9c4-57fa-4149-9667-959a9d6f2204",
+          "width": 0,
+          "x": -512,
+          "y": 576,
+          "zOrder": 133,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Spawn_Points",
+          "persistentUuid": "05a00c30-e728-4247-9466-fe5f903d78cb",
+          "width": 0,
+          "x": -768,
+          "y": 608,
+          "zOrder": 133,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Spawn_Points",
+          "persistentUuid": "3cd2fc63-8b15-4979-887f-adc4bdbbb63e",
+          "width": 0,
+          "x": -416,
+          "y": -128,
+          "zOrder": 133,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Spawn_Points",
+          "persistentUuid": "51f0caf1-212d-408f-a2aa-cc3df4281400",
+          "width": 0,
+          "x": -160,
+          "y": -224,
+          "zOrder": 133,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Spawn_Points",
+          "persistentUuid": "8009118b-ac86-4f99-b73d-0d1a49431239",
+          "width": 0,
+          "x": 1024,
+          "y": -256,
+          "zOrder": 133,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Spawn_Points",
+          "persistentUuid": "1050b6e0-e5d1-472d-86b6-6db34086c409",
+          "width": 0,
+          "x": 672,
+          "y": -160,
+          "zOrder": 133,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Spawn_Points",
+          "persistentUuid": "5d0ced00-ce41-41ef-b467-3c89f24bad01",
+          "width": 0,
+          "x": 1216,
+          "y": -288,
+          "zOrder": 133,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Spawn_Points",
+          "persistentUuid": "3132740f-6c12-4027-b76a-7027f01fc0de",
+          "width": 0,
+          "x": 1216,
+          "y": -64,
+          "zOrder": 133,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Spawn_Points",
+          "persistentUuid": "59244e5b-3318-4370-b5d0-3c14e364111c",
+          "width": 0,
+          "x": 1408,
+          "y": 64,
+          "zOrder": 133,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Spawn_Points",
+          "persistentUuid": "8f03762c-f453-41db-b6ec-65d1c1e404ce",
+          "width": 0,
+          "x": 1344,
+          "y": 288,
+          "zOrder": 133,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Spawn_Points",
+          "persistentUuid": "3bca6269-e283-4c32-b47e-cfa04b90924e",
+          "width": 0,
+          "x": 1376,
+          "y": 672,
+          "zOrder": 133,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -4703,6 +4943,20 @@
               "Property": 3.63103e+180
             },
             {
+              "name": "Sway",
+              "type": "Sway::Sway",
+              "Scale": "Scale",
+              "TweenBehavior": "Tween",
+              "AngleLeft": -10,
+              "AngleRight": 10,
+              "AngleTimeMin": 1,
+              "AngleTimeMax": 3,
+              "YScaleMin": 0.95,
+              "YScaleMax": 1.05,
+              "YScaleTimeMin": 1,
+              "YScaleTimeMax": 3
+            },
+            {
               "name": "ThreeDFlip",
               "type": "ThreeDFlip::ThreeDFlip",
               "Resizable": "Resizable",
@@ -4743,7 +4997,7 @@
                         {
                           "name": "Skull_Point",
                           "x": 114.5,
-                          "y": 57.5
+                          "y": 57
                         },
                         {
                           "name": "FirePoint",
@@ -4759,8 +5013,8 @@
                       "centerPoint": {
                         "automatic": false,
                         "name": "centre",
-                        "x": 64,
-                        "y": 64
+                        "x": 82.5,
+                        "y": 143.5
                       },
                       "customCollisionMask": [
                         [
@@ -4802,7 +5056,7 @@
                         {
                           "name": "Skull_Point",
                           "x": 114.5,
-                          "y": 57.5
+                          "y": 57
                         },
                         {
                           "name": "FirePoint",
@@ -4818,8 +5072,8 @@
                       "centerPoint": {
                         "automatic": false,
                         "name": "centre",
-                        "x": 64,
-                        "y": 64
+                        "x": 82.5,
+                        "y": 143.5
                       },
                       "customCollisionMask": [
                         [
@@ -4849,7 +5103,7 @@
                         {
                           "name": "Skull_Point",
                           "x": 114.5,
-                          "y": 57.5
+                          "y": 57
                         },
                         {
                           "name": "FirePoint",
@@ -4865,8 +5119,8 @@
                       "centerPoint": {
                         "automatic": false,
                         "name": "centre",
-                        "x": 64,
-                        "y": 64
+                        "x": 82.5,
+                        "y": 143.5
                       },
                       "customCollisionMask": [
                         [
@@ -4896,7 +5150,7 @@
                         {
                           "name": "Skull_Point",
                           "x": 114.5,
-                          "y": 57.5
+                          "y": 57
                         },
                         {
                           "name": "FirePoint",
@@ -4912,8 +5166,8 @@
                       "centerPoint": {
                         "automatic": false,
                         "name": "centre",
-                        "x": 64,
-                        "y": 64
+                        "x": 82.5,
+                        "y": 143.5
                       },
                       "customCollisionMask": [
                         [
@@ -4943,7 +5197,7 @@
                         {
                           "name": "Skull_Point",
                           "x": 114.5,
-                          "y": 57.5
+                          "y": 57
                         },
                         {
                           "name": "FirePoint",
@@ -4959,8 +5213,8 @@
                       "centerPoint": {
                         "automatic": false,
                         "name": "centre",
-                        "x": 64,
-                        "y": 64
+                        "x": 82.5,
+                        "y": 143.5
                       },
                       "customCollisionMask": [
                         [
@@ -4990,7 +5244,7 @@
                         {
                           "name": "Skull_Point",
                           "x": 114.5,
-                          "y": 57.5
+                          "y": 57
                         },
                         {
                           "name": "FirePoint",
@@ -5006,8 +5260,8 @@
                       "centerPoint": {
                         "automatic": false,
                         "name": "centre",
-                        "x": 64,
-                        "y": 64
+                        "x": 82.5,
+                        "y": 143.5
                       },
                       "customCollisionMask": [
                         [
@@ -5037,7 +5291,7 @@
                         {
                           "name": "Skull_Point",
                           "x": 114.5,
-                          "y": 57.5
+                          "y": 57
                         },
                         {
                           "name": "FirePoint",
@@ -5053,8 +5307,8 @@
                       "centerPoint": {
                         "automatic": false,
                         "name": "centre",
-                        "x": 64,
-                        "y": 64
+                        "x": 82.5,
+                        "y": 143.5
                       },
                       "customCollisionMask": [
                         [
@@ -5084,7 +5338,7 @@
                         {
                           "name": "Skull_Point",
                           "x": 114.5,
-                          "y": 57.5
+                          "y": 57
                         },
                         {
                           "name": "FirePoint",
@@ -5100,8 +5354,8 @@
                       "centerPoint": {
                         "automatic": false,
                         "name": "centre",
-                        "x": 64,
-                        "y": 64
+                        "x": 82.5,
+                        "y": 143.5
                       },
                       "customCollisionMask": [
                         [
@@ -5131,7 +5385,7 @@
                         {
                           "name": "Skull_Point",
                           "x": 114.5,
-                          "y": 57.5
+                          "y": 57
                         },
                         {
                           "name": "FirePoint",
@@ -5147,8 +5401,8 @@
                       "centerPoint": {
                         "automatic": false,
                         "name": "centre",
-                        "x": 64,
-                        "y": 64
+                        "x": 82.5,
+                        "y": 143.5
                       },
                       "customCollisionMask": [
                         [
@@ -5178,7 +5432,7 @@
                         {
                           "name": "Skull_Point",
                           "x": 114.5,
-                          "y": 57.5
+                          "y": 57
                         },
                         {
                           "name": "FirePoint",
@@ -5194,8 +5448,8 @@
                       "centerPoint": {
                         "automatic": false,
                         "name": "centre",
-                        "x": 64,
-                        "y": 64
+                        "x": 82.5,
+                        "y": 143.5
                       },
                       "customCollisionMask": [
                         [
@@ -5225,7 +5479,7 @@
                         {
                           "name": "Skull_Point",
                           "x": 114.5,
-                          "y": 57.5
+                          "y": 57
                         },
                         {
                           "name": "FirePoint",
@@ -5241,8 +5495,8 @@
                       "centerPoint": {
                         "automatic": false,
                         "name": "centre",
-                        "x": 64,
-                        "y": 64
+                        "x": 82.5,
+                        "y": 143.5
                       },
                       "customCollisionMask": [
                         [
@@ -5272,7 +5526,7 @@
                         {
                           "name": "Skull_Point",
                           "x": 114.5,
-                          "y": 57.5
+                          "y": 57
                         },
                         {
                           "name": "FirePoint",
@@ -5288,8 +5542,8 @@
                       "centerPoint": {
                         "automatic": false,
                         "name": "centre",
-                        "x": 64,
-                        "y": 64
+                        "x": 82.5,
+                        "y": 143.5
                       },
                       "customCollisionMask": [
                         [
@@ -5331,7 +5585,7 @@
                         {
                           "name": "Skull_Point",
                           "x": 114.5,
-                          "y": 57.5
+                          "y": 57
                         },
                         {
                           "name": "FirePoint",
@@ -5347,8 +5601,8 @@
                       "centerPoint": {
                         "automatic": false,
                         "name": "centre",
-                        "x": 64,
-                        "y": 64
+                        "x": 82.5,
+                        "y": 143.5
                       },
                       "customCollisionMask": [
                         [
@@ -14967,7 +15221,7 @@
                                 "",
                                 "Enemy_Health_Bar",
                                 "Enemy.BoundingBoxLeft()",
-                                "Enemy.CenterY()-100",
+                                "Enemy.CenterY()-175",
                                 ""
                               ]
                             },
