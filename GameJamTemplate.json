@@ -6628,6 +6628,24 @@
               "Property": 3.631025965735259e+180
             },
             {
+              "name": "Sway",
+              "type": "Sway::Sway",
+              "Scale": "Scale",
+              "TweenBehavior": "Tween",
+              "AngleLeft": -10,
+              "AngleRight": 22,
+              "AngleTimeMin": 1,
+              "AngleTimeMax": 3,
+              "YScaleMin": 0.9,
+              "YScaleMax": 1.1,
+              "YScaleTimeMin": 1,
+              "YScaleTimeMax": 3
+            },
+            {
+              "name": "Tween",
+              "type": "Tween::TweenBehavior"
+            },
+            {
               "name": "YSort",
               "type": "YSort::YSort"
             }
