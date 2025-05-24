@@ -1157,6 +1157,16 @@
         "name": "AssetsV4\\islandWithWater.png",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "file": "New pirate song 5.0.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "New pirate song 5.0.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -1350,7 +1360,7 @@
     {
       "name": "Player_Speed",
       "type": "number",
-      "value": 300
+      "value": 225
     },
     {
       "name": "Player_Turn_Speed",
@@ -2597,6 +2607,104 @@
                 ""
               ]
             }
+          ],
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": [
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "Magnet_Strength",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "Player_Health",
+                    "=",
+                    "10"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "Player_Max_Health",
+                    "=",
+                    "10"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "Player_Turn_Speed",
+                    "=",
+                    "125"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "Magnet_Distance",
+                    "=",
+                    "0"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "Player_Speed",
+                    "=",
+                    "225"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "Level",
+                    "=",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "Cannon_Shot_Number",
+                    "=",
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetNumberVariable"
+                  },
+                  "parameters": [
+                    "Gold_Global",
+                    "=",
+                    "200"
+                  ]
+                }
+              ]
+            }
           ]
         },
         {
@@ -3024,6 +3132,11 @@
               ]
             }
           ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": []
         }
       ],
       "layers": [
@@ -3984,7 +4097,7 @@
           "width": 0,
           "x": 864,
           "y": 512,
-          "zOrder": 134,
+          "zOrder": 1000,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -11594,7 +11707,7 @@
               "parameters": [
                 "Player_Speed",
                 "=",
-                "400"
+                "315"
               ]
             },
             {
@@ -14982,7 +15095,7 @@
               },
               "parameters": [
                 "",
-                "pirate idea prt 3.mp3",
+                "New pirate song 5.0.mp3",
                 "1",
                 "",
                 "30",
