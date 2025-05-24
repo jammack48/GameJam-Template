@@ -1793,7 +1793,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.2,
         "snap": true,
-        "zoomFactor": 0.3010461197182473,
+        "zoomFactor": 0.28172599320795727,
         "windowMask": false
       },
       "objectsGroups": [
@@ -1826,6 +1826,9 @@
             },
             {
               "name": "InstructionsText"
+            },
+            {
+              "name": "Logo"
             }
           ]
         },
@@ -1932,23 +1935,6 @@
         },
         {
           "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 32,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Heading",
-          "persistentUuid": "9ad4b428-2153-4e6d-b157-fa5cf3511b8f",
-          "width": 1280,
-          "x": 1536,
-          "y": 0,
-          "zOrder": 7,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
           "customSize": false,
           "height": 0,
           "keepRatio": true,
@@ -2041,57 +2027,6 @@
           "x": 608,
           "y": 352,
           "zOrder": 12,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 32,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Heading",
-          "persistentUuid": "b2f7d827-fff3-4243-9109-6dc60b913a35",
-          "width": 1280,
-          "x": 0,
-          "y": 0,
-          "zOrder": 7,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 32,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Heading",
-          "persistentUuid": "2e155cf6-2c55-4323-ad5a-b062574b2c94",
-          "width": 1280,
-          "x": -1792,
-          "y": 32,
-          "zOrder": 7,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 32,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Heading",
-          "persistentUuid": "5aff3cd5-4ccb-4bb3-8d15-b2d31ca812db",
-          "width": 1280,
-          "x": 0,
-          "y": 1024,
-          "zOrder": 7,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -3182,7 +3117,20 @@
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
-          "effects": [],
+          "effects": [
+            {
+              "effectType": "Outline",
+              "name": "Effect",
+              "doubleParameters": {
+                "padding": 5,
+                "thickness": 5
+              },
+              "stringParameters": {
+                "color": "255;255;255"
+              },
+              "booleanParameters": {}
+            }
+          ],
           "behaviors": [
             {
               "name": "ButtonFSM",
@@ -15794,6 +15742,10 @@
         }
       ],
       "behaviorsSharedData": [
+        {
+          "name": "Animation",
+          "type": "AnimatableCapability::AnimatableBehavior"
+        },
         {
           "name": "Effect",
           "type": "EffectCapability::EffectBehavior"
