@@ -1131,6 +1131,32 @@
         "preloadAsSound": false,
         "preloadInCache": false,
         "userAdded": false
+      },
+      {
+        "file": "upd congrats level complete idea 1.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "upd congrats level complete idea 1.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "AssetsV3/rocks.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "AssetsV3\\rocks.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "AssetsV4/islandWithWater.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "AssetsV4\\islandWithWater.png",
+        "smoothed": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -3138,7 +3164,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 0.5117784035210231,
+        "zoomFactor": 0.23867758270258083,
         "windowMask": false
       },
       "objectsGroups": [
@@ -3211,7 +3237,7 @@
           "width": 0,
           "x": 460,
           "y": 372,
-          "zOrder": 100,
+          "zOrder": 1000,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -3245,7 +3271,7 @@
           "width": 3552,
           "x": -1664,
           "y": -864,
-          "zOrder": -73,
+          "zOrder": -2000,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -3262,7 +3288,7 @@
           "width": 3840,
           "x": -1760,
           "y": -992,
-          "zOrder": -68,
+          "zOrder": -1000,
           "numberProperties": [],
           "stringProperties": [
             {
@@ -4094,6 +4120,102 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Islands",
+          "persistentUuid": "1810bedf-2d73-4b99-872d-77dd94711a05",
+          "width": 0,
+          "x": 128,
+          "y": 109,
+          "zOrder": 50,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Rocks_Items",
+          "persistentUuid": "3525ea20-45b8-42df-a574-0390411fe567",
+          "width": 0,
+          "x": 768,
+          "y": 128,
+          "zOrder": 30,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Islands",
+          "persistentUuid": "b342892b-1a5e-43d9-957b-8df5d5a6959f",
+          "width": 0,
+          "x": 896,
+          "y": 160,
+          "zOrder": 50,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Islands",
+          "persistentUuid": "e478f0b3-a88a-4ba0-a0d9-226a4ed89b5e",
+          "width": 0,
+          "x": 1024,
+          "y": 448,
+          "zOrder": 50,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Islands",
+          "persistentUuid": "b22e38b1-f478-4b01-857a-20bf8ba20b3d",
+          "width": 0,
+          "x": 588,
+          "y": 544,
+          "zOrder": 50,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Islands",
+          "persistentUuid": "8c999e3a-1928-49b3-a3d4-c2263f471948",
+          "width": 0,
+          "x": 204,
+          "y": 480,
+          "zOrder": 50,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [
@@ -4598,6 +4720,10 @@
             {
               "name": "Tween",
               "type": "Tween::TweenBehavior"
+            },
+            {
+              "name": "YSort",
+              "type": "YSort::YSort"
             }
           ],
           "animations": [
@@ -6133,6 +6259,10 @@
               "type": "ShakeObject::ShakeObject_PositionAngleScale",
               "Scale": "Scale",
               "Property": 3.631025965735259e+180
+            },
+            {
+              "name": "YSort",
+              "type": "YSort::YSort"
             }
           ],
           "animations": [
@@ -6713,6 +6843,10 @@
               "HalfPeriodTime": 0.1,
               "IsFlashing": false,
               "FlashDuration": 0
+            },
+            {
+              "name": "YSort",
+              "type": "YSort::YSort"
             }
           ],
           "animations": [
@@ -6781,6 +6915,10 @@
               "Speed": 48,
               "Distance": 128,
               "IsAttracted": false
+            },
+            {
+              "name": "YSort",
+              "type": "YSort::YSort"
             }
           ],
           "animations": [
@@ -7859,6 +7997,148 @@
             "characterSize": 40,
             "color": "0;0;0"
           }
+        },
+        {
+          "adaptCollisionMaskAutomatically": false,
+          "assetStoreId": "",
+          "name": "Rocks_Items",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "YSort",
+              "type": "YSort::YSort"
+            }
+          ],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "AssetsV4\\rocksWithWater.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 21.5,
+                            "y": 36
+                          },
+                          {
+                            "x": 91.5,
+                            "y": 36.5
+                          },
+                          {
+                            "x": 109,
+                            "y": 72.5
+                          },
+                          {
+                            "x": 80,
+                            "y": 82.5
+                          },
+                          {
+                            "x": 39.5,
+                            "y": 83.5
+                          },
+                          {
+                            "x": 12,
+                            "y": 74
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": false,
+          "assetStoreId": "",
+          "name": "Islands",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [
+            {
+              "name": "YSort",
+              "type": "YSort::YSort"
+            }
+          ],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "AssetsV4\\islandWithWater.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 30,
+                            "y": 53.5
+                          },
+                          {
+                            "x": 85,
+                            "y": 51.5
+                          },
+                          {
+                            "x": 97.5,
+                            "y": 88
+                          },
+                          {
+                            "x": 47,
+                            "y": 92
+                          },
+                          {
+                            "x": 20,
+                            "y": 83
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         }
       ],
       "objectsFolderStructure": {
@@ -7872,6 +8152,12 @@
               },
               {
                 "objectName": "Coin"
+              },
+              {
+                "objectName": "Rocks_Items"
+              },
+              {
+                "objectName": "Islands"
               },
               {
                 "objectName": "Barrel"
@@ -8179,6 +8465,13 @@
           "target": "UI"
         },
         {
+          "type": "BuiltinCommonInstructions::Link",
+          "include": {
+            "includeConfig": 0
+          },
+          "target": "Rocks_Islands"
+        },
+        {
           "type": "BuiltinCommonInstructions::Comment",
           "color": {
             "b": 109,
@@ -8201,7 +8494,7 @@
                 "Enemy",
                 "Enemy",
                 "<=",
-                "1"
+                "0"
               ]
             },
             {
@@ -8212,6 +8505,27 @@
             }
           ],
           "actions": [
+            {
+              "type": {
+                "value": "PlaySoundCanal"
+              },
+              "parameters": [
+                "",
+                "upd congrats level complete idea 1.mp3",
+                "10",
+                "",
+                "25",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Wait"
+              },
+              "parameters": [
+                "7"
+              ]
+            },
             {
               "type": {
                 "value": "FlashTransitionPainter::FlashTransitionPainter::PaintEffect"
@@ -8229,14 +8543,6 @@
             },
             {
               "type": {
-                "value": "Wait"
-              },
-              "parameters": [
-                "1"
-              ]
-            },
-            {
-              "type": {
                 "value": "Scene"
               },
               "parameters": [
@@ -8246,11 +8552,6 @@
               ]
             }
           ]
-        },
-        {
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [],
-          "actions": []
         }
       ],
       "layers": [
@@ -8466,6 +8767,10 @@
         {
           "name": "Tween",
           "type": "Tween::TweenBehavior"
+        },
+        {
+          "name": "YSort",
+          "type": "YSort::YSort"
         }
       ]
     },
@@ -12975,8 +13280,40 @@
                     "Freeze_Overlay",
                     "\"74;151;243\""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "OpacityCapability::OpacityBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "Player_Ship",
+                    "Opacity",
+                    "=",
+                    "50"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "OpacityCapability::OpacityBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "Player_Cannon",
+                    "Opacity",
+                    "=",
+                    "50"
+                  ]
                 }
               ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": []
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [],
+              "actions": []
             },
             {
               "type": "BuiltinCommonInstructions::Standard",
@@ -13041,6 +13378,28 @@
                     "IsFreezing",
                     "False",
                     ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "OpacityCapability::OpacityBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "Player_Ship",
+                    "Opacity",
+                    "=",
+                    "255"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "OpacityCapability::OpacityBehavior::SetValue"
+                  },
+                  "parameters": [
+                    "Player_Cannon",
+                    "Opacity",
+                    "=",
+                    "255"
                   ]
                 }
               ]
@@ -13142,6 +13501,16 @@
                     "!=",
                     "\"Hurt\""
                   ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "IsFreezing",
+                    "=",
+                    ""
+                  ]
                 }
               ],
               "actions": [
@@ -13182,6 +13551,16 @@
                     "State",
                     "!=",
                     "\"Hurt\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "BooleanVariable"
+                  },
+                  "parameters": [
+                    "IsFreezing",
+                    "=",
+                    ""
                   ]
                 }
               ],
@@ -16038,6 +16417,47 @@
           ]
         },
         {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Seperate Border"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "Chest",
+                "Border",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SeparateFromObjects"
+              },
+              "parameters": [
+                "Chest",
+                "Border",
+                ""
+              ]
+            }
+          ]
+        },
+        {
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": []
@@ -16269,6 +16689,47 @@
               "type": "BuiltinCommonInstructions::Standard",
               "conditions": [],
               "actions": []
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Seperate Border"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "Barrel",
+                "Border",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SeparateFromObjects"
+              },
+              "parameters": [
+                "Barrel",
+                "Border",
+                ""
+              ]
             }
           ]
         },
@@ -16626,6 +17087,70 @@
             }
           ],
           "parameters": []
+        }
+      ]
+    },
+    {
+      "associatedLayout": "PirateGameScene1",
+      "name": "Rocks_Islands",
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "Player_HitBox",
+                "Rocks_Items",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SeparateFromObjects"
+              },
+              "parameters": [
+                "Player_HitBox",
+                "Rocks_Items",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "Player_HitBox",
+                "Islands",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SeparateFromObjects"
+              },
+              "parameters": [
+                "Player_HitBox",
+                "Islands",
+                ""
+              ]
+            }
+          ]
         }
       ]
     }
@@ -61898,6 +62423,106 @@
               "name": "IsAttracted"
             }
           ],
+          "sharedPropertyDescriptors": []
+        }
+      ],
+      "eventsBasedObjects": []
+    },
+    {
+      "author": "Gustavo Marciano",
+      "category": "Visual effect",
+      "extensionNamespace": "",
+      "fullName": "YSort",
+      "gdevelopVersion": ">=5.5.222",
+      "helpPath": "",
+      "iconUrl": "data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz48IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0ibWRpLXNvcnQtYXNjZW5kaW5nIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTE5IDE3SDIyTDE4IDIxTDE0IDE3SDE3VjNIMTlNMiAxN0gxMlYxOUgyTTYgNVY3SDJWNU0yIDExSDlWMTNIMlYxMVoiIC8+PC9zdmc+",
+      "name": "YSort",
+      "previewIconUrl": "https://resources.gdevelop-app.com/assets/Icons/sort-ascending.svg",
+      "shortDescription": "Create an illusion of depth by setting the Z-order based on the Y position of the object. Useful for isometric games, 2D games with a \"Top-Down\" view, RPG...",
+      "version": "0.1.0",
+      "description": [
+        "Set the depth (Z-order) of the instance to the value of its Y position in the scene, creating an illusion of depth. The origin point of the object is used to determine the Z-order.",
+        "",
+        "This is useful for:",
+        "- isometric games ([open the project online](https://editor.gdevelop.io/?project=example://isometric-game))",
+        "- top-down games ([open the project online](https://editor.gdevelop.io/?project=example://top-down-grid-movement))"
+      ],
+      "origin": {
+        "identifier": "YSort",
+        "name": "gdevelop-extension-store"
+      },
+      "tags": [
+        "z-order",
+        "y-sort",
+        "depth",
+        "fake-depth",
+        "isometric",
+        "rpg"
+      ],
+      "authorIds": [],
+      "dependencies": [],
+      "globalVariables": [],
+      "sceneVariables": [],
+      "eventsFunctions": [],
+      "eventsBasedBehaviors": [
+        {
+          "description": "Set the depth (Z-order) of the instance to the value of its Y position in the scene, creating an illusion of depth. The origin point of the object is used to determine the Z-order.",
+          "fullName": "YSort",
+          "name": "YSort",
+          "objectType": "",
+          "eventsFunctions": [
+            {
+              "fullName": "",
+              "functionType": "Action",
+              "name": "doStepPostEvents",
+              "sentence": "",
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "This is done in doStepPostEvents because the sort must happens right before the rendering to avoid a 1 frame delay."
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "ChangePlan"
+                      },
+                      "parameters": [
+                        "Object",
+                        "=",
+                        "Object.Y()"
+                      ]
+                    }
+                  ]
+                }
+              ],
+              "parameters": [
+                {
+                  "description": "Object",
+                  "name": "Object",
+                  "type": "object"
+                },
+                {
+                  "description": "Behavior",
+                  "name": "Behavior",
+                  "supplementaryInformation": "YSort::YSort",
+                  "type": "behavior"
+                }
+              ],
+              "objectGroups": []
+            }
+          ],
+          "propertyDescriptors": [],
           "sharedPropertyDescriptors": []
         }
       ],
