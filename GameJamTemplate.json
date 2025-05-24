@@ -1370,7 +1370,7 @@
     {
       "name": "Cannon_Shot_Number",
       "type": "number",
-      "value": 1
+      "value": 8
     },
     {
       "name": "Magnet_Distance",
@@ -13935,6 +13935,378 @@
                           "parameters": [
                             "Player_Cannon_Ball_HitBox",
                             "AngleBetweenPositions(Player_HitBox.CenterX(), Player_HitBox.CenterY(),MouseX(),MouseY())-10",
+                            "TimerValue*3",
+                            "1"
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Comment",
+                  "color": {
+                    "b": 109,
+                    "g": 230,
+                    "r": 255,
+                    "textB": 0,
+                    "textG": 0,
+                    "textR": 0
+                  },
+                  "comment": "Cannon Ball Super Power"
+                },
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "NumberVariable"
+                      },
+                      "parameters": [
+                        "Cannon_Shot_Number",
+                        "=",
+                        "8"
+                      ]
+                    }
+                  ],
+                  "actions": [],
+                  "events": [
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "Player_Cannon_Ball_HitBox",
+                            "Player_Cannon.PointX(\"FirePoint\")",
+                            "Player_Cannon.PointY(\"FirePoint\")",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "Player_Cannon_Ball_HitBox",
+                            "\"ShotTimer\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AddForceAL"
+                          },
+                          "parameters": [
+                            "Player_Cannon_Ball_HitBox",
+                            "0",
+                            "TimerValue*3",
+                            "1"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "Player_Cannon_Ball_HitBox",
+                            "Player_Cannon.PointX(\"FirePoint\")",
+                            "Player_Cannon.PointY(\"FirePoint\")",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "Player_Cannon_Ball_HitBox",
+                            "\"ShotTimer\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AddForceAL"
+                          },
+                          "parameters": [
+                            "Player_Cannon_Ball_HitBox",
+                            "45",
+                            "TimerValue*3",
+                            "1"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "Player_Cannon_Ball_HitBox",
+                            "Player_Cannon.PointX(\"FirePoint\")",
+                            "Player_Cannon.PointY(\"FirePoint\")",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "Player_Cannon_Ball_HitBox",
+                            "\"ShotTimer\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AddForceAL"
+                          },
+                          "parameters": [
+                            "Player_Cannon_Ball_HitBox",
+                            "-45",
+                            "TimerValue*3",
+                            "1"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "Player_Cannon_Ball_HitBox",
+                            "Player_Cannon.PointX(\"FirePoint\")",
+                            "Player_Cannon.PointY(\"FirePoint\")",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "Player_Cannon_Ball_HitBox",
+                            "\"ShotTimer\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AddForceAL"
+                          },
+                          "parameters": [
+                            "Player_Cannon_Ball_HitBox",
+                            "90",
+                            "TimerValue*3",
+                            "1"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "Player_Cannon_Ball_HitBox",
+                            "Player_Cannon.PointX(\"FirePoint\")",
+                            "Player_Cannon.PointY(\"FirePoint\")",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "Player_Cannon_Ball_HitBox",
+                            "\"ShotTimer\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AddForceAL"
+                          },
+                          "parameters": [
+                            "Player_Cannon_Ball_HitBox",
+                            "-90",
+                            "TimerValue*3",
+                            "1"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "Player_Cannon_Ball_HitBox",
+                            "Player_Cannon.PointX(\"FirePoint\")",
+                            "Player_Cannon.PointY(\"FirePoint\")",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "Player_Cannon_Ball_HitBox",
+                            "\"ShotTimer\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AddForceAL"
+                          },
+                          "parameters": [
+                            "Player_Cannon_Ball_HitBox",
+                            "180",
+                            "TimerValue*3",
+                            "1"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "Player_Cannon_Ball_HitBox",
+                            "Player_Cannon.PointX(\"FirePoint\")",
+                            "Player_Cannon.PointY(\"FirePoint\")",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "Player_Cannon_Ball_HitBox",
+                            "\"ShotTimer\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AddForceAL"
+                          },
+                          "parameters": [
+                            "Player_Cannon_Ball_HitBox",
+                            "-180",
+                            "TimerValue*3",
+                            "1"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "Player_Cannon_Ball_HitBox",
+                            "Player_Cannon.PointX(\"FirePoint\")",
+                            "Player_Cannon.PointY(\"FirePoint\")",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "Player_Cannon_Ball_HitBox",
+                            "\"ShotTimer\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AddForceAL"
+                          },
+                          "parameters": [
+                            "Player_Cannon_Ball_HitBox",
+                            "225",
+                            "TimerValue*3",
+                            "1"
+                          ]
+                        }
+                      ]
+                    },
+                    {
+                      "type": "BuiltinCommonInstructions::Standard",
+                      "conditions": [],
+                      "actions": [
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "Player_Cannon_Ball_HitBox",
+                            "Player_Cannon.PointX(\"FirePoint\")",
+                            "Player_Cannon.PointY(\"FirePoint\")",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "ResetObjectTimer"
+                          },
+                          "parameters": [
+                            "Player_Cannon_Ball_HitBox",
+                            "\"ShotTimer\""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "AddForceAL"
+                          },
+                          "parameters": [
+                            "Player_Cannon_Ball_HitBox",
+                            "135",
                             "TimerValue*3",
                             "1"
                           ]
