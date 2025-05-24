@@ -5921,6 +5921,24 @@
               "type": "ShakeObject::ShakeObject_PositionAngleScale",
               "Scale": "Scale",
               "Property": 3.631025965735259e+180
+            },
+            {
+              "name": "Sway",
+              "type": "Sway::Sway",
+              "Scale": "Scale",
+              "TweenBehavior": "Tween",
+              "AngleLeft": -5,
+              "AngleRight": 5,
+              "AngleTimeMin": 1,
+              "AngleTimeMax": 3,
+              "YScaleMin": 0.9,
+              "YScaleMax": 1.1,
+              "YScaleTimeMin": 1,
+              "YScaleTimeMax": 3
+            },
+            {
+              "name": "Tween",
+              "type": "Tween::TweenBehavior"
             }
           ],
           "animations": [
@@ -17180,35 +17198,6 @@
           "parameters": []
         },
         {
-          "disabled": true,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "CollisionNP"
-              },
-              "parameters": [
-                "Player_HitBox",
-                "Barrel",
-                "",
-                "",
-                ""
-              ]
-            }
-          ],
-          "actions": [
-            {
-              "type": {
-                "value": "Delete"
-              },
-              "parameters": [
-                "Barrel",
-                ""
-              ]
-            }
-          ]
-        },
-        {
           "type": "BuiltinCommonInstructions::Standard",
           "conditions": [
             {
@@ -17272,14 +17261,34 @@
           "conditions": [
             {
               "type": {
-                "value": "CollisionNP"
+                "value": "BuiltinCommonInstructions::Or"
               },
-              "parameters": [
-                "Barrel_Shockwave",
-                "Barrel",
-                "",
-                "",
-                ""
+              "parameters": [],
+              "subInstructions": [
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "Barrel_Shockwave",
+                    "Barrel",
+                    "",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "CollisionNP"
+                  },
+                  "parameters": [
+                    "Player_HitBox",
+                    "Barrel",
+                    "",
+                    "",
+                    ""
+                  ]
+                }
               ]
             }
           ],
