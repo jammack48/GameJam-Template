@@ -1765,7 +1765,7 @@
     {
       "name": "Gold_Global",
       "type": "number",
-      "value": 20000
+      "value": 750
     },
     {
       "name": "Player_Speed",
@@ -1829,7 +1829,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.2,
         "snap": true,
-        "zoomFactor": 0.28172599320795727,
+        "zoomFactor": 0.40575189059438455,
         "windowMask": false
       },
       "objectsGroups": [
@@ -1882,6 +1882,9 @@
             },
             {
               "name": "CameraCredits"
+            },
+            {
+              "name": "CameraInstructions"
             }
           ]
         }
@@ -2169,23 +2172,6 @@
               "value": "{\"tileWidth\":160,\"tileHeight\":160,\"dimX\":8,\"dimY\":5,\"layers\":[{\"id\":0,\"alpha\":1,\"tiles\":[[21,21,21,21,21,21,21,21],[21,21,21,21,21,21,21,21],[21,21,21,21,21,21,21,21],[21,21,21,21,21,21,21,21],[21,21,21,21,21,21,21,21]]}]}"
             }
           ],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": true,
-          "depth": 1,
-          "height": 32,
-          "keepRatio": true,
-          "layer": "",
-          "name": "Heading",
-          "persistentUuid": "3d7d5e9c-ed38-47de-a1a1-aca36db48146",
-          "width": 1280,
-          "x": 0,
-          "y": -928,
-          "zOrder": 7,
-          "numberProperties": [],
-          "stringProperties": [],
           "initialVariables": []
         },
         {
@@ -52855,7 +52841,7 @@
               "parameters": [
                 "Gold_Global",
                 "+",
-                "712"
+                "497"
               ]
             }
           ]
