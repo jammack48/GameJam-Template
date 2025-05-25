@@ -24,7 +24,7 @@
     "author": "",
     "windowWidth": 1280,
     "windowHeight": 720,
-    "latestCompilationDirectory": "",
+    "latestCompilationDirectory": "C:\\Users\\jam_m\\Downloads\\PiratesGamev2",
     "maxFPS": 60,
     "minFPS": 20,
     "verticalSync": false,
@@ -78,10 +78,14 @@
       "showWatermark": true
     },
     "authorIds": [
-      "r5aB5SYPI4boglaJ9XWqj9AG6qb2"
+      "r5aB5SYPI4boglaJ9XWqj9AG6qb2",
+      "GwGomcOjseQQb18iemQK3WZrOUh2",
+      "lzOCG6lK6Fh7ng5wF3859smCpDW2"
     ],
     "authorUsernames": [
-      "jam_mack46"
+      "jam_mack46",
+      "KamiAmiga",
+      "RicoTV"
     ],
     "categories": [],
     "playableDevices": [],
@@ -4123,6 +4127,76 @@
                   "parameters": [
                     "Gold_Global",
                     "=",
+                    "750"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "fPicked_Triplelast",
+                    "False",
+                    "750"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "Picked_DoubleBlast",
+                    "False",
+                    "750"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "Picked_Magnet1",
+                    "False",
+                    "750"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "Picked_Magnet2",
+                    "False",
+                    "750"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "Picked_PowderKeg",
+                    "False",
+                    "750"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "Picked_TurnSpeed",
+                    "False",
+                    "750"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "SetBooleanVariable"
+                  },
+                  "parameters": [
+                    "Picked_Speed",
+                    "False",
                     "750"
                   ]
                 }
@@ -18023,6 +18097,34 @@
           "effects": [],
           "behaviors": [
             {
+              "name": "Health",
+              "type": "Health::Health",
+              "Health": 10,
+              "CurrentHealth": 0,
+              "MaxHealth": 10,
+              "DamageCooldown": 0,
+              "AllowOverHealing": false,
+              "IsHealthJustDamaged": false,
+              "DamageToBeApplied": 0,
+              "HitAtLeastOnce": false,
+              "ChanceToDodge": 0,
+              "IsJustDodged": false,
+              "HealToBeApplied": 0,
+              "HealthRegenRate": 0,
+              "HealthRegenDelay": 0,
+              "IsJustHealed": false,
+              "CurrentShieldPoints": 2.0247e-320,
+              "MaxShieldPoints": 0,
+              "ShieldDuration": 5,
+              "ShieldRegenRate": 0,
+              "BlockExcessDamage": false,
+              "ShieldRegenDelay": 0,
+              "IsShieldJustDamaged": false,
+              "ShieldDamageTaken": 2.0247e-320,
+              "FlatDamageReduction": 0,
+              "PercentDamageReduction": 0
+            },
+            {
               "name": "Sway",
               "type": "Sway::Sway",
               "Scale": "Scale",
@@ -18048,7 +18150,7 @@
               "directions": [
                 {
                   "looping": true,
-                  "timeBetweenFrames": 0.08,
+                  "timeBetweenFrames": 0.125,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
@@ -18687,7 +18789,7 @@
               "directions": [
                 {
                   "looping": false,
-                  "timeBetweenFrames": 0.08,
+                  "timeBetweenFrames": 0.125,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
@@ -18813,7 +18915,7 @@
               "directions": [
                 {
                   "looping": false,
-                  "timeBetweenFrames": 0.08,
+                  "timeBetweenFrames": 1,
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
@@ -43529,22 +43631,6 @@
           "height": 0,
           "keepRatio": true,
           "layer": "",
-          "name": "Item_Whirlpool",
-          "persistentUuid": "2f5a79c4-14f6-4375-b882-025da5fa29cf",
-          "width": 0,
-          "x": 21,
-          "y": 487,
-          "zOrder": 12,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
           "name": "CoinText",
           "persistentUuid": "a2ff4d37-b090-44ea-a280-34298d8e5ef3",
           "width": 0,
@@ -52043,7 +52129,7 @@
                       "parameters": [
                         "Enemy",
                         "Health",
-                        "200",
+                        "500",
                         "",
                         "",
                         ""
@@ -52333,6 +52419,18 @@
                           "parameters": [
                             "",
                             "Enemy_Cannon_Ball",
+                            "Enemy.PointX(\"FirePoint\")",
+                            "Enemy.PointY(\"FirePoint\")",
+                            ""
+                          ]
+                        },
+                        {
+                          "type": {
+                            "value": "Create"
+                          },
+                          "parameters": [
+                            "",
+                            "Smoke_Particle",
                             "Enemy.PointX(\"FirePoint\")",
                             "Enemy.PointY(\"FirePoint\")",
                             ""
@@ -53251,6 +53349,93 @@
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "Chest",
+                "Islands",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SeparateFromObjects"
+              },
+              "parameters": [
+                "Chest",
+                "Islands",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "Chest",
+                "Barrel",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SeparateFromObjects"
+              },
+              "parameters": [
+                "Chest",
+                "Barrel",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "Chest",
+                "Rocks_Items",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SeparateFromObjects"
+              },
+              "parameters": [
+                "Chest",
+                "Rocks_Items",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
           "conditions": [],
           "actions": []
         }
@@ -53523,6 +53708,64 @@
               "parameters": [
                 "Barrel",
                 "Border",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "Barrel",
+                "Islands",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SeparateFromObjects"
+              },
+              "parameters": [
+                "Barrel",
+                "Islands",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "Barrel",
+                "Rocks_Items",
+                "",
+                "",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "SeparateFromObjects"
+              },
+              "parameters": [
+                "Barrel",
+                "Rocks_Items",
                 ""
               ]
             }
@@ -54137,6 +54380,18 @@
             },
             {
               "type": {
+                "value": "Create"
+              },
+              "parameters": [
+                "",
+                "Smoke_Particle",
+                "Boss_Cannon_Front_L.PointX(\"FirePoint\")",
+                "Boss_Cannon_Front_L.PointY(\"FirePoint\")",
+                ""
+              ]
+            },
+            {
+              "type": {
                 "value": "AddForceAL"
               },
               "parameters": [
@@ -54273,6 +54528,18 @@
               "parameters": [
                 "",
                 "Enemy_Cannon_Ball",
+                "Boss_Cannon_Front_R.PointX(\"FirePoint\")",
+                "Boss_Cannon_Front_R.PointY(\"FirePoint\")",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Create"
+              },
+              "parameters": [
+                "",
+                "Smoke_Particle",
                 "Boss_Cannon_Front_R.PointX(\"FirePoint\")",
                 "Boss_Cannon_Front_R.PointY(\"FirePoint\")",
                 ""
@@ -54423,6 +54690,18 @@
             },
             {
               "type": {
+                "value": "Create"
+              },
+              "parameters": [
+                "",
+                "Smoke_Particle",
+                "Boss_Cannon_Side_L.PointX(\"FirePoint\")",
+                "Boss_Cannon_Side_L.PointY(\"FirePoint\")",
+                ""
+              ]
+            },
+            {
+              "type": {
                 "value": "AddForceAL"
               },
               "parameters": [
@@ -54566,6 +54845,18 @@
             },
             {
               "type": {
+                "value": "Create"
+              },
+              "parameters": [
+                "",
+                "Smoke_Particle",
+                "Boss_Cannon_Side_R.PointX(\"FirePoint\")",
+                "Boss_Cannon_Side_R.PointY(\"FirePoint\")",
+                ""
+              ]
+            },
+            {
+              "type": {
                 "value": "AddForceAL"
               },
               "parameters": [
@@ -54666,7 +54957,7 @@
             "textG": 0,
             "textR": 0
           },
-          "comment": "Damage"
+          "comment": "Damage Cannons"
         },
         {
           "type": "BuiltinCommonInstructions::Standard",
@@ -54792,6 +55083,195 @@
                 "Animation",
                 "=",
                 "\"Idle\""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Comment",
+          "color": {
+            "b": 109,
+            "g": 230,
+            "r": 255,
+            "textB": 0,
+            "textG": 0,
+            "textR": 0
+          },
+          "comment": "Damage Boss"
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "CollisionNP"
+              },
+              "parameters": [
+                "Player_Cannon_Ball_HitBox",
+                "Boss",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "SceneInstancesCount"
+              },
+              "parameters": [
+                "",
+                "Boss_Cannons",
+                "=",
+                "0"
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Create"
+              },
+              "parameters": [
+                "",
+                "Enemy_Hit_Particle",
+                "Player_Cannon_Ball_HitBox.CenterX()",
+                "Player_Cannon_Ball_HitBox.CenterY()",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "Player_Cannon_Ball_HitBox",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Health::Health::Hit"
+              },
+              "parameters": [
+                "Boss",
+                "Health",
+                "1",
+                "",
+                "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "AnimatableCapability::AnimatableBehavior::SetName"
+              },
+              "parameters": [
+                "Boss",
+                "Animation",
+                "=",
+                "\"Hurt\""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "AnimatableCapability::AnimatableBehavior::HasAnimationEnded"
+              },
+              "parameters": [
+                "Boss",
+                "Animation"
+              ]
+            },
+            {
+              "type": {
+                "value": "AnimatableCapability::AnimatableBehavior::Name"
+              },
+              "parameters": [
+                "Boss",
+                "Animation",
+                "=",
+                "\"Hurt\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "AnimatableCapability::AnimatableBehavior::SetName"
+              },
+              "parameters": [
+                "Boss",
+                "Animation",
+                "=",
+                "\"Idle\""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "AnimatableCapability::AnimatableBehavior::HasAnimationEnded"
+              },
+              "parameters": [
+                "Boss",
+                "Animation"
+              ]
+            },
+            {
+              "type": {
+                "value": "AnimatableCapability::AnimatableBehavior::Name"
+              },
+              "parameters": [
+                "Boss",
+                "Animation",
+                "=",
+                "\"Dead\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "Delete"
+              },
+              "parameters": [
+                "Boss",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "Health::Health::IsDead"
+              },
+              "parameters": [
+                "Boss",
+                "Health",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "AnimatableCapability::AnimatableBehavior::SetName"
+              },
+              "parameters": [
+                "Boss",
+                "Animation",
+                "=",
+                "\"Dead\""
               ]
             }
           ]
