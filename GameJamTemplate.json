@@ -43738,7 +43738,7 @@
               },
               "parameters": [
                 "",
-                "\"PirateGameScene1\"",
+                "\"PirateGameScene\"+Level",
                 ""
               ]
             }
