@@ -19473,7 +19473,7 @@
               },
               "parameters": [
                 "Enemy",
-                "Boss",
+                "Boss_Cannons",
                 "<=",
                 "0"
               ]
@@ -52419,6 +52419,18 @@
           "actions": [
             {
               "type": {
+                "value": "Create"
+              },
+              "parameters": [
+                "",
+                "Enemy_Hit_Particle",
+                "Player_Cannon_Ball_HitBox.CenterX()",
+                "Player_Cannon_Ball_HitBox.CenterY()",
+                ""
+              ]
+            },
+            {
+              "type": {
                 "value": "Delete"
               },
               "parameters": [
@@ -52512,146 +52524,6 @@
                 "Animation",
                 "=",
                 "\"Idle\""
-              ]
-            }
-          ]
-        },
-        {
-          "disabled": true,
-          "type": "BuiltinCommonInstructions::Standard",
-          "conditions": [
-            {
-              "type": {
-                "value": "StringObjectVariable"
-              },
-              "parameters": [
-                "Enemy",
-                "State",
-                "=",
-                "\"Hurt\""
-              ]
-            }
-          ],
-          "actions": [],
-          "events": [
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "BooleanObjectVariable"
-                  },
-                  "parameters": [
-                    "Enemy",
-                    "Hurt",
-                    "False",
-                    ""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "ResetObjectTimer"
-                  },
-                  "parameters": [
-                    "Enemy",
-                    "\"Hurt_Timer\""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetBooleanObjectVariable"
-                  },
-                  "parameters": [
-                    "Enemy",
-                    "Hurt",
-                    "True",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "AnimatableCapability::AnimatableBehavior::SetName"
-                  },
-                  "parameters": [
-                    "Enemy",
-                    "Animation",
-                    "=",
-                    "\"Hurt\""
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "BuiltinCommonInstructions::Standard",
-              "conditions": [
-                {
-                  "type": {
-                    "value": "CompareObjectTimer"
-                  },
-                  "parameters": [
-                    "Enemy",
-                    "\"Hurt_Timer\"",
-                    ">=",
-                    ".4"
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "BooleanObjectVariable"
-                  },
-                  "parameters": [
-                    "Enemy",
-                    "Hurt",
-                    "True",
-                    ""
-                  ]
-                }
-              ],
-              "actions": [
-                {
-                  "type": {
-                    "value": "SetStringObjectVariable"
-                  },
-                  "parameters": [
-                    "Enemy",
-                    "State",
-                    "=",
-                    "\"Moving\""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "RemoveObjectTimer"
-                  },
-                  "parameters": [
-                    "Enemy",
-                    "\"Hurt_Timer\""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetBooleanObjectVariable"
-                  },
-                  "parameters": [
-                    "Enemy",
-                    "Hurt",
-                    "False",
-                    ""
-                  ]
-                },
-                {
-                  "type": {
-                    "value": "SetBooleanObjectVariable"
-                  },
-                  "parameters": [
-                    "Enemy",
-                    "BarrelHit",
-                    "False",
-                    ""
-                  ]
-                }
               ]
             }
           ]
