@@ -12253,7 +12253,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 0.21040511501735115,
+        "zoomFactor": 0.19690202305140314,
         "windowMask": false
       },
       "objectsGroups": [
@@ -12415,7 +12415,7 @@
           "width": 0,
           "x": 1760,
           "y": -736,
-          "zOrder": 124,
+          "zOrder": 1010,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -55953,6 +55953,43 @@
                 "Animation",
                 "=",
                 "\"Dead\""
+              ]
+            },
+            {
+              "type": {
+                "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+              },
+              "parameters": [
+                "Boss",
+                "Tween",
+                "\"fadeOut\"",
+                "0",
+                "\"easeOutQuart\"",
+                ".3",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Wait"
+              },
+              "parameters": [
+                ".3"
+              ]
+            },
+            {
+              "type": {
+                "value": "FlashTransitionPainter::FlashTransitionPainter::PaintEffect"
+              },
+              "parameters": [
+                "TransistionPainter",
+                "FlashTransitionPainter",
+                "\"0;0;0\"",
+                ".8",
+                "\"Circular\"",
+                "\"Forward\"",
+                "",
+                ""
               ]
             },
             {
