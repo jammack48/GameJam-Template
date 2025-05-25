@@ -1451,6 +1451,36 @@
         "preloadAsSound": false,
         "preloadInCache": false,
         "userAdded": false
+      },
+      {
+        "file": "barrel explosion.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "barrel explosion.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "Enemy Approching Music.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "Enemy Approching Music.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "boss victory 2.0 idea.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "boss victory 2.0 idea.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -1738,6 +1768,53 @@
           ]
         }
       ]
+    },
+    {
+      "additive": false,
+      "assetStoreId": "",
+      "destroyWhenNoParticles": true,
+      "emitterAngleA": 0,
+      "emitterAngleB": 360,
+      "emitterForceMax": 500,
+      "emitterForceMin": 200,
+      "flow": 500,
+      "jumpForwardInTimeOnCreation": 0,
+      "maxParticleNb": 45,
+      "name": "G_Barrel_Explode_Particle",
+      "particleAlpha1": 204,
+      "particleAlpha2": 0,
+      "particleAlphaRandomness1": 0,
+      "particleAlphaRandomness2": 0,
+      "particleAngle1": 0,
+      "particleAngle2": 0,
+      "particleAngleRandomness1": 0,
+      "particleAngleRandomness2": 0,
+      "particleBlue1": 255,
+      "particleBlue2": 255,
+      "particleColor1": "255;255;255",
+      "particleColor2": "255;255;255",
+      "particleGravityX": 0,
+      "particleGravityY": 0,
+      "particleGreen1": 255,
+      "particleGreen2": 255,
+      "particleLifeTimeMax": 0.8,
+      "particleLifeTimeMin": 0.2,
+      "particleRed1": 255,
+      "particleRed2": 255,
+      "particleSize1": 100,
+      "particleSize2": 100,
+      "particleSizeRandomness1": 0,
+      "particleSizeRandomness2": 0,
+      "rendererParam1": 3,
+      "rendererParam2": 1,
+      "rendererType": "Quad",
+      "tank": 199,
+      "textureParticleName": "AssetsV4\\enemyImpact.png",
+      "type": "ParticleSystem::ParticleEmitter",
+      "zoneRadius": 500,
+      "variables": [],
+      "effects": [],
+      "behaviors": []
     }
   ],
   "objectsFolderStructure": {
@@ -1757,6 +1834,9 @@
       },
       {
         "objectName": "Player_UI_Wrapper"
+      },
+      {
+        "objectName": "G_Barrel_Explode_Particle"
       }
     ]
   },
@@ -1806,6 +1886,41 @@
       "name": "Level",
       "type": "number",
       "value": 1
+    },
+    {
+      "name": "Picked_DoubleBlast",
+      "type": "boolean",
+      "value": false
+    },
+    {
+      "name": "fPicked_Triplelast",
+      "type": "boolean",
+      "value": false
+    },
+    {
+      "name": "Picked_PowderKeg",
+      "type": "boolean",
+      "value": false
+    },
+    {
+      "name": "Picked_Speed",
+      "type": "boolean",
+      "value": false
+    },
+    {
+      "name": "Picked_TurnSpeed",
+      "type": "boolean",
+      "value": false
+    },
+    {
+      "name": "Picked_Magnet1",
+      "type": "boolean",
+      "value": false
+    },
+    {
+      "name": "Picked_Magnet2",
+      "type": "boolean",
+      "value": false
     }
   ],
   "layouts": [
@@ -1829,7 +1944,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.2,
         "snap": true,
-        "zoomFactor": 0.40575189059438455,
+        "zoomFactor": 0.5290357402156868,
         "windowMask": false
       },
       "objectsGroups": [
@@ -6044,6 +6159,22 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Barrel",
+          "persistentUuid": "a4e400e3-5fe3-427a-b0cc-0b88730853be",
+          "width": 0,
+          "x": 928,
+          "y": 512,
+          "zOrder": 1004,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [
@@ -9683,53 +9814,6 @@
           "behaviors": []
         },
         {
-          "additive": false,
-          "assetStoreId": "",
-          "destroyWhenNoParticles": true,
-          "emitterAngleA": 0,
-          "emitterAngleB": 360,
-          "emitterForceMax": 250,
-          "emitterForceMin": 200,
-          "flow": 250,
-          "jumpForwardInTimeOnCreation": 0,
-          "maxParticleNb": 15,
-          "name": "Barrel_Explode_Particle",
-          "particleAlpha1": 204,
-          "particleAlpha2": 0,
-          "particleAlphaRandomness1": 0,
-          "particleAlphaRandomness2": 0,
-          "particleAngle1": 0,
-          "particleAngle2": 0,
-          "particleAngleRandomness1": 0,
-          "particleAngleRandomness2": 0,
-          "particleBlue1": 255,
-          "particleBlue2": 255,
-          "particleColor1": "255;255;255",
-          "particleColor2": "255;255;255",
-          "particleGravityX": 0,
-          "particleGravityY": 0,
-          "particleGreen1": 255,
-          "particleGreen2": 255,
-          "particleLifeTimeMax": 1.2,
-          "particleLifeTimeMin": 0.5,
-          "particleRed1": 255,
-          "particleRed2": 255,
-          "particleSize1": 100,
-          "particleSize2": 100,
-          "particleSizeRandomness1": 0,
-          "particleSizeRandomness2": 0,
-          "rendererParam1": 3,
-          "rendererParam2": 1,
-          "rendererType": "Quad",
-          "tank": 15,
-          "textureParticleName": "AssetsV4\\enemyImpact.png",
-          "type": "ParticleSystem::ParticleEmitter",
-          "zoneRadius": 20,
-          "variables": [],
-          "effects": [],
-          "behaviors": []
-        },
-        {
           "assetStoreId": "",
           "name": "Barrel_Shockwave",
           "type": "PrimitiveDrawing::Drawer",
@@ -9745,13 +9829,13 @@
               "StartColor": "255;0;31",
               "StartOpacity": 255,
               "StartAngle": 0,
-              "EndWidth": 400,
-              "EndHeight": 400,
-              "EndOutlineThickness": 4,
+              "EndWidth": 800,
+              "EndHeight": 800,
+              "EndOutlineThickness": 32,
               "EndColor": "255;159;0",
               "EndOpacity": 125,
               "EndAngle": 0,
-              "Duration": 0.3,
+              "Duration": 0.4,
               "Easing": "easeOutSine",
               "IsFilled": false,
               "Progress": 0
@@ -11344,9 +11428,6 @@
               },
               {
                 "objectName": "Barrel_Shockwave"
-              },
-              {
-                "objectName": "Barrel_Explode_Particle"
               },
               {
                 "objectName": "Chest"
@@ -13784,6 +13865,38 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Barrel",
+          "persistentUuid": "29f97948-148e-44f3-96ad-6f6081359675",
+          "width": 0,
+          "x": 1024,
+          "y": 480,
+          "zOrder": 1011,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "Barrel",
+          "persistentUuid": "348273a5-80e3-42ff-b384-26578a299ccd",
+          "width": 0,
+          "x": 896,
+          "y": 672,
+          "zOrder": 1012,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [
@@ -17485,13 +17598,13 @@
               "StartColor": "255;0;31",
               "StartOpacity": 255,
               "StartAngle": 0,
-              "EndWidth": 400,
-              "EndHeight": 400,
-              "EndOutlineThickness": 4,
+              "EndWidth": 800,
+              "EndHeight": 800,
+              "EndOutlineThickness": 32,
               "EndColor": "255;159;0",
               "EndOpacity": 125,
               "EndAngle": 0,
-              "Duration": 0.3,
+              "Duration": 0.4,
               "Easing": "easeOutSine",
               "IsFilled": false,
               "Progress": 0
@@ -20001,7 +20114,7 @@
                   },
                   "parameters": [
                     "",
-                    "upd congrats level complete idea 1.mp3",
+                    "boss victory 2.0 idea.mp3",
                     "10",
                     "",
                     "25",
@@ -25735,9 +25848,9 @@
               "StartColor": "255;0;31",
               "StartOpacity": 255,
               "StartAngle": 0,
-              "EndWidth": 400,
-              "EndHeight": 400,
-              "EndOutlineThickness": 4,
+              "EndWidth": 800,
+              "EndHeight": 800,
+              "EndOutlineThickness": 32,
               "EndColor": "255;159;0",
               "EndOpacity": 125,
               "EndAngle": 0,
@@ -33373,13 +33486,13 @@
               "StartColor": "255;0;31",
               "StartOpacity": 255,
               "StartAngle": 0,
-              "EndWidth": 400,
-              "EndHeight": 400,
-              "EndOutlineThickness": 4,
+              "EndWidth": 800,
+              "EndHeight": 800,
+              "EndOutlineThickness": 32,
               "EndColor": "255;159;0",
               "EndOpacity": 125,
               "EndAngle": 0,
-              "Duration": 0.3,
+              "Duration": 0.4,
               "Easing": "easeOutSine",
               "IsFilled": false,
               "Progress": 0
@@ -40835,9 +40948,9 @@
               "StartColor": "255;0;31",
               "StartOpacity": 255,
               "StartAngle": 0,
-              "EndWidth": 400,
-              "EndHeight": 400,
-              "EndOutlineThickness": 4,
+              "EndWidth": 800,
+              "EndHeight": 800,
+              "EndOutlineThickness": 32,
               "EndColor": "255;159;0",
               "EndOpacity": 125,
               "EndAngle": 0,
@@ -45454,13 +45567,12 @@
             },
             {
               "type": {
-                "value": "BooleanObjectVariable"
+                "value": "BooleanVariable"
               },
               "parameters": [
-                "Item_Double_Blast",
+                "Picked_DoubleBlast",
                 "IsPicked",
-                "=",
-                ""
+                "="
               ]
             },
             {
@@ -45505,13 +45617,12 @@
             },
             {
               "type": {
-                "value": "SetBooleanObjectVariable"
+                "value": "SetBooleanVariable"
               },
               "parameters": [
-                "Item_Double_Blast",
-                "IsPicked",
+                "Picked_DoubleBlast",
                 "True",
-                ""
+                "True"
               ]
             }
           ]
@@ -45532,13 +45643,12 @@
             },
             {
               "type": {
-                "value": "BooleanObjectVariable"
+                "value": "BooleanVariable"
               },
               "parameters": [
-                "Item_Double_Blast",
+                "Picked_DoubleBlast",
                 "IsPicked",
-                "=",
-                ""
+                "="
               ]
             }
           ],
@@ -45609,13 +45719,12 @@
             },
             {
               "type": {
-                "value": "BooleanObjectVariable"
+                "value": "BooleanVariable"
               },
               "parameters": [
-                "Item_Triple_Blast",
+                "fPicked_Triplelast",
                 "IsPicked",
-                "=",
-                ""
+                "="
               ]
             },
             {
@@ -45660,13 +45769,12 @@
             },
             {
               "type": {
-                "value": "SetBooleanObjectVariable"
+                "value": "SetBooleanVariable"
               },
               "parameters": [
-                "Item_Triple_Blast",
-                "IsPicked",
+                "fPicked_Triplelast",
                 "True",
-                ""
+                "True"
               ]
             }
           ]
@@ -45687,13 +45795,12 @@
             },
             {
               "type": {
-                "value": "BooleanObjectVariable"
+                "value": "BooleanVariable"
               },
               "parameters": [
-                "Item_Triple_Blast",
+                "fPicked_Triplelast",
                 "IsPicked",
-                "=",
-                ""
+                "="
               ]
             }
           ],
@@ -45764,13 +45871,12 @@
             },
             {
               "type": {
-                "value": "BooleanObjectVariable"
+                "value": "BooleanVariable"
               },
               "parameters": [
-                "Item_Magnet_1",
+                "Picked_Magnet1",
                 "IsPicked",
-                "=",
-                ""
+                "="
               ]
             },
             {
@@ -45825,13 +45931,12 @@
             },
             {
               "type": {
-                "value": "SetBooleanObjectVariable"
+                "value": "SetBooleanVariable"
               },
               "parameters": [
-                "Item_Magnet_1",
-                "IsPicked",
+                "Picked_Magnet1",
                 "True",
-                ""
+                "True"
               ]
             }
           ]
@@ -45852,13 +45957,12 @@
             },
             {
               "type": {
-                "value": "BooleanObjectVariable"
+                "value": "BooleanVariable"
               },
               "parameters": [
-                "Item_Magnet_1",
+                "Picked_Magnet1",
                 "IsPicked",
-                "=",
-                ""
+                "="
               ]
             }
           ],
@@ -45929,13 +46033,12 @@
             },
             {
               "type": {
-                "value": "BooleanObjectVariable"
+                "value": "BooleanVariable"
               },
               "parameters": [
-                "Item_Magnet_2",
+                "Picked_Magnet2",
                 "IsPicked",
-                "=",
-                ""
+                "="
               ]
             },
             {
@@ -45990,13 +46093,12 @@
             },
             {
               "type": {
-                "value": "SetBooleanObjectVariable"
+                "value": "SetBooleanVariable"
               },
               "parameters": [
-                "Item_Magnet_2",
-                "IsPicked",
+                "Picked_Magnet2",
                 "True",
-                ""
+                "True"
               ]
             }
           ]
@@ -46017,13 +46119,12 @@
             },
             {
               "type": {
-                "value": "BooleanObjectVariable"
+                "value": "BooleanVariable"
               },
               "parameters": [
-                "Item_Magnet_2",
+                "Picked_Magnet2",
                 "IsPicked",
-                "=",
-                ""
+                "="
               ]
             }
           ],
@@ -46094,20 +46195,19 @@
             },
             {
               "type": {
-                "value": "BooleanObjectVariable"
-              },
-              "parameters": [
-                "Item_Speed_Boost",
-                "IsPicked",
-                "=",
-                ""
-              ]
-            },
-            {
-              "type": {
                 "value": "BuiltinCommonInstructions::Once"
               },
               "parameters": []
+            },
+            {
+              "type": {
+                "value": "BooleanVariable"
+              },
+              "parameters": [
+                "Picked_Speed",
+                "IsPicked",
+                "="
+              ]
             }
           ],
           "actions": [
@@ -46145,13 +46245,12 @@
             },
             {
               "type": {
-                "value": "SetBooleanObjectVariable"
+                "value": "SetBooleanVariable"
               },
               "parameters": [
-                "Item_Speed_Boost",
-                "IsPicked",
+                "Picked_Speed",
                 "True",
-                ""
+                "True"
               ]
             }
           ]
@@ -46172,13 +46271,12 @@
             },
             {
               "type": {
-                "value": "BooleanObjectVariable"
+                "value": "BooleanVariable"
               },
               "parameters": [
-                "Item_Speed_Boost",
+                "Picked_Speed",
                 "IsPicked",
-                "=",
-                ""
+                "="
               ]
             }
           ],
@@ -46249,13 +46347,12 @@
             },
             {
               "type": {
-                "value": "BooleanObjectVariable"
+                "value": "BooleanVariable"
               },
               "parameters": [
-                "Item_Fast_Turn",
+                "Picked_TurnSpeed",
                 "IsPicked",
-                "=",
-                ""
+                "="
               ]
             },
             {
@@ -46300,13 +46397,12 @@
             },
             {
               "type": {
-                "value": "SetBooleanObjectVariable"
+                "value": "SetBooleanVariable"
               },
               "parameters": [
-                "Item_Fast_Turn",
-                "IsPicked",
+                "Picked_TurnSpeed",
                 "True",
-                ""
+                "True"
               ]
             }
           ]
@@ -46327,13 +46423,12 @@
             },
             {
               "type": {
-                "value": "BooleanObjectVariable"
+                "value": "BooleanVariable"
               },
               "parameters": [
-                "Item_Fast_Turn",
+                "Picked_TurnSpeed",
                 "IsPicked",
-                "=",
-                ""
+                "="
               ]
             }
           ],
@@ -46692,20 +46787,19 @@
             },
             {
               "type": {
-                "value": "BooleanObjectVariable"
-              },
-              "parameters": [
-                "Item_Powderkey",
-                "IsPicked",
-                "=",
-                ""
-              ]
-            },
-            {
-              "type": {
                 "value": "BuiltinCommonInstructions::Once"
               },
               "parameters": []
+            },
+            {
+              "type": {
+                "value": "BooleanVariable"
+              },
+              "parameters": [
+                "Picked_PowderKeg",
+                "IsPicked",
+                "="
+              ]
             }
           ],
           "actions": [
@@ -46743,13 +46837,12 @@
             },
             {
               "type": {
-                "value": "SetBooleanObjectVariable"
+                "value": "SetBooleanVariable"
               },
               "parameters": [
-                "Item_Powderkey",
-                "IsPicked",
+                "Picked_PowderKeg",
                 "True",
-                ""
+                "True"
               ]
             }
           ]
@@ -46770,13 +46863,12 @@
             },
             {
               "type": {
-                "value": "BooleanObjectVariable"
+                "value": "BooleanVariable"
               },
               "parameters": [
-                "Item_Powderkey",
+                "Picked_PowderKeg",
                 "IsPicked",
-                "=",
-                ""
+                "="
               ]
             }
           ],
@@ -46941,13 +47033,12 @@
           "conditions": [
             {
               "type": {
-                "value": "BooleanObjectVariable"
+                "value": "BooleanVariable"
               },
               "parameters": [
-                "Bottles",
-                "IsPicked",
+                "Picked_PowderKeg",
                 "True",
-                ""
+                "="
               ]
             }
           ],
@@ -46957,7 +47048,163 @@
                 "value": "ChangeColor"
               },
               "parameters": [
-                "Bottles",
+                "Item_Powderkey",
+                "\"63;63;63\""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BooleanVariable"
+              },
+              "parameters": [
+                "fPicked_Triplelast",
+                "True",
+                "="
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ChangeColor"
+              },
+              "parameters": [
+                "Item_Triple_Blast",
+                "\"63;63;63\""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BooleanVariable"
+              },
+              "parameters": [
+                "Picked_DoubleBlast",
+                "True",
+                "="
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ChangeColor"
+              },
+              "parameters": [
+                "Item_Double_Blast",
+                "\"63;63;63\""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BooleanVariable"
+              },
+              "parameters": [
+                "Picked_Magnet1",
+                "True",
+                "="
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ChangeColor"
+              },
+              "parameters": [
+                "Item_Magnet_1",
+                "\"63;63;63\""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BooleanVariable"
+              },
+              "parameters": [
+                "Picked_Magnet2",
+                "True",
+                "="
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ChangeColor"
+              },
+              "parameters": [
+                "Item_Magnet_2",
+                "\"63;63;63\""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BooleanVariable"
+              },
+              "parameters": [
+                "Picked_Speed",
+                "True",
+                "="
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ChangeColor"
+              },
+              "parameters": [
+                "Item_Speed_Boost",
+                "\"63;63;63\""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BooleanVariable"
+              },
+              "parameters": [
+                "Picked_TurnSpeed",
+                "True",
+                "="
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ChangeColor"
+              },
+              "parameters": [
+                "Item_Fast_Turn",
                 "\"63;63;63\""
               ]
             }
@@ -50856,18 +51103,66 @@
               ]
             }
           ],
-          "actions": [
+          "actions": [],
+          "events": [
             {
-              "type": {
-                "value": "PlayMusicCanal"
-              },
-              "parameters": [
-                "",
-                "New pirate song 5.0.mp3",
-                "1",
-                "",
-                "30",
-                "1"
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "Level",
+                    "!=",
+                    "5"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "PlayMusicCanal"
+                  },
+                  "parameters": [
+                    "",
+                    "New pirate song 5.0.mp3",
+                    "1",
+                    "",
+                    "30",
+                    "1"
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "NumberVariable"
+                  },
+                  "parameters": [
+                    "Level",
+                    "=",
+                    "5"
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "PlayMusicCanal"
+                  },
+                  "parameters": [
+                    "",
+                    "Enemy Approching Music.mp3",
+                    "1",
+                    "",
+                    "30",
+                    "1"
+                  ]
+                }
               ]
             }
           ]
@@ -53097,7 +53392,7 @@
                   },
                   "parameters": [
                     "",
-                    "Barrel_Explode_Particle",
+                    "G_Barrel_Explode_Particle",
                     "Barrel.CenterX()",
                     "Barrel.CenterY()",
                     ""
@@ -53112,6 +53407,18 @@
                     "Barrel_Shockwave",
                     "Barrel.CenterX()",
                     "Barrel.CenterY()",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PlaySound"
+                  },
+                  "parameters": [
+                    "",
+                    "barrel explosion.mp3",
+                    "",
+                    "85",
                     ""
                   ]
                 },
