@@ -1745,7 +1745,7 @@
     {
       "name": "Gold_Global",
       "type": "number",
-      "value": 200
+      "value": 20000
     },
     {
       "name": "Player_Speed",
@@ -42025,7 +42025,7 @@
             {
               "name": "Desc",
               "type": "string",
-              "value": "Increase Health $500"
+              "value": "Increase Health +2 $500"
             }
           ]
         },
@@ -42438,6 +42438,11 @@
               "name": "Desc",
               "type": "string",
               "value": "0"
+            },
+            {
+              "name": "IsPicked",
+              "type": "boolean",
+              "value": false
             }
           ],
           "effects": [
@@ -42536,6 +42541,11 @@
               "name": "IsAvailable",
               "type": "boolean",
               "value": true
+            },
+            {
+              "name": "IsPicked",
+              "type": "boolean",
+              "value": false
             }
           ],
           "effects": [
@@ -42639,6 +42649,11 @@
               "name": "Desc",
               "type": "string",
               "value": "0"
+            },
+            {
+              "name": "IsPicked",
+              "type": "boolean",
+              "value": false
             }
           ],
           "effects": [
@@ -42742,6 +42757,11 @@
               "name": "Desc",
               "type": "string",
               "value": "0"
+            },
+            {
+              "name": "IsPicked",
+              "type": "boolean",
+              "value": false
             }
           ],
           "effects": [
@@ -42845,6 +42865,11 @@
               "name": "Desc",
               "type": "string",
               "value": "0"
+            },
+            {
+              "name": "IsPicked",
+              "type": "boolean",
+              "value": false
             }
           ],
           "effects": [
@@ -42948,6 +42973,11 @@
               "name": "Desc",
               "type": "string",
               "value": "0"
+            },
+            {
+              "name": "IsPicked",
+              "type": "boolean",
+              "value": false
             }
           ],
           "effects": [
@@ -43051,6 +43081,11 @@
               "name": "Desc",
               "type": "string",
               "value": "0"
+            },
+            {
+              "name": "IsPicked",
+              "type": "boolean",
+              "value": false
             }
           ],
           "effects": [
@@ -43154,6 +43189,11 @@
               "name": "Desc",
               "type": "string",
               "value": "Double blast baby"
+            },
+            {
+              "name": "IsPicked",
+              "type": "boolean",
+              "value": false
             }
           ],
           "effects": [
@@ -43257,6 +43297,11 @@
               "name": "Desc",
               "type": "string",
               "value": "0"
+            },
+            {
+              "name": "IsPicked",
+              "type": "boolean",
+              "value": false
             }
           ],
           "effects": [
@@ -43360,6 +43405,11 @@
               "name": "Desc",
               "type": "string",
               "value": "0"
+            },
+            {
+              "name": "IsPicked",
+              "type": "boolean",
+              "value": false
             }
           ],
           "effects": [
@@ -44158,6 +44208,17 @@
             },
             {
               "type": {
+                "value": "BooleanObjectVariable"
+              },
+              "parameters": [
+                "Item_Double_Blast",
+                "IsPicked",
+                "=",
+                ""
+              ]
+            },
+            {
+              "type": {
                 "value": "BuiltinCommonInstructions::Once"
               },
               "parameters": []
@@ -44195,6 +44256,17 @@
                 "25",
                 "RandomFloatInRange(.9,1.1)"
               ]
+            },
+            {
+              "type": {
+                "value": "SetBooleanObjectVariable"
+              },
+              "parameters": [
+                "Item_Double_Blast",
+                "IsPicked",
+                "True",
+                ""
+              ]
             }
           ]
         },
@@ -44209,6 +44281,17 @@
                 "Item_Double_Blast",
                 "",
                 "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "BooleanObjectVariable"
+              },
+              "parameters": [
+                "Item_Double_Blast",
+                "IsPicked",
+                "=",
                 ""
               ]
             }
@@ -44280,6 +44363,17 @@
             },
             {
               "type": {
+                "value": "BooleanObjectVariable"
+              },
+              "parameters": [
+                "Item_Triple_Blast",
+                "IsPicked",
+                "=",
+                ""
+              ]
+            },
+            {
+              "type": {
                 "value": "BuiltinCommonInstructions::Once"
               },
               "parameters": []
@@ -44317,6 +44411,17 @@
                 "25",
                 "RandomFloatInRange(.9,1.1)"
               ]
+            },
+            {
+              "type": {
+                "value": "SetBooleanObjectVariable"
+              },
+              "parameters": [
+                "Item_Triple_Blast",
+                "IsPicked",
+                "True",
+                ""
+              ]
             }
           ]
         },
@@ -44331,6 +44436,17 @@
                 "Item_Triple_Blast",
                 "",
                 "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "BooleanObjectVariable"
+              },
+              "parameters": [
+                "Item_Triple_Blast",
+                "IsPicked",
+                "=",
                 ""
               ]
             }
@@ -44402,6 +44518,17 @@
             },
             {
               "type": {
+                "value": "BooleanObjectVariable"
+              },
+              "parameters": [
+                "Item_Magnet_1",
+                "IsPicked",
+                "=",
+                ""
+              ]
+            },
+            {
+              "type": {
                 "value": "BuiltinCommonInstructions::Once"
               },
               "parameters": []
@@ -44449,6 +44576,17 @@
                 "25",
                 "RandomFloatInRange(.9,1.1)"
               ]
+            },
+            {
+              "type": {
+                "value": "SetBooleanObjectVariable"
+              },
+              "parameters": [
+                "Item_Magnet_1",
+                "IsPicked",
+                "True",
+                ""
+              ]
             }
           ]
         },
@@ -44463,6 +44601,17 @@
                 "Item_Magnet_1",
                 "",
                 "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "BooleanObjectVariable"
+              },
+              "parameters": [
+                "Item_Magnet_1",
+                "IsPicked",
+                "=",
                 ""
               ]
             }
@@ -44534,6 +44683,17 @@
             },
             {
               "type": {
+                "value": "BooleanObjectVariable"
+              },
+              "parameters": [
+                "Item_Magnet_2",
+                "IsPicked",
+                "=",
+                ""
+              ]
+            },
+            {
+              "type": {
                 "value": "BuiltinCommonInstructions::Once"
               },
               "parameters": []
@@ -44581,6 +44741,17 @@
                 "25",
                 "RandomFloatInRange(.9,1.1)"
               ]
+            },
+            {
+              "type": {
+                "value": "SetBooleanObjectVariable"
+              },
+              "parameters": [
+                "Item_Magnet_2",
+                "IsPicked",
+                "True",
+                ""
+              ]
             }
           ]
         },
@@ -44595,6 +44766,17 @@
                 "Item_Magnet_2",
                 "",
                 "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "BooleanObjectVariable"
+              },
+              "parameters": [
+                "Item_Magnet_2",
+                "IsPicked",
+                "=",
                 ""
               ]
             }
@@ -44666,6 +44848,17 @@
             },
             {
               "type": {
+                "value": "BooleanObjectVariable"
+              },
+              "parameters": [
+                "Item_Speed_Boost",
+                "IsPicked",
+                "=",
+                ""
+              ]
+            },
+            {
+              "type": {
                 "value": "BuiltinCommonInstructions::Once"
               },
               "parameters": []
@@ -44703,6 +44896,17 @@
                 "25",
                 "RandomFloatInRange(.9,1.1)"
               ]
+            },
+            {
+              "type": {
+                "value": "SetBooleanObjectVariable"
+              },
+              "parameters": [
+                "Item_Speed_Boost",
+                "IsPicked",
+                "True",
+                ""
+              ]
             }
           ]
         },
@@ -44717,6 +44921,17 @@
                 "Item_Speed_Boost",
                 "",
                 "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "BooleanObjectVariable"
+              },
+              "parameters": [
+                "Item_Speed_Boost",
+                "IsPicked",
+                "=",
                 ""
               ]
             }
@@ -44748,7 +44963,7 @@
                 "SpeechText",
                 "Text",
                 "=",
-                "Item_Double_Blast.Desc"
+                "Item_Speed_Boost.Desc"
               ]
             }
           ]
@@ -44788,6 +45003,17 @@
             },
             {
               "type": {
+                "value": "BooleanObjectVariable"
+              },
+              "parameters": [
+                "Item_Fast_Turn",
+                "IsPicked",
+                "=",
+                ""
+              ]
+            },
+            {
+              "type": {
                 "value": "BuiltinCommonInstructions::Once"
               },
               "parameters": []
@@ -44811,7 +45037,7 @@
               "parameters": [
                 "Player_Turn_Speed",
                 "=",
-                "300"
+                "225"
               ]
             },
             {
@@ -44824,6 +45050,17 @@
                 "",
                 "25",
                 "RandomFloatInRange(.9,1.1)"
+              ]
+            },
+            {
+              "type": {
+                "value": "SetBooleanObjectVariable"
+              },
+              "parameters": [
+                "Item_Fast_Turn",
+                "IsPicked",
+                "True",
+                ""
               ]
             }
           ]
@@ -44839,6 +45076,17 @@
                 "Item_Fast_Turn",
                 "",
                 "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "BooleanObjectVariable"
+              },
+              "parameters": [
+                "Item_Fast_Turn",
+                "IsPicked",
+                "=",
                 ""
               ]
             }
@@ -44906,6 +45154,17 @@
                 "Gold_Global",
                 ">=",
                 "500"
+              ]
+            },
+            {
+              "type": {
+                "value": "BooleanObjectVariable"
+              },
+              "parameters": [
+                "Item_Health_Plus",
+                "IsPicked",
+                "=",
+                ""
               ]
             },
             {
@@ -45043,6 +45302,17 @@
             },
             {
               "type": {
+                "value": "BooleanObjectVariable"
+              },
+              "parameters": [
+                "Item_Health_Max",
+                "IsPicked",
+                "=",
+                ""
+              ]
+            },
+            {
+              "type": {
                 "value": "BuiltinCommonInstructions::Once"
               },
               "parameters": []
@@ -45176,6 +45446,17 @@
             },
             {
               "type": {
+                "value": "BooleanObjectVariable"
+              },
+              "parameters": [
+                "Item_Powderkey",
+                "IsPicked",
+                "=",
+                ""
+              ]
+            },
+            {
+              "type": {
                 "value": "BuiltinCommonInstructions::Once"
               },
               "parameters": []
@@ -45213,6 +45494,17 @@
                 "=",
                 "8"
               ]
+            },
+            {
+              "type": {
+                "value": "SetBooleanObjectVariable"
+              },
+              "parameters": [
+                "Item_Powderkey",
+                "IsPicked",
+                "True",
+                ""
+              ]
             }
           ]
         },
@@ -45227,6 +45519,17 @@
                 "Item_Powderkey",
                 "",
                 "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "BooleanObjectVariable"
+              },
+              "parameters": [
+                "Item_Powderkey",
+                "IsPicked",
+                "=",
                 ""
               ]
             }
@@ -45383,6 +45686,33 @@
                 "Text",
                 "=",
                 "Item_Powderkey.Desc"
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "BooleanObjectVariable"
+              },
+              "parameters": [
+                "Bottles",
+                "IsPicked",
+                "True",
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "ChangeColor"
+              },
+              "parameters": [
+                "Bottles",
+                "\"63;63;63\""
               ]
             }
           ]
@@ -49030,7 +49360,7 @@
                       "parameters": [
                         "EnemyCount",
                         "=",
-                        "0"
+                        "6"
                       ]
                     }
                   ]
@@ -50927,7 +51257,7 @@
               "parameters": [
                 "Gold_Global",
                 "+",
-                "111"
+                "712"
               ]
             }
           ]
