@@ -460,7 +460,7 @@
         "kind": "image",
         "metadata": "",
         "name": "AssetsV4\\barrelWithWater.png",
-        "smoothed": false,
+        "smoothed": true,
         "userAdded": false
       },
       {
@@ -468,7 +468,7 @@
         "kind": "image",
         "metadata": "",
         "name": "AssetsV4\\treasureWithWater.png",
-        "smoothed": false,
+        "smoothed": true,
         "userAdded": false
       },
       {
@@ -486,7 +486,7 @@
         "kind": "image",
         "metadata": "",
         "name": "AssetsV4\\rocksWithWater.png",
-        "smoothed": false,
+        "smoothed": true,
         "userAdded": false
       },
       {
@@ -582,7 +582,7 @@
         "kind": "image",
         "metadata": "",
         "name": "AssetsV4\\playerDirectionCompass.png",
-        "smoothed": false,
+        "smoothed": true,
         "userAdded": false
       },
       {
@@ -788,7 +788,7 @@
         "kind": "image",
         "metadata": "",
         "name": "pi-rat.png",
-        "smoothed": false,
+        "smoothed": true,
         "userAdded": false
       },
       {
@@ -1159,7 +1159,7 @@
         "kind": "image",
         "metadata": "",
         "name": "AssetsV4\\islandWithWater.png",
-        "smoothed": false,
+        "smoothed": true,
         "userAdded": false
       },
       {
@@ -1385,7 +1385,7 @@
         "kind": "image",
         "metadata": "",
         "name": "AssetsV4\\instructionLMB.png",
-        "smoothed": false,
+        "smoothed": true,
         "userAdded": false
       },
       {
@@ -1484,6 +1484,22 @@
         "preloadAsMusic": false,
         "preloadAsSound": false,
         "preloadInCache": false,
+        "userAdded": false
+      },
+      {
+        "file": "AssetsV4/instructionKeys.png",
+        "kind": "image",
+        "metadata": "",
+        "name": "AssetsV4\\instructionKeys.png",
+        "smoothed": false,
+        "userAdded": false
+      },
+      {
+        "file": "AssetsV4/victoryScreen.jpg",
+        "kind": "image",
+        "metadata": "",
+        "name": "AssetsV4\\victoryScreen.jpg",
+        "smoothed": false,
         "userAdded": false
       }
     ],
@@ -1948,7 +1964,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.2,
         "snap": true,
-        "zoomFactor": 0.3925161175488247,
+        "zoomFactor": 0.2550455473354358,
         "windowMask": false
       },
       "objectsGroups": [
@@ -1981,9 +1997,6 @@
             },
             {
               "name": "InstructionsText"
-            },
-            {
-              "name": "Logo"
             }
           ]
         },
@@ -2020,8 +2033,8 @@
           "name": "QuitText",
           "persistentUuid": "0f2d92ad-34cd-4c82-989a-e2896f1ee385",
           "width": 196,
-          "x": 1052,
-          "y": 703,
+          "x": 2076,
+          "y": 992,
           "zOrder": 2,
           "numberProperties": [],
           "stringProperties": [],
@@ -2054,7 +2067,7 @@
           "persistentUuid": "3bbff27e-4b80-4ee5-bfa4-666324b2f83e",
           "width": 160,
           "x": 512,
-          "y": 1024,
+          "y": 1120,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -2103,7 +2116,7 @@
           "persistentUuid": "7dd6ce66-320d-4ba8-a5a4-e33ac0abc7c9",
           "width": 122,
           "x": 887,
-          "y": 527,
+          "y": 563,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -2119,7 +2132,7 @@
           "persistentUuid": "dd2d00d2-e4a9-47a7-a90b-b35919afa60b",
           "width": 0,
           "x": 572,
-          "y": 1416,
+          "y": 1632,
           "zOrder": 11,
           "numberProperties": [],
           "stringProperties": [],
@@ -2305,7 +2318,7 @@
           "persistentUuid": "8b98bc3f-a8f9-48a1-a9da-9fac6241ddc0",
           "width": 0,
           "x": 844,
-          "y": 444,
+          "y": 480,
           "zOrder": 5,
           "numberProperties": [],
           "stringProperties": [],
@@ -2331,14 +2344,14 @@
           "angle": 0,
           "customSize": true,
           "depth": 1,
-          "height": 64,
+          "height": 105,
           "keepRatio": true,
           "layer": "",
           "name": "Instruction_01",
           "persistentUuid": "4bb2db88-c055-4120-ad00-229dd13eabe3",
-          "width": 289,
-          "x": 63,
-          "y": -617,
+          "width": 321,
+          "x": 31,
+          "y": -608,
           "zOrder": 20,
           "numberProperties": [],
           "stringProperties": [],
@@ -2420,8 +2433,8 @@
           "name": "Instruction_Arrows_Img",
           "persistentUuid": "558e3f48-c4dc-48f5-9c05-198f7a89247c",
           "width": 0,
-          "x": 130,
-          "y": -681,
+          "x": 125,
+          "y": -751,
           "zOrder": 26,
           "numberProperties": [],
           "stringProperties": [],
@@ -2485,8 +2498,24 @@
           "persistentUuid": "1bbc6b44-a46c-4d30-b5e0-0f7babb4f611",
           "width": 0,
           "x": 384,
-          "y": 1120,
+          "y": 1216,
           "zOrder": 30,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "PirateTextStart",
+          "persistentUuid": "140b7aa2-9e05-4a51-91f9-ab26cd16492d",
+          "width": 0,
+          "x": 889,
+          "y": 368,
+          "zOrder": 31,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -2501,10 +2530,22 @@
           "effects": [
             {
               "effectType": "Outline",
+              "name": "BaseStroke",
+              "doubleParameters": {
+                "padding": 0,
+                "thickness": 2
+              },
+              "stringParameters": {
+                "color": "184;107;34"
+              },
+              "booleanParameters": {}
+            },
+            {
+              "effectType": "Outline",
               "name": "Effect",
               "doubleParameters": {
                 "padding": 2,
-                "thickness": 2
+                "thickness": 4
               },
               "stringParameters": {
                 "color": "255;255;255"
@@ -2525,13 +2566,13 @@
             }
           ],
           "content": {
-            "text": "Pirate Kings Clash of the tides",
+            "text": "Start",
             "opacity": 255,
             "fontSize": 64,
             "visible": true,
             "color": "94;46;17",
             "fontFamily": "AssetsV4\\Beryliumbold.ttf",
-            "align": "left",
+            "align": "center",
             "wordWrap": true,
             "verticalTextAlignment": "top"
           }
@@ -3259,20 +3300,7 @@
           "type": "Sprite",
           "updateIfNotVisible": false,
           "variables": [],
-          "effects": [
-            {
-              "effectType": "Outline",
-              "name": "Effect",
-              "doubleParameters": {
-                "padding": 5,
-                "thickness": 5
-              },
-              "stringParameters": {
-                "color": "255;255;255"
-              },
-              "booleanParameters": {}
-            }
-          ],
+          "effects": [],
           "behaviors": [
             {
               "name": "ButtonFSM",
@@ -3450,7 +3478,7 @@
           "variables": [],
           "effects": [],
           "behaviors": [],
-          "string": "Use arrow keys to change the direction of the ship",
+          "string": "Use arrow keys to change the direction of the ship. You can also use A & D or Q & D keys.",
           "font": "AssetsV4\\Berylium.ttf",
           "textAlignment": "center",
           "characterSize": 24,
@@ -3473,7 +3501,7 @@
             "shadowOpacity": 127,
             "smoothed": true,
             "underlined": false,
-            "text": "Use arrow keys to change the direction of the ship",
+            "text": "Use arrow keys to change the direction of the ship. You can also use A & D or Q & D keys.",
             "font": "AssetsV4\\Berylium.ttf",
             "textAlignment": "center",
             "verticalTextAlignment": "top",
@@ -3627,7 +3655,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "AssetsV4\\instructionArrows.png",
+                      "image": "AssetsV4\\instructionKeys.png",
                       "points": [],
                       "originPoint": {
                         "name": "origine",
@@ -3643,20 +3671,20 @@
                       "customCollisionMask": [
                         [
                           {
-                            "x": 1,
-                            "y": 1
+                            "x": 3,
+                            "y": 3
                           },
                           {
-                            "x": 126,
-                            "y": 1
+                            "x": 145,
+                            "y": 3
                           },
                           {
-                            "x": 126,
-                            "y": 51
+                            "x": 145,
+                            "y": 123
                           },
                           {
-                            "x": 1,
-                            "y": 51
+                            "x": 3,
+                            "y": 123
                           }
                         ]
                       ]
@@ -4339,7 +4367,7 @@
                 "value": "ButtonStates::ButtonFSM::IsClicked"
               },
               "parameters": [
-                "Logo",
+                "PirateTextStart",
                 "ButtonFSM",
                 ""
               ]
@@ -12225,7 +12253,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": true,
-        "zoomFactor": 0.21040511501735115,
+        "zoomFactor": 0.19690202305140314,
         "windowMask": false
       },
       "objectsGroups": [
@@ -12387,7 +12415,7 @@
           "width": 0,
           "x": 1760,
           "y": -736,
-          "zOrder": 124,
+          "zOrder": 1010,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -47665,6 +47693,659 @@
           "type": "TextContainerCapability::TextContainerBehavior"
         }
       ]
+    },
+    {
+      "b": 209,
+      "disableInputWhenNotFocused": true,
+      "mangledName": "VictoryScene",
+      "name": "VictoryScene",
+      "r": 209,
+      "standardSortMethod": true,
+      "stopSoundsOnStartup": true,
+      "title": "",
+      "v": 209,
+      "uiSettings": {
+        "grid": false,
+        "gridType": "rectangular",
+        "gridWidth": 32,
+        "gridHeight": 32,
+        "gridOffsetX": 0,
+        "gridOffsetY": 0,
+        "gridColor": 10401023,
+        "gridAlpha": 0.8,
+        "snap": false,
+        "zoomFactor": 0.6672773998329976,
+        "windowMask": false
+      },
+      "objectsGroups": [],
+      "variables": [],
+      "instances": [
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "background",
+          "name": "victoryBg",
+          "persistentUuid": "05e71918-ecd3-4493-8853-d27983dbee48",
+          "width": 0,
+          "x": 0,
+          "y": 0,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "background",
+          "name": "Logo",
+          "persistentUuid": "e30ca00e-aa51-4a72-989e-76dc5dcdafc4",
+          "width": 0,
+          "x": 646,
+          "y": 99,
+          "zOrder": 2,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "background",
+          "name": "congratsText",
+          "persistentUuid": "4bd633d6-1a85-42ce-9166-b721b5851bfa",
+          "width": 0,
+          "x": 752,
+          "y": 447,
+          "zOrder": 3,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "background",
+          "name": "backToMain",
+          "persistentUuid": "cde4fc35-6ffe-48e1-9a3a-cd80e7d12b5c",
+          "width": 0,
+          "x": 858,
+          "y": 599,
+          "zOrder": 4,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "background",
+          "name": "TransistionPainter",
+          "persistentUuid": "d279b868-c0f1-4b5c-b47d-965c3d1fb48d",
+          "width": 0,
+          "x": 1416,
+          "y": 137,
+          "zOrder": 5,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        }
+      ],
+      "objects": [
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "victoryBg",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "AssetsV4\\victoryScreen.jpg",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 0,
+                            "y": 0
+                          },
+                          {
+                            "x": 1280,
+                            "y": 0
+                          },
+                          {
+                            "x": 1280,
+                            "y": 720
+                          },
+                          {
+                            "x": 0,
+                            "y": 720
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "adaptCollisionMaskAutomatically": true,
+          "assetStoreId": "",
+          "name": "Logo",
+          "type": "Sprite",
+          "updateIfNotVisible": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "animations": [
+            {
+              "name": "",
+              "useMultipleDirections": false,
+              "directions": [
+                {
+                  "looping": false,
+                  "timeBetweenFrames": 0.08,
+                  "sprites": [
+                    {
+                      "hasCustomCollisionMask": true,
+                      "image": "AssetsV4\\logo.png",
+                      "points": [],
+                      "originPoint": {
+                        "name": "origine",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "centerPoint": {
+                        "automatic": true,
+                        "name": "centre",
+                        "x": 0,
+                        "y": 0
+                      },
+                      "customCollisionMask": [
+                        [
+                          {
+                            "x": 7,
+                            "y": 11
+                          },
+                          {
+                            "x": 598,
+                            "y": 11
+                          },
+                          {
+                            "x": 598,
+                            "y": 214
+                          },
+                          {
+                            "x": 7,
+                            "y": 214
+                          }
+                        ]
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "congratsText",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "Thanks for playing !",
+          "font": "AssetsV4\\Beryliumbold.ttf",
+          "textAlignment": "left",
+          "characterSize": 48,
+          "color": {
+            "b": 32,
+            "g": 57,
+            "r": 112
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "Thanks for playing !",
+            "font": "AssetsV4\\Beryliumbold.ttf",
+            "textAlignment": "left",
+            "verticalTextAlignment": "top",
+            "characterSize": 48,
+            "color": "112;57;32"
+          }
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "backToMain",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [
+            {
+              "effectType": "Outline",
+              "name": "Stroke",
+              "doubleParameters": {
+                "padding": 2,
+                "thickness": 2
+              },
+              "stringParameters": {
+                "color": "255;255;255"
+              },
+              "booleanParameters": {}
+            }
+          ],
+          "behaviors": [
+            {
+              "name": "ButtonFSM",
+              "type": "ButtonStates::ButtonFSM",
+              "ShouldCheckHovering": true,
+              "State": "Idle",
+              "TouchId": 0,
+              "TouchIsInside": false,
+              "MouseIsInside": false,
+              "Index": 2.0247e-320
+            }
+          ],
+          "string": "Back to menu",
+          "font": "AssetsV4\\Beryliumbold.ttf",
+          "textAlignment": "left",
+          "characterSize": 32,
+          "color": {
+            "b": 19,
+            "g": 29,
+            "r": 65
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "Back to menu",
+            "font": "AssetsV4\\Beryliumbold.ttf",
+            "textAlignment": "left",
+            "verticalTextAlignment": "top",
+            "characterSize": 32,
+            "color": "65;29;19"
+          }
+        }
+      ],
+      "objectsFolderStructure": {
+        "folderName": "__ROOT",
+        "children": [
+          {
+            "objectName": "victoryBg"
+          },
+          {
+            "objectName": "Logo"
+          },
+          {
+            "objectName": "congratsText"
+          },
+          {
+            "objectName": "backToMain"
+          }
+        ]
+      },
+      "events": [
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "DepartScene"
+              },
+              "parameters": [
+                ""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "PlayMusicCanal"
+              },
+              "parameters": [
+                "",
+                "new intro theme updated 2.0.mp3",
+                "5",
+                "yes",
+                "25",
+                ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [],
+          "actions": []
+        },
+        {
+          "colorB": 228,
+          "colorG": 176,
+          "colorR": 74,
+          "creationTime": 0,
+          "name": "BackToMain handlers",
+          "source": "",
+          "type": "BuiltinCommonInstructions::Group",
+          "events": [
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "ButtonStates::ButtonFSM::IsClicked"
+                  },
+                  "parameters": [
+                    "backToMain",
+                    "ButtonFSM",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "FlashTransitionPainter::FlashTransitionPainter::PaintEffect"
+                  },
+                  "parameters": [
+                    "TransistionPainter",
+                    "FlashTransitionPainter",
+                    "\"0;0;0\"",
+                    ".8",
+                    "\"Circular\"",
+                    "\"Forward\"",
+                    "",
+                    ""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Wait"
+                  },
+                  "parameters": [
+                    "1"
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "Scene"
+                  },
+                  "parameters": [
+                    "",
+                    "\"MenuScene\"",
+                    ""
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "value": "ButtonStates::ButtonFSM::IsHovered"
+                  },
+                  "parameters": [
+                    "backToMain",
+                    "ButtonFSM",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "EffectCapability::EffectBehavior::EnableEffect"
+                  },
+                  "parameters": [
+                    "backToMain",
+                    "Effect",
+                    "\"Stroke\"",
+                    "yes"
+                  ]
+                }
+              ],
+              "events": [
+                {
+                  "type": "BuiltinCommonInstructions::Standard",
+                  "conditions": [
+                    {
+                      "type": {
+                        "value": "BuiltinCommonInstructions::Once"
+                      },
+                      "parameters": []
+                    }
+                  ],
+                  "actions": [
+                    {
+                      "type": {
+                        "value": "PlaySound"
+                      },
+                      "parameters": [
+                        "",
+                        "menu scroll sound 2.mp3",
+                        "",
+                        "15",
+                        "RandomFloatInRange(.9,1.1)"
+                      ]
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "type": "BuiltinCommonInstructions::Standard",
+              "conditions": [
+                {
+                  "type": {
+                    "inverted": true,
+                    "value": "ButtonStates::ButtonFSM::IsHovered"
+                  },
+                  "parameters": [
+                    "backToMain",
+                    "ButtonFSM",
+                    ""
+                  ]
+                }
+              ],
+              "actions": [
+                {
+                  "type": {
+                    "value": "EffectCapability::EffectBehavior::EnableEffect"
+                  },
+                  "parameters": [
+                    "backToMain",
+                    "Effect",
+                    "\"Stroke\"",
+                    ""
+                  ]
+                }
+              ]
+            }
+          ],
+          "parameters": []
+        }
+      ],
+      "layers": [
+        {
+          "ambientLightColorB": 200,
+          "ambientLightColorG": 200,
+          "ambientLightColorR": 200,
+          "camera3DFarPlaneDistance": 10000,
+          "camera3DFieldOfView": 45,
+          "camera3DNearPlaneDistance": 3,
+          "cameraType": "",
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "isLocked": false,
+          "name": "background",
+          "renderingType": "",
+          "visibility": true,
+          "cameras": [],
+          "effects": [
+            {
+              "effectType": "Scene3D::HemisphereLight",
+              "name": "3D Light",
+              "doubleParameters": {
+                "elevation": 45,
+                "intensity": 1,
+                "rotation": 0
+              },
+              "stringParameters": {
+                "groundColor": "64;64;64",
+                "skyColor": "255;255;255",
+                "top": "Y-"
+              },
+              "booleanParameters": {}
+            }
+          ]
+        },
+        {
+          "ambientLightColorB": 200,
+          "ambientLightColorG": 200,
+          "ambientLightColorR": 200,
+          "camera3DFarPlaneDistance": 10000,
+          "camera3DFieldOfView": 45,
+          "camera3DNearPlaneDistance": 3,
+          "cameraType": "",
+          "followBaseLayerCamera": false,
+          "isLightingLayer": false,
+          "isLocked": false,
+          "name": "",
+          "renderingType": "",
+          "visibility": true,
+          "cameras": [
+            {
+              "defaultSize": true,
+              "defaultViewport": true,
+              "height": 0,
+              "viewportBottom": 1,
+              "viewportLeft": 0,
+              "viewportRight": 1,
+              "viewportTop": 0,
+              "width": 0
+            }
+          ],
+          "effects": [
+            {
+              "effectType": "Scene3D::HemisphereLight",
+              "name": "3D Light",
+              "doubleParameters": {
+                "elevation": 45,
+                "intensity": 1,
+                "rotation": 0
+              },
+              "stringParameters": {
+                "groundColor": "64;64;64",
+                "skyColor": "255;255;255",
+                "top": "Y-"
+              },
+              "booleanParameters": {}
+            }
+          ]
+        }
+      ],
+      "behaviorsSharedData": [
+        {
+          "name": "Animation",
+          "type": "AnimatableCapability::AnimatableBehavior"
+        },
+        {
+          "name": "ButtonFSM",
+          "type": "ButtonStates::ButtonFSM"
+        },
+        {
+          "name": "Effect",
+          "type": "EffectCapability::EffectBehavior"
+        },
+        {
+          "name": "FlashTransitionPainter",
+          "type": "FlashTransitionPainter::FlashTransitionPainter"
+        },
+        {
+          "name": "Flippable",
+          "type": "FlippableCapability::FlippableBehavior"
+        },
+        {
+          "name": "Opacity",
+          "type": "OpacityCapability::OpacityBehavior"
+        },
+        {
+          "name": "Resizable",
+          "type": "ResizableCapability::ResizableBehavior"
+        },
+        {
+          "name": "Scale",
+          "type": "ScalableCapability::ScalableBehavior"
+        },
+        {
+          "name": "Text",
+          "type": "TextContainerCapability::TextContainerBehavior"
+        }
+      ]
     }
   ],
   "externalEvents": [
@@ -55272,6 +55953,61 @@
                 "Animation",
                 "=",
                 "\"Dead\""
+              ]
+            },
+            {
+              "type": {
+                "value": "Tween::TweenBehavior::AddObjectOpacityTween2"
+              },
+              "parameters": [
+                "Boss",
+                "Tween",
+                "\"fadeOut\"",
+                "0",
+                "\"easeOutQuart\"",
+                ".3",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Wait"
+              },
+              "parameters": [
+                ".3"
+              ]
+            },
+            {
+              "type": {
+                "value": "FlashTransitionPainter::FlashTransitionPainter::PaintEffect"
+              },
+              "parameters": [
+                "TransistionPainter",
+                "FlashTransitionPainter",
+                "\"0;0;0\"",
+                ".8",
+                "\"Circular\"",
+                "\"Forward\"",
+                "",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "Wait"
+              },
+              "parameters": [
+                "1"
+              ]
+            },
+            {
+              "type": {
+                "value": "Scene"
+              },
+              "parameters": [
+                "",
+                "\"VictoryScene\"",
+                ""
               ]
             }
           ]
