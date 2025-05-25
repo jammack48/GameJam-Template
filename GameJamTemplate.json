@@ -1501,6 +1501,20 @@
         "name": "AssetsV4\\victoryScreen.jpg",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "file": "Project_1.mp4",
+        "kind": "video",
+        "metadata": "",
+        "name": "Project_1.mp4",
+        "userAdded": false
+      },
+      {
+        "file": "Project_2.mp4",
+        "kind": "video",
+        "metadata": "",
+        "name": "Project_2.mp4",
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -20327,7 +20341,7 @@
                   },
                   "parameters": [
                     "",
-                    "\"MenuScene\"",
+                    "\"VictoryScene\"",
                     ""
                   ]
                 }
@@ -46227,7 +46241,7 @@
               "parameters": [
                 "Magnet_Strength",
                 "=",
-                "400"
+                "600"
               ]
             },
             {
@@ -46237,7 +46251,7 @@
               "parameters": [
                 "Magnet_Distance",
                 "=",
-                "800"
+                "1000"
               ]
             },
             {
@@ -47521,7 +47535,7 @@
             "opacity": 255,
             "loop": false,
             "volume": 25,
-            "videoResource": "FullSSIntro.mp4"
+            "videoResource": "Project_2.mp4"
           }
         }
       ],
@@ -47799,6 +47813,22 @@
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "congratsText2",
+          "persistentUuid": "7880338a-4209-4ae9-b84a-e5a8ca69794a",
+          "width": 0,
+          "x": 857,
+          "y": 362,
+          "zOrder": 6,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
         }
       ],
       "objects": [
@@ -48029,6 +48059,48 @@
             "characterSize": 32,
             "color": "65;29;19"
           }
+        },
+        {
+          "assetStoreId": "",
+          "bold": false,
+          "italic": false,
+          "name": "congratsText2",
+          "smoothed": true,
+          "type": "TextObject::Text",
+          "underlined": false,
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "string": "Victory!!",
+          "font": "AssetsV4\\Beryliumbold.ttf",
+          "textAlignment": "left",
+          "characterSize": 48,
+          "color": {
+            "b": 32,
+            "g": 57,
+            "r": 112
+          },
+          "content": {
+            "bold": false,
+            "isOutlineEnabled": false,
+            "isShadowEnabled": false,
+            "italic": false,
+            "outlineColor": "255;255;255",
+            "outlineThickness": 2,
+            "shadowAngle": 90,
+            "shadowBlurRadius": 2,
+            "shadowColor": "0;0;0",
+            "shadowDistance": 4,
+            "shadowOpacity": 127,
+            "smoothed": true,
+            "underlined": false,
+            "text": "Victory!!",
+            "font": "AssetsV4\\Beryliumbold.ttf",
+            "textAlignment": "left",
+            "verticalTextAlignment": "top",
+            "characterSize": 48,
+            "color": "112;57;32"
+          }
         }
       ],
       "objectsFolderStructure": {
@@ -48042,6 +48114,9 @@
           },
           {
             "objectName": "congratsText"
+          },
+          {
+            "objectName": "congratsText2"
           },
           {
             "objectName": "backToMain"
@@ -48072,6 +48147,14 @@
                 "5",
                 "yes",
                 "25",
+                ""
+              ]
+            },
+            {
+              "type": {
+                "value": "MontreSouris"
+              },
+              "parameters": [
                 ""
               ]
             }
@@ -55966,47 +56049,6 @@
                 "0",
                 "\"easeOutQuart\"",
                 ".3",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "Wait"
-              },
-              "parameters": [
-                ".3"
-              ]
-            },
-            {
-              "type": {
-                "value": "FlashTransitionPainter::FlashTransitionPainter::PaintEffect"
-              },
-              "parameters": [
-                "TransistionPainter",
-                "FlashTransitionPainter",
-                "\"0;0;0\"",
-                ".8",
-                "\"Circular\"",
-                "\"Forward\"",
-                "",
-                ""
-              ]
-            },
-            {
-              "type": {
-                "value": "Wait"
-              },
-              "parameters": [
-                "1"
-              ]
-            },
-            {
-              "type": {
-                "value": "Scene"
-              },
-              "parameters": [
-                "",
-                "\"VictoryScene\"",
                 ""
               ]
             }
