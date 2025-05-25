@@ -1431,6 +1431,16 @@
         "name": "bossCannonFront_Rotated2.png",
         "smoothed": false,
         "userAdded": false
+      },
+      {
+        "file": "player damage.mp3",
+        "kind": "audio",
+        "metadata": "",
+        "name": "player damage.mp3",
+        "preloadAsMusic": false,
+        "preloadAsSound": false,
+        "preloadInCache": false,
+        "userAdded": false
       }
     ],
     "resourceFolders": []
@@ -48597,6 +48607,19 @@
                     "Animation",
                     "=",
                     "\"Hurt\""
+                  ]
+                },
+                {
+                  "type": {
+                    "value": "PlaySoundCanal"
+                  },
+                  "parameters": [
+                    "",
+                    "player damage.mp3",
+                    "12",
+                    "",
+                    "20",
+                    ""
                   ]
                 }
               ]
