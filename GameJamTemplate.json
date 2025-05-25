@@ -18339,7 +18339,7 @@
           ],
           "animations": [
             {
-              "name": "AssetsV4\\bossCannonFront",
+              "name": "Idle",
               "useMultipleDirections": false,
               "directions": [
                 {
@@ -18496,7 +18496,7 @@
           ],
           "animations": [
             {
-              "name": "",
+              "name": "Idle",
               "useMultipleDirections": false,
               "directions": [
                 {
@@ -18771,7 +18771,7 @@
           ],
           "animations": [
             {
-              "name": "",
+              "name": "Idle",
               "useMultipleDirections": false,
               "directions": [
                 {
@@ -18834,7 +18834,7 @@
                   "sprites": [
                     {
                       "hasCustomCollisionMask": true,
-                      "image": "AssetsV4\\bossCannonFrontHurt.png",
+                      "image": "AssetsV4\\bossCannonBackHurt.png",
                       "points": [
                         {
                           "name": "FirePoint",
@@ -18926,7 +18926,7 @@
           ],
           "animations": [
             {
-              "name": "",
+              "name": "Idle",
               "useMultipleDirections": false,
               "directions": [
                 {
@@ -52438,6 +52438,17 @@
                 "",
                 ""
               ]
+            },
+            {
+              "type": {
+                "value": "AnimatableCapability::AnimatableBehavior::SetName"
+              },
+              "parameters": [
+                "Boss_Cannons",
+                "Animation",
+                "=",
+                "\"Hurt\""
+              ]
             }
           ]
         },
@@ -52463,6 +52474,44 @@
               "parameters": [
                 "Boss_Cannons",
                 ""
+              ]
+            }
+          ]
+        },
+        {
+          "type": "BuiltinCommonInstructions::Standard",
+          "conditions": [
+            {
+              "type": {
+                "value": "AnimatableCapability::AnimatableBehavior::HasAnimationEnded"
+              },
+              "parameters": [
+                "Boss_Cannons",
+                "Animation"
+              ]
+            },
+            {
+              "type": {
+                "value": "AnimatableCapability::AnimatableBehavior::Name"
+              },
+              "parameters": [
+                "Boss_Cannons",
+                "Animation",
+                "=",
+                "\"Hurt\""
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "type": {
+                "value": "AnimatableCapability::AnimatableBehavior::SetName"
+              },
+              "parameters": [
+                "Boss_Cannons",
+                "Animation",
+                "=",
+                "\"Idle\""
               ]
             }
           ]
