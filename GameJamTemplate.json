@@ -1944,7 +1944,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.2,
         "snap": true,
-        "zoomFactor": 0.5290357402156868,
+        "zoomFactor": 0.3925161175488247,
         "windowMask": false
       },
       "objectsGroups": [
@@ -2041,15 +2041,16 @@
         },
         {
           "angle": 0,
-          "customSize": false,
-          "height": 0,
+          "customSize": true,
+          "depth": 1,
+          "height": 64,
           "keepRatio": true,
           "layer": "",
           "name": "CreditsText",
           "persistentUuid": "3bbff27e-4b80-4ee5-bfa4-666324b2f83e",
-          "width": 0,
-          "x": 544,
-          "y": 1152,
+          "width": 160,
+          "x": 512,
+          "y": 1024,
           "zOrder": 4,
           "numberProperties": [],
           "stringProperties": [],
@@ -2083,22 +2084,6 @@
           "x": 704,
           "y": -96,
           "zOrder": 6,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "keepRatio": true,
-          "layer": "",
-          "name": "SettingsText",
-          "persistentUuid": "260de386-5b05-4cbf-b7b9-5e1e1a5bef92",
-          "width": 0,
-          "x": 877,
-          "y": 365,
-          "zOrder": 3,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -2359,7 +2344,7 @@
           "angle": 0,
           "customSize": true,
           "depth": 1,
-          "height": 61,
+          "height": 102,
           "keepRatio": true,
           "layer": "",
           "name": "Instruction_02",
@@ -2482,6 +2467,22 @@
           "x": 1036,
           "y": -713,
           "zOrder": 29,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        },
+        {
+          "angle": 0,
+          "customSize": false,
+          "height": 0,
+          "keepRatio": true,
+          "layer": "",
+          "name": "CreditsText2",
+          "persistentUuid": "1bbc6b44-a46c-4d30-b5e0-0f7babb4f611",
+          "width": 0,
+          "x": 384,
+          "y": 1120,
+          "zOrder": 30,
           "numberProperties": [],
           "stringProperties": [],
           "initialVariables": []
@@ -3487,7 +3488,7 @@
           "variables": [],
           "effects": [],
           "behaviors": [],
-          "string": "Aim with your mouse and shoot with left click.",
+          "string": "Aim with your mouse and shoot with left click. Hold to build up charge.",
           "font": "AssetsV4\\Berylium.ttf",
           "textAlignment": "center",
           "characterSize": 24,
@@ -3510,7 +3511,7 @@
             "shadowOpacity": 127,
             "smoothed": true,
             "underlined": false,
-            "text": "Aim with your mouse and shoot with left click.",
+            "text": "Aim with your mouse and shoot with left click. Hold to build up charge.",
             "font": "AssetsV4\\Berylium.ttf",
             "textAlignment": "center",
             "verticalTextAlignment": "top",
@@ -3841,6 +3842,49 @@
               ]
             }
           ]
+        },
+        {
+          "assetStoreId": "",
+          "name": "CreditsText2",
+          "type": "BBText::BBText",
+          "variables": [],
+          "effects": [
+            {
+              "effectType": "Outline",
+              "name": "Effect",
+              "doubleParameters": {
+                "padding": 2,
+                "thickness": 2
+              },
+              "stringParameters": {
+                "color": "255;255;255"
+              },
+              "booleanParameters": {}
+            }
+          ],
+          "behaviors": [
+            {
+              "name": "ButtonFSM",
+              "type": "ButtonStates::ButtonFSM",
+              "ShouldCheckHovering": true,
+              "State": "Idle",
+              "TouchId": 0,
+              "TouchIsInside": false,
+              "MouseIsInside": false,
+              "Index": 2.0247e-320
+            }
+          ],
+          "content": {
+            "text": "Kami Amiga Art\nWilson SFX and Music\nJammack Coding\nRico Intro, Play testing and Story",
+            "opacity": 255,
+            "fontSize": 40,
+            "visible": true,
+            "color": "94;46;17",
+            "fontFamily": "AssetsV4\\Beryliumbold.ttf",
+            "align": "left",
+            "wordWrap": true,
+            "verticalTextAlignment": "top"
+          }
         }
       ],
       "objectsFolderStructure": {
@@ -3875,6 +3919,9 @@
           },
           {
             "objectName": "CreditsText"
+          },
+          {
+            "objectName": "CreditsText2"
           },
           {
             "objectName": "HighscoreText"
